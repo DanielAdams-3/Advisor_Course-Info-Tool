@@ -1,0 +1,792 @@
+#include "Trie.h"
+
+using namespace std;
+
+//constructor, set default values
+Trie::Trie()
+{
+    this->numWords=0;
+    TrieNode* root= new TrieNode();
+    this->setRoot(root);
+    //this->userStatus=false;
+} 
+
+//destructor
+Trie::~Trie()
+{
+    //DYNAMIC MEMORY ALLOCATION
+    vector<TrieNode*> to_delete;
+    TrieNode* cursor=this->getRoot();
+    treeDeleter(cursor, to_delete);
+    for (long unsigned int i=0;i<to_delete.size();i++)
+    {
+        TrieNode* doom_node = to_delete.at(i);
+        delete doom_node;
+    }
+} 
+
+//recursively finds nodes to delete
+void Trie::treeDeleter(TrieNode* subtreeRoot, vector<TrieNode*>& to_delete)
+{
+    TrieNode* cursor = subtreeRoot;
+    for (long unsigned int i=0;i<cursor->descendants.size();i++)
+    {
+        if (cursor->descendants.at(i) != nullptr)
+        {
+            if (cursor->descendants.at(i)->getDeleteStatus() != true) 
+            {
+                to_delete.push_back(cursor->descendants.at(i));
+                cursor->descendants.at(i)->markDeletion(true);
+                treeDeleter(cursor->descendants.at(i), to_delete);
+            }
+        }
+    }
+    if (cursor->getDeleteStatus() != true)
+    {
+        to_delete.push_back(cursor);
+        cursor->markDeletion(true);
+    }
+}
+
+void Trie::setRoot(TrieNode* new_root)
+{
+    this->root = new_root;
+}
+TrieNode* Trie::getRoot()
+{
+    return this->root;
+}
+int Trie::getNumWords()
+{
+    return this->numWords;
+} 
+void Trie::setNumWords (int new_val)
+{
+    this->numWords=new_val;
+}
+
+bool Trie::contains(string word)
+{
+    if (searchTrie(word) == true)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool Trie::searchTrie(string course_to_find)
+{
+    bool answer = false;
+    if (this->getRoot() == nullptr)
+    {
+        cout << "error, root not set" << endl;
+        return answer;
+    }
+
+    //TODO-error handling - update the course_to_find so we can account for CSCi 5214, not require CSCI-5214
+
+    //set up a string stream to read what cousre we should find
+    stringstream ss(course_to_find);
+    char current;
+    ss.get(current);
+     //clear leading spaces at start of user input string
+    while (current == ' ')
+    {
+        ss.get(current);
+    }
+
+    //now that we have first letter, initialize cursor for tree navigation
+    TrieNode* cursor = this->getRoot();
+    //prepare to recursively identify indices of provided subject code
+    int index = 0;
+    
+    //prepare conditions for when we need to stop and replace a ' ' with a '-'
+    //int dashIndexCtr=0;
+    //stringstream ssdash("-----");
+    
+    //read the string, one character at a time
+    while (ss.eof() != true)
+    {
+        //CALCULATE THE INDEX OF THE CHARACTER an assign teh appropriate index value
+        if (current=='-') //special character
+        {
+            index = 26;
+        }
+        else //accounts for 0-10 in 2nd half of subject code
+        {
+            if ( static_cast<int>(current) < 58 && static_cast<int>(current) >= 48 ) //account for 0-10 in 2nd half of subject code
+            {
+                int subject_num=static_cast<int>(current) - 48; //48 is the difference between 0-9 and the ASCII value
+                index = subject_num + 27; //avoid first 27 slots in descendants indexing 26 letters and dash (-)
+            }
+            else if (static_cast<int>(current) > 123 && static_cast<int>(current) >=97) //account for lower-case letters in subject code and in special topics
+            {
+                int subject_num=static_cast<int>(current) - 97; //97 'a' becomes 65 'A', 122 becomes 90 'Z'
+                index = subject_num;
+            }
+            else
+            {
+                index = current - 'A';
+            }
+        }
+        //CHECK THE INDEXED THE LOCATION IS A POINTER OR NULLPTR - IF IT'S NULL, WE RETURN FALSE
+        if (cursor->descendants.at(index) == nullptr) 
+        {
+            return answer;
+        }
+
+        //prep for next loop
+        cursor=cursor->descendants.at(index); //go to next node
+
+        ss.get(current); //read next character
+        index = 0;
+        //in case the user inputs a ' ' instead of a '-' in CSCI-5214, for ex.
+        //dashIndexCtr++;
+        //if (current == ' ' && dashIndexCtr ==5)
+        //{
+        //    index = 26;
+        //    ssdash.get(current);//pull '-' and store in current
+        //    ssdash.clear();
+        //    ssdash<<"-----";
+        //}
+    }
+
+    if (cursor->getLeafStatus() == true && cursor->getCoursePtr()->getCourseSubjectCode() == course_to_find)
+    {
+        answer=true;
+    }
+    return answer;
+}
+
+void Trie::insertNode(Course* course_to_add)
+{
+    bool node_exists=this->searchTrie(course_to_add->getCourseSubjectCode());
+
+    if (node_exists == true)
+    {
+        return;
+    }
+    //if the tree has no root;
+    if (this->getRoot() == nullptr)
+    {
+        TrieNode* new_root = new TrieNode();
+        this->setRoot(new_root);
+    }
+    TrieNode* cursor=this->getRoot();
+    stringstream ss(course_to_add->getCourseSubjectCode());
+    char current;
+    ss.get(current);
+    while (current == ' ')
+    {
+        ss.get(current);
+    }
+    int index = 0;
+    while (ss.eof() != true)
+    {
+        //CALCULATE THE INDEX OF THE CHARACTER
+        if (static_cast<int>(current) == 45) //special character
+        {
+            index = 26;
+        }
+        else //accounts for 0-10 in 2nd half of subject code
+        {
+            if ( static_cast<int>(current) < 58 && static_cast<int>(current) >= 48 )
+            {
+                int subject_num=static_cast<int>(current) - 48; //48 is the difference between 0-9 and the ASCII value
+                index = subject_num + 27; //avoid first 27 slots in descendants indexing 26 letters, '-'
+            }
+            else if (static_cast<int>(current) > 123 && static_cast<int>(current) >=97) //account for lower-case letters in subject code and in special topics
+            {
+                int subject_num=static_cast<int>(current) - 97; //97 'a' becomes 65 'A', 122 becomes 90 'Z'
+                index = subject_num;
+            }
+            else
+            {
+                index = current - 'A';
+            }
+        }
+        //CHECK THE INDEXED THE LOCATION IS A POINTER OR NULLPTR - IF IT'S NULL, we create a new node.
+        if (cursor->descendants.at(index) == nullptr) 
+        {
+            //create a new node, UPDATE POINTER FROM CURRENT NODE, set predecessor and stuff
+            TrieNode* next_node = new TrieNode();
+            next_node->setPredecessor(cursor);
+            cursor->descendants.at(index) = next_node;
+        }
+        //prep for next loop
+        cursor=cursor->descendants.at(index);
+        ss.get(current);
+        index = 0;
+    }
+    cursor->setLeafStatus(true);
+    cursor->setCoursePtr(course_to_add);
+    this->setNumWords(this->getNumWords() + 1);
+}
+void Trie::removeNode(string doom_course_subject_code)
+{
+    if (searchTrie(doom_course_subject_code) == false)
+    {
+        return;
+    }
+    TrieNode* cursor=this->getRoot();
+    TrieNode* predecessor=nullptr;
+
+    stringstream ss(doom_course_subject_code);
+    char current;
+    ss.get(current);
+    while (current == ' ')
+    {
+        ss.get(current);
+    }
+    int index = 0;
+    while (ss.good() == true)
+    {
+        index = 0;
+        //CALCULATE THE INDEX OF THE CHARACTER
+        if (current == '-') //special character
+        {
+            index = 26;
+        }
+        else //accounts for 0-10 in 2nd half of subject code
+        {
+            if ( static_cast<int>(current) < 58 && static_cast<int>(current) > 48 )
+            {
+                int subject_num=static_cast<int>(current) - 48; //48 is the difference between 0-9 and the ASCII value
+                index = subject_num + 27; //avoid first 27 slots in descendants indexing 26 letters, '-'
+            }
+            else if (static_cast<int>(current) > 123 && static_cast<int>(current) >=97) //account for lower-case letters in subject code and in special topics
+            {
+                int subject_num=static_cast<int>(current) - 97; //97 'a' becomes 0 'A', 122 becomes 25 'Z'
+                index = subject_num;
+            }
+            else
+            {
+                index = current - 'A';
+            }
+        }
+        //prep for next loop
+        if (cursor->descendants.at(index) != nullptr)
+        {
+            ss.get(current);
+            cursor=cursor->descendants.at(index);
+        }
+    }
+    
+    //verify we're in the right spot and process
+    if (cursor->getLeafStatus() == true)
+    {
+        Course* leafCoursePtr = cursor->getCoursePtr();
+        string leaf_course_code=leafCoursePtr->getCourseSubjectCode();
+        predecessor=cursor->getPredecessor();
+        if (leaf_course_code == doom_course_subject_code)
+        {
+            cursor->setLeafStatus(false);
+            predecessor->descendants.at(index)=nullptr;
+            cursor->setCoursePtr(nullptr);
+            this->setNumWords(this->getNumWords() - 1);
+        }
+    }
+}
+
+//this loads cirt_data.csv and cleans up data
+//TODO-make it easier to read data, fix comma issue
+vector<Course*> Trie::readData(string file_name)
+{
+    vector<Course*> courses_to_insert_into_trie;
+
+    string all_data_as_string="";
+    ifstream readf;
+    readf.open(file_name); //  "/code/static/test_cirt_data.csv" 
+
+    //error handling --
+    if (readf.is_open() != true)
+    {
+        cout << "readData error: file not open - check filename" << endl;
+        return courses_to_insert_into_trie;
+    }
+
+    if (readf.good() != true)
+    {
+        cout << "stream error" << endl;
+    }
+
+
+    //read all data into one big line; we'll use string streams later to split it up by ',' and endline.
+    while(readf.eof() != true)
+    {
+        string csv_line=""; //connect the string stream so it's ready
+        getline(readf, csv_line); //puts a full line from the file into line variable
+        stringstream ss;  
+        ss<<csv_line; //put the line from the file into the stream
+        string csv_cell="";
+        string new_subj_code = "";
+        string new_title="";
+        string new_description="";
+        string new_hours="";
+        string new_notes="";
+        string new_restricts="";
+        string new_plans="";
+        string new_skills="";
+
+        for (long unsigned int i=0;i<8;i++)
+        {
+            csv_cell="";
+            getline(ss,csv_cell,'*');
+
+            //CLEAN-UP BEGINNING AND END OF STRINGS
+            char garbage = csv_cell.front();
+            while (garbage == '\"' || garbage == ',' || garbage == ' ' || garbage == ':')
+            {
+                csv_cell.erase(0,1); //erase 1 character at position 0
+                garbage=csv_cell.front();
+            }
+
+            garbage = csv_cell.back();
+            while (garbage == '\"' || garbage == ',' || garbage == ' ') 
+            {
+                csv_cell.pop_back();
+                garbage=csv_cell.back();
+            }
+
+            //store the string into the right variable to then initialize new Course object
+            if (i==0)
+            {
+                new_subj_code=csv_cell;
+            }
+            else if (i==1)
+            {
+                new_title=csv_cell;
+            }
+            else if (i==2)
+            {
+                new_description=csv_cell;
+            }
+            else if (i==3)
+            {
+                new_hours=csv_cell;
+            }
+            else if (i==4)
+            {
+                new_notes=csv_cell;
+            }
+            else if (i==5)
+            {
+                new_restricts=csv_cell;
+            }
+            else if (i==6)
+            {
+                new_plans=csv_cell;
+            }
+            else if (i==7)
+            {
+                new_skills = csv_cell;
+            }
+        }
+        if (new_subj_code != "")
+        {
+            Course* new_course = new Course();
+            new_course->setCourseInfo(new_title, new_description, new_notes, new_subj_code, new_restricts, new_plans, new_hours, new_skills);
+            courses_to_insert_into_trie.push_back(new_course);
+        }
+    }
+    readf.close();
+
+    courses_to_insert_into_trie.erase(courses_to_insert_into_trie.begin());     //remove headers
+    return courses_to_insert_into_trie;
+}
+
+bool Trie::load(const string& filename)
+{
+    buildTrie(filename);
+    if (this->getNumWords() >0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+void Trie::buildTrie(string filename)
+{
+    //filename = "../code/cirt_data.csv"; //ONLY WORKS FOR MY TEST
+    vector<Course*> new_courses = readData(filename);
+
+    for (long unsigned int i=0;i<new_courses.size();i++)
+    {
+        Course* cursor=new_courses.at(i);
+        this->insertNode(cursor);
+    }
+}
+
+vector<string> Trie::autocompleteTopics(const string& prefix, size_t max_results)
+{
+    vector<string> suggestions;
+    vector<Course*> coursePTRresults = startsWithPrefix(prefix);
+    for (long unsigned int i=0;i<coursePTRresults.size() && i<max_results;i++)
+    {
+        suggestions.push_back(coursePTRresults.at(i)->getCourseSubjectCode());
+    }
+    return suggestions;
+}
+
+vector<string> Trie::autocomplete(const string& prefix, size_t max_results)
+{
+    vector<string> suggestions;
+    vector<Course*> coursePTRresults = startsWithPrefix(prefix);
+    for (long unsigned int i=0;i<coursePTRresults.size() && i<max_results;i++)
+    {
+        suggestions.push_back(coursePTRresults.at(i)->getCourseSubjectCode());
+    }
+    return suggestions;
+}
+
+
+vector<Course*> Trie::startsWithPrefix(string prefix)
+{
+    vector<Course*> search_results;
+
+    //return the spot at which the prefix provided stops, recursively add all descendants we haven't visited
+    //to a vector, and if they match the prefix, add them to the vector search_results; we can do this recursively
+    TrieNode* cursor=this->getRoot();
+    vector<TrieNode*> searchForMatches;
+    prefixFinder(cursor, searchForMatches);
+
+    //now that we have the search node list
+    for (long unsigned int i=0;i<searchForMatches.size();i++)
+    {
+        TrieNode* subCursor=searchForMatches.at(i);
+        bool differences = false;
+        if (subCursor->getCoursePtr() != nullptr)
+        {
+            //compare the CoursePtr's subject code to what we have of the prefix. 
+            //if there are no differences by the time our prefix runs out,
+            for (long unsigned int i=0;i<prefix.length();i++)
+            {
+                if (prefix.at(i) != subCursor->getCoursePtr()->getCourseSubjectCode().at(i))
+                {
+                    differences = true;
+                }
+            }
+        }
+        //for each one that has no differences, add subCursor to the search_results;
+        if (differences == false && subCursor->getCoursePtr() != nullptr)
+        {
+            search_results.push_back(subCursor->getCoursePtr());
+        }
+    }
+    for (long unsigned int i=0;i<searchForMatches.size();i++)
+    {
+        searchForMatches.at(i)->setPrefixFlag(false); //fix this for future searches - what is the issue?
+    }
+    return search_results;
+} 
+
+//helper to recursively search for CoursePtrs
+void Trie::prefixFinder(TrieNode* currentNode, vector<TrieNode*>& searchForMatches)
+{
+    TrieNode* cursor = currentNode;
+    for (long unsigned int i=0;i<cursor->descendants.size();i++)
+    {
+        if (cursor->descendants.at(i) != nullptr && cursor->descendants.at(i)->getPrefixFlag() != true)
+        {
+            if (cursor->descendants.at(i) != nullptr)
+            {
+                TrieNode* subCursor = cursor->descendants.at(i);
+                for (long unsigned int j=0;j<subCursor->descendants.size();j++)
+                {
+                    if (subCursor->getPrefixFlag() != true)
+                    {
+                        searchForMatches.push_back(subCursor); //add it to the list to compare
+                        subCursor->setPrefixFlag(true); //make sure we don't add it again
+                        prefixFinder(subCursor, searchForMatches); //call it on its descendants
+                    }
+                }
+            }
+        }
+    }
+    //just in case we missed it.
+    if (cursor->getPrefixFlag() != true)
+    {
+        searchForMatches.push_back(cursor);
+        cursor->setPrefixFlag(true);
+    }
+}
+
+
+//given a subject code, it searches the trie to return a ptr to corresponding course object
+//used after the Lookup call returns a dict of responses to the trie_server.cpp
+Course* Trie::swapCodeforPtr(string course_subject_code)
+{
+    Course* answer = nullptr;
+    if (this->searchTrie(course_subject_code) != true)
+    {
+        return answer;
+    }
+
+    if (this->getRoot() == nullptr)
+    {
+        cout << "error, root not set" << endl;
+        return answer;
+    }
+
+    //set up a string stream to read the course 
+    stringstream ss(course_subject_code);
+    char current;
+    ss.get(current);
+    while (current == ' ')
+    {
+        ss.get(current);
+    }
+    TrieNode* cursor = this->getRoot();
+    int index = 0;
+    while (ss.eof() != true && current != ' ')
+    {
+        //CALCULATE THE INDEX OF THE CHARACTER
+        if (current=='-') //special character
+        {
+            index = 26;
+        }
+        else //accounts for 0-10 in 2nd half of subject code
+        {
+            if ( static_cast<int>(current) < 58 && static_cast<int>(current) >= 48 )
+            {
+                int subject_num=static_cast<int>(current) - 48; //48 is the difference between 0-9 and the ASCII value
+                index = subject_num + 27; //avoid first 27 slots in descendants indexing 26 letters, '-'
+            }
+            else if (static_cast<int>(current) > 123 && static_cast<int>(current) >=97) //account for lower-case letters in subject code and in special topics
+            {
+                int subject_num=static_cast<int>(current) - 97; //97 'a' becomes 65 'A', 122 becomes 90 'Z'
+                index = subject_num;
+            }
+            else
+            {
+                index = current - 'A';
+            }
+        }
+        //CHECK THE INDEXED THE LOCATION IS A POINTER OR NULLPTR - IF IT'S NULL, WE RETURN FALSE
+        if (cursor->descendants.at(index) == nullptr) 
+        {
+            return answer;
+        }
+        //prep for next loop
+        cursor=cursor->descendants.at(index);
+        ss.get(current);
+        index = 0;
+    }
+    
+    //verify we found the right course and assign the answer to the Course Ptr so we can return it
+    if (cursor->getLeafStatus() == true && cursor->getCoursePtr()->getCourseSubjectCode() == course_subject_code)
+    {
+        answer=cursor->getCoursePtr();
+    }
+    return answer;
+
+}
+
+
+//this is only used for CLI and debugging
+/*
+void Trie::outputCourseData(string course_subject_code)
+{
+    //40
+    const int LINE_LENGTH = 40;
+    const string LINE_WIDTH_40 = "----------------------------------------";
+
+    //if not in there
+    if (this->searchTrie(course_subject_code) != true)
+    {
+        cout << "Unfortunately, the course is not available." << endl;
+        return;
+    }
+
+    Course* cursor = this->swapCodeforPtr(course_subject_code);
+
+    //OUTPUT MESSAGE TO USER
+    cout << LINE_WIDTH_40 << endl;
+    cout << "Course found: " << course_subject_code << endl;
+
+    //PREPARE FOR OUTPUT
+    string course_subject="";
+    string course_title="";
+    string course_description="";
+    string course_notes="";
+    string reg_restricts="";
+    map<string,string> plansreqs;
+    string credit_hours="";
+    string course_skills="";
+    cursor->getCourseInfo(course_title, course_description, course_notes, course_subject, reg_restricts,
+    plansreqs, credit_hours, course_skills);
+
+    //BEGIN OUTPUT
+    cout << LINE_WIDTH_40 << endl;
+    cout << LINE_WIDTH_40 << endl;
+    cout << course_subject_code << endl;
+    cout << LINE_WIDTH_40 << endl;
+    cout << "COURSE TITLE: " << endl;    
+    string title_output = consoleOutputWordWrapping(course_title, LINE_LENGTH);
+    cout << title_output << endl;
+    cout << LINE_WIDTH_40 << endl;
+
+    cout << "COURSE DESCRIPTION: " << endl;
+    string description_output = consoleOutputWordWrapping(course_description, LINE_LENGTH);
+    cout << description_output << endl;
+    cout << LINE_WIDTH_40 << endl;
+    
+    cout << "SKILLS LEARNED: " << endl;
+    string skills_output = consoleOutputWordWrapping(course_skills,LINE_LENGTH);
+    cout << skills_output << endl;
+    cout << LINE_WIDTH_40 << endl;
+    
+    cout << "COURSE NOTES: " << endl;
+    string notes_output = consoleOutputWordWrapping(course_notes,LINE_LENGTH);
+    cout << notes_output << endl;
+    cout << LINE_WIDTH_40 << endl;
+
+    cout << "CREDIT HOURS: " << endl;
+    string hours_output = consoleOutputWordWrapping(credit_hours,LINE_LENGTH);
+    cout << hours_output << endl;
+    cout << LINE_WIDTH_40 << endl;
+
+    cout << "REGISTRATION RESTRICTIONS: " << endl;
+    string restricts_output = consoleOutputWordWrapping(reg_restricts,LINE_LENGTH);
+    cout << restricts_output << endl;
+    cout << LINE_WIDTH_40 << endl;
+
+    cout << "DEGREE PLAN REQUIREMENTS: " << endl;
+    for (auto i  = plansreqs.begin(); i!= plansreqs.end(); i++)
+    {
+        stringstream ss;
+        string this_line = "";
+        int gap = 12-i->first.length();
+        ss << i->first << left << setw(gap) << ": " << i->second;
+        getline(ss,this_line);
+        this_line=consoleOutputWordWrapping(this_line,LINE_LENGTH);
+        cout << this_line << endl;
+    }
+    cout << LINE_WIDTH_40 << endl;
+}
+
+//CLI use only
+string Trie::consoleOutputWordWrapping(string to_word_wrap, const int WIDTH_OF_LINE)
+{
+    string answer = "";
+
+    stringstream originalSS;
+    stringstream destinationSS;
+    originalSS << to_word_wrap;
+    int counter=0;
+    int gap_to_end = 0;
+    string word="";
+    do
+    {
+        getline(originalSS,word,' ');
+        word=word.append(" "); //re-add the ' ' that getline consumed
+        gap_to_end = WIDTH_OF_LINE - counter;
+        if (gap_to_end <= word.length())
+        {
+            destinationSS<<'\n';
+            counter=0;
+        }
+        destinationSS<<word;
+        counter = counter+word.length();
+    } while (originalSS.eof() != true);
+
+    char temp_val = ' ';
+    while (destinationSS.eof() != true)
+    {
+        destinationSS.get(temp_val);
+        //destinationSS >> temp_answer; //THIS IS WHERE WE'RE LOSING THE SPACE
+        answer.push_back(temp_val);
+    }
+
+    if (answer.back() == ' ')
+    {
+        answer.pop_back();
+    }
+    return answer;
+}
+//CLI use only
+void Trie::setUserStatus(bool new_status)
+{
+    //this->userStatus=new_status;
+}
+//CLI use only
+bool Trie::getUserStatus()
+{
+    //return this->userStatus;
+    return false;
+}
+//CLI use only
+//this may just be the main.cpp function below, not sure we need this function as part of the Trie();
+//test output and get functions through console I/O
+void Trie::getUserInput()
+{
+    cout << "CIRT - Course Information Retrieval Tool" << endl;
+    cout << "Status: On" << endl;
+    cout << "-----------------------------------------" << endl;
+    
+    this->setUserStatus(true);
+    
+    string input="";
+    cout << "MENU" << endl;
+    cout << "-----------------------------------------" << endl;
+    cout << "SEARCH:" << endl;
+    cout << "--1-- Add the 4-digit subject code ('CSCI')" << endl;
+    cout << "--2-- Add a dash or hyphen: -" << endl;
+    cout << "--3-- Add the 4-digit course number ('5832')" << endl;
+    cout << "--4-- Press Enter" << endl;
+    cout << "----- Example: CSCI-5832'" << endl;
+    cout << "QUIT:" << endl;
+    cout << "--1-- Press Q" << endl;
+    cout << "--2-- Press Enter" << endl;
+    cout << "-----------------------------------------" << endl;
+    cout << "Waiting for user input...---->  ";
+
+    do
+    {
+        cin >> input;
+        if (input == "Q")
+        {
+            this->setUserStatus(false);
+        }
+        else
+        {
+            //ERROR HANDLING
+            if (input.length() < 1 || input.length() >9)
+            {
+                cout << "Incorrect length provided. Please use 4 digits for the subject area, 1 digit for the dash/hyphen, and 4 digits for the course number." << endl;
+            }
+            /*
+            if (input.length()<9)
+            {
+                vector<Course*> auto_complete_suggestions=startsWithPrefix(input);
+                if (auto_complete_suggestions.size() <= 0)
+                {
+                    cout << "No courses match the provided code. Please try again later." << endl;
+                    return; //DELETE LATER - TODO
+                }
+            }
+
+            //if they just put a space instead
+            if (input.length() == 9 && input.at(5) == ' ')
+            {
+                input.at(5) = '-';
+            }
+
+            cout << "Searching for: " << input << endl;
+
+            outputCourseData(input);
+            cout << "-----------------------------------------" << endl;
+            cout << "Waiting for user input...---->";
+        }
+    } while(this->getUserStatus() == true);
+    
+    cout << "QUIT" << endl;
+    cout << "-----------------------------------------" << endl;
+    cout << "CIRT Program status: Off" << endl;
+}
+*/
