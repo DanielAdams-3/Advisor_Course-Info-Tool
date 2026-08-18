@@ -13,7 +13,7 @@ body {
   width:50%;
   max-width:70%;
   max-height:70%;
-  background-image: url('background.png');
+  background-image: url(/background.png);
   background-attachment: fixed;
   background-size: cover;
   position:absolute;

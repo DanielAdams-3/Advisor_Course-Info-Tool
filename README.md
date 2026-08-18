@@ -1,4 +1,4 @@
-# Acro - Advisor Course Retrieval Option
+# CIRT - Course Info Retrieval Tool
 ## About the Project
 Create a course information retrieval tool (CIRT), based on a prefix tree data structure.
 #### (1) User Function: Search by Course Number, Special Topics Course, or 
