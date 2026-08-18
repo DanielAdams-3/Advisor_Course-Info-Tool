@@ -13,7 +13,7 @@ body {
   width:50%;
   max-width:70%;
   max-height:70%;
-  background-image: url(/background.png);
+  background-image: url('background.png');
   background-attachment: fixed;
   background-size: cover;
   position:absolute;
@@ -494,7 +494,8 @@ option{
   cursor:default;
   border:none;
   outline:none;
-  background:black url(sidebarHeader.png);
+  background:black;
+  background-image:url('sidebarHeader.png');
   background-position:top;
   background-size:contain;
   background-repeat:no-repeat;
