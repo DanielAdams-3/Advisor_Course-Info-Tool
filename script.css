@@ -494,7 +494,7 @@ option{
   cursor:default;
   border:none;
   outline:none;
-  background:black url("/user/daad2295/codeserver/proxy/8080/sidebarHeader.png");
+  background:black url(sidebarHeader.png);
   background-position:top;
   background-size:contain;
   background-repeat:no-repeat;
