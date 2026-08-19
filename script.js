@@ -1,18 +1,20 @@
   const courseCatalog = [
     {
-      id: "CSCI-5253",
-      courseSubject:"CSCI 5253",
-      title: "Datacenter Scale Computing - Methods, Systems and Techniques",
-      credits: "3",
-      description: "Covers the primary problem solving strategies, methods and tools needed for data-intensive programs using large collections of computers typically called 'warehouse scale' or 'data-center scale' computers. Examines methods and algorithms for processing data-intensive applications, methods for deploying and managing large collections of computers in an on-demand infrastructure and issues of large-scale computer system design. Equivalent - duplicate degree credit not granted for CSCI 4253, CSPB 4253, ECEN 5253.",
-      notes: "The waitlist for this class is automatically re-sequenced to allow first priority to CS PhD students and second priority to CS masters students. Until open enrollment date, registration is restricted to Computer Science graduate students only. Non-CS students can waitlist before that date. Student may be dropped from course for non-attendance.",
-      restrictions: "Restricted to graduate students only. Recommended: CSCI 5273.",
-      reqCSENPHD: "Depth",
-      reqCSENMS: "Bin 3, Elective",
-      reqCSENMSCPS: "Bin 3, Elective, DSE Subplan, SSC Subplan",
-      reqNTENMSNE: "Elective",
-      reqAINTMSAI: "Elective",
-      className: "course",
+      CSCI5253: {
+        id: "CSCI-5253",
+        courseSubject:"CSCI 5253",
+        title: "Datacenter Scale Computing - Methods, Systems and Techniques",
+        credits: "3",
+        description: "Covers the primary problem solving strategies, methods and tools needed for data-intensive programs using large collections of computers typically called 'warehouse scale' or 'data-center scale' computers. Examines methods and algorithms for processing data-intensive applications, methods for deploying and managing large collections of computers in an on-demand infrastructure and issues of large-scale computer system design. Equivalent - duplicate degree credit not granted for CSCI 4253, CSPB 4253, ECEN 5253.",
+        notes: "The waitlist for this class is automatically re-sequenced to allow first priority to CS PhD students and second priority to CS masters students. Until open enrollment date, registration is restricted to Computer Science graduate students only. Non-CS students can waitlist before that date. Student may be dropped from course for non-attendance.",
+        restrictions: "Restricted to graduate students only. Recommended: CSCI 5273.",
+        reqCSENPHD: "Depth",
+        reqCSENMS: "Bin 3, Elective",
+        reqCSENMSCPS: "Bin 3, Elective, DSE Subplan, SSC Subplan",
+        reqNTENMSNE: "Elective",
+        reqAINTMSAI: "Elective",
+        className: "course",
+      }
     },
   ]
 
@@ -51,13 +53,7 @@
       resultDiv.textContent='';
       return;
     }
-    if(word.charAt(4)==='-')
-      {
-        let first = word.substring(0,4);
-        let second= word.substring(5);
-        word=first+' '+second;
-      }
-
+    word=word.substring(0,4)+word.substring(5);
     let result = findCourse(word);
     if (result === undefined){
       resultMessage.textContent = "Not found";
