@@ -215,7 +215,8 @@
     lookupforTopics(courseSelected);
   }
 
-  //UPDATEME
+  //UPDATEME 
+  /*
   async function lookupforTopicTerm(x) {
     const prefix = x;
 
@@ -479,33 +480,6 @@
     const resultDiv = document.getElementById('resultRestrictions');
     const resultMessage = document.getElementById('searchResultMessage');
 
-    if (!word) {
-      resultDiv.textContent='';
-      return;
-    }
-    resultDiv.textContent = ' ';
-    resultMessage.textcontent= 'Checking...';
-    try {
-      const resp = await fetch('lookupForRestrictions?q=' + encodeURIComponent(word)); //removed first forward slash from '/lookup?q=' per Prof. Guinn 11.28.2025
-        if (!resp.ok) {
-          const text = await resp.text();
-          return;
-        }
-        const text = await resp.text();
-        if (text.startsWith('FOUND ')) {
-          const w = text.substring('FOUND '.length);
-          //resultDiv.textContent =w;
-        } else if (text.startsWith('NOT_FOUND ')) {
-          const w = text.substring('NOT_FOUND '.length);
-          //resultMessage.textContent='' + w + '"' + ' was not found.';
-          resultMessage.textcontent='No results found';
-        }
-          else {
-          resultDiv.textContent = text;
-        }
-      }
-      catch (err) {
-      }
   }
 
   async function lookupForHours(x) {
@@ -537,27 +511,7 @@
     }
     resultDiv.textContent= ' ';
     resultMessage.textcontent= 'Checking...';
-    try {
-      const resp = await fetch('lookupForDegreeReqs?q=' + encodeURIComponent(word)); //removed first forward slash from '/lookup?q=' per Prof. Guinn 11.28.2025
-      if (!resp.ok) {
-        const text = await resp.text();
-        return;
-      }
-      const text = await resp.text();
-      if (text.startsWith('FOUND ')) {
-        const w = text.substring('FOUND '.length);
-        //resultDiv.textContent =w;
-      } else if (text.startsWith('NOT_FOUND ')) {
-        const w = text.substring('NOT_FOUND '.length);
-        //resultMessage.textContent='' + w + '"' + ' was not found.';
-        resultMessage.textcontent='No results found';
-      }
-        else {
-        resultDiv.textContent = text;
-      }
-    }
-    catch (err) {
-    }
+
   }
   async function autocomplete() {
     const prefix = document.getElementById('prefixInput').value.trim();
