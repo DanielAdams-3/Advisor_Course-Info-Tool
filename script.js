@@ -74,9 +74,10 @@
 
   //copilot wrote first draft of this, verify
   function findCourse(requestedSubject) {
-    return courseCatalog.find(course =>
+    let result = courseCatalog.find(course =>
     course.subjectCode === requestedSubject
     );
+    return result.subjectCode;
   }
 
   //UPDATEME
