@@ -15,12 +15,13 @@
       className: "course",
     },
   ]
+
+
   //copilot wrote this, does this work?
   function autocomplete(prefix) {
     return courses.filter(course =>
     course.subjectCode
-      .toUpperCase()
-      .startsWith(prefix)
+      .startsWith(prefix.toUpperCase())
     );
   }
   
@@ -51,13 +52,13 @@
       return;
     }
 
-    let result = findCourse(word); //this replaces 
+    let result = findCourse(word);
     if (result === undefined){
       resultMessage.textContent = "Not found";
       resultDiv.textContent='';
       return;
     }
-    if(result.charAt(4)==='-') //issue, this is turning 'blank' into 'blan-k-'
+    if(result.charAt(4)==='-')
     {
       let first = result.substring(0,4);
       let second= result.substring(5);
