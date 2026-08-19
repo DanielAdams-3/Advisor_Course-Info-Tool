@@ -12,7 +12,7 @@
       reqCSENMSCPS: "Bin 3, Elective, DSE Subplan, SSC Subplan",
       reqNTENMSNE: "Elective",
       reqAINTMSAI: "Elective",
-      className: "courseObject",
+      className: "course",
     },
   ]
   //copilot wrote this, does this work?
@@ -36,36 +36,45 @@
     lookupForDegreeReqs(currSearch);
     lookupForSkills(currSearch);
   }
-  //copilot wrote this, does this work?
-  function findCourse(requestedSubject) {
-    return courses.find(course =>
-    course.subjectCode === requestedSubject
-    );
-  }
 
-  //REPLACEME
+
+  //UPDATEME
   async function lookupForSubject(x) {
     const word = x;
+    
     const resultDiv = document.getElementById('resultSubject');
     const resultMessage = document.getElementById('searchResultMessage');
+    
     if (!word) {
       resultMessage.textContent = "Please enter a subject code";
       resultDiv.textContent='';
       return;
     }
-    text = findCourse(word);
-    if(text.charAt(4)==='-') //issue, this is turning 'blank' into 'blan-k-'
-    {
-      let first = text.substring(0,4);
-      let second= text.substring(5);
-      temp=first+' '+second;
+
+    let result = findCourse(word); //this replaces 
+    if (result === undefined){
+      resultMessage.textContent = "Not found";
+      resultDiv.textContent='';
+      return;
     }
-    if (temp.length>10)
+    if(result.charAt(4)==='-') //issue, this is turning 'blank' into 'blan-k-'
     {
-      temp=temp.substring(0,9);
+      let first = result.substring(0,4);
+      let second= result.substring(5);
+      result=first+' '+second;
     }
-    answer=temp;
-    resultDiv.textContent=answer;
+    if (result.length>10)
+    {
+      result=temp.substring(0,9);
+    }
+    resultDiv.textContent=result;
+  }
+
+  //copilot wrote first draft of this, verify
+  function findCourse(requestedSubject) {
+    return courseCatalog.find(course =>
+    course.subjectCode === requestedSubject
+    );
   }
 
   function TopicsSearch() {
