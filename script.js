@@ -51,6 +51,12 @@
       resultDiv.textContent='';
       return;
     }
+    if(word.charAt(4)==='-')
+      {
+        let first = word.substring(0,4);
+        let second= word.substring(5);
+        word=first+' '+second;
+      }
 
     let result = findCourse(word);
     if (result === undefined){
@@ -58,12 +64,7 @@
       resultDiv.textContent='';
       return;
     }
-    if(result.charAt(4)==='-')
-    {
-      let first = result.substring(0,4);
-      let second= result.substring(5);
-      result=first+' '+second;
-    }
+
     if (result.length>10)
     {
       result=temp.substring(0,9);
