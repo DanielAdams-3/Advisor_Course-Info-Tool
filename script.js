@@ -41,7 +41,7 @@
 
   //UPDATEME
   async function lookupForSubject(x) {
-    const word = x;
+    let word = x;
     
     const resultDiv = document.getElementById('resultSubject');
     const resultMessage = document.getElementById('searchResultMessage');
