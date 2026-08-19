@@ -69,21 +69,18 @@
     var topicsTermDisplayed=document.getElementById('topicsTermDisplayed');
     let y = topicsTermDisplayed.options.length;
 
-    //clears terms listed
     if (y>0){
       while (y>0){
         topicsTermDisplayed.remove(0);
         y = topicsTermDisplayed.options.length;
       }
     } 
-    //add a blank option
     let blankTerm=document.createElement("option");
     blankTerm.text=" ";
     blankTerm.value="blank";
     topicsTermDisplayed.appendChild(blankTerm);
 
 
-    //clears sections listed
     let topicsSectionsListed = document.getElementById('topicsDisplayed');
     let x = topicsSectionsListed.options.length;
     if (x>0){
@@ -92,8 +89,8 @@
         x=topicsSectionsListed.options.length;
       }
     }
-    //add a blank option 
-    let blankSection=document.createElement("option");
+
+      let blankSection=document.createElement("option");
     blankSection.text=" ";
     blankSection.value="blank";
     topicsSectionsListed.appendChild(blankSection);
@@ -103,10 +100,9 @@
 
   //dynamically updates topics sections when the user selects a topic course and then picks a semester
   function populateTopics(){
-    let courseSelected=document.getElementById('topicsCourseSelected').value; //now we update which options are available
+    let courseSelected=document.getElementById('topicsCourseSelected').value;
 
-    //clears sections available
-    let topicsSectionsListed = document.getElementById('topicsDisplayed'); //.value only gets the topic selected, we want the topics list itself
+    let topicsSectionsListed = document.getElementById('topicsDisplayed');
     let x = topicsSectionsListed.options.length;
     if (x>0){
       while (x>0){
@@ -114,7 +110,7 @@
         x=topicsSectionsListed.options.length;
       }
     }
-    //add a blank option 
+
     let blankSection=document.createElement("option");
     blankSection.text=" ";
     blankSection.value="blank";
@@ -152,7 +148,7 @@
     
     topicsSuggestionsDiv.textContent = 'Searching...';
     try {
-      const resp = await fetch('lookupForTopicsTerms?q=' + encodeURIComponent(prefix)); //this pulls a dictionary of results FIXME
+      const resp = await fetch('lookupForTopicsTerms?q=' + encodeURIComponent(prefix));
       if (!resp.ok) {
         const text = await resp.text();
         topicsSuggestionsDiv.textContent = 'Error: ' + resp.status + ' ' + resp.statusText + '\\n' + text;
@@ -224,7 +220,6 @@
             topicsTermDisplayed.appendChild(newTerm);
         });
 
-        //topicsSuggestionsDiv.textContent=myArray.length;
         topicsSuggestionsDiv.textContent='';
       }
       else {
@@ -244,7 +239,6 @@
     //let prefix = x;
     let q=x.trim();
     let prefix = q.substring(0,q.length);
-    //let topicsSuggestionsDiv=document.getElementById('topicsSuggestions'); //displays number of results and outputs error messages
     let topicsSuggestionsDiv=document.getElementById('searchResultMessage');
     let topicsDisplayed=document.getElementById('topicsDisplayed'); //dropdown #1 - special topics list that we will update
     

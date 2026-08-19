@@ -1,21 +1,10 @@
 # CIRT - Course Info Retrieval Tool
 ## About the Project
 Create a course information retrieval tool (CIRT), based on a prefix tree data structure.
-#### (1) User Function: Search by Course Number, Special Topics Course, or 
+#### (1) User Function: Search by Course Number
 The first function that the user will be able to use is searching for course information by providing a 9-digit string representing a course subject code (e.g., CSCI-5202). If the course is in the trie, it will output all the stored course information with headers for each section (e.g., CREDIT HOURS, 3). The function provides error messages based on various scenarios (e.g., if server is inactive, if the input is too short, if the course subject code does not match anything in the trie). Multiple requests can be made in a single session.
-
-## Program Overview
-### Step 1: Program Reads Data from CSV
-To start, the program reads in data. This is done by calling buildTrie which itself calls readData.
-  void trie::buildTrie(string filename);
-  void trie::readData(string filename);
-The buildTrie function reads in data, creates a vector of Course* populated with the course information, creates a new Trie object, then populates the trie with each course until the vector is done iterating.
-### Step 2: Program Builds the Trie
-A new Trie is initialized, a dynamically allocated root TrieNode is created, and the Trie creates a series of dynamically allocated TrieNodes based on the course subject codes. At the end of each path is a leaf node that represents the final character in each string. Each leaf node stores a pointer to a Course object which will contain the stored course information. 
-### Step 3: Program Starts Server
-Once the trie is built, the server will be created and is ready to be used. The locally hosted web address that is associated with the server is provided to output. 
-### Step 4: Tool Available for Use by User
-Once at the web address, the user can use the tool for searches or to get autocomplete suggestions.
+#### (2) Speical Topics Search
+#### (3) AutoComplete - get suggestions of available courses
 
 
 ## Future Work
