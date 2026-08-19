@@ -28,13 +28,13 @@
     const courseSelected=document.getElementById('suggestionSelected').value; 
     let currSearch=courseSelected;
     lookupForSubject(currSearch);
-    lookupForTitle(currSearch);
-    lookupForHours(currSearch);
-    lookupForDescription(currSearch);
-    lookupForNotes(currSearch);
-    lookupForRestrictions(currSearch);
-    lookupForDegreeReqs(currSearch);
-    lookupForSkills(currSearch);
+    //lookupForTitle(currSearch);
+    //lookupForHours(currSearch);
+    //lookupForDescription(currSearch);
+    //lookupForNotes(currSearch);
+    //lookupForRestrictions(currSearch);
+    //lookupForDegreeReqs(currSearch);
+    //lookupForSkills(currSearch);
   }
 
 
@@ -77,6 +77,7 @@
     );
   }
 
+  //UPDATEME
   function TopicsSearch() {
     const courseSelected=document.getElementById('topicsCourseSelected').value; 
     const termSelected = document.getElementById('topicsTermDisplayed').value; 
@@ -84,13 +85,13 @@
     let section = topicsSelected.substring(0,4);
     let currSearch=courseSelected+'-'+termSelected+'-'+section;
     lookupForSubject(currSearch);
-    lookupForDegreeReqs(currSearch);
-    lookupForDescription(currSearch);
-    lookupForHours(currSearch);
-    lookupForNotes(currSearch);
-    lookupForRestrictions(currSearch);
-    lookupForTitle(currSearch);
-    lookupForSkills(currSearch);
+    //lookupForDegreeReqs(currSearch);
+    //lookupForDescription(currSearch);
+    //lookupForHours(currSearch);
+    //lookupForNotes(currSearch);
+    //lookupForRestrictions(currSearch);
+    //lookupForTitle(currSearch);
+    //lookupForSkills(currSearch);
   }
 
   function showHide() {
@@ -213,15 +214,13 @@
     lookupforTopics(courseSelected);
   }
 
-
-
-  //this we are replacing
+  //UPDATEME
   async function lookupforTopicTerm(x) {
     const prefix = x;
-    let topicsTermDisplayed=document.getElementById('topicsTermDisplayed'); //dropdown #2
-    //let topicsSuggestionsDiv=document.getElementById('topicsSuggestions'); //displays number of results and outputs error messages
+
+    let topicsTermDisplayed=document.getElementById('topicsTermDisplayed');
     let topicsSuggestionsDiv=document.getElementById('searchResultMessage');
-    let topicsDisplayed=document.getElementById('topicsDisplayed'); //dropdown #1 - special topics list
+
     if (!prefix) {
       topicsSuggestionsDiv.textContent = 'Topic term not able to run because prefix = x is empty';
       return "";
