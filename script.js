@@ -456,7 +456,6 @@
     for (let m=0; m< courseCatalog.length;m++)
     {
       let currCourse=courseCatalog[m];
-      console.log(currCourse.courseSubject);
       if (currCourse.courseSubject.startsWith(subjectPrefix))
       {
         suggestedCourseObjs.push(currCourse);
