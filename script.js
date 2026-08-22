@@ -131,7 +131,7 @@
     let courseSelected=document.getElementById('topicsCourseSelected').value; //this gets the course  
     let listSemester = [];
 
-    listSemester = lookupforTopicTerm(courseSelected);
+    listSemester = lookupforTopicTerm();
     if (listSemester.length===0){
       searchResultMessage.textContent="No data available for the selected topics course";
       return listSemester;
@@ -292,7 +292,7 @@
       newTopic.value=new_option_value;
       topicsSectionsListed.appendChild(newTopic);
     }
-    searchResultMessage.textContent="";
+    searchResultMessage.textContent="Available topics added";
     return;
   }
 
@@ -385,7 +385,6 @@
   }
   
 
-  //IN PROGRESS
   function populateAutocompleteSuggestions(){
     //Step 1 - clear out all previous suggestions
     const courseSuggestedList=document.getElementById('suggestionSelected'); 
@@ -432,7 +431,7 @@
       newSuggestion.value=new_option_value;
       courseSuggestedList.appendChild(newSuggestion);
     }
-    searchResultMessage.textContent="";
+    searchResultMessage.textContent="Available topics added";
     return;
 
   }

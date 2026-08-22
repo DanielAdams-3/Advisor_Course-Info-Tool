@@ -99,3 +99,10 @@ I was unable to add a search-by-title option. Instead of remaking a new trie, I 
   ##### https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html
   ##### https://www.geeksforgeeks.org/python/how-to-fix-no-module-named-pandas/
   ##### Microsoft Copilot was used in debugging and adding features realted to data upload through Python and converting data stored in a .csv to .js files
+  ##### https://stackoverflow.com/questions/921384/java-string-array-is-there-a-size-of-method
+  ##### https://help.webflow.com/hc/en-us/articles/33961409134227-Control-text-wrapping-line-breaking-and-truncation#how-to-set-wrapping-behavior
+  ##### https://www.geeksforgeeks.org/css/text-truncate-in-css/
+  ##### https://stackoverflow.com/questions/18578388/html-dropdown-select-with-text-wrap-and-border-after-every-value-option
+  ##### https://inclusive-components.design/collapsible-sections/
+  ##### https://www.w3schools.com/howto/howto_js_tabs.asp
+  ##### https://stackoverflow.com/questions/15487408/buttons-text-vertical-align

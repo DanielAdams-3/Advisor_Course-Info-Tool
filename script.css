@@ -2,15 +2,6 @@
 /*dark grey: #777777, black: #000000, white: #ffffff, gold: #CFB87C*/
 /*coral: ff6060, green: 00a491, blue:#73c8e2:*/
 /*REMINDER - when using div  class ="", need to use a href="javascript", but with button class, use onclick()*/
-/*
-https://stackoverflow.com/questions/921384/java-string-array-is-there-a-size-of-method
-https://help.webflow.com/hc/en-us/articles/33961409134227-Control-text-wrapping-line-breaking-and-truncation#how-to-set-wrapping-behavior
-https://www.geeksforgeeks.org/css/text-truncate-in-css/
-https://stackoverflow.com/questions/18578388/html-dropdown-select-with-text-wrap-and-border-after-every-value-option
-https://inclusive-components.design/collapsible-sections/
-https://www.w3schools.com/howto/howto_js_tabs.asp
-https://stackoverflow.com/questions/15487408/buttons-text-vertical-align
-*/
 
 /*define style for body text*/
 body {

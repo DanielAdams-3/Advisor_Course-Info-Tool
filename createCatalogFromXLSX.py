@@ -55,7 +55,7 @@ def clean(value):
     return str(value).rstrip("*").strip()
 
 with open(js_file, "w", encoding="utf-8") as f:
-    f.write("const courseCatalog = [\n")
+    f.write("const topicsCourseCatalog = [\n")
     for _, row in df.iterrows():
         f.write(" {\n")
         f.write(f' id: {json.dumps(clean(row["id"]))},\n')
