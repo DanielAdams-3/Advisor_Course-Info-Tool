@@ -2,15 +2,8 @@
 /*dark grey: #777777, black: #000000, white: #ffffff, gold: #CFB87C*/
 /*coral: ff6060, green: 00a491, blue:#73c8e2:*/
 /*REMINDER - when using div  class ="", need to use a href="javascript", but with button class, use onclick()*/
-/*
-https://stackoverflow.com/questions/921384/java-string-array-is-there-a-size-of-method
-https://help.webflow.com/hc/en-us/articles/33961409134227-Control-text-wrapping-line-breaking-and-truncation#how-to-set-wrapping-behavior
-https://www.geeksforgeeks.org/css/text-truncate-in-css/
-https://stackoverflow.com/questions/18578388/html-dropdown-select-with-text-wrap-and-border-after-every-value-option
-https://inclusive-components.design/collapsible-sections/
-https://www.w3schools.com/howto/howto_js_tabs.asp
-https://stackoverflow.com/questions/15487408/buttons-text-vertical-align
-*/
+
+/*https://stackoverflow.com/questions/921384/java-string-array-is-there-a-size-of-method*/
 
 /*define style for body text*/
 body {
@@ -434,6 +427,11 @@ button:hover, .buttonHelp:hover
   content: '\2212';
 }
 
+/*
+https://help.webflow.com/hc/en-us/articles/33961409134227-Control-text-wrapping-line-breaking-and-truncation#how-to-set-wrapping-behavior
+https://www.geeksforgeeks.org/css/text-truncate-in-css/
+https://stackoverflow.com/questions/18578388/html-dropdown-select-with-text-wrap-and-border-after-every-value-option
+*/
 .selectRow{
   max-width:100%;
   min-width:100%; 
@@ -597,6 +595,9 @@ option{
     width:33%;
   }
 }
+/*https://inclusive-components.design/collapsible-sections/*/
+/*https://www.w3schools.com/howto/howto_js_tabs.asp*/
+/*https://stackoverflow.com/questions/15487408/buttons-text-vertical-align*/
 
 .tab {
   overflow: hidden;
@@ -640,7 +641,6 @@ option{
 .tablinks:after {
   content:none;
 }
-
 /* Style the tab content */
 /*affects ids= #searchWithHelpTab, #searchTraditionalTab, #searchByTopics*/
 .tabContent {
@@ -649,3 +649,12 @@ option{
   border: 2px solid #777777;
   border-top: none;
 }
+
+/*
+      <div class="row" style="margin-top:0.5rem;">
+        <strong><p>Number of Results Found:&nbsp;</p></strong><p id="counter"></p>
+      </div>
+      <div class="row" style="margin-top:0.5rem;">
+        <p style="margin-top:0rem;margin-bottom:0rem;"><strong>Number of Results Found:&nbsp;</strong></p><p id="topicsSuggestions"></p>
+      </div>
+      */

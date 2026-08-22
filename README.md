@@ -35,8 +35,8 @@ I was unable to add a search-by-title option. Instead of remaking a new trie, I 
   ###### https://www.geeksforgeeks.org/dsa/auto-complete-feature-using-trie/
   ###### https://www.geeksforgeeks.org/javascript/where-to-put-javascript-in-an-html-document/
 
-## HTML, CSS, Javascript Resources consulted after initial project
-  #### //FIXED-competing calls was preventing resubmission, happens when onclick is used multiple times for a button and then clicked
+## HTML, CSS, Javascript, Pandas Resources consulted after initial project
+  ##### //FIXED-competing calls was preventing resubmission, happens when onclick is used multiple times for a button and then clicked
   ##### //https://stackoverflow.com/questions/17433557/how-to-save-user-input-into-a-variable-in-html-and-javascript
   ##### https://www.w3schools.com/html/html_responsive.asp
   ##### https://www.w3schools.com/css/css_rwd_intro.asp
@@ -96,3 +96,6 @@ I was unable to add a search-by-title option. Instead of remaking a new trie, I 
   ##### https://www.w3schools.com/howto/howto_js_tabs.asp
   ##### https://www.geeksforgeeks.org/html/how-to-style-the-option-of-an-html-select-element/
 
+  ##### https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html
+  ##### https://www.geeksforgeeks.org/python/how-to-fix-no-module-named-pandas/
+  ##### Microsoft Copilot was used in debugging and adding features realted to data upload through Python and converting data stored in a .csv to .js files
