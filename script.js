@@ -582,7 +582,24 @@
 
     let topicsTermSelected=document.getElementById('topicsTermDisplayed');
     let topicsSectionSelected=document.getElementById('topicsDisplayed');
+    let autocompletesuggestionSelected=document.getElementById('suggestionSelected');
+    autocompletesuggestionSelected.text="";
+    autocompletesuggestionSelected.value="blank";
 
+    let y = autocompletesuggestionSelected.options.length;
+
+    if (y>0){
+      while (y>0){
+        autocompletesuggestionSelected.remove(0);
+        y = autocompletesuggestionSelected.options.length;
+      } 
+    }
+    if (y=== 0){
+      let blankSuggestion=document.createElement("option");
+      blankSuggestion.text=" ";
+      blankSuggestion.value="blank";
+      autocompletesuggestionSelected.appendChild(blankSuggestion);
+    }
     topicsSectionSelected.value="";
     topicsTermSelected.value="";
     prefixInput.value="";
