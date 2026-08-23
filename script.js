@@ -431,7 +431,7 @@
       newSuggestion.value=new_option_value;
       courseSuggestedList.appendChild(newSuggestion);
     }
-    searchResultMessage.textContent="Available topics added";
+    searchResultMessage.textContent="Suggestions added";
     return;
 
   }
@@ -456,6 +456,7 @@
     for (let m=0; m< courseCatalog.length;m++)
     {
       let currCourse=courseCatalog[m];
+      console.log(currCourse.courseSubject);
       if (currCourse.courseSubject.startsWith(subjectPrefix))
       {
         suggestedCourseObjs.push(currCourse);
@@ -579,6 +580,11 @@
     let requirements = document.getElementById('resultReqs');
     let skills = document.getElementById('resultSkills');
 
+    let topicsTermSelected=document.getElementById('topicsTermDisplayed');
+    let topicsSectionSelected=document.getElementById('topicsDisplayed');
+
+    topicsSectionSelected.value="";
+    topicsTermSelected.value="";
     prefixInput.value="";
     courseInput.value="";
     topicsInput.value="blank";
