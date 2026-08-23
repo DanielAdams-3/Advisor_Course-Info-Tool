@@ -4,7 +4,9 @@
   //https://www.geeksforgeeks.org/javascript/javascript-string-startswith-method/
   //https://www.geeksforgeeks.org/javascript/javascript-array-sort-method/
   //https://www.geeksforgeeks.org/javascript/javascript-array-splice-method/
-
+  //https://www.geeksforgeeks.org/javascript/how-to-include-a-javascript-file-in-another-javascript-file/
+  
+  
   //helper function for traditional search
   //returns the course object
   function retrieveCourseObject(requestedSubject) {
@@ -129,7 +131,7 @@
     let courseSelected=document.getElementById('topicsCourseSelected').value; //this gets the course  
     let listSemester = [];
 
-    listSemester = lookupforTopicTerm(courseSelected);
+    listSemester = lookupforTopicTerm();
     if (listSemester.length===0){
       searchResultMessage.textContent="No data available for the selected topics course";
       return listSemester;
@@ -290,7 +292,7 @@
       newTopic.value=new_option_value;
       topicsSectionsListed.appendChild(newTopic);
     }
-    searchResultMessage.textContent="";
+    searchResultMessage.textContent="Available topics added";
     return;
   }
 
@@ -371,7 +373,7 @@
         description.textContent=courseObj.description;
         notes.textContent=courseObj.notes;
         restrictions.textContent=courseObj.restrictions;
-        requirements.textContent="CSEN-PhD: "+courseObj.reqCSENPHD+"\nCSEN-MS: "+courseObj.reqCSENMS+"\nCSEN-MSCPS: "+courseObj.reqCSENMSCPS+"\nNTEN-MSNE: "+courseObj.reqNTENMSNE+"\nAINT-MSAI: "+courseObj.reqAINTMSAI;
+        requirements.textContent=+courseObj.reqCSENPHD+"\n"+courseObj.reqCSENMS+"\n"+courseObj.reqCSENMSCPS+"\n"+courseObj.reqNTENMSNE+"\n"+courseObj.reqAINTMSAI;
         skills.textContent=courseObj.skills;
 
         searchResultMessage="";
@@ -383,7 +385,6 @@
   }
   
 
-  //IN PROGRESS
   function populateAutocompleteSuggestions(){
     //Step 1 - clear out all previous suggestions
     const courseSuggestedList=document.getElementById('suggestionSelected'); 
@@ -430,7 +431,7 @@
       newSuggestion.value=new_option_value;
       courseSuggestedList.appendChild(newSuggestion);
     }
-    searchResultMessage.textContent="";
+    searchResultMessage.textContent="Suggestions added";
     return;
 
   }
@@ -579,6 +580,28 @@
     let requirements = document.getElementById('resultReqs');
     let skills = document.getElementById('resultSkills');
 
+    let topicsTermSelected=document.getElementById('topicsTermDisplayed');
+    let topicsSectionSelected=document.getElementById('topicsDisplayed');
+    let autocompletesuggestionSelected=document.getElementById('suggestionSelected');
+    autocompletesuggestionSelected.text="";
+    autocompletesuggestionSelected.value="blank";
+
+    let y = autocompletesuggestionSelected.options.length;
+
+    if (y>0){
+      while (y>0){
+        autocompletesuggestionSelected.remove(0);
+        y = autocompletesuggestionSelected.options.length;
+      } 
+    }
+    if (y=== 0){
+      let blankSuggestion=document.createElement("option");
+      blankSuggestion.text=" ";
+      blankSuggestion.value="blank";
+      autocompletesuggestionSelected.appendChild(blankSuggestion);
+    }
+    topicsSectionSelected.value="";
+    topicsTermSelected.value="";
     prefixInput.value="";
     courseInput.value="";
     topicsInput.value="blank";
@@ -605,106 +628,3 @@
     showHide();
     changeMenu(menuButton);
   });
-
-
-  const courseCatalog = [
-    {
-      id:"CSCI-5253",
-      courseSubject:"CSCI 5253",
-      title: "Datacenter Scale Computing - Methods, Systems and Techniques",
-      credits: "3",
-      description: "Covers the primary problem solving strategies, methods and tools needed for data-intensive programs using large collections of computers typically called 'warehouse scale' or 'data-center scale' computers. Examines methods and algorithms for processing data-intensive applications, methods for deploying and managing large collections of computers in an on-demand infrastructure and issues of large-scale computer system design. Equivalent - duplicate degree credit not granted for CSCI 4253, CSPB 4253, ECEN 5253.",
-      notes: "The waitlist for this class is automatically re-sequenced to allow first priority to CS PhD students and second priority to CS masters students. Until open enrollment date, registration is restricted to Computer Science graduate students only. Non-CS students can waitlist before that date. Student may be dropped from course for non-attendance.",
-      restrictions: "Restricted to graduate students only. Recommended: CSCI 5273.",
-      skills: "TBD",
-      reqCSENPHD: "Depth",
-      reqCSENMS: "Bin 3, Elective",
-      reqCSENMSCPS: "Bin 3, Elective, DSE Subplan, SSC Subplan",
-      reqNTENMSNE: "Elective",
-      reqAINTMSAI: "Elective",
-    },
-    {
-      id:"CSCI-5214",
-      courseSubject: "CSCI 5214",
-      title: "Big Data Architecture",
-      credits: "3",
-      description: "TBD",
-      notes: "The waitlist for this class is automatically re-sequenced to allow first priority to CS PhD students and second priority to CS masters students. Until open enrollment date, registration is restricted to Computer Science graduate students only. Non-CS students can waitlist before that date. Student may be dropped from course for non-attendance.",
-      restrictions: "TBD",
-      skills: "TBD",
-      reqCSENPHD: "Depth",
-      reqCSENMS: "Bin 3, Elective",
-      reqCSENMSCPS: "Bin 3, Elective, AIG Subplan, DSE Subplan, SSC Subplan",
-      reqNTENMSNE: "Elective",
-      reqAINTMSAI: "Depth, Elective",
-    },
-    {
-      id:"CSCI-7000",
-      courseSubject: "CSCI 7000",
-      title: "Current Topics in Computer Science",
-      credits: "1-4",
-      description: " Covers research topics of current interest in computer science that do not fall into a standard subarea. Repeatable: Repeatable for up to 18.0 total credit hours. Allows multiple enrollment in term.",
-      notes: "Use 'Search by Topics Course' for section-specific details",
-      restrictions: "Use 'Search by Topics Course' for section-specific details",
-      skills: "Use 'Search by Topics Course' for section-specific details",
-      reqCSENPHD: "Use 'Search by Topics Course' for section-specific details",
-      reqCSENMS: "Use 'Search by Topics Course' for section-specific details",
-      reqCSENMSCPS: "Use 'Search by Topics Course' for section-specific details",
-      reqNTENMSNE: "Use 'Search by Topics Course' for section-specific details",
-      reqAINTMSAI: "Use 'Search by Topics Course' for section-specific details",
-    }
-  ]
-
-  const topicsCourseCatalog = [
-    {
-      id: "CSCI-7000-2267-002",
-      courseSubject: "CSCI 7000",
-      term: "Fall 2026",
-      section: "002",
-      title: "Intro to Quantum Programming",
-      credits: "3",
-      description: "Not provided",
-      notes: "Until open enrollment date, registration is restricted to Computer Science graduate students only. Non-CS students can waitlist before that date. The waitlist for this class is automatically re-sequenced to allow first priority to CS PhD students and second priority to CS masters students. Student may be dropped from course for non-attendance",
-      restrictions: "Restricted to graduate students only",
-      skills: "N/A",
-      reqCSENPHD: "Depth",
-      reqCSENMS: "Elective",
-      reqCSENMSCPS: "Elective",
-      reqNTENMSNE: "Elective",
-      reqAINTMSAI: "Elective",
-    },
-    {
-      id: "CSCI-7000-2267-005",
-      courseSubject: "CSCI 7000",
-      term: "Fall 2026",
-      section: "005",
-      title: "Neuro-Symbolic Approach to NLP",
-      credits: "3",
-      description: "Not provided",
-      notes: "Until open enrollment date, registration is restricted to Computer Science graduate students only. Non-CS students can waitlist before that date. The waitlist for this class is automatically re-sequenced to allow first priority to CS PhD students and second priority to CS masters students. Student may be dropped from course for non-attendance",
-      restrictions: "Restricted to graduate students only",
-      skills: "N/A",
-      reqCSENPHD: "Depth",
-      reqCSENMS: "Elective",
-      reqCSENMSCPS: "Elective",
-      reqNTENMSNE: "Elective",
-      reqAINTMSAI: "Elective",
-    },
-    {
-      id: "CSCI-7000-2267-007",
-      courseSubject: "CSCI 7000",
-      term: "Fall 2026",
-      section: "007",
-      title: "Logic and Future of Programming",
-      credits: "3",
-      description: "In a future where AI models help write most software, what kinds of control should you and I exercise over the programming process? How can we build mental models of and reason about programs we didn't write or which we specified ambiguously? In a hypothetical future in which AI models help specify and prove correctness of the software they help write, how should we use such power to best exercise our own creative choice? What is the right unit of automation which both speeds up software engineering and preserves our agency in the process? How can we reason about whether a goal is actually realizable or whether an agent is making progress toward realizing it? When is a given formal specification of our intentions a \"reasonable\" one? This course will explore such questions through the lens of formal logic. We will start with a primer on logic as a tool for thinking about ambiguity, specification, and model building. Depending on interest, we may cover connections between learning in symbolic languages and realizability questions or other topics at the interface of AI and logic.",
-      notes: "Until open enrollment date, registration is restricted to Computer Science graduate students only. Non-CS students can waitlist before that date. The waitlist for this class is automatically re-sequenced to allow first priority to CS PhD students and second priority to CS masters students. Student may be dropped from course for non-attendance",
-      restrictions: "Restricted to graduate students only",
-      skills: "N/A",
-      reqCSENPHD: "Depth",
-      reqCSENMS: "Elective",
-      reqCSENMSCPS: "Elective",
-      reqNTENMSNE: "Elective",
-      reqAINTMSAI: "Elective",
-    },
-  ]
