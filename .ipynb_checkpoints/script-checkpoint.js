@@ -373,8 +373,9 @@
         description.textContent=courseObj.description;
         notes.textContent=courseObj.notes;
         restrictions.textContent=courseObj.restrictions;
-        requirements.textContent=+courseObj.reqCSENPHD+"\n"+courseObj.reqCSENMS+"\n"+courseObj.reqCSENMSCPS+"\n"+courseObj.reqNTENMSNE+"\n"+courseObj.reqAINTMSAI;
-        skills.textContent=courseObj.skills;
+        requirements.textContent="CSEN-PhD: "+result.reqCSENPHD+"\n" + "CSEN-MS: "+result.reqCSENMS+"\n" + "CSEN-MSCPS: "+
+        result.reqCSENMSCPS+"\n" + "NTEN-MSNE: "+result.reqNTENMSNE+"\n" +"AINT-MSAI: "+result.reqAINTMSAI+"\n";
+          skills.textContent=courseObj.skills;
 
         searchResultMessage="";
         return;
