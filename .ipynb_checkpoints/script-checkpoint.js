@@ -92,7 +92,7 @@
     description.textContent=result.description;
     notes.textContent=result.notes;
     restrictions.textContent=result.restrictions;
-    requirements.textContent="CSEN-PhD: "+result.reqCSENPHD+"\n" + "CSEN-MS: "+result.reqCSENMS+"\n" + "CSEN-MSCPS: "+
+    requirements.textContent= "CSEN-PhD: " + result.reqCSENPHD+"\n" + "CSEN-MS: "+result.reqCSENMS+"\n" + "CSEN-MSCPS: "+
     result.reqCSENMSCPS+"\n" + "NTEN-MSNE: "+result.reqNTENMSNE+"\n" +"AINT-MSAI: "+result.reqAINTMSAI+"\n";
     skills.textContent=result.skills;
 
@@ -373,9 +373,9 @@
         description.textContent=courseObj.description;
         notes.textContent=courseObj.notes;
         restrictions.textContent=courseObj.restrictions;
-        requirements.textContent="CSEN-PhD: "+result.reqCSENPHD+"\n" + "CSEN-MS: "+result.reqCSENMS+"\n" + "CSEN-MSCPS: "+
-        result.reqCSENMSCPS+"\n" + "NTEN-MSNE: "+result.reqNTENMSNE+"\n" +"AINT-MSAI: "+result.reqAINTMSAI+"\n";
-          skills.textContent=courseObj.skills;
+        requirements.textContent="CSEN-PhD: "+courseObj.reqCSENPHD+"\n" + "CSEN-MS: "+courseObj.reqCSENMS+"\n" + "CSEN-MSCPS: "+
+        courseObj.reqCSENMSCPS+"\n" + "NTEN-MSNE: "+courseObj.reqNTENMSNE+"\n" +"AINT-MSAI: "+courseObj.reqAINTMSAI+"\n";
+        skills.textContent=courseObj.skills;
 
         searchResultMessage="";
         return;
