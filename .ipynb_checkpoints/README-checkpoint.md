@@ -1,41 +1,18 @@
 # CIRT - Course Info Retrieval Tool
-## About the Project
-Create a course information retrieval tool (CIRT), based on a prefix tree data structure.
-#### (1) User Function: Search by Course Number
-The first function that the user will be able to use is searching for course information by providing a 9-digit string representing a course subject code (e.g., CSCI-5202). If the course is in the trie, it will output all the stored course information with headers for each section (e.g., CREDIT HOURS, 3). The function provides error messages based on various scenarios (e.g., if server is inactive, if the input is too short, if the course subject code does not match anything in the trie). Multiple requests can be made in a single session.
-#### (2) Speical Topics Search
-#### (3) AutoComplete - get suggestions of available courses
-
+## About the Tool
+<span>An internal, advisor-facing course information tool. Provides 3 ways to access course information:</span>
+### (1) Search by Course Number
+<span>Search for course information by providing a 8 or 9 character course subject code in the format of 'CSCI-50000', 'CSCI5000', or 'CSCI 5000'.</span>
+### (2) Special Topics Search
+<span>Search for course information stored for special topics courses, where each section is treated as its own course. Must use all three dropdown menus that help filter the information. </span> 
+### (3) AutoComplete - get suggestions of available courses
+<span>Search for suggestions based on what is in the dataset. User must enter the beginning characters, like an autocomplete function. Then select an option from the dropdown and search for the selected suggestion.</span>
 
 ## Future Work
+### AutoComplete should accept titles and partial titles
 ### Search-by-Partial-Course-Title Option
-The first option should be modified to allow for Then when the user provided the course title, I would search the map for a key, and if it existed, then call the search and output functions based on the associated value, the course subject code.
 
-### References & Resources
-    ##### zyBook CSPB 2270: Data Structures - 7.12 Tries
-    ##### zyBook CSPB 2270: C++ Refresher - 9.5, 9.6, 9.7 File input and output
-    ##### Wikipedia – Trie
-    ##### Geeks4Geeks – Trie Data Structures
-    ###### geeksforgeeks.org/cpp/traversing-a-map-or-unordered_map-in-cpp-stl/
-    ###### geeksforgeeks.org/cpp/how-to-access-value-in-a-map-using-key-in-cpp/
-    ###### learn.zybooks.com/zybook/COLORADOCSPB2270DataStructuresGuinnFall2025/chapter/14/section/1
-    ###### geeksforgeeks.org/cpp/map-insert-in-c-stl/
-    ###### geeksforgeeks.org/cpp/stringstream-c-applications/
-    ###### geeksforgeeks.org/cpp/how-to-read-data-from-csv-file-to-a-2d-array-in-cpp/
-    ###### geeksforgeeks.org/cpp/getline-string-c/
-    ###### geeksforgeeks.org/cpp/file-handling-c-classes/
-    ###### geeksforgeeks.org/cpp/vector-erase-in-cpp-stl/
-    ###### cppreference.com/w/cpp/string/basic_string/begin
-    ###### geeksforgeeks.org/cpp/string-concatenation-in-cpp/
-    ###### cplusplus.com/reference/string/string/end/
-    ###### geeksforgeeks.org/cpp/stdstringinsert-in-c/
-    ###### en.cppreference.com/w/cpp/string/basic_string/insert
-    ###### geeksforgeeks.org/cpp/traversing-a-map-or-unordered_map-in-cpp-stl/
-    ###### en.cppreference.com/w/cpp/container/map/begin.html
-    ###### geeksforgeeks.org/dsa/auto-complete-feature-using-trie/
-    ###### geeksforgeeks.org/javascript/where-to-put-javascript-in-an-html-document/
-
-### HTML, CSS, Javascript and related resources consulted after initial project
+#### HTML, CSS, Javascript and related resources consulted after initial project
     #### Microsoft Copilot
     ##### Used in the final stages to debug and add featuers when I converted the C++ structure to .js
 
@@ -49,11 +26,11 @@ The first option should be modified to allow for Then when the user provided the
     ##### ../python/javascript-equivalent-to-python-dictionary/
     ##### ../javascript/javascript-string-search-methods/#using-the-search-method
     ##### ../javascript/how-to-create-dictionary-and-add-key-value-pairs-dynamically/
-    ##### ../javascript/how-to-create-dictionary-and-add-key-value-pairs-dynamically/
     ##### ../javascript/how-to-iterate-over-a-javascript-object/
     ##### ..//html/how-to-style-the-option-of-an-html-select-element/
     ##### ../css/text-truncate-in-css/
     ##### ../python/how-to-fix-no-module-named-pandas/
+    ##### ../javascript/where-to-put-javascript-in-an-html-document/
     
     #### GitHub (github.com)
     ##### ../yokoffing/Betterfox/discussions/261 - fixed font visibility issue in Firefox
@@ -68,7 +45,6 @@ The first option should be modified to allow for Then when the user provided the
     ##### ../Web/CSS/Guides/Animations/Using
 
     #### Medium (medium.com)
-    ##### ../@ryan_forrester_/dictionaries-in-javascript-how-to-guide-05457a0c581b
     ##### ../@ryan_forrester_/dictionaries-in-javascript-how-to-guide-05457a0c581b
 
     #### Pandas Module Documentation (pandas.pydata.org)
@@ -117,7 +93,6 @@ The first option should be modified to allow for Then when the user provided the
     ##### ../jsref/jsref_obj_string.asp
     ##### ../jsref/jsref_filter.asp
     ##### ../jsref/jsref_indexof.asp
-    ##### ../jsref/jsref_filter.asp
     ##### ../jsref/jsref_sort.asp
     ##### ../jsref/jsref_trim_string.asp
     ##### ../jsref/jsref_search.asp /
@@ -127,3 +102,27 @@ The first option should be modified to allow for Then when the user provided the
     ##### ../howto/tryit.asp?filename=tryhow_js_accordion_symbol
     ##### ../howto/tryit.asp?filename=tryhow_js_sidenav_dropdown
 
+#### Archived References & Resources
+    ##### zyBook CSPB 2270: Data Structures - 7.12 Tries
+    ##### zyBook CSPB 2270: C++ Refresher - 9.5, 9.6, 9.7 File input and output
+    ##### ZyBook CSPB 2270: 14.1
+    ##### Wikipedia – Trie
+    ##### Geeks4Geeks – Trie Data Structures (geeksforgeeks.org)
+    ###### ../cpp/traversing-a-map-or-unordered_map-in-cpp-stl/
+    ###### ../cpp/traversing-a-map-or-unordered_map-in-cpp-stl/
+    ###### ../cpp/how-to-access-value-in-a-map-using-key-in-cpp/
+    ###### ../cpp/map-insert-in-c-stl/
+    ###### ../cpp/stringstream-c-applications/
+    ###### ../cpp/how-to-read-data-from-csv-file-to-a-2d-array-in-cpp/
+    ###### ../cpp/getline-string-c/
+    ###### ../cpp/file-handling-c-classes/
+    ###### ../cpp/vector-erase-in-cpp-stl/
+    ###### ../cpp/string-concatenation-in-cpp/
+    ###### ../cpp/stdstringinsert-in-c/
+    ###### ../dsa/auto-complete-feature-using-trie/
+    #### CPP Reference (en.cppreference.com)
+    ###### ../w/cpp/string/basic_string/begin
+    ###### ../w/cpp/string/basic_string/insert
+    ###### ../w/cpp/container/map/begin.html
+    #### CPlusPlus (cplusplus.com)
+    ###### ../reference/string/string/end/
