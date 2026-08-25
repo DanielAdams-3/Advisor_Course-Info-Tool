@@ -1,12 +1,34 @@
 # CIRT - Course Info Retrieval Tool
 ## About the Tool
-<span>An internal, advisor-facing course information tool. Provides 3 ways to access course information:</span>
+<span>An internal, advisor-facing course information tool. Provides 3 ways to access course information.</span>
 ### (1) Search by Course Number
 <span>Search for course information by providing a 8 or 9 character course subject code in the format of 'CSCI-50000', 'CSCI5000', or 'CSCI 5000'.</span>
 ### (2) Special Topics Search
 <span>Search for course information stored for special topics courses, where each section is treated as its own course. Must use all three dropdown menus that help filter the information. </span> 
 ### (3) AutoComplete - get suggestions of available courses
 <span>Search for suggestions based on what is in the dataset. User must enter the beginning characters, like an autocomplete function. Then select an option from the dropdown and search for the selected suggestion.</span>
+
+## File Structure
+### index.html
+<span>The website html page the user interfaces with</span>
+### cirt_data.xlsx
+<span>Excel file that CS uses to store and track course data. Manually updated separately, uploaded here, then run createCatalogFromXLSX.py to populate catalog js files</span>
+### script.css
+<span>Style sheet for the website</span>
+### script.js
+<span>Stores the functions for data lookups and navigation</span>
+### createCatalogFromXLSX.py
+<span>Internal function used to pull data from cirt_data.xlsx and create updated courseCatalog.js and topicsCourseCatalog.js files, which are the website's datasets</span>
+### courseCatalog.js
+<span>Javascript file that holds the course information for all non-special topics courses</span>
+### topicsCourseCatalog.js
+<span>Javascript file that holds the course information for all speical topics courses</span>
+### sidebar background.jpg
+<span>Light grey image file that serves as background for resource sidebar</span>
+### sidebarHeader.png
+<span>CS department logo to be the header image for resource sidebar</span>
+### background.png
+<span>Dark grey image file that serves as background </span>
 
 ## Future Work
 ### AutoComplete should accept titles and partial titles
@@ -103,26 +125,26 @@
     ##### ../howto/tryit.asp?filename=tryhow_js_sidenav_dropdown
 
 #### Archived References & Resources
-    ##### zyBook CSPB 2270: Data Structures - 7.12 Tries
-    ##### zyBook CSPB 2270: C++ Refresher - 9.5, 9.6, 9.7 File input and output
-    ##### ZyBook CSPB 2270: 14.1
-    ##### Wikipedia – Trie
-    ##### Geeks4Geeks – Trie Data Structures (geeksforgeeks.org)
-    ###### ../cpp/traversing-a-map-or-unordered_map-in-cpp-stl/
-    ###### ../cpp/traversing-a-map-or-unordered_map-in-cpp-stl/
-    ###### ../cpp/how-to-access-value-in-a-map-using-key-in-cpp/
-    ###### ../cpp/map-insert-in-c-stl/
-    ###### ../cpp/stringstream-c-applications/
-    ###### ../cpp/how-to-read-data-from-csv-file-to-a-2d-array-in-cpp/
-    ###### ../cpp/getline-string-c/
-    ###### ../cpp/file-handling-c-classes/
-    ###### ../cpp/vector-erase-in-cpp-stl/
-    ###### ../cpp/string-concatenation-in-cpp/
-    ###### ../cpp/stdstringinsert-in-c/
-    ###### ../dsa/auto-complete-feature-using-trie/
+    #### zyBook CSPB 2270: Data Structures - 7.12 Tries
+    #### zyBook CSPB 2270: C++ Refresher - 9.5, 9.6, 9.7 File input and output
+    #### ZyBook CSPB 2270: 14.1
+    #### Wikipedia – Trie
+    #### Geeks4Geeks – Trie Data Structures (geeksforgeeks.org)
+    ##### ../cpp/traversing-a-map-or-unordered_map-in-cpp-stl/
+    ##### ../cpp/traversing-a-map-or-unordered_map-in-cpp-stl/
+    ##### ../cpp/how-to-access-value-in-a-map-using-key-in-cpp/
+    ##### ../cpp/map-insert-in-c-stl/
+    ##### ../cpp/stringstream-c-applications/
+    ##### ../cpp/how-to-read-data-from-csv-file-to-a-2d-array-in-cpp/
+    ##### ../cpp/getline-string-c/
+    ##### ../cpp/file-handling-c-classes/
+    ##### ../cpp/vector-erase-in-cpp-stl/
+    ##### ../cpp/string-concatenation-in-cpp/
+    ##### ../cpp/stdstringinsert-in-c/
+    ##### ../dsa/auto-complete-feature-using-trie/
     #### CPP Reference (en.cppreference.com)
-    ###### ../w/cpp/string/basic_string/begin
-    ###### ../w/cpp/string/basic_string/insert
-    ###### ../w/cpp/container/map/begin.html
+    ##### ../w/cpp/string/basic_string/begin
+    ##### ../w/cpp/string/basic_string/insert
+    ##### ../w/cpp/container/map/begin.html
     #### CPlusPlus (cplusplus.com)
-    ###### ../reference/string/string/end/
+    ##### ../reference/string/string/end/
