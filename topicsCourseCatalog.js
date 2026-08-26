@@ -5,7 +5,7 @@ const topicsCourseCatalog = [
  term: "Fall 2024",
  section: "002",
  title: "Interactive Sound",
- description: "",
+ description: "n-a",
  credits: "3",
  notes: "",
  restrictions: "Restricted to graduate students only.",
