@@ -1,12 +1,3 @@
-  //https://www.geeksforgeeks.org/javascript/how-to-insert-a-string-at-a-specific-index-in-javascript/
-  //https://www.geeksforgeeks.org/html/html-clearing-the-input-field/
-  //https://stackoverflow.com/questions/799981/document-ready-equivalent-without-jquery
-  //https://www.geeksforgeeks.org/javascript/javascript-string-startswith-method/
-  //https://www.geeksforgeeks.org/javascript/javascript-array-sort-method/
-  //https://www.geeksforgeeks.org/javascript/javascript-array-splice-method/
-  //https://www.geeksforgeeks.org/javascript/how-to-include-a-javascript-file-in-another-javascript-file/
-  
-  
   //helper function for traditional search
   //returns the course object
   function retrieveCourseObject(requestedSubject) {

@@ -40,16 +40,23 @@
 
     #### GeeksforGeeks (geeksforgeeks.org)
     ##### ../css/how-to-design-a-modern-sidebar-menu-using-html-and-css/
-    ##### ../html/how-to-set-the-default-value-for-an-html-select-element/
     ##### ../javascript/convert-a-string-to-an-integer-in-javascript/
     ##### ../css/how-to-create-toggle-switch-by-using-html-and-css/
     ##### ../css/how-to-make-right-align-div-elements-in-css/
     ##### ../html/html-dropdown
+    ##### ../html/how-to-set-the-default-value-for-an-html-select-element/
+    ##### ../html/how-to-style-the-option-of-an-html-select-element/
+    ##### ../html/html-clearing-the-input-field/
     ##### ../python/javascript-equivalent-to-python-dictionary/
     ##### ../javascript/javascript-string-search-methods/#using-the-search-method
     ##### ../javascript/how-to-create-dictionary-and-add-key-value-pairs-dynamically/
     ##### ../javascript/how-to-iterate-over-a-javascript-object/
-    ##### ..//html/how-to-style-the-option-of-an-html-select-element/
+    ##### ../javascript/how-to-insert-a-string-at-a-specific-index-in-javascript/
+    ##### ../javascript/javascript-string-startswith-method/
+    ##### ../javascript/javascript-array-sort-method/
+    ##### ../javascript/javascript-array-splice-method/
+    ##### ../javascript/how-to-include-a-javascript-file-in-another-javascript-file/
+
     ##### ../css/text-truncate-in-css/
     ##### ../python/how-to-fix-no-module-named-pandas/
     ##### ../javascript/where-to-put-javascript-in-an-html-document/
@@ -85,6 +92,8 @@
     ##### ../921384/java-string-array-is-there-a-size-of-method
     ##### ../18578388/html-dropdown-select-with-text-wrap-and-border-after-every-value-option
     ##### ../15487408/buttons-text-vertical-align
+    ##### ../799981/document-ready-equivalent-without-jquery
+
     
     #### Tutorial Republic (tutorialrepublic.com)
     ##### ../css-tutorial/css-layers.php
@@ -148,3 +157,4 @@
     ##### ../w/cpp/container/map/begin.html
     #### CPlusPlus (cplusplus.com)
     ##### ../reference/string/string/end/
+  
