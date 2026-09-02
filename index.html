@@ -230,23 +230,27 @@
           <button class="buttonHelp" onclick="javascript:ShowHideMessage(document.getElementById('DegreeReqsCSMessageOnClick'),'40%'); javascript:changeHelpButton(this)">About</button> 
         </div>
         <div id="DegreeReqsCSMessageOnClick" style="max-width:40%;width:0%;"><h4>About Degree Requirements (CS)</h4>Currently supports CS graduate degree programs only. Information from Degree Requirements pages</div>
-            <table>
-              <caption>
-                Degree Requirements Satisfied by the Course
-              </caption>
-              <tr>
-                <th>CSEN-PhD</th>
-                <th>CSEN-MS</th>
-                <th>CSEN-MSCPS</th>
-                <th>NTEN-MSNE</th>
-                <th>AINT-MSAI</th>
-              </tr>
-              <td id="reqsCSENPHD"></tr>
-              <td id="reqsCSENMS"></tr>
-              <td id="reqsCSENMSCPS"></tr>
-              <td id="reqsNTENMSNE"></tr>
-              <td id="reqsAINTMSAI"></tr>
-            </table>
+        <div class = "row">  
+          <table>
+            <caption>
+              Degree Requirements Satisfied by the Course
+            </caption>
+            <tr>
+              <th>CSEN-PhD</th>
+              <th>CSEN-MS</th>
+              <th>CSEN-MSCPS</th>
+              <th>NTEN-MSNE</th>
+              <th>AINT-MSAI</th>
+            </tr>
+            <tr>
+            <td id="reqsCSENPHD"></td>
+            <td id="reqsCSENMS"></td>
+            <td id="reqsCSENMSCPS"></td>
+            <td id="reqsNTENMSNE"></td>
+            <td id="reqsAINTMSAI"></td>
+            </tr>
+          </table>
+        </div>
         <div class="row">
           <h4>Skills Learned*&nbsp;</h4>
           <button class="buttonHelp" onclick="javascript:ShowHideMessage(document.getElementById('skillsLearnedMessageOnClick'),'40%'); javascript:changeHelpButton(this)">About</button> 

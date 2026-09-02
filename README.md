@@ -2,7 +2,7 @@
 ## About the Tool
 <span>An internal, advisor-facing course information tool. Provides 3 ways to access course information.</span>
 ### (1) Search by Course Number
-<span>Search for course information by providing a 8 or 9 character course subject code in the format of 'CSCI-50000', 'CSCI5000', or 'CSCI 5000'.</span>
+<span>Search for course information by providing a 8 or 9 character course subject code in the format of 'CSCI-5000', 'CSCI5000', or 'CSCI 5000'.</span>
 ### (2) Special Topics Search
 <span>Search for course information stored for special topics courses, where each section is treated as its own course. Must use all three dropdown menus that help filter the information. </span> 
 ### (3) AutoComplete - get suggestions of available courses
