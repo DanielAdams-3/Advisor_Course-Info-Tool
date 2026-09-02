@@ -669,10 +669,9 @@ tr:nth-child(odd) td {
   background-color: #ffffff;
 }
 
-caption {
+#caption {
   padding: 10px;
   font-family:'Roboto Condensed';
   font-weight:bold;
   font-size:1.25rem;
-
 }
