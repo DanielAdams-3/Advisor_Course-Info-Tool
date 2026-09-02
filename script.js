@@ -26,9 +26,13 @@
     let description = document.getElementById('resultDescription');
     let notes = document.getElementById('resultNotes');
     let restrictions = document.getElementById('resultRestrictions');
-    let requirements = document.getElementById('resultReqs');
+    //let requirements = document.getElementById('resultReqs');
+    let reqCSENPHD = document.getElementById('reqsCSENPHD');
+    let reqCSENMS = document.getElementById('reqsCSENMS');
+    let reqCSENMSCPS = document.getElementById('reqsCSENMSCPS');
+    let reqNTENMSNE = document.getElementById('reqsNTENMSNE');
+    let reqAINTMSAI = document.getElementById('reqsAINTMSAI');
     let skills = document.getElementById('resultSkills');
-
 
     if (!requestedCourse) {
       resultMessage.textContent = "Please enter a subject code";
@@ -38,7 +42,12 @@
       description.textContent="";
       notes.textContent="";
       restrictions.textContent="";
-      requirements.textContent="";
+      //requirements.textContent="";
+      reqCSENPHD.textContent="";
+      reqCSENMS.textContent="";
+      reqCSENMSCPS.textContent="";
+      reqNTENMSNE.textContent="";
+      reqAINTMSAI.textContent="";
       skills.textContent="";
       return;
     }
@@ -51,7 +60,12 @@
       description.textContent="";
       notes.textContent="";
       restrictions.textContent="";
-      requirements.textContent="";
+      //requirements.textContent="";
+      reqCSENPHD.textContent="";
+      reqCSENMS.textContent="";
+      reqCSENMSCPS.textContent="";
+      reqNTENMSNE.textContent="";
+      reqAINTMSAI.textContent="";
       skills.textContent="";
       return;
     }
@@ -83,8 +97,13 @@
     description.textContent=result.description;
     notes.textContent=result.notes;
     restrictions.textContent=result.restrictions;
-    requirements.textContent= "CSEN-PhD: " + result.reqCSENPHD+"\n" + "CSEN-MS: "+result.reqCSENMS+"\n" + "CSEN-MSCPS: "+
-    result.reqCSENMSCPS+"\n" + "NTEN-MSNE: "+result.reqNTENMSNE+"\n" +"AINT-MSAI: "+result.reqAINTMSAI+"\n";
+    //requirements.textContent= "CSEN-PhD: " + result.reqCSENPHD+"\n" + "CSEN-MS: "+result.reqCSENMS+"\n" + "CSEN-MSCPS: "+
+    //result.reqCSENMSCPS+"\n" + "NTEN-MSNE: "+result.reqNTENMSNE+"\n" +"AINT-MSAI: "+result.reqAINTMSAI+"\n";
+    reqCSENPHD.textContent=result.reqCSENPHD;
+    reqCSENMS.textContent=result.reqCSENMS;
+    reqCSENMSCPS.textContent=result.reqCSENMSCPS;
+    reqNTENMSNE.textContent=result.reqNTENMSNE;
+    reqAINTMSAI.textContent=result.reqAINTMSAI;
     skills.textContent=result.skills;
 
     resultMessage.textContent="Completed";
@@ -355,17 +374,27 @@
         let description = document.getElementById('resultDescription');
         let notes = document.getElementById('resultNotes');
         let restrictions = document.getElementById('resultRestrictions');
-        let requirements = document.getElementById('resultReqs');
+        //let requirements = document.getElementById('resultReqs');
+        let reqCSENPHD = document.getElementById('reqsCSENPHD');
+        let reqCSENMS = document.getElementById('reqsCSENMS');
+        let reqCSENMSCPS = document.getElementById('reqsCSENMSCPS');
+        let reqNTENMSNE = document.getElementById('reqsNTENMSNE');
+        let reqAINTMSAI = document.getElementById('reqsAINTMSAI');
         let skills = document.getElementById('resultSkills');
     
-        subject.textContent=courseObj.courseSubject;;
+        subject.textContent=courseObj.courseSubject;
         title.textContent=courseObj.title;
         hours.textContent=courseObj.credits;
         description.textContent=courseObj.description;
         notes.textContent=courseObj.notes;
         restrictions.textContent=courseObj.restrictions;
-        requirements.textContent="CSEN-PhD: "+courseObj.reqCSENPHD+"\n" + "CSEN-MS: "+courseObj.reqCSENMS+"\n" + "CSEN-MSCPS: "+
-        courseObj.reqCSENMSCPS+"\n" + "NTEN-MSNE: "+courseObj.reqNTENMSNE+"\n" +"AINT-MSAI: "+courseObj.reqAINTMSAI+"\n";
+        //requirements.textContent="CSEN-PhD: "+courseObj.reqCSENPHD+"\n" + "CSEN-MS: "+courseObj.reqCSENMS+"\n" + "CSEN-MSCPS: "+
+        //courseObj.reqCSENMSCPS+"\n" + "NTEN-MSNE: "+courseObj.reqNTENMSNE+"\n" +"AINT-MSAI: "+courseObj.reqAINTMSAI+"\n";
+        reqCSENPHD.textContent=courseObj.reqCSENPHD;
+        reqCSENMS.textContent=courseObj.reqCSENMS;
+        reqCSENMSCPS.textContent=courseObj.reqCSENMSCPS;
+        reqNTENMSNE.textContent=courseObj.reqNTENMSNE;
+        reqAINTMSAI.textContent=courseObj.reqAINTMSAI;
         skills.textContent=courseObj.skills;
 
         searchResultMessage="";
@@ -569,7 +598,12 @@
     let description = document.getElementById('resultDescription');
     let notes = document.getElementById('resultNotes');
     let restrictions = document.getElementById('resultRestrictions');
-    let requirements = document.getElementById('resultReqs');
+    //let requirements = document.getElementById('resultReqs');
+    let reqCSENPHD = document.getElementById('reqsCSENPHD');
+    let reqCSENMS = document.getElementById('reqsCSENMS');
+    let reqCSENMSCPS = document.getElementById('reqsCSENMSCPS');
+    let reqNTENMSNE = document.getElementById('reqsNTENMSNE');
+    let reqAINTMSAI = document.getElementById('reqsAINTMSAI');
     let skills = document.getElementById('resultSkills');
 
     let topicsTermSelected=document.getElementById('topicsTermDisplayed');
@@ -603,7 +637,12 @@
     description.textContent="";
     notes.textContent="";
     restrictions.textContent="";
-    requirements.textContent="";
+    reqCSENPHD.textContent="";
+    reqCSENMS.textContent="";
+    reqCSENMSCPS.textContent="";
+    reqNTENMSNE.textContent="";
+    reqAINTMSAI.textContent="";
+    //requirements.textContent="";
     skills.textContent="";
     searchResultMessage=document.getElementById('searchResultMessage');
     searchResultMessage.textContent="";

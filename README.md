@@ -66,15 +66,16 @@
 
     #### Inclusive Components Design (inclusive-components.design)
     ##### ../collapsible-sections/
+    
+    #### Medium (medium.com)
+    ##### ../@ryan_forrester_/dictionaries-in-javascript-how-to-guide-05457a0c581b
 
     #### Mozilla documentation (developer.mozilla.org/en-US/docs)
     ##### ../Web/CSS/Reference/Properties/background-image
     ##### ../Web/CSS/Reference/Properties/position
     ##### ../Learn_web_development/Core/CSS_layout/Positioning
     ##### ../Web/CSS/Guides/Animations/Using
-
-    #### Medium (medium.com)
-    ##### ../@ryan_forrester_/dictionaries-in-javascript-how-to-guide-05457a0c581b
+    ##### ../Learn_web_development/Core/Structuring_content/Table_accessibility
 
     #### Pandas Module Documentation (pandas.pydata.org)
     ##### ./pandas-docs/stable/reference/api/pandas.read_excel.html
