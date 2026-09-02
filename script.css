@@ -536,16 +536,15 @@ option{
 
 #titleMessageOnClick, #searchMessageOnClick, #subjectMessageOnClick,
 #nameMessageOnClick, #hoursMessageOnClick, #descriptionMessageOnClick,
-#notesMessageOnClick, #regRestrictionsMessageOnClick,
-#DegreeReqsCSMessageOnClick, #skillsLearnedMessageOnClick,
-#autocompleteMessageOnClick, #webpageMessageOnClick,
-#specialTopicsMessageOnClick {
+#notesMessageOnClick, #offeringsMessageOnClick,
+#regRestrictionsMessageOnClick, #DegreeReqsCSMessageOnClick, 
+#skillsLearnedMessageOnClick, #autocompleteMessageOnClick,
+#webpageMessageOnClick, #specialTopicsMessageOnClick {
   height:fit-content;
   padding-top:0%;
   z-index:1;
   min-height:2rem;
   width:0%;
-  /*left:15%;*/
   right:1%;
   max-width:50%;
   margin-top:-2rem;
@@ -580,10 +579,10 @@ option{
   }
   #titleMessageOnClick, #searchMessageOnClick, #subjectMessageOnClick,
   #nameMessageOnClick, #hoursMessageOnClick, #descriptionMessageOnClick,
-  #notesMessageOnClick, #regRestrictionsMessageOnClick,
-  #DegreeReqsCSMessageOnClick, #skillsLearnedMessageOnClick,
-  #autocompleteMessageOnClick, #webpageMessageOnClick,
-  #specialTopicsMessageOnClick{
+  #notesMessageOnClick, #offeringsMessageOnClick,
+  #regRestrictionsMessageOnClick, #DegreeReqsCSMessageOnClick,
+  #skillsLearnedMessageOnClick, #autocompleteMessageOnClick,
+  #webpageMessageOnClick, #specialTopicsMessageOnClick{
     max-width:33%;
     width:33%;
   }
@@ -649,6 +648,7 @@ table {
   border-collapse: collapse;
   border: 2px solid rgb(200 200 200);
   font-size: 0.95rem;
+  margin-bottom:1rem;
 }
 
 td,th {

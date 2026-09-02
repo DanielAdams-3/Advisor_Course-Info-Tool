@@ -29,7 +29,6 @@ with open(js_file, "w", encoding="utf-8") as f:
         f.write(f' credits: {json.dumps(clean(row["credits"]))},\n')
         f.write(f' notes: {json.dumps(clean(row["notes"]))},\n')
         f.write(f' restrictions: {json.dumps(clean(row["restrictions"]))},\n')
-        f.write(f' offerings: {json.dumps(clean(row["offerings"]))},\n')
         f.write(f' skills: {json.dumps(clean(row["skills"]))},\n')
         f.write(f' reqCSENPHD: {json.dumps(clean(row["reqCSENPHD"]))},\n')
         f.write(f' reqCSENMS: {json.dumps(clean(row["reqCSENMS"]))},\n')
@@ -43,7 +42,7 @@ with open(js_file, "w", encoding="utf-8") as f:
 f.close()
 
 df2 = pd.read_excel(xlsx_file,sheet_name="topics")
-# Replace blank cells, if needed
+# Replace blanks
 df2 = df2.fillna("")
 
 with open(js2_file, "w", encoding="utf-8") as g:
@@ -58,7 +57,6 @@ with open(js2_file, "w", encoding="utf-8") as g:
         g.write(f' description: {json.dumps(clean(row["description"]))},\n')
         g.write(f' credits: {json.dumps(clean(row["credits"]))},\n')
         g.write(f' notes: {json.dumps(clean(row["notes"]))},\n')
-        g.write(f' offerings: {json.dumps(clean(row["offerings"]))},\n')
         g.write(f' restrictions: {json.dumps(clean(row["restrictions"]))},\n')
         g.write(f' skills: {json.dumps(clean(row["skills"]))},\n')
         g.write(f' reqCSENPHD: {json.dumps(clean(row["reqCSENPHD"]))},\n')
