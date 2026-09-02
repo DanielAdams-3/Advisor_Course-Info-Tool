@@ -642,10 +642,13 @@ option{
 }
 
 table {
+  margin-left:12.5%;
+  margin-right:12.5%;
+  min-width:75%;
+  max-width:75%;
   border-collapse: collapse;
   border: 2px solid rgb(200 200 200);
-  letter-spacing: 1px;
-  font-size: 0.8rem;
+  font-size: 0.95rem;
 }
 
 td,th {
@@ -653,8 +656,11 @@ td,th {
   padding: 10px 20px;
 }
 
-th {
-  background-color: rgb(235 235 235);
+tr:nth-child(even) th {
+  background-color: #EEF5F8;
+}
+tr:nth-child(odd) th {
+  background-color: #ffffff;
 }
 
 td {
@@ -669,9 +675,11 @@ tr:nth-child(odd) td {
   background-color: #ffffff;
 }
 
-#caption {
+caption {
   padding: 10px;
   font-family:'Roboto Condensed';
   font-weight:bold;
-  font-size:1.25rem;
+  text-transform:uppercase;
+  font-size:1rem;
+  margin-bottom: 4px;
 }
