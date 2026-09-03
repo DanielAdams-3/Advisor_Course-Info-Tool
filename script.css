@@ -116,7 +116,7 @@ input[type="text"] {
 }
 
 /*format for the results boxes for Title & Hours, different because one line is enough*/
-#resultSubject, #resultTitle, #resultHours
+#resultSubject, #resultTitle, #resultHours, #resultOfferings
 {
   padding: 0.25rem;
   background: #ffff;
@@ -641,12 +641,12 @@ option{
 }
 
 table {
-  margin-left:12.5%;
-  margin-right:12.5%;
-  min-width:75%;
-  max-width:75%;
+  margin-left:2.5%;
+  margin-right:2.5%;
+  min-width:95%;
+  max-width:95%;
   border-collapse: collapse;
-  border: 2px solid rgb(200 200 200);
+  border: 2px solid #777777;
   font-size: 0.95rem;
   margin-bottom:1rem;
 }
