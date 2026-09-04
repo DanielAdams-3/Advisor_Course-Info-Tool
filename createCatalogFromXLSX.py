@@ -3,11 +3,13 @@ import json
 xlsx_file = "cirt_data.xlsx"
 js_file = "courseCatalog.js"
 js2_file = "topicsCourseCatalog.js"
-# Read spreadsheet
 
+# Read spreadsheet
 df = pd.read_excel(xlsx_file,sheet_name="courses")
 # Replace blanks
 df = df.fillna("")
+
+
 
 def clean(value):
     """

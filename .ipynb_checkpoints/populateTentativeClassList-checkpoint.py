@@ -4,12 +4,11 @@ import json
 #https://stackoverflow.com/questions/64746066/how-to-access-google-sheets-without-authentication
 
 sheet_id="11YBH99TtZ-5n22z8hDVdbpa43s2aK7L7crpLpRsKXeo"
-r="https://docs.google.com/spreadsheets/export?id={}&exportFormat=csv".format(sheet_id)
-df= pd.read_csv(r)
+xlsx_file="https://docs.google.com/spreadsheets/export?id={}&exportFormat=xlsx".format(sheet_id)
+df= pd.read_excel(xlsx_file,sheet_name="Sheet1")
 df.head()
 
-
-#
+#Step 1 - 
 
 js_file = "courseCatalog.js"
 js2_file = "topicsCourseCatalog.js"

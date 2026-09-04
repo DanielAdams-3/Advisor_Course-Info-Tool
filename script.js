@@ -33,6 +33,7 @@
     let reqCSENMSCPS = document.getElementById('reqsCSENMSCPS');
     let reqNTENMSNE = document.getElementById('reqsNTENMSNE');
     let reqAINTMSAI = document.getElementById('reqsAINTMSAI');
+    let reqsNotes=document.getElementById('reqsNotes');
     let skills = document.getElementById('resultSkills');
 
     if (!requestedCourse) {
@@ -50,6 +51,7 @@
       reqCSENMSCPS.textContent="";
       reqNTENMSNE.textContent="";
       reqAINTMSAI.textContent="";
+      reqsNotes.textContent="";
       skills.textContent="";
       return;
     }
@@ -69,6 +71,7 @@
       reqCSENMSCPS.textContent="";
       reqNTENMSNE.textContent="";
       reqAINTMSAI.textContent="";
+      reqsNotes.textContent="";
       skills.textContent="";
       return;
     }
@@ -108,6 +111,7 @@
     reqCSENMSCPS.textContent=result.reqCSENMSCPS;
     reqNTENMSNE.textContent=result.reqNTENMSNE;
     reqAINTMSAI.textContent=result.reqAINTMSAI;
+    reqsNotes.textContent=result.reqNote;
     skills.textContent=result.skills;
 
     resultMessage.textContent="Completed";
@@ -385,6 +389,7 @@
         let reqCSENMSCPS = document.getElementById('reqsCSENMSCPS');
         let reqNTENMSNE = document.getElementById('reqsNTENMSNE');
         let reqAINTMSAI = document.getElementById('reqsAINTMSAI');
+        let reqsNotes=document.getElementById('reqsNotes');
         let skills = document.getElementById('resultSkills');
     
         subject.textContent=courseObj.courseSubject;
@@ -401,6 +406,7 @@
         reqCSENMSCPS.textContent=courseObj.reqCSENMSCPS;
         reqNTENMSNE.textContent=courseObj.reqNTENMSNE;
         reqAINTMSAI.textContent=courseObj.reqAINTMSAI;
+        reqsNotes.textContent=courseObj.reqNote;
         skills.textContent=courseObj.skills;
 
         searchResultMessage="";
@@ -611,6 +617,7 @@
     let reqCSENMSCPS = document.getElementById('reqsCSENMSCPS');
     let reqNTENMSNE = document.getElementById('reqsNTENMSNE');
     let reqAINTMSAI = document.getElementById('reqsAINTMSAI');
+    let reqsNotes=document.getElementById('reqsNotes');
     let skills = document.getElementById('resultSkills');
 
     let topicsTermSelected=document.getElementById('topicsTermDisplayed');
@@ -651,6 +658,7 @@
     reqNTENMSNE.textContent="";
     reqAINTMSAI.textContent="";
     //requirements.textContent="";
+    reqsNotes.textContent="";
     skills.textContent="";
     searchResultMessage=document.getElementById('searchResultMessage');
     searchResultMessage.textContent="";
