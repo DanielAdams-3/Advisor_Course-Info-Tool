@@ -10,30 +10,6 @@ js2_file = "topicsCourseCatalog.js"
 
 context=js2py.EvalJs()
 
-with open("courseCatalog.js", "r", encoding="utf-8") as g:
-    catalog_js = g.read()
-
-#error, function is not accurately 
-context.execute(catalog_js)
-context.execute(""" 
-    function retrieveCourseObject(requestedSubject) { 
-        for (let i=0; i< courseCatalog.length;i++)
-        {
-            if (requestedSubject === undefined)
-            {
-                return null;
-            }
-            currCourseSubj=courseCatalog[i]['courseSubject'];
-            if (requestedSubject === currCourseSubj)
-            {
-               let result=courseCatalog[i];
-                return result;
-            }
-        }
-        return null;
-    }
-""")
-
 def clean(value):
     """
     Convert to string,
@@ -42,11 +18,29 @@ def clean(value):
     """
     return str(value).strip()
 
+with open("courseCatalog.js", "r", encoding="utf-8") as g:
+    catalog_js = g.read()
 
-#translate catalogs to python files
-#js2py.translate_file('courseCatalog.js', 'courseCatalog.py')
-#js2py.translate_file('topicsCourseCatalog.js','topicsCourseCatalog.py')
-#define python version of the search function? No it appears we still can call JS function
+    #error, function is not accurately 
+    context.execute(catalog_js)
+    context.execute(""" 
+        function retrieveCourseObject(requestedSubject) { 
+            for (let i=0; i< courseCatalog.length;i++)
+            {
+                if (requestedSubject === undefined)
+                {
+                    return null;
+                }
+                currCourseSubj=courseCatalog[i]['courseSubject'];
+                if (requestedSubject === currCourseSubj)
+                {
+                let result=courseCatalog[i];
+                    return result;
+                }
+            }
+            return null;
+        }
+    """)
 
 #Step 1 - open the google sheet
 #https://stackoverflow.com/questions/64746066/how-to-access-google-sheets-without-authentication
@@ -70,8 +64,6 @@ active_sheet=wb.active
 c=1
 row_num = 3
 cell_obj=active_sheet.cell(row_num,c)
-#print(cell_obj)
-#print(cell_obj.value)
 offerings=""
 csphd=""
 csms=""
@@ -80,7 +72,10 @@ msne=""
 msai=""
 notes=""
 
-while (cell_obj.value != "Topics Classes"):
+while (cell_obj.value != "end"):
+
+    #FIXME: need to account for CSCI 7412, 7712, etc.
+
     requestedSubject=clean(cell_obj.value)
     result=context.retrieveCourseObject(requestedSubject) 
     if ((result is None) or (type(result) == "NoneType")):
@@ -136,4 +131,95 @@ while (cell_obj.value != "Topics Classes"):
     cell_obj=active_sheet.cell(row_num,c)
     wb.save("updated.xlsx")
 
+
+
+#Process Topics Courses
+#chagne the active sheet
+with open("topicsCourseCatalog.js", "r", encoding="utf-8") as h:
+    topicsCatalog_js = h.read()
+
+    context.execute(topicsCatalog_js)
+    context.execute(""" 
+        function retrieveTopicsCourseObject(requestedSubject, requestedTopic) { 
+            lookupSubject=clean(requestedSubject.subtring(0,9));
+            lookupTopic=clean(requestedTopic.substring(0,7));
+            for (let i=0; i< topicsCourseCatalog.length;i++)
+            {
+                if ((lookupSubject === undefined) || (lookupTitle === undefined))
+                {
+                    return null;
+                }
+                currCourseTitle=topicsCourseCatalog[i]['title'];
+                currCourseSubj=topicsCourseCatalog[i]['courseSubject'];
+                
+                if ((lookupSubject === currCourseSubj) && (currCourseTitle.includes(lookupTitle)))
+                {
+                    let result=topicsCourseCatalog[i];
+                    return result;
+                }
+            }
+            return null;
+        }
+    """)
+
+#switch tab to topics
+active_sheet=wb['topics']
+while (cell_obj.value != "end"):
+    requestedSubject=clean(cell_obj.value)
+    result=context.retrieveTopicsCourseObject(requestedSubject) 
+    if ((result is None) or (type(result) == "NoneType")):
+        offerings=""
+        csphd=""
+        csms=""
+        mscps=""
+        msne=""
+        msai=""
+        notes=""
+    else:
+        offerings=result.offerings        
+        csphd=result.reqCSENPHD     
+        csms=result.reqCSENMS       
+        mscps=result.reqCSENMSCPS
+        msne=result.reqNTENMSNE     
+        msai=result.reqAINTMSAI     
+        notes=result.reqNote     
+
+    #assign values to correct cells
+    c=3
+    
+    cell_obj=active_sheet.cell(row_num,c)
+    cell_obj.value=notes        #col3
+    c=5
+
+    cell_obj=active_sheet.cell(row_num,c)
+    cell_obj.value=offerings    #col 5
+    c+=1
+
+    cell_obj=active_sheet.cell(row_num,c)
+    cell_obj.value=csphd        #col 6
+    c+=1      
+
+    cell_obj=active_sheet.cell(row_num,c)
+    cell_obj.value=csms         #col 7
+    c+=1
+
+    cell_obj=active_sheet.cell(row_num,c)
+    cell_obj.value=mscps        #col 8
+    c+=1
+
+    cell_obj=active_sheet.cell(row_num,c)
+    cell_obj.value=msne         #col 9
+    c+=1
+
+    cell_obj=active_sheet.cell(row_num,c)
+    cell_obj.value=msai         #col10
+
+    #go to next row
+    row_num += 1
+    c=1
+    cell_obj=active_sheet.cell(row_num,c)
+    wb.save("updated.xlsx")
+
+g.close()
+h.close()
 f.close()

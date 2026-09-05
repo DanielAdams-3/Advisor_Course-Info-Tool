@@ -84,7 +84,6 @@ for stu in plos_list:
     plos_sheet=plos_wb['Data']
 
     #save as new file with new name
-    #new_file_path = "C:\\Users\\daad2295\\Desktop\\PLOS_Maker\\"
     new_file_path="R:\\gradadmin\\Grad Program\\3. Daniel Adams_GPS\\Student Forms\\Plan of Study\\"
 
     if ("CSEN-MSCPS" in stu.stu_info_dict["Study Plan Codes"]):
