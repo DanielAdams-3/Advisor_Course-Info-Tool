@@ -96,14 +96,17 @@
           <button class="buttonHelp" style="margin-top:1.5rem;" onclick="javascript:ShowHideMessage(document.getElementById('titleMessageOnClick'),'35%');javascript:changeHelpButton(this)">About</button>
         </div>
         <div id="titleMessageOnClick" style="margin-top:0rem;max-width:35%;width:0%;"><h4>About CIRT</h4>An internal advisor-facing tool to retrieve course information for graduate courses. Data is pre-collected, so information is not 'live'.</div>
+        <div class="row">
+          <h2>Search Options</h2>
+        </div>
+        <div class="row">
+          <p style="margin-top:0.25rem;margin-bottom:0.5rem;">Use the appropriate tab to search for course information</p>
+        </div>
       </header>
       <div class="tab">
         <button class="tablinks" id = "defaultOpen" onclick="javascript:openSearchTab(this, 'searchTraditionalTab')">Search by Course Number</button>
         <button class="tablinks" onclick="javascript:openSearchTab(this, 'searchByTopics')">Search by Topics Course</button>
         <button class="tablinks" onclick="javascript:openSearchTab(this, 'searchWithHelpTab')">Get Suggestions!</button>
-      </div>
-      <div class="row">
-      <h2>Search Options</h2>
       </div>
       <article>
         <div class="tabContent" id="searchTraditionalTab">
@@ -177,35 +180,35 @@
       <article>
         <h2>Course Information</h2>
         <div class="row">
-          <div class="row" style="min-width:40%;width:40%;max-width:40%;">
-            <h3>Course Subject&nbsp;</h3>
+          <div class="row" style="min-width:35%;width:35%;max-width:35%;">
+            <h3>Subject&nbsp;</h3>
             <button class="buttonHelp" onclick="javascript:ShowHideMessage(document.getElementById('subjectMessageOnClick'),'40%'); javascript:changeHelpButton(this)">About</button>
-            <div id="subjectMessageOnClick" style="max-width:40%;width:0%;"><h4>About Course Subject</h4>Per Graduate Catalog AY26-27. If a course does not appear, it is not in the dataset, but can be requested by clicking the 'Contact CS Department' button at the bottom of the page</div>
+            <div id="subjectMessageOnClick" style="max-width:40%;width:0%;"><h4>About Subject</h4>Per Graduate Catalog AY26-27. If a course does not appear, it is not in the dataset, but can be requested by clicking the 'Contact CS Department' button at the bottom of the page</div>
           </div>
-          <div class="row" style="min-width:60%;width:60%;max-width:60%;">
-            <h3>Course Title&nbsp;</h3>
+          <div class="row" style="min-width:65%;width:65%;max-width:65%;">
+            <h3>Title&nbsp;</h3>
             <button class="buttonHelp" onclick="javascript:ShowHideMessage(document.getElementById('nameMessageOnClick'),'40%'); javascript:changeHelpButton(this)">About</button> 
-            <div id="nameMessageOnClick" style="max-width:40%;width:0%;"><h4>About Course Title</h4>Data from 2026-27 Graduate Catalog</div>
+            <div id="nameMessageOnClick" style="max-width:40%;width:0%;"><h4>About Title</h4>Data from 2026-27 Graduate Catalog</div>
           </div>
         </div>
 
         <div class="row">
-          <div class="row" style="min-width:40%;width:40%;max-width:40%;">
+          <div class="row" style="min-width:35%;width:35%;max-width:35%;">
             <div id="resultSubject" style="max-width:90%;"></div>
           </div>
-          <div class="row" style="min-width:60%;width:60%;max-width:60%;">
+          <div class="row" style="min-width:65%;width:65%;max-width:65%;">
             <div id="resultTitle"></div>
           </div>
         </div>
 
         <div class="row">
-          <div class="row" style="min-width:40%;width:40%;max-width:40%;">
+          <div class="row" style="min-width:35%;width:35%;max-width:35%;">
             <h3>Credit Hours&nbsp;</h3>
             <button class="buttonHelp" onclick="javascript:ShowHideMessage(document.getElementById('hoursMessageOnClick'),'40%'); javascript:changeHelpButton(this)">About</button> 
             <div id="hoursMessageOnClick" style="max-width:40%;width:0%;"><h4>About Credit Hours</h4>Data from 2026-27 Graduate Catalog. If credit hours are variable, output will be listed as a range (for ex: 1-4)</div>
           </div>
-          <div class="row" style="min-width:60%;width:60%;max-width:60%;">
-            <h3>Recent Offerings&nbsp;</h3>
+          <div class="row" style="min-width:65%;width:65%;max-width:65%;">
+            <h3>Iterations&nbsp;</h3>
             <button class="buttonHelp" onclick="javascript:ShowHideMessage(document.getElementById('offeringsMessageOnClick'),'40%'); javascript:changeHelpButton(this)">About</button> 
             <div id="offeringsMessageOnClick" style="max-width:40%;width:0%;"><h4>About Recent Offerings</h4>Data pulled from Class Search. Lists the semesters that the course was offered from Fall 2024-Fall 2026</div>
           </div>
@@ -213,16 +216,16 @@
 
 
         <div class="row">
-          <div class="row" style="min-width:40%;width:40%;max-width:40%;">
+          <div class="row" style="min-width:35%;width:35%;max-width:35%;">
             <div id="resultHours" style="max-width:90%;"></div>
           </div>
-          <div class="row" style="min-width:60%;width:60%;max-width:60%;">
+          <div class="row" style="min-width:65%;width:65%;max-width:65%;">
             <div id="resultOfferings"></div>
           </div>
         </div>
 
         <div class="row">  
-          <h3>Course Description&nbsp;</h3>
+          <h3>Description&nbsp;</h3>
           <button class="buttonHelp" onclick="javascript:ShowHideMessage(document.getElementById('descriptionMessageOnClick'),'40%'); javascript:changeHelpButton(this)">About</button> 
         </div>
         <div id="descriptionMessageOnClick" style="max-width:40%;width:0%;"><h4>About Course Description</h4>Data from 2026-27 Graduate Catalog. Results may also include cross-listed course numbers</div>
