@@ -128,12 +128,13 @@
             <h3>Get Suggestions - AutoComplete</h3>
             <button class="buttonHelp" style="margin-top:0.5rem;" onclick="javascript:ShowHideMessage(document.getElementById('autocompleteMessageOnClick'),'40%');javascript:changeHelpButton(this)">About</button>
           </div>
-          <p>Enter the first letter(s) of a course subject code (ex: A, ATLS, ATLS-5) and click <strong>AutoComplete</strong> to retrieve suggestions.</p>
+          <p>Enter the first letter(s) of a course subject code (for ex, entering 'CSCI 5' will retrieve all 5000-level CSCI courses) and click <strong>Get Matching Courses</strong> to retrieve suggestions.</p>
           <div id="autocompleteMessageOnClick" style="margin-top:-2rem;max-width:40%;width:0%;display:none;"><h4>About AutoComplete</h4>Must start with beginning of subject code. All available results will match those characters.</div>
           <div class="row">
             <input id="prefixInput" type="text" placeholder="Enter the first letter(s) of a course subject code..." />
             <button class="searchButton" onclick="populateAutocompleteSuggestions()">Get Matching Courses</button>
           </div>
+          <p>After you select a suggested coures from the dropdown menu, click <b>Search</b> to retrieve that course's information.</p>
           <div class="selectRow">
             <select id='suggestionSelected' style="min-width:84%;max-width:84%;"></select>
             <button class="searchButton" style="min-width:15%;max-width:15%;" onclick="javascript:autoCompleteSearch()">Search</button>
