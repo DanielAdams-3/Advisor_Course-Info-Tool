@@ -31,8 +31,12 @@
 <span>Dark grey image file that serves as background </span>
 
 ## Future Work
-### AutoComplete should accept titles and partial titles
 ### Search-by-Partial-Course-Title Option
+### Search-by-Full-Course-Title Option
+### Menu button should be available in the sidebar
+### Sidebar should appear below the white main box when screen is smaller than 'y' px, and should not close
+### Add new field, Student Reviews from CS-GSA
+### Add new field, 'Rigor, according to students' whihc is available for some courses in the Skills Learnt document'
 
 #### HTML, CSS, Javascript and related resources consulted after initial project
     #### Microsoft Copilot

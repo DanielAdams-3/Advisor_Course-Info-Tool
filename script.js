@@ -551,11 +551,51 @@
     x.classList.toggle("opened");
   }
 
+
+  function HideAllOtherMessages(x){
+    const protectedMessage =x;
+    let titleHelp=document.getElementById('titleMessageOnClick');
+    let searchHelp=document.getElementById('searchMessageOnClick');
+    let subjectHelp=document.getElementById('subjectMessageOnClick');
+    let nameHelp=document.getElementById('nameMessageOnClick');
+    let hoursHelp=document.getElementById('hoursMessageOnClick');
+    let descriptionHelp=document.getElementById('descriptionMessageOnClick');
+    let notesHelp=document.getElementById('notesMessageOnClick');
+    let offeringsHelp=document.getElementById('offeringsMessageOnClick');
+    let regHelp=document.getElementById('regRestrictionsMessageOnClick');
+    let degreeHelp=document.getElementById('DegreeReqsCSMessageOnClick');
+    let skillsHelp=document.getElementById('skillsLearnedMessageOnClick');
+    let autoHelp=document.getElementById('autocompleteMessageOnClick');
+    let webpageHelp=document.getElementById('webpageMessageOnClick');
+    let topicsHelp=document.getElementById('specialTopicsMessageOnClick');
+
+    var accordionR = {titleHelp,searchHelp,subjectHelp,nameHelp,hoursHelp,descriptionHelp,notesHelp,offeringsHelp,regHelp,degreeHelp,skillsHelp,autoHelp,webpageHelp,topicsHelp}
+    var i;
+    for (i = 0; i < accordionR.length; i++) {
+      let currMessage=accordionR[i];
+      if (currMessage != protectedMessage){
+        if (parseInt(currMessage.style.width)>(0)){
+          currMessage.className="fade-out-messageDisplay";
+          currMessage.style.width="0%";
+          currMessage.style.opacity="0.0";
+          currMessage.style.paddingLeft="0%";
+          currMessage.style.paddingTop="0%";
+          currMessage.style.paddingRight="0%";
+          currMessage.style.paddingBottom="0%";
+          currMessage.style.display="none";
+        }
+      }
+    }
+  }
+
   function ShowHideMessage(x,y){
     const messageToDisplay=x;
     const courseSearchMessageHidden=messageToDisplay.style.width ==="0%";
-    //first, close all other messages
-    
+
+    //first, close all other messages - lol never implemented
+    HideAllOtherMessages(x);
+
+    //now we open/close JUST the message intended
     if (courseSearchMessageHidden === true)
     { 
       messageToDisplay.className="fade-in-messageDisplay";
