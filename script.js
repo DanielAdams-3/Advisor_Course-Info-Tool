@@ -27,7 +27,6 @@
     let notes = document.getElementById('resultNotes');
     let restrictions = document.getElementById('resultRestrictions');
     let offerings = document.getElementById('resultOfferings');
-    //let requirements = document.getElementById('resultReqs');
     let reqCSENPHD = document.getElementById('reqsCSENPHD');
     let reqCSENMS = document.getElementById('reqsCSENMS');
     let reqCSENMSCPS = document.getElementById('reqsCSENMSCPS');
@@ -45,7 +44,6 @@
       notes.textContent="";
       offerings.textContent="";
       restrictions.textContent="";
-      //requirements.textContent="";
       reqCSENPHD.textContent="";
       reqCSENMS.textContent="";
       reqCSENMSCPS.textContent="";
@@ -65,7 +63,6 @@
       notes.textContent="";
       offerings.textContent="";
       restrictions.textContent="";
-      //requirements.textContent="";
       reqCSENPHD.textContent="";
       reqCSENMS.textContent="";
       reqCSENMSCPS.textContent="";
@@ -104,8 +101,6 @@
     notes.textContent=result.notes;
     offerings.textContent=result.offerings;
     restrictions.textContent=result.restrictions;
-    //requirements.textContent= "CSEN-PhD: " + result.reqCSENPHD+"\n" + "CSEN-MS: "+result.reqCSENMS+"\n" + "CSEN-MSCPS: "+
-    //result.reqCSENMSCPS+"\n" + "NTEN-MSNE: "+result.reqNTENMSNE+"\n" +"AINT-MSAI: "+result.reqAINTMSAI+"\n";
     reqCSENPHD.textContent=result.reqCSENPHD;
     reqCSENMS.textContent=result.reqCSENMS;
     reqCSENMSCPS.textContent=result.reqCSENMSCPS;
@@ -284,22 +279,6 @@
       return;
     }
     
-    //sort the list (should be sorted by default)
-    /*if (listCourseObjs.length>1){
-      let sortedList=[];
-      sortedList.push(listCourseObjs[0]); //start by adding the first element to the list
-      for (let i=1;i<listCourseObjs.length;i++){
-        let newSection=parseInt(listCourseObjs[i].section); //section of the new element we're trying to add
-        for (let j=0;j<sortedList.length;j++){
-          let sortedSection=parseInt(sortedList[j].section); //section of the sorted list element we're at rn
-          if (newSection<sortedSection){
-            sortedList.splice(j,0,listCourseObjs[i]);       
-          }
-        }
-      }
-      listCourseObjs=sortedList;
-    }*/
-
     //populate the options
     for (let k=0;k<listCourseObjs.length;k++){
       let newTopic=document.createElement("option");
@@ -383,7 +362,6 @@
         let notes = document.getElementById('resultNotes');
         let offerings = document.getElementById('resultOfferings');
         let restrictions = document.getElementById('resultRestrictions');
-        //let requirements = document.getElementById('resultReqs');
         let reqCSENPHD = document.getElementById('reqsCSENPHD');
         let reqCSENMS = document.getElementById('reqsCSENMS');
         let reqCSENMSCPS = document.getElementById('reqsCSENMSCPS');
@@ -399,8 +377,6 @@
         notes.textContent=courseObj.notes;
         offerings.textContent=courseObj.offerings;
         restrictions.textContent=courseObj.restrictions;
-        //requirements.textContent="CSEN-PhD: "+courseObj.reqCSENPHD+"\n" + "CSEN-MS: "+courseObj.reqCSENMS+"\n" + "CSEN-MSCPS: "+
-        //courseObj.reqCSENMSCPS+"\n" + "NTEN-MSNE: "+courseObj.reqNTENMSNE+"\n" +"AINT-MSAI: "+courseObj.reqAINTMSAI+"\n";
         reqCSENPHD.textContent=courseObj.reqCSENPHD;
         reqCSENMS.textContent=courseObj.reqCSENMS;
         reqCSENMSCPS.textContent=courseObj.reqCSENMSCPS;
@@ -447,13 +423,6 @@
       searchResultMessage.textContent="No suggestions available";
       return;
     }
-
-    /*
-    //list should be sorted already
-    if (listSemester.length>1){
-      listSemester.sort((a,b)=> a-b);
-    }
-    */
 
     //Step 3 - if any results, populate the suggestions dropdown
     for (let m=0;m<listSuggestions.length;m++){
@@ -569,12 +538,13 @@
     let webpageHelp=document.getElementById('webpageMessageOnClick');
     let topicsHelp=document.getElementById('specialTopicsMessageOnClick');
 
-    var accordionR = {titleHelp,searchHelp,subjectHelp,nameHelp,hoursHelp,descriptionHelp,notesHelp,offeringsHelp,regHelp,degreeHelp,skillsHelp,autoHelp,webpageHelp,topicsHelp}
+    var accordionR = [titleHelp,searchHelp,subjectHelp,nameHelp,hoursHelp,descriptionHelp,notesHelp,offeringsHelp,regHelp,degreeHelp,skillsHelp,autoHelp,webpageHelp,topicsHelp]
     var i;
+
     for (i = 0; i < accordionR.length; i++) {
       let currMessage=accordionR[i];
       if (currMessage != protectedMessage){
-        if (parseInt(currMessage.style.width)>(0)){
+        if (currMessage.style.width != "0%"){
           currMessage.className="fade-out-messageDisplay";
           currMessage.style.width="0%";
           currMessage.style.opacity="0.0";
@@ -651,7 +621,6 @@
     let notes = document.getElementById('resultNotes');
     let offerings=document.getElementById('resultOfferings');
     let restrictions = document.getElementById('resultRestrictions');
-    //let requirements = document.getElementById('resultReqs');
     let reqCSENPHD = document.getElementById('reqsCSENPHD');
     let reqCSENMS = document.getElementById('reqsCSENMS');
     let reqCSENMSCPS = document.getElementById('reqsCSENMSCPS');
@@ -697,7 +666,6 @@
     reqCSENMSCPS.textContent="";
     reqNTENMSNE.textContent="";
     reqAINTMSAI.textContent="";
-    //requirements.textContent="";
     reqsNotes.textContent="";
     skills.textContent="";
     searchResultMessage=document.getElementById('searchResultMessage');

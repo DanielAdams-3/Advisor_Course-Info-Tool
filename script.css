@@ -116,23 +116,8 @@ input[type="text"] {
   font-family:"Roboto",sans-serif;
 }
 
-/*format for the results boxes for Title & Hours, different because one line is enough*/
-#resultSubject, #resultTitle, #resultHours, #resultOfferings
-{
-  padding: 0.25rem;
-  background: #ffff;
-  min-height: 1rem;
-  max-height: 1rem;
-  overflow:hidden;
-  width:100%;
-  border: 2px solid #CFB87C;
-  white-space: pre-wrap;
-  cursor: text;
-  font-size: 1rem;
-}
-
 /*Format the result boxes for Course description, notes Degree Reqs and Reg Restrictions*/
-#resultDescription, #resultNotes, #resultReqs, #resultRestrictions, #resultSkills
+#resultDescription, #resultNotes, #resultReqs, #resultRestrictions, #resultSkills, #resultSubject, #resultTitle, #resultHours, #resultOfferings
 {
   padding: 0.25rem;
   background: #ffff;
@@ -656,7 +641,9 @@ td,th {
   border: 1px solid #000000;
   padding: 10px 20px;
 }
-
+th{
+  font-family:'Roboto Condensed', sans-serif;
+}
 tr:nth-child(even) th {
   background-color: #EEF5F8;
 }
