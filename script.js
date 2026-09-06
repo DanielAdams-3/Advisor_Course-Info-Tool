@@ -529,7 +529,7 @@
     let nameHelp=document.getElementById('nameMessageOnClick');
     let hoursHelp=document.getElementById('hoursMessageOnClick');
     let descriptionHelp=document.getElementById('descriptionMessageOnClick');
-    let notesHelp=document.getElementById('notesMessageOnClick');
+    let notesHelp=document.getElementById('notesMessageOnClick');    
     let offeringsHelp=document.getElementById('offeringsMessageOnClick');
     let regHelp=document.getElementById('regRestrictionsMessageOnClick');
     let degreeHelp=document.getElementById('DegreeReqsCSMessageOnClick');
@@ -554,6 +554,15 @@
           currMessage.style.paddingBottom="0%";
           currMessage.style.display="none";
         }
+      }
+    }
+
+    var helpButtonClass = document.getElementsByClassName("buttonHelp");
+    var i;
+    for (i = 0; i < helpButtonClass.length; i++) {
+      if (helpButtonClass[i].style.background-color==="#ff6060")
+      {
+        changeHelpButton(helpButtonClass[i]);
       }
     }
   }
