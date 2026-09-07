@@ -560,9 +560,10 @@
     var helpButtonClass = document.getElementsByClassName("buttonHelp");
     var i;
     for (i = 0; i < helpButtonClass.length; i++) {
-      if (helpButtonClass[i].style.backgroundColor==="#ff6060")
+      if (helpButtonClass[i].classList.toggle("opened") === true)
       {
         changeHelpButton(helpButtonClass[i]);
+        x.classList.toggle("opened");
       }
     }
   }
@@ -573,6 +574,7 @@
 
     //first, close all other messages - lol never implemented
     HideAllOtherMessages(x);
+
 
     //now we open/close JUST the message intended
     if (courseSearchMessageHidden === true)
