@@ -519,7 +519,12 @@
   function changeInnerMenu(x) {
     const visibleNav = document.getElementById("mySidebar");    
 
+    let y = document.getElementById('menuButton');
+
     if (visibleNav.style.width === '20%' || visibleNav.style.minWidth === '200px') {
+      y.classList.toggle("change");
+      y.classList.toggle("opened");
+
       x.classList.toggle("change");
       x.classList.toggle("opened");
     }
@@ -572,8 +577,9 @@
       if (helpButtonClass[i].classList.toggle("opened") === true)
       {
         changeHelpButton(helpButtonClass[i]);
-        x.classList.toggle("opened");
+        //x.classList.toggle("opened");
       }
+      
     }
   }
 
@@ -702,4 +708,10 @@
     menuButton=document.getElementById("menuButton");
     showHide();
     changeMenu(menuButton);
+  });
+
+  document.addEventListener("DOMContentLoaded", function() { 
+    innerMenuButton=document.getElementById("innerMenuButton");
+    showHide();
+    changeMenu(innerMenuButton);
   });
