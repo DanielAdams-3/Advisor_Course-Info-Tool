@@ -516,6 +516,15 @@
     x.classList.toggle("opened");
   }
 
+  function changeInnerMenu(x) {
+    const visibleNav = document.getElementById("mySidebar");    
+
+    if (visibleNav.style.width === '20%' || visibleNav.style.minWidth === '200px') {
+      x.classList.toggle("change");
+      x.classList.toggle("opened");
+    }
+  }
+
   function changeHelpButton(x){
     x.classList.toggle("opened");
   }
