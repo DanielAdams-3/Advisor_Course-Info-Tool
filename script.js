@@ -560,7 +560,7 @@
     var helpButtonClass = document.getElementsByClassName("buttonHelp");
     var i;
     for (i = 0; i < helpButtonClass.length; i++) {
-      if (helpButtonClass[i].style.background-color==="#ff6060")
+      if (helpButtonClass[i].style.backgroundColor==="#ff6060")
       {
         changeHelpButton(helpButtonClass[i]);
       }
