@@ -502,9 +502,9 @@
     var i;
     var panel = document.getElementsByClassName("panel");
     for (i = 0; i < accordionR.length; i++) {
+
       accordionR[i].addEventListener("click", function() {
         this.classList.toggle("active");
-
         var currPanel=this.nextElementSibling;
         currPanel.classList.toggle("show");
       });
@@ -522,11 +522,13 @@
     let y = document.getElementById('menuButton');
 
     if (visibleNav.style.width === '20%' || visibleNav.style.minWidth === '200px') {
-      y.classList.toggle("change");
-      y.classList.toggle("opened");
-
       x.classList.toggle("change");
       x.classList.toggle("opened");
+    }
+
+    if (y.style.backgroundColor === "#ff6060"){
+      y.classList.toggle("change");
+      y.classList.toggle("opened");
     }
   }
 
@@ -574,7 +576,7 @@
     var helpButtonClass = document.getElementsByClassName("buttonHelp");
     var i;
     for (i = 0; i < helpButtonClass.length; i++) {
-      if (helpButtonClass[i].classList.toggle("opened") === true)
+      if (helpButtonClass[i].style.backgroundColor === ("#ff6060"))
       {
         changeHelpButton(helpButtonClass[i]);
         //x.classList.toggle("opened");
