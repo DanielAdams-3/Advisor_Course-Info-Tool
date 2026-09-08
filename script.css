@@ -488,7 +488,6 @@ option{
   background-size:contain;
   background-repeat:no-repeat;
   margin:0;
-
   padding: 12px 0px 12px 0px;
   border-radius: 0px;
 }
@@ -509,7 +508,6 @@ option{
   overflow-y:hidden;
   border:none;
   border-radius:0px;
-  cursor: pointer;
   outline:none;
 }
 

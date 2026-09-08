@@ -519,16 +519,16 @@
   function changeInnerMenu(x) {
     const visibleNav = document.getElementById("mySidebar");    
 
-    let y = document.getElementById('menuButton');
+    let y = document.getElementById("menuButton");
 
     if (visibleNav.style.width === '20%' || visibleNav.style.minWidth === '200px') {
       x.classList.toggle("change");
       x.classList.toggle("opened");
-    }
-
-    if (y.style.backgroundColor === "#ff6060"){
-      y.classList.toggle("change");
-      y.classList.toggle("opened");
+    
+      if (y.style.backgroundColor === "#ff6060"){
+        y.classList.toggle("change");
+        y.classList.toggle("opened");
+      }
     }
   }
 
