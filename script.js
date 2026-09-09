@@ -530,6 +530,8 @@
         y.classList.toggle("opened");
       }
     }
+    console.log(y.style.backgroundColor);
+    console.log(getComputedStyle(y).backgroundColor);
   }
 
   function changeHelpButton(x){
