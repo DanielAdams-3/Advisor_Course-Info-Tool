@@ -522,25 +522,41 @@
     x.classList.toggle("change");
   }
 
-
   function HideAllOtherMessages(x){
     const protectedMessage =x;
-    let titleHelp=document.getElementById('titleMessageOnClick');
     let searchHelp=document.getElementById('searchMessageOnClick');
-    let subjectHelp=document.getElementById('subjectMessageOnClick');
-    let nameHelp=document.getElementById('nameMessageOnClick');
-    let hoursHelp=document.getElementById('hoursMessageOnClick');
-    let descriptionHelp=document.getElementById('descriptionMessageOnClick');
-    let notesHelp=document.getElementById('notesMessageOnClick');    
-    let offeringsHelp=document.getElementById('offeringsMessageOnClick');
-    let regHelp=document.getElementById('regRestrictionsMessageOnClick');
-    let degreeHelp=document.getElementById('DegreeReqsCSMessageOnClick');
-    let skillsHelp=document.getElementById('skillsLearnedMessageOnClick');
+    let searchHelpButton=document.getElementById("searchStandardHelpButton");
     let autoHelp=document.getElementById('autocompleteMessageOnClick');
-    let webpageHelp=document.getElementById('webpageMessageOnClick');
+    let autohelpButton=document.getElementById("autoHelpButton");
     let topicsHelp=document.getElementById('specialTopicsMessageOnClick');
+    let searchTopicsHelpButton=document.getElementById("searchTopicsHelpButton");
+    let titleHelp=document.getElementById('titleMessageOnClick');
+    let titleButton = document.getElementById('titleHelpButton');    
+    let subjectHelp=document.getElementById('subjectMessageOnClick');
+    let subjectHelpButton=document.getElementById('subjectHelpButton');  
+    let nameHelp=document.getElementById('nameMessageOnClick');
+    let nameHelpButton = document.getElementById("nameHelpButton");
+    let hoursHelp=document.getElementById('hoursMessageOnClick');
+    let hoursHelpButton= document.getElementById("hoursHelpButton");
+    let descriptionHelp=document.getElementById('descriptionMessageOnClick');
+    let descriptionHelpButton= document.getElementById("descriptionHelpButton");
+    let notesHelp=document.getElementById('notesMessageOnClick');    
+    let notesHelpButton= document.getElementById("notesHelpButton");
+    let offeringsHelp=document.getElementById('offeringsMessageOnClick');
+    let offeringsHelpButton = document.getElementById("offeringsHelpButton");
+    let regHelp=document.getElementById('regRestrictionsMessageOnClick');
+    let regHelpButton= document.getElementById("regHelpButton");
+    let degreeHelp=document.getElementById('DegreeReqsCSMessageOnClick');
+    let reqsHelpButton= document.getElementById('reqsHelpButton');
 
-    var accordionR = [titleHelp,searchHelp,subjectHelp,nameHelp,hoursHelp,descriptionHelp,notesHelp,offeringsHelp,regHelp,degreeHelp,skillsHelp,autoHelp,webpageHelp,topicsHelp]
+    let skillsHelp=document.getElementById('skillsLearnedMessageOnClick');
+    let skillsHelpButton = document.getElementById('skillsHelpButton')
+    let webpageHelp=document.getElementById('webpageMessageOnClick');
+    let webpageHelpButton = document.getElementById("webpageHelpButton");
+
+    var accordionR = [titleHelp,searchHelp,subjectHelp,nameHelp,hoursHelp,descriptionHelp,notesHelp,offeringsHelp,regHelp,degreeHelp,skillsHelp,autoHelp,webpageHelp,topicsHelp];
+    var helpButtonR = [titleButton,searchHelpButton,subjectHelpButton,nameHelpButton,hoursHelpButton,descriptionHelpButton,notesHelpButton,offeringsHelpButton,regHelpButton,reqsHelpButton,skillsHelpButton,autohelpButton,webpageHelpButton,searchTopicsHelpButton,];
+
     var i;
 
     for (i = 0; i < accordionR.length; i++) {
@@ -556,17 +572,12 @@
           currMessage.style.paddingBottom="0%";
           currMessage.style.display="none";
         }
+        //https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
+        let redButton = helpButtonR[i].classList.contains("opened") === true
+        if (redButton === true){
+          changeHelpButton(helpButtonR[i]);
+        }
       }
-    }
-
-    var helpButtonClass = document.getElementsByClassName("buttonHelp");
-    var i;
-    for (i = 0; i < helpButtonClass.length; i++) {
-      if (helpButtonClass[i].style.backgroundColor === ("#ff6060"))
-      {
-        changeHelpButton(helpButtonClass[i]);
-      }
-      
     }
   }
 
@@ -699,7 +710,7 @@
     const navBarHidden = navBar.style.width === "0%";
     const mainMenuButtonRed = mainMenuButton.getAttribute("opened");
     
-    if (navBarHidden === true && mainMenuButtonRed){
+    if (navBarHidden === true && mainMenuButtonRed === true){
       changeMenu(mainMenuButton);
     }
   });
@@ -711,7 +722,7 @@
     const navBarHidden=navBar.style.width === "0%";
 
     const innerMenuButtonRed = innerMenuButton.getAttribute("opened");
-    if (navBarHidden === true && innerMenuButtonRed){
+    if (navBarHidden === true && innerMenuButtonRed === true){
       changeMenu(innerMenuButton);
     }
   });
