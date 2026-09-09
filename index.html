@@ -12,24 +12,24 @@
   <script src="topicsCourseCatalog.js"></script>
   <title>Course Information Retrieval Tool (CIRT)</title>
 </head>
-  <div id="mySidebar">
+<div id="mySidebar">
+  <div class="sidebarRow" style="background:black;">
+    <div class="buttonNav" id="innerMenuButton" style="align-content:right;" onclick="javascript:showHide(); javascript:changeInnerMenu(this)">
+      <div class="buttonNavBar1"></div>
+      <div class="buttonNavBar2"></div>
+      <div class="buttonNavBar3"></div>
+    </div>
+  <div class="sidebarRow" style="background:black;">
+  </div>
+    <div class="sidebarHeader" style="padding-bottom:0;"></div>
     <div class="sidebarRow" style="background:black;">
-      <div class="buttonNav" id="innerMenuButton" style="align-content:right;" onclick="javascript:showHide(); javascript:changeInnerMenu(this)">
-        <div class="buttonNavBar1"></div>
-        <div class="buttonNavBar2"></div>
-        <div class="buttonNavBar3"></div>
-      </div>
-    <div class="sidebarRow" style="background:black;">
-    </div>
-      <div class="sidebarHeader" style="padding-bottom:0;"></div>
-      <div class="sidebarRow" style="background:black;">
-    </div>
-    <div class="sidebarHeader" style="background:#CFB87C;color:#000000;text-transform:uppercase;min-height:0%">Course Information</div>
-    <button class="accordion" style="text-transform:capitalize">CU Boulder</button>
-    <div class="panel">
-      <button class="sidebarRow" onclick="javascript:goLink('https://catalog.colorado.edu/courses-a-z/')">Graduate Catalog AY26-27</button>
-      <button class="sidebarRow" onclick="javascript:goLink('https://classes.colorado.edu/')">Class Search (classes.colorado.edu)</button>
-    </div>
+  </div>
+  <div class="sidebarHeader" style="background:#CFB87C;color:#000000;text-transform:uppercase;min-height:0%">Course Information</div>
+  <button class="accordion" style="text-transform:capitalize">CU Boulder</button>
+   <div class="panel">
+    <button class="sidebarRow" onclick="javascript:goLink('https://catalog.colorado.edu/courses-a-z/')">Graduate Catalog AY26-27</button>
+    <button class="sidebarRow" onclick="javascript:goLink('https://classes.colorado.edu/')">Class Search (classes.colorado.edu)</button>
+  </div>
   <button class="accordion" style="text-transform:capitalize">CSCI Course Info</button>
   <div class="panel">
     <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/graduate-programs/breadth-courses')">Breadth List</button>
@@ -40,7 +40,7 @@
     <button class="sidebarRow" onclick="javascript:goLink('https://docs.google.com/spreadsheets/d/1cyO2n1xfp6QEOjoUIr4CfAsfHH-fGB7LIWFB1ZFxfOY/edit?gid=0#gid=0')">3. Skills Learned by Course (2019)</button>
     <button class="sidebarRow" onclick="javascript:goLink('https://bouldercsgrads.org/classes')">Class Reviews, CS-GSA</button>
   </div>
-  <div class="sidebarHeader" style="background:#CFB87C;color:#000000;text-transform:uppercase;min-height:0%">Degree Requirements</div>
+ <div class="sidebarHeader" style="background:#CFB87C;color:#000000;text-transform:uppercase;min-height:0%">Degree Requirements</div>
   <button class="accordion" style="text-transform:capitalize">Research MS, PhD</button>
   <div class="panel">
     <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/graduate-programs/master-science-computer-science/master-science-computer-science-degree')">Research MSCS (CSEN-MS)</button>
@@ -66,7 +66,7 @@
     <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/admissions/graduate-admissions')">Grad Admissions Homepage</button>
     <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/admissions/graduate-admissions/admissions-requirements')">CS Grad Programs Requirements</button>
     <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/admissions/graduate-admissions/how-apply/how-apply-masters-program')">Spring 2027 Admissions Exception</button>
-  </div>
+ </div>
   <button class="accordion" style="text-transform:capitalize">MS as non-CS PhD</button>
   <div class="panel">
     <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/students/graduate-students/forms-policies/earning-cs-ms-non-cs-phd-student')">Earning MSCPS as non-CS PhD</button>  
