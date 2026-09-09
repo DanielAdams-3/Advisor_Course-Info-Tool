@@ -525,7 +525,7 @@
       x.classList.toggle("change");
       x.classList.toggle("opened");
     
-      if (y.style.backgroundColor === "#ff6060"){
+      if (getComputedStyle(y).backgroundColor === "#ff6060"){
         y.classList.toggle("change");
         y.classList.toggle("opened");
       }
