@@ -487,11 +487,12 @@
   function showHide() {
     const visibleNav = document.getElementById("mySidebar");    
 
-    if (visibleNav.style.width === '20%' || visibleNav.style.minWidth === '200px') {
+    if (visibleNav.style.width === '20%' || visibleNav.style.width === '200px') {
       visibleNav.className="fade-out";
       visibleNav.style.width="0%";
       visibleNav.style.minWidth="0px";      
     }
+
     else {
       visibleNav.className="fade-in";
       visibleNav.style.width="20%";
@@ -573,11 +574,8 @@
     const messageToDisplay=x;
     const courseSearchMessageHidden=messageToDisplay.style.width ==="0%";
 
-    //first, close all other messages - lol never implemented
     HideAllOtherMessages(x);
 
-
-    //now we open/close JUST the message intended
     if (courseSearchMessageHidden === true)
     { 
       messageToDisplay.className="fade-in-messageDisplay";
@@ -689,11 +687,13 @@
     theTab=document.getElementById("defaultOpen");
     openSearchTab(theTab,"searchTraditionalTab");
   });
-  
+
+  document.addEventListener("DOMContentLoaded", function() { 
+    showHide();
+  });
   
   document.addEventListener("DOMContentLoaded", function() { 
     mainMenuButton=document.getElementById("menuButton");
-    showHide();
     
     const navBar=document.getElementById("mySideBar");
     const navBarHidden = navBar.style.width === "0%";
@@ -706,7 +706,6 @@
 
   document.addEventListener("DOMContentLoaded", function() { 
     innerMenuButton=document.getElementById("innerMenuButton");
-    showHide();
     
     const navBar = document.getElementById("mySidebar"); 
     const navBarHidden=navBar.style.width === "0%";
