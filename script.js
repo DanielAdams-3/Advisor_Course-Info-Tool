@@ -520,14 +520,14 @@
     const visibleNav = document.getElementById("mySidebar");    
 
     let y = document.getElementById("menuButton");
-
+    var BackgroundColor="#ff6060"; 
+    let warningMessage = document.getElementById('searchResultMessage');
     if (visibleNav.style.width === '20%' || visibleNav.style.minWidth === '200px') {
       x.classList.toggle("change");
       x.classList.toggle("opened");
-    
-      if (getComputedStyle(y).backgroundColor === "#ff6060"){
-        y.classList.toggle("change");
-        y.classList.toggle("opened");
+      warningMessage.textContent = toString(y.style.backgroundColor);
+      if (y.style.backgroundColor === BackgroundColor){
+        changeMenu(y);
       }
     }
   }
