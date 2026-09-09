@@ -490,7 +490,7 @@
     if (visibleNav.style.width === '20%' || visibleNav.style.minWidth === '200px') {
       visibleNav.className="fade-out";
       visibleNav.style.width="0%";
-      visibleNav.style.minWidth="0px";
+      visibleNav.style.minWidth="0px";      
     }
     else {
       visibleNav.className="fade-in";
@@ -516,22 +516,9 @@
     x.classList.toggle("opened");
   }
 
-  function changeInnerMenu(x) {
-    const visibleNav = document.getElementById("mySidebar");    
-
-    let y = document.getElementById("menuButton");
-    let warningMessage = document.getElementById('searchResultMessage');
-    if (visibleNav.style.width === '20%' || visibleNav.style.minWidth === '200px') {
-      x.classList.toggle("change");
-      x.classList.toggle("opened");
-    }
-    else{
-      changeMenu(y);
-    }
-  }
-
   function changeHelpButton(x){
     x.classList.toggle("opened");
+    x.classList.toggle("change");
   }
 
 
@@ -577,7 +564,6 @@
       if (helpButtonClass[i].style.backgroundColor === ("#ff6060"))
       {
         changeHelpButton(helpButtonClass[i]);
-        //x.classList.toggle("opened");
       }
       
     }
@@ -704,14 +690,29 @@
     openSearchTab(theTab,"searchTraditionalTab");
   });
   
+  
   document.addEventListener("DOMContentLoaded", function() { 
-    menuButton=document.getElementById("menuButton");
+    mainMenuButton=document.getElementById("menuButton");
     showHide();
-    changeMenu(menuButton);
+    
+    const navBar=document.getElementById("mySideBar");
+    const navBarHidden = navBar.style.width === "0%";
+    const mainMenuButtonRed = mainMenuButton.getAttribute("opened");
+    
+    if (navBarHidden === true && mainMenuButtonRed){
+      changeMenu(mainMenuButton);
+    }
   });
 
   document.addEventListener("DOMContentLoaded", function() { 
     innerMenuButton=document.getElementById("innerMenuButton");
     showHide();
-    changeMenu(innerMenuButton);
+    
+    const navBar = document.getElementById("mySidebar"); 
+    const navBarHidden=navBar.style.width === "0%";
+
+    const innerMenuButtonRed = innerMenuButton.getAttribute("opened");
+    if (navBarHidden === true && innerMenuButtonRed){
+      changeMenu(innerMenuButton);
+    }
   });
