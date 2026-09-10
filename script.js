@@ -496,7 +496,7 @@
       visibleNav.style.minWidth="0px";  
       
       if (redButton === true){
-        changeHelpButton(helpButtonR[i]);
+        changeHelpButton(menuButton);
       }
     }
 
@@ -505,7 +505,7 @@
       visibleNav.style.width="20%";
       visibleNav.style.minWidth="200px";
       if (redButton === false){
-        changeHelpButton(helpButtonR[i]);
+        changeHelpButton(menuButton);
       }
     }
   
