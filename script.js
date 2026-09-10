@@ -714,7 +714,7 @@
   });
   
   document.addEventListener("DOMContentLoaded", function() { 
-    mainMenuButton=document.getElementById("menuButton");
+    let mainMenuButton=document.getElementById("menuButton");
     
     const navBar=document.getElementById("mySideBar");
     const navBarHidden = navBar.style.width === "0%";
@@ -726,7 +726,7 @@
   });
 
   document.addEventListener("DOMContentLoaded", function() { 
-    innerMenuButton=document.getElementById("innerMenuButton");
+    let innerMenuButton=document.getElementById("innerMenuButton");
     
     const navBar = document.getElementById("mySidebar"); 
     const navBarHidden=navBar.style.width === "0%";
