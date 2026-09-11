@@ -229,8 +229,6 @@
             <div id="offeringsMessageOnClick" style="max-width:40%;width:0%;"><h4>About Historical Offerings (future offerings subject to change)</h4>Data manually updated from Class Search. Lists the semesters that the course was offered from Fall 2024-Fall 2026</div>
           </div>
         </div>
-
-
         <div class="row">
           <div class="row" style="min-width:35%;width:35%;max-width:35%;">
             <div id="resultHours" style="max-width:90%;"></div>
@@ -239,7 +237,6 @@
             <div id="resultOfferings"></div>
           </div>
         </div>
-
         <div class="row">  
           <h3>Description&nbsp;</h3>
           <button class="buttonHelp" id="descriptionHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('descriptionMessageOnClick'),'40%'); javascript:changeHelpButton(this)">About</button> 
@@ -248,7 +245,6 @@
         <div class="row">
           <div id="resultDescription"></div>
         </div>  
-
         <div class="row">
           <h3>Class Notes&nbsp;</h3>
           <button class="buttonHelp" id="notesHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('notesMessageOnClick'),'40%'); javascript:changeHelpButton(this)">About</button> 
@@ -257,7 +253,6 @@
         <div class="row">
           <div id="resultNotes"></div>
         </div>
-
         <div class="row">
           <h3>Registration Restrictions&nbsp;</h3>
           <button class="buttonHelp" id="regHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('regRestrictionsMessageOnClick'),'40%'); javascript:changeHelpButton(this)">About</button> 
@@ -266,7 +261,6 @@
         <div class="row">  
           <div id="resultRestrictions"></div>
         </div>
-
         <div class="row">
           <h3>Degree Requirements&nbsp;</h3>
           <button class="buttonHelp" id="reqsHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('DegreeReqsCSMessageOnClick'),'40%'); javascript:changeHelpButton(this)">About</button> 
@@ -300,7 +294,7 @@
               <td id="reqsAINTMSAI"></td>
             </tr>
             <tr>
-              <th>General Notes</th>
+              <th>GENERAL NOTES</th>
               <td id="reqsNotes"></td>
             </tr>
           </table>
@@ -313,11 +307,45 @@
         <div class="row">
           <div id="resultSkills"></div>
         </div>
+        <div class="row">
+          <h3>Course Rigor*&nbsp;</h3>
+          <button class="buttonHelp" id="rigorHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('rigorMessageOnClick'),'40%'); javascript:changeHelpButton(this)">About</button> 
+        </div>
+        <div id="rigorMessageOnClick" style="max-width:40%;width:0%;"><h4>About Rigor</h4>Data available for courses listed in the 3.Skills Learnt document, which was last updated in 2019. Rigor is an individual factor, so this information should be one consideration among others.</div>
+        <div class="row">
+          <div id="resultRigor"></div>
+        </div>
+        <div class="row">
+          <h3>CS GSA Class Reviews&nbsp;</h3>
+          <button class="buttonHelp" id="reviewsHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('reviewsMessageOnClick'),'40%'); javascript:changeHelpButton(this)">About</button> 
+        </div>
+        <div id="reviewsMessageOnClick" style="max-width:40%;width:0%;"><h4>About Reviews</h4>Data manually downloaded from CS-GSA website. Last data update was 09.11.2026</div>
+        <div class="row" style="border:2px solid #CFB87C;">  
+          <table>
+            <caption>CS GSA Class Reviews</caption>
+            <tr>
+              <th>COURSE DETAILS</th>
+              <th>REVIEW INFORMATION</th>
+            </tr>
+            <tr>
+              <th>INSTRUCTOR</th>
+              <td id="reviewIntructor"></td>
+            </tr>
+            <tr>
+              <th>RIGOR</th>
+              <td id="reviewCourseload"></td>
+            </tr>
+            <tr>
+              <th>INPUT</th>
+              <td id="reviewInput"></td>
+            </tr>
+          </table>
+        </div>
       </article>
       <hr/>
       <footer>
         <div class="row">
-          <p>Last updated 09.09.2026</p>
+          <p>Last updated 09.11.2026</p>
           <button class="buttonHelp" id="webpageHelpButton" style="margin-top:-0.25rem;" onclick="javascript:ShowHideMessage(document.getElementById('webpageMessageOnClick'),'40%'); javascript:changeHelpButton(this)">About</button>
           </div>
           <div class="row">

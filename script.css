@@ -641,6 +641,7 @@ td,th {
 }
 th{
   font-family:'Roboto Condensed', sans-serif;
+  background-color:#096FAE;
 }
 tr:nth-child(even) th {
   background-color: #EEF5F8;
