@@ -741,8 +741,7 @@
     }
   }
   
-
-  document.getElementByClassName("buttonNav").addEventListener("click", function() { 
+  document.getElementsByClassName("buttonNav").addEventListener("click", function() { 
     checkInnerMenuButton();
     checkMainMenuButton();
   });
