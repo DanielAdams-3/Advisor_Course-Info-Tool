@@ -742,17 +742,10 @@
   }
   
 
-  document.getElementById('menuButton').addEventListener("click", function() { 
+  document.getElementByClassName("buttonNav").addEventListener("click", function() { 
     checkInnerMenuButton();
     checkMainMenuButton();
   });
-
-  document.getElementById('innerMenuButton').addEventListener("click", function() { 
-    checkInnerMenuButton();
-    checkMainMenuButton();
-  });
-
-
 
   document.addEventListener("DOMContentLoaded", function() { 
     let innerMenuButton=document.getElementById('innerMenuButton');
