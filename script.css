@@ -523,7 +523,7 @@ option{
 #notesMessageOnClick, #offeringsMessageOnClick,
 #regRestrictionsMessageOnClick, #DegreeReqsCSMessageOnClick, 
 #skillsLearnedMessageOnClick, #autocompleteMessageOnClick,
-#webpageMessageOnClick, #specialTopicsMessageOnClick {
+#webpageMessageOnClick, #specialTopicsMessageOnClick, #rigorMessageOnClick, #reviewsMessageOnClick {
   height:fit-content;
   padding-top:0%;
   z-index:1;
@@ -566,7 +566,8 @@ option{
   #notesMessageOnClick, #offeringsMessageOnClick,
   #regRestrictionsMessageOnClick, #DegreeReqsCSMessageOnClick,
   #skillsLearnedMessageOnClick, #autocompleteMessageOnClick,
-  #webpageMessageOnClick, #specialTopicsMessageOnClick{
+  #webpageMessageOnClick, #specialTopicsMessageOnClick,
+  #rigorMessageOnClick, #reviewsMessageOnClick {
     max-width:33%;
     width:33%;
   }
