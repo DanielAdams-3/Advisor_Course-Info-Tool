@@ -741,8 +741,10 @@
     }
   }
   
-  document.getElementsByClassName("buttonNav").addEventListener("click", checkInnerMenuButton());
-  document.getElementsByClassName("buttonNav").addEventListener("click",checkMainMenubutton());
+  document.querySelector("#menuButton").addEventListener("click", checkMainMenuButton());
+  document.querySelector("#innerMenuButton").addEventListener("click",checkMainMenubutton());
+  document.querySelector("#menuButton").addEventListener("click", checkInnerMenuButton());
+  document.querySelector("#innerMenuButton").addEventListener("click",checkInnerMenubutton());
 
 
   document.addEventListener("DOMContentLoaded", function() { 
