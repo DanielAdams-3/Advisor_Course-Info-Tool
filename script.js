@@ -486,27 +486,18 @@
   
   function showHide() {
     const visibleNav = document.getElementById("mySidebar");    
-    let menuButton = document.getElementById('menuButton');
     //https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
-    let redButton = menuButton.classList.contains("opened") === true
 
     if (visibleNav.style.width === '20%' || visibleNav.style.width === '200px') {
       visibleNav.className="fade-out";
       visibleNav.style.width="0%";
       visibleNav.style.minWidth="0px";  
-      
-      if (redButton === true){
-        changeHelpButton(menuButton);
-      }
     }
 
     else {
       visibleNav.className="fade-in";
       visibleNav.style.width="20%";
       visibleNav.style.minWidth="200px";
-      if (redButton === false){
-        changeHelpButton(menuButton);
-      }
     }
   
     var accordionR = document.getElementsByClassName("accordion");
@@ -620,8 +611,6 @@
     }    
   }
 
-
-
   async function goLink(x){
     window.open(x,"_blank");
   }
@@ -714,17 +703,35 @@
   });
   
   document.addEventListener("DOMContentLoaded", function() { 
+    let innerMenuButton=document.getElementById('innerMenuButton');
     let mainMenuButton=document.getElementById("menuButton");
-    
+
+    let redMainButton = menuButton.classList.contains("opened") === true;
+    let redInnerButton=innerMenuButton.classList.contains("opened") === true;
+
     const navBar=document.getElementById("mySideBar");
     const navBarHidden = navBar.style.width === "0%";
-    const mainMenuButtonRed = mainMenuButton.getAttribute("opened");
-    
-    if (navBarHidden === true && mainMenuButtonRed === true){
-      changeMenu(mainMenuButton);
+
+    if (navBarHidden === true){
+      if (redMainButton === true){
+        changeMenu(mainMenuButton);
+      }
+      if (redInnerButton === true)
+      {
+        changeMenu(innerMenuButton);
+      }
+    }
+    else{
+      if (redMainButton === false){
+        changeMenu(mainMenuButton);
+      }
+      if (redInnerButton === false)
+      {
+        changeMenu(innerMenuButton);
+      }
     }
   });
-
+/*
   document.addEventListener("DOMContentLoaded", function() { 
     let innerMenuButton=document.getElementById("innerMenuButton");
     
@@ -735,4 +742,4 @@
     if (navBarHidden === true && innerMenuButtonRed === true){
       changeMenu(innerMenuButton);
     }
-  });
+  });*/
