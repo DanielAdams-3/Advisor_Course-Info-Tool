@@ -741,10 +741,9 @@
     }
   }
   
-  document.getElementsByClassName("buttonNav").addEventListener("click", function() { 
-    checkInnerMenuButton();
-    checkMainMenuButton();
-  });
+  document.getElementsByClassName("buttonNav").addEventListener("click", checkInnerMenuButton());
+  document.getElementsByClassName("buttonNav").addEventListener("click",checkMainMenubutton());
+
 
   document.addEventListener("DOMContentLoaded", function() { 
     let innerMenuButton=document.getElementById('innerMenuButton');
