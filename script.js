@@ -701,7 +701,59 @@
   document.addEventListener("DOMContentLoaded", function() { 
     showHide();
   });
+
+  function checkInnerMenuButton(){
+    let innerMenuButton=document.getElementById('innerMenuButton');
+    let redInnerButton=innerMenuButton.classList.contains("opened") === true;
+    const navBar=document.getElementById("mySideBar");
+    const navBarHidden = navBar.style.width === "0%";
+
+    if (navBarHidden === true){
+      if (redInnerButton === true)
+      {
+        changeMenu(innerMenuButton);
+      }
+    }
+    else{
+      if (redInnerButton === false)
+      {
+        changeMenu(innerMenuButton);
+      }
+    }
+  }
+
+  function checkMainMenuButton(){
+    let mainMenuButton=document.getElementById("menuButton");
+    let redMainButton = menuButton.classList.contains("opened") === true;
+    const navBar=document.getElementById("mySideBar");
+    const navBarHidden = navBar.style.width === "0%";
+
+    if (navBarHidden === true){
+      if (redMainButton === true){
+        changeMenu(mainMenuButton);
+      }
+    }
+    else{
+      if (redMainButton === false)
+      {
+        changeMenu(mainMenuButton);
+      }
+    }
+  }
   
+
+  document.getElementById('menuButton').addEventListener("click", function() { 
+    checkInnerMenuButton();
+    checkMainMenuButton();
+  });
+
+  document.getElementById('innerMenuButton').addEventListener("click", function() { 
+    checkInnerMenuButton();
+    checkMainMenuButton();
+  });
+
+
+
   document.addEventListener("DOMContentLoaded", function() { 
     let innerMenuButton=document.getElementById('innerMenuButton');
     let mainMenuButton=document.getElementById("menuButton");
