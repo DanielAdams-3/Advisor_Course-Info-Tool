@@ -693,15 +693,6 @@
 
   }
 
-  document.addEventListener("DOMContentLoaded", function() { 
-    theTab=document.getElementById("defaultOpen");
-    openSearchTab(theTab,"searchTraditionalTab");
-  });
-
-  document.addEventListener("DOMContentLoaded", function() { 
-    showHide();
-  });
-
   function checkInnerMenuButton(){
     let innerMenuButton=document.getElementById('innerMenuButton');
     let redInnerButton=innerMenuButton.classList.contains("opened") === true;
@@ -740,13 +731,24 @@
       }
     }
   }
-  
-  document.querySelector("#menuButton").addEventListener("click", checkMainMenuButton());
-  document.querySelector("#innerMenuButton").addEventListener("click",checkMainMenubutton());
-  document.querySelector("#menuButton").addEventListener("click", checkInnerMenuButton());
-  document.querySelector("#innerMenuButton").addEventListener("click",checkInnerMenubutton());
 
+  document.addEventListener("DOMContentLoaded", function() { 
+    theTab=document.getElementById("defaultOpen");
+    openSearchTab(theTab,"searchTraditionalTab");
+  });
 
+  document.addEventListener("DOMContentLoaded", function() { 
+    showHide();
+  });
+
+  document.addEventListener("DOMContentLoaded",function(){ 
+    checkInnerMenuButton()
+  });
+  document.addEventListener("DOMContentLoaded",function(){ 
+    checkMainMenuButton()
+  });
+
+  /*
   document.addEventListener("DOMContentLoaded", function() { 
     let innerMenuButton=document.getElementById('innerMenuButton');
     let mainMenuButton=document.getElementById("menuButton");
@@ -774,17 +776,5 @@
       {
         changeMenu(innerMenuButton);
       }
-    }
-  });
-/*
-  document.addEventListener("DOMContentLoaded", function() { 
-    let innerMenuButton=document.getElementById("innerMenuButton");
-    
-    const navBar = document.getElementById("mySidebar"); 
-    const navBarHidden=navBar.style.width === "0%";
-
-    const innerMenuButtonRed = innerMenuButton.getAttribute("opened");
-    if (navBarHidden === true && innerMenuButtonRed === true){
-      changeMenu(innerMenuButton);
     }
   });*/
