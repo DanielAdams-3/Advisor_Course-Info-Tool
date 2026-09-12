@@ -736,7 +736,7 @@
     theTab=document.getElementById("defaultOpen");
     openSearchTab(theTab,"searchTraditionalTab");
   });
-
+/*
   document.addEventListener("DOMContentLoaded", function() { 
     showHide();
   });
@@ -747,34 +747,4 @@
   document.addEventListener("DOMContentLoaded",function(){ 
     checkMainMenuButton();
   });
-
-  /*
-  document.addEventListener("DOMContentLoaded", function() { 
-    let innerMenuButton=document.getElementById('innerMenuButton');
-    let mainMenuButton=document.getElementById("menuButton");
-
-    let redMainButton = menuButton.classList.contains("opened") === true;
-    let redInnerButton=innerMenuButton.classList.contains("opened") === true;
-
-    const navBar=document.getElementById("mySideBar");
-    const navBarHidden = navBar.style.width === "0%";
-
-    if (navBarHidden === true){
-      if (redMainButton === true){
-        changeMenu(mainMenuButton);
-      }
-      if (redInnerButton === true)
-      {
-        changeMenu(innerMenuButton);
-      }
-    }
-    else{
-      if (redMainButton === false){
-        changeMenu(mainMenuButton);
-      }
-      if (redInnerButton === false)
-      {
-        changeMenu(innerMenuButton);
-      }
-    }
-  });*/
+  */
