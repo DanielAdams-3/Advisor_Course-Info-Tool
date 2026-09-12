@@ -741,11 +741,11 @@
     showHide();
   });
 
-  document.addEventListener("DOMContentLoaded",function(){ 
-    checkInnerMenuButton()
+  document.addEventListener("DOMContentLoaded", function(){ 
+    checkInnerMenuButton();
   });
   document.addEventListener("DOMContentLoaded",function(){ 
-    checkMainMenuButton()
+    checkMainMenuButton();
   });
 
   /*
