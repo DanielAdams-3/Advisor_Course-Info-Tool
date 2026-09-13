@@ -762,7 +762,7 @@
     menuButtons=document.getElementsByClassName("buttonNav");
     for (i=0;i<menuButtons.length;i++){
       menuButtons[i].className += " change";
-      menuButtons[i].className += " active";
+      menuButtons[i].className += " opened";
     }
     
     //open the sideBar;
