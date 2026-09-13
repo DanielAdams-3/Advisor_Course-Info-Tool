@@ -749,7 +749,7 @@
   });
 
   function openSideBar(){
-    sideBar=document.getElementById('mySideBar');
+    sideBar=document.getElementById('mySidebar');
     //innerMenuButton=document.getElementById('innerMenuButton');
     //mainMenuButton=document.getElementById('mainMenuButton');
 
