@@ -736,6 +736,7 @@
     theTab=document.getElementById("defaultOpen");
     openSearchTab(theTab,"searchTraditionalTab");
   });
+  
 /*
   document.addEventListener("DOMContentLoaded", function() { 
     showHide();
@@ -747,4 +748,4 @@
   document.addEventListener("DOMContentLoaded",function(){ 
     checkMainMenuButton();
   });
-  */
+*/

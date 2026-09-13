@@ -308,6 +308,7 @@ button:hover, .buttonHelp:hover
 
 
 /*Styles for the button we use to open/close the sidebar*/
+
 .buttonNav {
   position: relative;
   cursor: pointer;
@@ -372,8 +373,8 @@ button:hover, .buttonHelp:hover
 
 /* Style the accordion folder buttons */
 .accordion {
-  background-color:#ffffff;
-  color: #000000;
+  background-color:#777777;
+  color: #ffffff;
   text-transform:uppercase;
   padding: 12px 12px 12px 12px;
   margin:0px;
@@ -458,7 +459,7 @@ option{
 }
 
 .accordion:hover, .accordion a:hover .panel a:hover, .sidebarRow a:hover, .sidebarRow:hover{
-  background-color:#777777;
+  background-color:#0A3758;
   color:#ffffff;
   transition-duration:0.25s;
 }
@@ -493,7 +494,7 @@ option{
 }
 
 .sidebarRow, .sidebarRow a {
-  background-color:#EEF5F8;
+  background-color:#ffffff;
   color: #000000;
   font-size: 1rem;
   font-weight:normal;
@@ -547,7 +548,8 @@ option{
 } 
 
 /*FIXME not actually accessing the screen*/
-@media screen and (width > 800px){ 
+/*need to compute the values*/
+@media screen and (min-width: 800px){ 
   .body{
     left:0%;
     right:15%;
