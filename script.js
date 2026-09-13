@@ -27,6 +27,7 @@
     let notes = document.getElementById('resultNotes');
     let restrictions = document.getElementById('resultRestrictions');
     let offerings = document.getElementById('resultOfferings');
+    let rigor=document.getElementById('resultRigor');
     let reqCSENPHD = document.getElementById('reqsCSENPHD');
     let reqCSENMS = document.getElementById('reqsCSENMS');
     let reqCSENMSCPS = document.getElementById('reqsCSENMSCPS');
@@ -44,6 +45,7 @@
       notes.textContent="";
       offerings.textContent="";
       restrictions.textContent="";
+      rigor.textContent="";
       reqCSENPHD.textContent="";
       reqCSENMS.textContent="";
       reqCSENMSCPS.textContent="";
@@ -63,6 +65,7 @@
       notes.textContent="";
       offerings.textContent="";
       restrictions.textContent="";
+      rigor.textContent="";
       reqCSENPHD.textContent="";
       reqCSENMS.textContent="";
       reqCSENMSCPS.textContent="";
@@ -101,6 +104,7 @@
     notes.textContent=result.notes;
     offerings.textContent=result.offerings;
     restrictions.textContent=result.restrictions;
+    rigor.textContent=result.rigor;
     reqCSENPHD.textContent=result.reqCSENPHD;
     reqCSENMS.textContent=result.reqCSENMS;
     reqCSENMSCPS.textContent=result.reqCSENMSCPS;
@@ -362,6 +366,7 @@
         let notes = document.getElementById('resultNotes');
         let offerings = document.getElementById('resultOfferings');
         let restrictions = document.getElementById('resultRestrictions');
+        let rigor = document.getElementById('resultRigor');
         let reqCSENPHD = document.getElementById('reqsCSENPHD');
         let reqCSENMS = document.getElementById('reqsCSENMS');
         let reqCSENMSCPS = document.getElementById('reqsCSENMSCPS');
@@ -376,6 +381,7 @@
         description.textContent=courseObj.description;
         notes.textContent=courseObj.notes;
         offerings.textContent=courseObj.offerings;
+        rigor.texContent=courseObj.rigor;
         restrictions.textContent=courseObj.restrictions;
         reqCSENPHD.textContent=courseObj.reqCSENPHD;
         reqCSENMS.textContent=courseObj.reqCSENMS;
@@ -548,15 +554,15 @@
     let regHelp=document.getElementById('regRestrictionsMessageOnClick');
     let regHelpButton= document.getElementById("regHelpButton");
     let degreeHelp=document.getElementById('DegreeReqsCSMessageOnClick');
-    let reqsHelpButton= document.getElementById('reqsHelpButton');
-
+    let rigorHelp=document.getElementById('rigorMessageOnClick');    
+    let rigorHelpButton=document.getElementById('rigorHelpButton');
     let skillsHelp=document.getElementById('skillsLearnedMessageOnClick');
     let skillsHelpButton = document.getElementById('skillsHelpButton')
     let webpageHelp=document.getElementById('webpageMessageOnClick');
     let webpageHelpButton = document.getElementById("webpageHelpButton");
 
-    var accordionR = [titleHelp,searchHelp,subjectHelp,nameHelp,hoursHelp,descriptionHelp,notesHelp,offeringsHelp,regHelp,degreeHelp,skillsHelp,autoHelp,webpageHelp,topicsHelp];
-    var helpButtonR = [titleButton,searchHelpButton,subjectHelpButton,nameHelpButton,hoursHelpButton,descriptionHelpButton,notesHelpButton,offeringsHelpButton,regHelpButton,reqsHelpButton,skillsHelpButton,autohelpButton,webpageHelpButton,searchTopicsHelpButton,];
+    var accordionR = [titleHelp,searchHelp,subjectHelp,nameHelp,hoursHelp,descriptionHelp,notesHelp,offeringsHelp,regHelp,degreeHelp,skillsHelp,autoHelp,webpageHelp,topicsHelp,rigorHelp];
+    var helpButtonR = [titleButton,searchHelpButton,subjectHelpButton,nameHelpButton,hoursHelpButton,descriptionHelpButton,notesHelpButton,offeringsHelpButton,regHelpButton,reqsHelpButton,skillsHelpButton,autohelpButton,webpageHelpButton,searchTopicsHelpButton,rigorHelpButton];
 
     var i;
 
@@ -615,7 +621,7 @@
     window.open(x,"_blank");
   }
 
-
+  
   function openSearchTab(x,tabName){
     var i, tabContent, tablinks;
     tabContent=document.getElementsByClassName("tabContent");
@@ -648,7 +654,7 @@
     let reqAINTMSAI = document.getElementById('reqsAINTMSAI');
     let reqsNotes=document.getElementById('reqsNotes');
     let skills = document.getElementById('resultSkills');
-
+    let rigor=document.getElementById('resultRigor');
     let topicsTermSelected=document.getElementById('topicsTermDisplayed');
     let topicsSectionSelected=document.getElementById('topicsDisplayed');
     let autocompletesuggestionSelected=document.getElementById('suggestionSelected');
@@ -681,6 +687,7 @@
     notes.textContent="";
     offerings.textContent="";
     restrictions.textContent="";
+    rigor.textContent="";
     reqCSENPHD.textContent="";
     reqCSENMS.textContent="";
     reqCSENMSCPS.textContent="";
@@ -688,9 +695,9 @@
     reqAINTMSAI.textContent="";
     reqsNotes.textContent="";
     skills.textContent="";
+    
     searchResultMessage=document.getElementById('searchResultMessage');
     searchResultMessage.textContent="";
-
   }
 
   function checkInnerMenuButton(){
@@ -737,6 +744,34 @@
     openSearchTab(theTab,"searchTraditionalTab");
   });
   
+  document.addEventListener("DOMContentLoaded",function(){
+    openSideBar();
+  });
+
+  function openSideBar(){
+    sideBar=document.getElementById('mySideBar');
+    //innerMenuButton=document.getElementById('innerMenuButton');
+    //mainMenuButton=document.getElementById('mainMenuButton');
+
+
+    /*for (i=0; i<menuButtons.length;i++){
+      menuButtons[i].style.display="none";
+    }
+    tablinks=document.getElementsByClassName("tablinks");*/
+    var i, menuButtons;
+    menuButtons=document.getElementsByClassName("buttonNav");
+    for (i=0;i<menuButtons.length;i++){
+      menuButtons[i].className += " change";
+      menuButtons[i].className += " active";
+    }
+    
+    //open the sideBar;
+    sideBar.style.display="block";
+    sideBar.className+= " fade-in";
+    sideBar.style.width="20%";
+    sideBar.style.minWidth="200px";
+  }
+
 /*
   document.addEventListener("DOMContentLoaded", function() { 
     showHide();

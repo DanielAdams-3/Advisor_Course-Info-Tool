@@ -117,7 +117,7 @@ input[type="text"] {
 }
 
 /*Format the result boxes for Course description, notes Degree Reqs and Reg Restrictions*/
-#resultDescription, #resultNotes, #resultReqs, #resultRestrictions, #resultSkills, #resultSubject, #resultTitle, #resultHours, #resultOfferings
+#resultDescription, #resultNotes, #resultReqs, #resultRestrictions, #resultSkills, #resultSubject, #resultTitle, #resultHours, #resultOfferings, #resultRigor
 {
   padding: 0.25rem;
   background: #ffff;
