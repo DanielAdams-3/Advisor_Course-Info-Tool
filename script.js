@@ -703,7 +703,7 @@
   function checkInnerMenuButton(){
     let innerMenuButton=document.getElementById('innerMenuButton');
     let redInnerButton=innerMenuButton.classList.contains("opened") === true;
-    const navBar=document.getElementById("mySideBar");
+    const navBar=document.getElementById("mySidebar");
     const navBarHidden = navBar.style.width === "0%";
 
     if (navBarHidden === true){
@@ -723,7 +723,7 @@
   function checkMainMenuButton(){
     let mainMenuButton=document.getElementById("menuButton");
     let redMainButton = menuButton.classList.contains("opened") === true;
-    const navBar=document.getElementById("mySideBar");
+    const navBar=document.getElementById("mySidebar");
     const navBarHidden = navBar.style.width === "0%";
 
     if (navBarHidden === true){
@@ -750,14 +750,6 @@
 
   function openSideBar(){
     sideBar=document.getElementById('mySidebar');
-    //innerMenuButton=document.getElementById('innerMenuButton');
-    //mainMenuButton=document.getElementById('mainMenuButton');
-
-
-    /*for (i=0; i<menuButtons.length;i++){
-      menuButtons[i].style.display="none";
-    }
-    tablinks=document.getElementsByClassName("tablinks");*/
     var i, menuButtons;
     menuButtons=document.getElementsByClassName("buttonNav");
     for (i=0;i<menuButtons.length;i++){
@@ -771,16 +763,3 @@
     sideBar.style.width="20%";
     sideBar.style.minWidth="200px";
   }
-
-/*
-  document.addEventListener("DOMContentLoaded", function() { 
-    showHide();
-  });
-
-  document.addEventListener("DOMContentLoaded", function(){ 
-    checkInnerMenuButton();
-  });
-  document.addEventListener("DOMContentLoaded",function(){ 
-    checkMainMenuButton();
-  });
-*/
