@@ -617,7 +617,7 @@
     }    
   }
 
-  async function goLink(x){
+  function goLink(x){
     window.open(x,"_blank");
   }
 
