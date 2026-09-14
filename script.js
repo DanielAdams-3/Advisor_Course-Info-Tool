@@ -561,13 +561,13 @@
     let webpageHelp=document.getElementById('webpageMessageOnClick');
     let webpageHelpButton = document.getElementById("webpageHelpButton");
 
-    var accordionR = [titleHelp,searchHelp,subjectHelp,nameHelp,hoursHelp,descriptionHelp,notesHelp,offeringsHelp,regHelp,degreeHelp,skillsHelp,autoHelp,webpageHelp,topicsHelp,rigorHelp];
+    var messagesR = [titleHelp,searchHelp,subjectHelp,nameHelp,hoursHelp,descriptionHelp,notesHelp,offeringsHelp,regHelp,degreeHelp,skillsHelp,autoHelp,webpageHelp,topicsHelp,rigorHelp];
     var helpButtonR = [titleButton,searchHelpButton,subjectHelpButton,nameHelpButton,hoursHelpButton,descriptionHelpButton,notesHelpButton,offeringsHelpButton,regHelpButton,reqsHelpButton,skillsHelpButton,autohelpButton,webpageHelpButton,searchTopicsHelpButton,rigorHelpButton];
 
     var i;
 
-    for (i = 0; i < accordionR.length; i++) {
-      let currMessage=accordionR[i];
+    for (i = 0; i < messagesR.length; i++) {
+      let currMessage=messagesR[i];
       if (currMessage != protectedMessage){
         if (currMessage.style.width != "0%"){
           currMessage.className="fade-out-messageDisplay";
@@ -617,10 +617,9 @@
     }    
   }
 
-  function goLink(x){
+  async function goLink(x){
     window.open(x,"_blank");
   }
-
   
   function openSearchTab(x,tabName){
     var i, tabContent, tablinks;
