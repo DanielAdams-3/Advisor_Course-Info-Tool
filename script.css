@@ -194,7 +194,7 @@ button:hover, .buttonHelp:hover
   z-index: 1;        /* higher index values stack on top of lower indexed items*/
   top: 0;            /*gap from the top of screen*/
   width:0%;         /*hidden by default*/
-  background-image: url('sidebar background.png');
+  background-color:#777777;
   overflow-y:scroll;
   overflow-x:hidden;     /* Disable horizontal scroll */
   padding-inline: 0px;
@@ -373,8 +373,8 @@ button:hover, .buttonHelp:hover
 
 /* Style the accordion folder buttons */
 .accordion {
-  background-color:#777777;
-  color: #ffffff;
+  background-color:#EEF5F8; 
+  color: #0A3758;
   text-transform:uppercase;
   padding: 12px 12px 12px 12px;
   margin:0px;
