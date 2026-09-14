@@ -505,18 +505,6 @@
       visibleNav.style.width="20%";
       visibleNav.style.minWidth="200px";
     }
-  
-    var accordionR = document.getElementsByClassName("accordion");
-    var i;
-    var panel = document.getElementsByClassName("panel");
-    for (i = 0; i < accordionR.length; i++) {
-
-      accordionR[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var currPanel=this.nextElementSibling;
-        currPanel.classList.toggle("show");
-      });
-    }
   }
 
   function changeMenu(x) {
@@ -738,6 +726,19 @@
     }
   }
 
+  function addListeners(){
+    var accordionR = document.getElementsByClassName("accordion");
+    var i;
+    var panel = document.getElementsByClassName("panel");
+    for (i = 0; i < accordionR.length; i++) {
+      accordionR[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var currPanel=this.nextElementSibling;
+        currPanel.classList.toggle("show");
+      });
+    }
+  }
+
   document.addEventListener("DOMContentLoaded", function() { 
     theTab=document.getElementById("defaultOpen");
     openSearchTab(theTab,"searchTraditionalTab");
@@ -745,6 +746,10 @@
   
   document.addEventListener("DOMContentLoaded",function(){
     openSideBar();
+  });
+
+  document.addEventListener("DOMContentLoaded",function(){
+    addListeners();
   });
 
   function openSideBar(){
