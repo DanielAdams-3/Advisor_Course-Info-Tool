@@ -42,6 +42,7 @@ with open(js_file, "w", encoding="utf-8") as f:
         f.write(f' reviewInstructor: {json.dumps(str(row["reviewInstructor"]))},\n')
         f.write(f' reviewCourseload: {json.dumps(str(row["reviewCourseload"]))},\n')
         f.write(f' reviewInput: {json.dumps(str(row["reviewInput"]))},\n')
+        f.write(f' rigor: {json.dumps(clean(row["rigor"]))},\n')
         f.write(" },\n")
     f.write("];\n")
 
@@ -75,6 +76,7 @@ with open(js2_file, "w", encoding="utf-8") as g:
         g.write(f' reviewInstructor: {json.dumps(str(row["reviewInstructor"]))},\n')
         g.write(f' reviewCourseload: {json.dumps(str(row["reviewCourseload"]))},\n')
         g.write(f' reviewInput: {json.dumps(str(row["reviewInput"]))},\n')
+        g.write(f' rigor: {json.dumps(clean(row["rigor"]))},\n')
         g.write(" },\n")
     g.write("];\n")
 g.close()

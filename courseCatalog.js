@@ -18,6 +18,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "APPM-5720",
@@ -38,6 +39,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "APPM-8500",
@@ -58,6 +60,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ASEN-5347",
@@ -78,6 +81,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ASEN-6020",
@@ -98,6 +102,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ASEN-6412",
@@ -118,6 +123,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5040",
@@ -138,6 +144,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5050",
@@ -158,6 +165,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5060",
@@ -178,6 +186,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5112",
@@ -198,6 +207,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5120",
@@ -218,6 +228,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5130",
@@ -238,6 +249,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5131",
@@ -258,6 +270,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5140",
@@ -278,6 +291,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5150",
@@ -298,6 +312,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5151",
@@ -318,6 +333,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5201",
@@ -338,6 +354,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5202",
@@ -358,6 +375,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5203",
@@ -378,6 +396,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5204",
@@ -398,6 +417,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5210",
@@ -418,6 +438,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5214",
@@ -438,6 +459,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5220",
@@ -458,6 +480,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5221",
@@ -478,6 +501,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5230",
@@ -498,6 +522,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5240",
@@ -518,6 +543,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5244",
@@ -538,6 +564,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5250",
@@ -558,6 +585,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5279",
@@ -578,6 +606,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5320",
@@ -598,6 +627,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5330",
@@ -618,6 +648,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5340",
@@ -638,6 +669,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5400",
@@ -658,6 +690,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5402",
@@ -678,6 +711,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5410",
@@ -698,6 +732,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5420",
@@ -718,6 +753,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5430",
@@ -738,6 +774,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5440",
@@ -758,6 +795,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5519",
@@ -778,6 +816,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5529",
@@ -798,6 +837,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5606",
@@ -818,6 +858,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5610",
@@ -838,6 +879,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5616",
@@ -858,6 +900,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5620",
@@ -878,6 +921,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5630",
@@ -898,6 +942,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5640",
@@ -918,6 +963,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5650",
@@ -938,6 +984,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5660",
@@ -958,6 +1005,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5680",
@@ -978,6 +1026,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5720",
@@ -998,6 +1047,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5730",
@@ -1018,6 +1068,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5809",
@@ -1038,6 +1089,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5820",
@@ -1058,6 +1110,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5840",
@@ -1078,6 +1131,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-5900",
@@ -1098,6 +1152,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-6519",
@@ -1118,6 +1173,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-6900",
@@ -1138,6 +1194,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-6910",
@@ -1158,6 +1215,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-6920",
@@ -1178,6 +1236,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-7000",
@@ -1198,6 +1257,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-7500",
@@ -1218,6 +1278,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-7900",
@@ -1238,6 +1299,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ATLS-8990",
@@ -1258,6 +1320,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5002",
@@ -1278,6 +1341,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5008",
@@ -1298,6 +1362,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5012",
@@ -1318,6 +1383,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5018",
@@ -1338,6 +1404,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5022",
@@ -1358,6 +1425,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5028",
@@ -1378,6 +1446,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5063",
@@ -1398,6 +1467,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5073",
@@ -1418,6 +1488,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5083",
@@ -1438,6 +1509,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5112",
@@ -1458,6 +1530,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5113",
@@ -1478,6 +1551,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5122",
@@ -1498,6 +1572,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5123",
@@ -1518,6 +1593,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5132",
@@ -1538,6 +1614,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5133",
@@ -1558,6 +1635,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5204",
@@ -1578,6 +1656,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5214",
@@ -1598,6 +1677,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5222",
@@ -1618,6 +1698,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5224",
@@ -1638,6 +1719,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5234",
@@ -1658,6 +1740,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5274",
@@ -1678,6 +1761,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5284",
@@ -1698,6 +1782,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5303",
@@ -1718,6 +1803,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5312",
@@ -1738,6 +1824,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5313",
@@ -1758,6 +1845,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5322",
@@ -1778,6 +1866,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5323",
@@ -1798,6 +1887,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5332",
@@ -1818,6 +1908,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5342",
@@ -1838,6 +1929,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5403",
@@ -1858,6 +1950,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5413",
@@ -1878,6 +1971,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5414",
@@ -1898,6 +1992,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5422",
@@ -1918,6 +2013,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5423",
@@ -1938,6 +2034,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5424",
@@ -1958,6 +2055,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5428",
@@ -1978,6 +2076,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5433",
@@ -1998,6 +2097,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5438",
@@ -2018,6 +2118,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5443",
@@ -2038,6 +2139,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5448",
@@ -2058,6 +2160,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5453",
@@ -2078,6 +2181,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5454",
@@ -2098,6 +2202,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5502",
@@ -2118,6 +2223,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5512",
@@ -2138,6 +2244,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5522",
@@ -2158,6 +2265,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5622",
@@ -2178,6 +2286,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5632",
@@ -2198,6 +2307,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5642",
@@ -2218,6 +2328,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5702",
@@ -2238,6 +2349,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5832",
@@ -2258,6 +2370,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5834",
@@ -2278,6 +2391,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5842",
@@ -2298,6 +2412,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5844",
@@ -2318,6 +2433,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5852",
@@ -2338,6 +2454,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5854",
@@ -2358,6 +2475,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5859",
@@ -2378,6 +2496,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5869",
@@ -2398,6 +2517,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5879",
@@ -2418,6 +2538,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5902",
@@ -2438,6 +2559,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5912",
@@ -2458,6 +2580,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-5922",
@@ -2478,6 +2601,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCA-7000",
@@ -2498,6 +2622,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5000",
@@ -2518,6 +2643,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5010",
@@ -2538,6 +2664,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5011",
@@ -2558,6 +2685,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5012",
@@ -2578,6 +2706,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5013",
@@ -2598,6 +2727,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5020",
@@ -2618,6 +2748,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5030",
@@ -2638,6 +2769,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5040",
@@ -2658,6 +2790,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5050",
@@ -2678,6 +2811,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5100",
@@ -2698,6 +2832,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5102",
@@ -2718,6 +2853,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5113",
@@ -2738,6 +2874,7 @@ const courseCatalog = [
  reviewInstructor: "Vlakkies (1 review)",
  reviewCourseload: "Moderate/Hard (1 review)",
  reviewInput: "Review #1: This is an amazing class. It is an extremely practical and hands-on class. The subjects include installing / using the below subjects on the following network (4 Red Hat Machines, 2 Debian Machines, and 1 FreeBSD): Bash Scripting, Users and Groups, File Permissions, Setting up a Apache Web Server / Configuration Management / DHCP Server / DNS Server / NFS / NTP Server, Mounting, and Firewalls.  ",
+ rigor: "-",
  },
  {
  id: "CSCI-5114",
@@ -2758,6 +2895,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5122",
@@ -2778,6 +2916,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5135",
@@ -2798,6 +2937,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5140",
@@ -2818,6 +2958,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5160",
@@ -2838,6 +2979,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5170",
@@ -2858,6 +3000,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5180",
@@ -2878,6 +3021,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5190",
@@ -2898,6 +3042,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5200",
@@ -2918,6 +3063,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5202",
@@ -2938,6 +3084,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5214",
@@ -2958,6 +3105,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5220",
@@ -2978,6 +3126,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5229",
@@ -2998,6 +3147,7 @@ const courseCatalog = [
  reviewInstructor: "Willem Schreuder (1 review)",
  reviewCourseload: "Medium (1 review)",
  reviewInput: "Review #1: The course is taught in pure C using OpenGL3. It\u2019s a good introduction to ideas in computer graphics which ends in a course project of your own desing that is visually interesting. You can choose to write your code using modern OpenGL versions like Volcan and languages other than C. It satisfies a Bin 1 requirement without actually doing any math or proofs, so I really enjoyed it.",
+ rigor: "-",
  },
  {
  id: "CSCI-5230",
@@ -3018,6 +3168,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5239",
@@ -3038,6 +3189,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5240",
@@ -3058,6 +3210,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5244",
@@ -3078,6 +3231,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5253",
@@ -3098,6 +3252,7 @@ const courseCatalog = [
  reviewInstructor: "Eric Keller (2 reviews)",
  reviewCourseload: "Light (2 reviews)",
  reviewInput: "Review #1: Very nice introduction to cloud computing (in GCP environment). You learn large-scale processing libraries like hadoop and spark (all done in Python), as well as Kubernetes and Redis. Great way to brush up on technologies that you will likely use in industry/system design interviews. Grade is based off of 10 labs and a final project. If you are less familiar with software engineer in general this may be more moderate of a workload. Review #2: Its a really nice introduction to Cloud Computing softwares/ frameworks. The concepts and curriculum is definitely relevant. However, the class itself felt dull. Regardless, good curriculum and easy course in general.",
+ rigor: "-",
  },
  {
  id: "CSCI-5254",
@@ -3118,6 +3273,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5260",
@@ -3138,6 +3294,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5263",
@@ -3158,6 +3315,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5264",
@@ -3178,6 +3336,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5270",
@@ -3198,6 +3357,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5273",
@@ -3218,6 +3378,7 @@ const courseCatalog = [
  reviewInstructor: "Sangte Ha (1 review)",
  reviewCourseload: "Moderate/hard (1 revie)",
  reviewInput: "Review #1: Covers a lot in limited time. Biweekly assignments and projects are hands-on and exam-heavy. Easier if you have prior networks knowledge; otherwise, expect to spend significant time learning. The final project is the toughest due to limited class coverage and time constraints.",
+ rigor: "-",
  },
  {
  id: "CSCI-5280",
@@ -3238,6 +3399,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5302",
@@ -3258,6 +3420,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5303",
@@ -3278,6 +3441,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5313",
@@ -3298,6 +3462,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5314",
@@ -3318,6 +3483,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5322",
@@ -3338,6 +3504,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5340",
@@ -3358,6 +3525,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5350",
@@ -3378,6 +3546,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5352",
@@ -3398,6 +3567,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5360",
@@ -3418,6 +3588,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5380",
@@ -3438,6 +3609,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5402",
@@ -3458,6 +3630,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5403",
@@ -3478,6 +3651,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5413",
@@ -3498,6 +3672,7 @@ const courseCatalog = [
  reviewInstructor: "John Black (1 review)",
  reviewCourseload: "Hard (1 review)",
  reviewInput: "Review #1: Excellent course to start basics of hacking. This is completely hands-on course, CTF style you will learn a lot about basics of binary exploitation, web exploitation and mitigation techniques Learn different hacking techniques, like recon, maintaining persistence, shells etc Finals is a CTF where you are expected to get root shell given a web server. For someone who has security experience it is perhaps easy, but for someone who has no clue about security should consider this as hard course and expect significant amount of dedicated time. It could really get frustrating.  The grades are based on number of levels you clear. Overall it\u2019s a fun class and you will definitely learn something and probably kick off your career in CyberSecurity. Also, the Prof is really really cool! ",
+ rigor: "-",
  },
  {
  id: "CSCI-5423",
@@ -3518,6 +3693,7 @@ const courseCatalog = [
  reviewInstructor: "Orit Peleg (1 review)",
  reviewCourseload: "Light (1 review)",
  reviewInput: "Review #1: The first half of the class is dedicated to reading and discussing papers, which are a good mix of biological and computational. For example, one might read about how ants find the shortest path using pheromone sensing, then read about how this was applied in network routing with the AntNet algorithm. The second half of the class is a small-group project (one to three people). The workload was very light, but I learned a ton from it and the professor is very kind and knowledgeable (and a fairly easy grader). A background in biology/ecology/programming is not assumed.",
+ rigor: "-",
  },
  {
  id: "CSCI-5434",
@@ -3538,6 +3714,7 @@ const courseCatalog = [
  reviewInstructor: "Daniel Acu\u00f1a (1 review)",
  reviewCourseload: "Medium (1 review)",
  reviewInput: "Review #1: 95% of the grade is in timed assessments (6 quizzes, midterm, and final exam), and the remaining 5% of the grade is in class participation. There are ungraded practice problems available that are quite helpful. I thought that the grading structure made the class difficult, but having taken an undergraduate probability, artificial intelligence, and data science course was quite helpful (for probability theory, HMM/Markov Chains/Bayes, and Gaussian Mixture Models/Maximum Likelihood, respectively).",
+ rigor: "-",
  },
  {
  id: "CSCI-5444",
@@ -3558,6 +3735,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5446",
@@ -3578,6 +3756,7 @@ const courseCatalog = [
  reviewInstructor: "Liz Bradley (1 review)",
  reviewCourseload: "Low->moderate workload if you have some background in dynamics/ODE solvers (1 review)",
  reviewInput: "Review #1: One of the best classes I have taken at CU! The project is super fun and relevant; the homeworks really dig into the lecture concepts so you can solidify your knowledge. That said, Liz is not an easy grader and expects solid knowledge of the material \u2013 presented and written well and concisely. If scientific writing or presentations are not your thing, you may struggle with the project. Liz is a fantastic teacher and guide through this material. She describes things in a really intuitive way.  ",
+ rigor: "-",
  },
  {
  id: "CSCI-5448",
@@ -3598,6 +3777,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5454",
@@ -3618,6 +3798,7 @@ const courseCatalog = [
  reviewInstructor: "Bo Waggoner (1 review)",
  reviewCourseload: "High",
  reviewInput: "Review #1: 1. Flipped classroom so expectation to read notes/videos before lecture and discuss related problems from weekly homework in class \u2013 which is open to collaboration \u2013 the assignment are the main learning vehicles. You need to write correctness and performance \u201cproofs\u201d which are a key skill to learn in the class. 2. Expect 4hrs of time for HW every week.  Prof releases a video and notes before the class. The expectation is you go through the materials before class and follow the discussion/doubts for the same. Really cool algorithms related to game theory, ML discussed, it\u2019s fun. I would say this is an excellent course if you can put some efforts. Don\u2019t be afraid of LaTex, you will get used to it. ",
+ rigor: "-",
  },
  {
  id: "CSCI-5502",
@@ -3638,6 +3819,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5514",
@@ -3658,6 +3840,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5523",
@@ -3678,6 +3861,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5525",
@@ -3698,6 +3882,7 @@ const courseCatalog = [
  reviewInstructor: "Joseph Izraelevitz",
  reviewCourseload: "Hard",
  reviewInput: "Review #1: Compiler Construction was a great class. Professor Joseph Izraelevitz was super nice to work with. The curriculum is pretty broad and touches a lot of subjects. That being said, this class is really hard. I would only recommend taking this class with an easy class. Also, it helps alot if you know x86 assembly and C. If you don't, you'll definitely find the class more challenging. Although the class offers plenty of opportunities for extra credit, so getting a good grade is plausible even if you struggle a lot . Addition: He hasn\u2019t taught it in a while, so it may yet come up in the near future. If Bor-Yuh Evan Chang is teaching, be advised that this will be entirely self guided learning with lectures as a place to ask questions on things you have already tried on your own time. This requires a ton more effort on your end as a student. (Fall 2017). You might learn a lot from this method, or you might drown without any support options as the course support staff often doesn\u2019t know the material well. ",
+ rigor: "-",
  },
  {
  id: "CSCI-5526",
@@ -3718,6 +3903,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5535",
@@ -3738,6 +3924,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5573",
@@ -3758,6 +3945,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5576",
@@ -3778,6 +3966,7 @@ const courseCatalog = [
  reviewInstructor: "Scott Runnels (1 review)",
  reviewCourseload: "Very light except like two weeks of the semester (1 review)",
  reviewInput: "Review #1: Scott Runnels is a delightful person and a lot of fun to listen to. That said, I didn\u2019t learn a lot about scientific computing from this class. There were moments that stretched my knowledge but some of the more critical concepts in HPSC were covered only superficially (e.g., OPENMP, MPI, etc.). For 4 units, this is a very light workload (I even traveled for a whole week during the semester and didn\u2019t get behind). But I didn\u2019t feel like I got 4 units worth of knowledge from the class at the same time.  ",
+ rigor: "-",
  },
  {
  id: "CSCI-5593",
@@ -3798,6 +3987,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5606",
@@ -3818,6 +4008,7 @@ const courseCatalog = [
  reviewInstructor: "",
  reviewCourseload: "",
  reviewInput: "",
+ rigor: "-",
  },
  {
  id: "CSCI-5612",
@@ -3838,6 +4029,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5616",
@@ -3858,6 +4050,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5620",
@@ -3878,6 +4071,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5622",
@@ -3898,6 +4092,7 @@ const courseCatalog = [
  reviewInstructor: "Theodora Chaspari (1 review)",
  reviewCourseload: "Medium (1 review)",
  reviewInput: "Review #1: The course subjects included \"Intro to ML\", \"K-Nearest Neighbor\", \"Linear Perceptron Algorithm\", \"Data Pre-Processing\", \"Linear Regression\", \"Non-Linear Regression & Regularization\", \"Logistic Regression\", \"Neural Networks\", \"Decision Trees and Random Forests\", \"Dimensionality Reduction\", \"Unsupervised Learning\" \"Ethics and Trustworthiness in Machine Learning\". The course was heavy on concepts, light on math, and medium-light on the programming. There were 6 quizzes, two exams, and four programming projects (3 single projects, and 1 team project). The professor was very helpful. I think the class content could have been managed better, I would have spent more time on some subjects rather than others but I think it was the first or second time the professor taught the course at CU Boulder. The slides need improvement but I think that is a comment that is true across all CS classes right now. In the end, I was happy to take the course but if you are NOT a beginner in the subject, I think you are likely to be a little frustrated with the content (that is, you would want it to be more in depth, faster, and with more complicated assignments).",
+ rigor: "-",
  },
  {
  id: "CSCI-5630",
@@ -3918,6 +4113,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5636",
@@ -3938,6 +4134,7 @@ const courseCatalog = [
  reviewInstructor: "Jed Brown (1 review)",
  reviewCourseload: "Light (1 review)",
  reviewInput: "Review #1: Don\u2019t be afraid if you\u2019re not a more math-heavy CS student, this class is super doable. Jed has an unorthodox teaching philosophy, but this makes for a more enjoyable and rewarding experience. My recommendation is anyone looking to satisfy their Bin 1 requirement take this course before looking into other classes. Just be aware that math grad students also take this course, and you should register early if you want a spot.  ",
+ rigor: "-",
  },
  {
  id: "CSCI-5646",
@@ -3958,6 +4155,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5654",
@@ -3978,6 +4176,7 @@ const courseCatalog = [
  reviewInstructor: "Sriram Sankaranaryanan",
  reviewCourseload: "Moderate/hard (1 review)",
  reviewInput: "Review #1: This course will be tricky if you\u2019re not on the more math-heavy side of CS. If you don\u2019t have a decent Linear Algebra background, I\u2019d recommend thinking long and hard before enrolling, because you\u2019ll need to be comfy with manipulating matrices.  On the other hand, Sriram is an excellent lecturer, and he\u2019s an invaluable resource if you\u2019re confused about the material.  The material itself is interesting and gives good grounding for understanding the principles of optimization problems.  I will note that the algorithms studied here aren\u2019t necessarily super applicable to real-world problems (you rarely get these beautifully convex problems in real-world scenarios), but there\u2019s definite value in learning these approaches as a building block. ",
+ rigor: "-",
  },
  {
  id: "CSCI-5673",
@@ -3998,6 +4197,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5676",
@@ -4018,6 +4218,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5714",
@@ -4038,6 +4239,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5722",
@@ -4058,6 +4260,7 @@ const courseCatalog = [
  reviewInstructor: "Tom Yeh (1 review)",
  reviewCourseload: "Light (1 review)",
  reviewInput: "Review #1: This was a remote-only class that was offered to both undergrads and grad students.  Personally, I think the goal of offering this course to both student bodies was a bad idea . . . I can\u2019t speak for the undergrads, but from a grad perspective, I don\u2019t think I learned anything particularly new in this course.  If you\u2019ve taken any kind of ML/Deep Learning/NLP course, you likely won\u2019t learn anything new.  They touch on models used in vision (CNNs, RNNs, etc.) without going into newer areas or discussing their specific applications from a vision perspective.  From a workload perspective, you\u2019d get one or two assignments a week to essentially practice what we went over in lecture.  They\u2019re easy and feel more like busy-work than anything else. Intro to computer vision concepts using Excel. Includes online lectures, in-person labs, and straightforward assignments. Exams are remote and resemble homework problems. Occasional special lectures on current CV advancements.",
+ rigor: "-",
  },
  {
  id: "CSCI-5753",
@@ -4078,6 +4281,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5802",
@@ -4098,6 +4302,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5809",
@@ -4118,6 +4323,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5817",
@@ -4138,6 +4344,7 @@ const courseCatalog = [
  reviewInstructor: "Milap Sharma (1 review)",
  reviewCourseload: "Light/Medium (1 review)",
  reviewInput: "Review #1: This class was chaos. The instructor was new, I believe they got him just to fill the slot. The lecture content was all over the place and very hard to follow. Half the time the assignments (programming homework, programming projects, and written assignments) felt like they were different material from the lecture/slides content or the reading. Covers many topics but not in depth. Biweekly assignments and projects are manageable if you follow the lectures. Exams consist of MCQs and SQL-based word problems. Time-consuming but doable.",
+ rigor: "-",
  },
  {
  id: "CSCI-5822",
@@ -4158,6 +4365,7 @@ const courseCatalog = [
  reviewInstructor: "Rebecca Morrison (1 review)",
  reviewCourseload: "Moderate (1 review)",
  reviewInput: "Review #1: Very good class that provides a nice introduction to probabilistic graphical models and bayesian probability. Grade is based off participation, homeworks (that were graded lightly), and a final project. There were some \"proofs\" involved and those who struggle with probability may find the workload higher. Rebecca is very nice, funny, and helpful in office hours too!",
+ rigor: "-",
  },
  {
  id: "CSCI-5828",
@@ -4178,6 +4386,7 @@ const courseCatalog = [
  reviewInstructor: "Michael Barinek and Tyson Gern",
  reviewCourseload: "Moderate/hard (1 review)",
  reviewInput: "Review #1: This class was supposed to cover all the topics that aren\u2019t formally introduced in a typical software development course (version control, terminal, vim, metaprogramming, etc.), but we ended up covering almost none of this due to poor planning. It\u2019s worth noting that the department chair Ken Anderson used to teach this class but had two industry programmers take over the role, which is probably the root of the problems. If you have to take a bin 3 requirement -- and already have industry experience -- I\u2019d say that this course is manageable, but otherwise just stay away from it and take something else.",
+ rigor: "-",
  },
  {
  id: "CSCI-5832",
@@ -4198,6 +4407,7 @@ const courseCatalog = [
  reviewInstructor: "Philip Ogren (1 review); Maria Pacheco (1 review)",
  reviewCourseload: "Light (1 review-Ogren), Moderate/Hard (1 review-Pacheco)",
  reviewInput: "Review #1 (Ogren): Overall, very good. A lot of the course is repeating AI/ML content covered in other classes, but specifically applied to language. The workload was not bad (six quizzes and an assignment perhaps every 2-3 weeks). The instructor was an industry professional teaching as a guest lecturer, so he was not always familiar with specific algorithms we covered, but he was knowledgeable about the industry side and was very fair. I would recommend this for anyone interested in AI/ML. Review #2 (Pacheco): Starts easy but gets intense. Weekly Python-based assignments using Jupyter Notebooks. ML background is helpful. Includes quizzes and a major final project with a report.",
+ rigor: "-",
  },
  {
  id: "CSCI-5839",
@@ -4218,6 +4428,7 @@ const courseCatalog = [
  reviewInstructor: "David Quigley (1 review)",
  reviewCourseload: "Light (1 review)",
  reviewInput: "Review #1: Focuses on user design theory and a semester-long group project. Weekly readings and Piazza discussions are graded but low-effort. Exams are simple and based on class discussions. Content is introductory and discussion-driven.",
+ rigor: "-",
  },
  {
  id: "CSCI-5840",
@@ -4238,6 +4449,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5849",
@@ -4258,6 +4470,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5854",
@@ -4278,6 +4491,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5880",
@@ -4298,6 +4512,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5897",
@@ -4318,6 +4533,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5900",
@@ -4338,6 +4554,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5919",
@@ -4358,6 +4575,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5922",
@@ -4378,6 +4596,7 @@ const courseCatalog = [
  reviewInstructor: "Danna Gurrari (1 review)",
  reviewCourseload: "Moderate/hard (1 review)",
  reviewInput: "Review #1: The course takes a not too mathematically heavy look at neural networks starting at low-level models and foundations. The course involves both programming and numerical or written assignments. It is topped off with a partner project, which allows for exploration of NNDL for your area of choice \u2013 a good item for resume if interested in related roles. It may be equivalent to many of the popular MOOC courses on the topic, but Dr Gurari is a pretty good instructor, so it doesn\u2019t get too inactive or boring. The programming assignments try to successively become harder. I had familiarity with the subject, which left the first half of the course a bit easy. The assigned readings are well written, free of charge, and LONG. If you have a background with the topic, then the readings are not necessary for success, but be aware that if you don\u2019t already know some of these topics you should expect to do a lot of reading. Similarly, if you aren\u2019t already familiar with these topics, you should expect to spend a lot of time working on building and training your models. The course lectures and supplemental assignment guides tell you everything that you need to do for each assignment, but achieving quality results takes a lot of \u201cbusy time\u201d if you don\u2019t know what you are doing (as is the nature of model training).",
+ rigor: "-",
  },
  {
  id: "CSCI-5929",
@@ -4398,6 +4617,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5932",
@@ -4418,6 +4638,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-5942",
@@ -4438,6 +4659,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-6000",
@@ -4458,6 +4680,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-6100",
@@ -4478,6 +4701,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-6110",
@@ -4498,6 +4722,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-6114",
@@ -4518,6 +4743,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-6118",
@@ -4538,6 +4764,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-6166",
@@ -4558,6 +4785,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-6200",
@@ -4578,6 +4806,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-6214",
@@ -4598,6 +4827,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-6254",
@@ -4618,6 +4848,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-6268",
@@ -4638,6 +4869,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-6302",
@@ -4658,6 +4890,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-6314",
@@ -4678,6 +4911,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-6402",
@@ -4698,6 +4932,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-6414",
@@ -4718,6 +4953,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-6454",
@@ -4738,6 +4974,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-6502",
@@ -4758,6 +4995,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-6622",
@@ -4778,6 +5016,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-6644",
@@ -4798,6 +5037,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-6686",
@@ -4818,6 +5058,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-6712",
@@ -4838,6 +5079,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-6810",
@@ -4858,6 +5100,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-6930",
@@ -4878,6 +5121,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-6940",
@@ -4898,6 +5142,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-6950",
@@ -4918,6 +5163,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-7000",
@@ -4938,6 +5184,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-7100",
@@ -4958,6 +5205,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-7114",
@@ -4978,6 +5226,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-7123",
@@ -4998,6 +5247,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-7135",
@@ -5018,6 +5268,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-7143",
@@ -5038,6 +5289,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-7154",
@@ -5058,6 +5310,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-7176",
@@ -5078,6 +5331,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-7222",
@@ -5098,6 +5352,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-7314",
@@ -5118,6 +5373,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-7412",
@@ -5138,6 +5394,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-7422",
@@ -5158,6 +5415,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-7565",
@@ -5178,6 +5436,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-7575",
@@ -5198,6 +5457,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-7585",
@@ -5218,6 +5478,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-7717",
@@ -5238,6 +5499,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-7772",
@@ -5258,6 +5520,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-7818",
@@ -5278,6 +5541,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-7900",
@@ -5298,6 +5562,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSCI-8990",
@@ -5318,6 +5583,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSPB-1000",
@@ -5338,6 +5604,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSPB-1300",
@@ -5358,6 +5625,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSPB-2270",
@@ -5378,6 +5646,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSPB-2400",
@@ -5398,6 +5667,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSPB-2820",
@@ -5418,6 +5688,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSPB-2824",
@@ -5438,6 +5709,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSPB-3010",
@@ -5458,6 +5730,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSPB-3022",
@@ -5478,6 +5751,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSPB-3104",
@@ -5498,6 +5772,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSPB-3112",
@@ -5518,6 +5793,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSPB-3155",
@@ -5538,6 +5814,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSPB-3202",
@@ -5558,6 +5835,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSPB-3287",
@@ -5578,6 +5856,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSPB-3302",
@@ -5598,6 +5877,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSPB-3308",
@@ -5618,6 +5898,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSPB-3403",
@@ -5638,6 +5919,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSPB-3702",
@@ -5658,6 +5940,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSPB-3753",
@@ -5678,6 +5961,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSPB-3832",
@@ -5698,6 +5982,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSPB-4122",
@@ -5718,6 +6003,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSPB-4502",
@@ -5738,6 +6024,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSPB-4622",
@@ -5758,6 +6045,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSPB-4830",
@@ -5778,6 +6066,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CSPB-4900",
@@ -5798,6 +6087,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CYBR-5000",
@@ -5818,6 +6108,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CYBR-5010",
@@ -5838,6 +6129,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CYBR-5020",
@@ -5858,6 +6150,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CYBR-5030",
@@ -5878,6 +6171,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CYBR-5113",
@@ -5898,6 +6192,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CYBR-5200",
@@ -5918,6 +6213,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CYBR-5220",
@@ -5938,6 +6234,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CYBR-5230",
@@ -5958,6 +6255,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CYBR-5240",
@@ -5978,6 +6276,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CYBR-5250",
@@ -5998,6 +6297,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CYBR-5260",
@@ -6018,6 +6318,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CYBR-5300",
@@ -6038,6 +6339,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CYBR-5303",
@@ -6058,6 +6360,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CYBR-5320",
@@ -6078,6 +6381,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CYBR-5330",
@@ -6098,6 +6402,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CYBR-5340",
@@ -6118,6 +6423,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CYBR-5350",
@@ -6138,6 +6444,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CYBR-5400",
@@ -6158,6 +6465,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CYBR-5410",
@@ -6178,6 +6486,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CYBR-5420",
@@ -6198,6 +6507,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CYBR-5505",
@@ -6218,6 +6528,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CYBR-5510",
@@ -6238,6 +6549,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CYBR-5550",
@@ -6258,6 +6570,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CYBR-5620",
@@ -6278,6 +6591,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CYBR-5630",
@@ -6298,6 +6612,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CYBR-5830",
@@ -6318,6 +6633,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CYBR-5910",
@@ -6338,6 +6654,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CYBR-6940",
@@ -6358,6 +6675,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CYBR-6950",
@@ -6378,6 +6696,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "CYBR-8990",
@@ -6398,6 +6717,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5001",
@@ -6418,6 +6738,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5002",
@@ -6438,6 +6759,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5003",
@@ -6458,6 +6780,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5011",
@@ -6478,6 +6801,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5012",
@@ -6498,6 +6822,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5013",
@@ -6518,6 +6843,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5020",
@@ -6538,6 +6864,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5021",
@@ -6558,6 +6885,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5022",
@@ -6578,6 +6906,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5301",
@@ -6598,6 +6927,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5302",
@@ -6618,6 +6948,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5303",
@@ -6638,6 +6969,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5304",
@@ -6658,6 +6990,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5501",
@@ -6678,6 +7011,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5502",
@@ -6698,6 +7032,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5503",
@@ -6718,6 +7053,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5504",
@@ -6738,6 +7074,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5505",
@@ -6758,6 +7095,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5506",
@@ -6778,6 +7116,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5507",
@@ -6798,6 +7137,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5508",
@@ -6818,6 +7158,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5509",
@@ -6838,6 +7179,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5510",
@@ -6858,6 +7200,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5511",
@@ -6878,6 +7221,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5512",
@@ -6898,6 +7242,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5513",
@@ -6918,6 +7263,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5514",
@@ -6938,6 +7284,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5515",
@@ -6958,6 +7305,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5516",
@@ -6978,6 +7326,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5517",
@@ -6998,6 +7347,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5701",
@@ -7018,6 +7368,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5702",
@@ -7038,6 +7389,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5703",
@@ -7058,6 +7410,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5704",
@@ -7078,6 +7431,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5705",
@@ -7098,6 +7452,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5706",
@@ -7118,6 +7473,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5707",
@@ -7138,6 +7494,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5714",
@@ -7158,6 +7515,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5718",
@@ -7178,6 +7536,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5719",
@@ -7198,6 +7557,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5720",
@@ -7218,6 +7578,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5721",
@@ -7238,6 +7599,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5722",
@@ -7258,6 +7620,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5723",
@@ -7278,6 +7641,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5724",
@@ -7298,6 +7662,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5725",
@@ -7318,6 +7683,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5726",
@@ -7338,6 +7704,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5727",
@@ -7358,6 +7725,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5728",
@@ -7378,6 +7746,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5733",
@@ -7398,6 +7767,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5734",
@@ -7418,6 +7788,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5735",
@@ -7438,6 +7809,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5736",
@@ -7458,6 +7830,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5737",
@@ -7478,6 +7851,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5738",
@@ -7498,6 +7872,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5739",
@@ -7518,6 +7893,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5740",
@@ -7538,6 +7914,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5741",
@@ -7558,6 +7935,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5742",
@@ -7578,6 +7956,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5743",
@@ -7598,6 +7977,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5744",
@@ -7618,6 +7998,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5745",
@@ -7638,6 +8019,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5746",
@@ -7658,6 +8040,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5747",
@@ -7678,6 +8061,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5748",
@@ -7698,6 +8082,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5749",
@@ -7718,6 +8103,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5750",
@@ -7738,6 +8124,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5751",
@@ -7758,6 +8145,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5752",
@@ -7778,6 +8166,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5798",
@@ -7798,6 +8187,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5799",
@@ -7818,6 +8208,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5800",
@@ -7838,6 +8229,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5840",
@@ -7858,6 +8250,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5841",
@@ -7878,6 +8271,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5842",
@@ -7898,6 +8292,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5843",
@@ -7918,6 +8313,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5900",
@@ -7938,6 +8334,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSA-5901",
@@ -7958,6 +8355,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSC-5001",
@@ -7978,6 +8376,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSC-5002",
@@ -7998,6 +8397,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSC-5003",
@@ -8018,6 +8418,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSC-5020",
@@ -8038,6 +8439,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSC-5301",
@@ -8058,6 +8460,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSC-5302",
@@ -8078,6 +8481,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSC-5303",
@@ -8098,6 +8502,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSC-5501",
@@ -8118,6 +8523,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSC-5810",
@@ -8138,6 +8544,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSC-5840",
@@ -8158,6 +8565,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSC-5900",
@@ -8178,6 +8586,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "DTSC-5930",
@@ -8198,6 +8607,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ECEN-5133",
@@ -8218,6 +8628,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ECEN-5253",
@@ -8238,6 +8649,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ECEN-5273",
@@ -8258,6 +8670,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ECEN-5313",
@@ -8278,6 +8691,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ECEN-5423",
@@ -8298,6 +8712,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ECEN-5533",
@@ -8318,6 +8733,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ECEN-5593",
@@ -8338,6 +8754,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ECEN-5672",
@@ -8358,6 +8775,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ECEN-5753",
@@ -8378,6 +8796,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ECEN-5772",
@@ -8398,6 +8817,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ECEN-5793",
@@ -8418,6 +8838,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "INFO-5501",
@@ -8438,6 +8859,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "INFO-5502",
@@ -8458,6 +8880,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "INFO-5601",
@@ -8478,6 +8901,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "INFO-5602",
@@ -8498,6 +8922,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "INFO-5605",
@@ -8518,6 +8943,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "INFO-5611",
@@ -8538,6 +8964,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "INFO-5919",
@@ -8558,6 +8985,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ROBO-5000",
@@ -8578,6 +9006,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ROBO-5008",
@@ -8598,6 +9027,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ROBO-5009",
@@ -8618,6 +9048,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ROBO-5302",
@@ -8638,6 +9069,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ROBO-5329",
@@ -8658,6 +9090,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ROBO-6900",
@@ -8678,6 +9111,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ROBO-6930",
@@ -8698,6 +9132,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ROBO-6940",
@@ -8718,6 +9153,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ROBO-6950",
@@ -8738,6 +9174,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ROBO-7000",
@@ -8758,6 +9195,7 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
  {
  id: "ROBO-8990",
@@ -8778,5 +9216,6 @@ const courseCatalog = [
  reviewInstructor: "-",
  reviewCourseload: "-",
  reviewInput: "-",
+ rigor: "-",
  },
 ];
