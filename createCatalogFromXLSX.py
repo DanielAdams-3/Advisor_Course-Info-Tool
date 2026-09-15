@@ -9,8 +9,6 @@ df = pd.read_excel(xlsx_file,sheet_name="courses")
 # Replace blanks
 df = df.fillna("")
 
-
-
 def clean(value):
     """
     Convert to string,
@@ -28,7 +26,7 @@ with open(js_file, "w", encoding="utf-8") as f:
         f.write(f' courseSubject: {json.dumps(clean(row["courseSubject"]))},\n')
         f.write(f' title: {json.dumps(clean(row["title"]))},\n')
         f.write(f' description: {json.dumps(clean(row["description"]))},\n')
-        f.write(f' credits: {json.dumps(clean(row["credits"]))},\n')
+        f.write(f' credits: {json.dumps(str(row["credits"]))},\n')
         f.write(f' notes: {json.dumps(clean(row["notes"]))},\n')
         f.write(f' restrictions: {json.dumps(clean(row["restrictions"]))},\n')
         f.write(f' offerings: {json.dumps(clean(row["offerings"]))},\n')
@@ -52,6 +50,9 @@ df2 = pd.read_excel(xlsx_file,sheet_name="topics")
 # Replace blank cells, if needed
 df2 = df2.fillna("")
 
+print(df2.head())
+print(len(df2))
+
 with open(js2_file, "w", encoding="utf-8") as g:
     g.write("const topicsCourseCatalog = [\n")
     for _, row in df2.iterrows():
@@ -59,7 +60,8 @@ with open(js2_file, "w", encoding="utf-8") as g:
         g.write(f' id: {json.dumps(clean(row["id"]))},\n')
         g.write(f' courseSubject: {json.dumps(clean(row["courseSubject"]))},\n')
         g.write(f' term: {json.dumps(clean(row["term"]))},\n')
-        g.write(f' section: {json.dumps(str(row["section"]).strip().zfill(3))},\n')
+        '''g.write(f' section: {json.dumps(clean(row["section"]).zfill(3))},\n')'''
+        g.write(f' section: {json.dumps(str(int(row["section"])).zfill(3))},\n')
         g.write(f' title: {json.dumps(clean(row["title"]))},\n')
         g.write(f' description: {json.dumps(clean(row["description"]))},\n')
         g.write(f' credits: {json.dumps(clean(row["credits"]))},\n')

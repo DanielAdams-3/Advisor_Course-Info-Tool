@@ -391,7 +391,7 @@
         reqsNotes.textContent=courseObj.reqNote;
         skills.textContent=courseObj.skills;
 
-        searchResultMessage="";
+        searchResultMessage="Completed";
         return;
       }
     }
@@ -486,7 +486,7 @@
     let currSearch=courseSelected;
     searchBySubject(currSearch);
     
-    searchResultMessage.textContent = "";
+    //searchResultMessage.textContent = "Completed";
     return;
   }
   

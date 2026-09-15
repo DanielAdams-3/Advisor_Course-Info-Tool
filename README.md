@@ -33,10 +33,14 @@
 ## Future Work
 ### Search-by-Partial-Course-Title Option
 ### Search-by-Full-Course-Title Option
-### Menu button should be available in the sidebar
 ### Sidebar should appear below the white main box when screen is smaller than 'y' px, and should not close
-### Add new field, Student Reviews from CS-GSA
-### Add new field, 'Rigor, according to students' whihc is available for some courses in the Skills Learnt document'
+### Populate Rigor data from Skills Learnt document
+
+## Completed Items from Future Work
+### Added menu button should be available in the sidebar, main menu button updates based on sidebar behavior regardless of which one is selected
+### Added new field, Student Reviews from CS-GSA
+### Added new field, 'Rigor, according to students' whihc is available for some courses in the Skills Learnt document'
+
 
 #### HTML, CSS, Javascript and related resources consulted after initial project
     #### Microsoft Copilot
