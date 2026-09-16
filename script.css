@@ -3,7 +3,7 @@
 /*coral: ff6060, green: 00a491, blue:#73c8e2:*/
 /*REMINDER - when using div  class ="", need to use a href="javascript", but with button class, use onclick()*/
 
-/*define style for body text*/
+/*define style for body*/
 body {
   font-family: "Roboto", sans-serif;
   line-height: 1rem;
@@ -189,6 +189,7 @@ button:hover, .buttonHelp:hover
 
 #mySidebar {
   height: 100%;
+  max-width:20%;
   position:fixed;
   left:0;             /*gap from left edge of the screen*/
   z-index: 1;        /* higher index values stack on top of lower indexed items*/
@@ -532,7 +533,7 @@ option{
   width:0%;
   right:1%;
   max-width:50%;
-  margin-top:-2rem;
+  margin-top:-1rem;
   max-height:fit-content;
   font-size:1rem;
   color:#000000;
