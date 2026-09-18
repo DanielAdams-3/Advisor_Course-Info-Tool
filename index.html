@@ -139,17 +139,17 @@
           <div id="autocompleteMessageOnClick" style="margin-top:-2rem;max-width:40%;width:0%;display:none;"><h4>About AutoComplete</h4>Must start with beginning of subject code. All available results will match those characters.</div>
           <p style="margin-top:0.25rem;margin-bottom:0.25rem;"></p>
           <div class="row">
-            <p><b><i>Step 1: Start Typing a Course Number</i></b></p>
+            <p style="margin-top:0.25rem;"><b><i>Step 1: Start Typing a Course Number</i></b></p>
             <button class="buttonHelp" id="autoStepOneHelpButton" style="margin-top:0.5rem;" onclick="javascript:ShowHideMessage(document.getElementById('autoStepOneMessageOnClick'),'40%');javascript:changeHelpButton(this)">About</button>
           </div>
-          <div id="autoStepOneMessageOnClick" style="margin-top:-2rem;max-width:40%;width:0%;display:none;"><h4>Step 1 Instructions:</h4>Enter the first letter(s) of a course subject code and click <b>Get Matching Courses</b> to retrieve suggestions. For example, entering 'CSCI 5' will retrieve all 5000-level CSCI courses</div>
+          <div id="autoStepOneMessageOnClick" style="margin-top:-2rem;max-width:40%;width:0%;display:none;"><h4>Step 1 Instructions:</h4><p>Enter the first letter(s) of a course subject code and click <b>Get Matching Courses</b> to retrieve suggestions. For example, entering 'CSCI 5' will retrieve all 5000-level CSCI courses</p></div>
           <div class="row">
             <input id="prefixInput" type="text" placeholder="Enter the first letter(s) of a course subject code..." />
             <button class="searchButton" onclick="populateAutocompleteSuggestions()">Get Matching Courses</button>
           </div>
-          <div id="autoStepTwoMessageOnClick" style="margin-top:-2rem;max-width:40%;width:0%;display:none;"><h4>Step 2 Instructions: </h4>After you select a suggested course from the dropdown menu, click <b>Search</b> to retrieve that course's information.</div>
+          <div id="autoStepTwoMessageOnClick" style="margin-top:-3rem;max-width:40%;width:0%;display:none;"><h4>Step 2 Instructions: </h4><p>After you select a suggested course from the dropdown menu, click <b>Search</b> to retrieve that course's information.</p></div>
           <div class="row">
-            <p><b><i>Step 2: Choose from the Options Found</i></b></p>
+            <p style="margin-top:0.25rem;"><b><i>Step 2: Choose from the Options Found</i></b></p>
             <button class="buttonHelp" id="autoStepTwoHelpButton" style="margin-top:0.5rem;" onclick="javascript:ShowHideMessage(document.getElementById('autoStepTwoMessageOnClick'),'40%');javascript:changeHelpButton(this)">About</button>
           </div>
           <div class="selectRow" style="margin-top:0.25rem;">
@@ -335,7 +335,7 @@
             </tr>
             <tr>
               <th>INSTRUCTOR</th>
-              <td id="reviewIntructor"></td>
+              <td id="reviewInstructor"></td>
             </tr>
             <tr>
               <th>RIGOR</th>
@@ -351,7 +351,7 @@
       <hr/>
       <footer>
         <div class="row">
-          <p>Last updated 09.17.2026</p>
+          <p>Last updated 09.18.2026</p>
           <button class="buttonHelp" id="webpageHelpButton" style="margin-top:-0.25rem;" onclick="javascript:ShowHideMessage(document.getElementById('webpageMessageOnClick'),'40%'); javascript:changeHelpButton(this)">About</button>
           </div>
           <div class="row">

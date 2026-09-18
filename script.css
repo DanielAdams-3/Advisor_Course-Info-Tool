@@ -525,7 +525,7 @@ option{
 #notesMessageOnClick, #offeringsMessageOnClick,
 #regRestrictionsMessageOnClick, #DegreeReqsCSMessageOnClick, 
 #skillsLearnedMessageOnClick, #autocompleteMessageOnClick,
-#webpageMessageOnClick, #specialTopicsMessageOnClick, #rigorMessageOnClick, #reviewsMessageOnClick
+#webpageMessagOenClick, #specialTopicsMessageOnClick, #rigorMessageOnClick, #reviewsMessageOnClick,
 #autoStepOneMessageOnClick, #autoStepTwoMessageOnClick{
   height:fit-content;
   padding-top:0%;
@@ -566,12 +566,12 @@ option{
     font-size:12px;
   }
   #titleMessageOnClick, #searchMessageOnClick, #subjectMessageOnClick,
-  #nameMessageOnClick, #hoursMessageOnClick, #descriptionMessageOnClick,
-  #notesMessageOnClick, #offeringsMessageOnClick,
-  #regRestrictionsMessageOnClick, #DegreeReqsCSMessageOnClick,
-  #skillsLearnedMessageOnClick, #autocompleteMessageOnClick,
-  #webpageMessageOnClick, #specialTopicsMessageOnClick,
-  #rigorMessageOnClick, #reviewsMessageOnClick {
+#nameMessageOnClick, #hoursMessageOnClick, #descriptionMessageOnClick,
+#notesMessageOnClick, #offeringsMessageOnClick,
+#regRestrictionsMessageOnClick, #DegreeReqsCSMessageOnClick, 
+#skillsLearnedMessageOnClick, #autocompleteMessageOnClick,
+#webpageMessageOnClick, #specialTopicsMessageOnClick, #rigorMessageOnClick, #reviewsMessageOnClick,
+#autoStepOneMessageOnClick, #autoStepTwoMessageOnClick {
     max-width:33%;
     width:33%;
   }
