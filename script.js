@@ -523,6 +523,12 @@
     let searchHelpButton=document.getElementById("searchStandardHelpButton");
     let autoHelp=document.getElementById('autocompleteMessageOnClick');
     let autohelpButton=document.getElementById("autoHelpButton");
+
+    let autoStepTwoMessage=document.getElementById('autoStepTwoMessageOnClick');
+    let autoStepOneMessage=document.getElementById("autoStepOneMessageOnClick");
+    let autohelpStepTwoButton=document.getElementById("autoStepTwoHelpButton");
+    let autohelpStepOneButton=document.getElementById("autoStepOneHelpButton");
+
     let topicsHelp=document.getElementById('specialTopicsMessageOnClick');
     let searchTopicsHelpButton=document.getElementById("searchTopicsHelpButton");
     let titleHelp=document.getElementById('titleMessageOnClick');
@@ -549,8 +555,8 @@
     let webpageHelp=document.getElementById('webpageMessageOnClick');
     let webpageHelpButton = document.getElementById("webpageHelpButton");
 
-    var messagesR = [titleHelp,searchHelp,subjectHelp,nameHelp,hoursHelp,descriptionHelp,notesHelp,offeringsHelp,regHelp,degreeHelp,skillsHelp,autoHelp,webpageHelp,topicsHelp,rigorHelp];
-    var helpButtonR = [titleButton,searchHelpButton,subjectHelpButton,nameHelpButton,hoursHelpButton,descriptionHelpButton,notesHelpButton,offeringsHelpButton,regHelpButton,reqsHelpButton,skillsHelpButton,autohelpButton,webpageHelpButton,searchTopicsHelpButton,rigorHelpButton];
+    var messagesR = [titleHelp,searchHelp,subjectHelp,nameHelp,hoursHelp,descriptionHelp,notesHelp,offeringsHelp,regHelp,degreeHelp,skillsHelp,autoHelp,webpageHelp,topicsHelp,rigorHelp,autoStepOneMessage,autoStepTwoMessage];
+    var helpButtonR = [titleButton,searchHelpButton,subjectHelpButton,nameHelpButton,hoursHelpButton,descriptionHelpButton,notesHelpButton,offeringsHelpButton,regHelpButton,reqsHelpButton,skillsHelpButton,autohelpButton,autohelpStepOneButton,autohelpStepTwoButton,webpageHelpButton,searchTopicsHelpButton,rigorHelpButton];
 
     var i;
 

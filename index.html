@@ -136,18 +136,21 @@
             <h3>Get Suggestions - AutoComplete</h3>
             <button class="buttonHelp" id="autoHelpButton" style="margin-top:0.5rem;" onclick="javascript:ShowHideMessage(document.getElementById('autocompleteMessageOnClick'),'40%');javascript:changeHelpButton(this)">About</button>
           </div>
-          <p style="margin-top:0.25rem;margin-bottom:0.25rem;">Enter the first letter(s) of a course subject code and click <strong>Get Matching Courses</strong> to retrieve suggestions. For example, entering 'CSCI 5' will retrieve all 5000-level CSCI courses.</p>
-          <p style="margin-top:0.25rem;margin-bottom:0.25rem;">After you select a suggested course from the dropdown menu, click <b>Search</b> to retrieve that course's information.</p>
-          <div class="row">
-            <i><b>Step 1: Start Typing a Course Number</b></i>
-          </div>
           <div id="autocompleteMessageOnClick" style="margin-top:-2rem;max-width:40%;width:0%;display:none;"><h4>About AutoComplete</h4>Must start with beginning of subject code. All available results will match those characters.</div>
+          <p style="margin-top:0.25rem;margin-bottom:0.25rem;"></p>
+          <div class="row">
+            <p><b><i>Step 1: Start Typing a Course Number</i></b></p>
+            <button class="buttonHelp" id="autoStepOneHelpButton" style="margin-top:0.5rem;" onclick="javascript:ShowHideMessage(document.getElementById('autoStepOneMessageOnClick'),'40%');javascript:changeHelpButton(this)">About</button>
+          </div>
+          <div id="autoStepOneMessageOnClick" style="margin-top:-2rem;max-width:40%;width:0%;display:none;"><h4>Step 1 Instructions:</h4>Enter the first letter(s) of a course subject code and click <b>Get Matching Courses</b> to retrieve suggestions. For example, entering 'CSCI 5' will retrieve all 5000-level CSCI courses</div>
           <div class="row">
             <input id="prefixInput" type="text" placeholder="Enter the first letter(s) of a course subject code..." />
             <button class="searchButton" onclick="populateAutocompleteSuggestions()">Get Matching Courses</button>
           </div>
+          <div id="autoStepTwoMessageOnClick" style="margin-top:-2rem;max-width:40%;width:0%;display:none;"><h4>Step 2 Instructions: </h4>After you select a suggested course from the dropdown menu, click <b>Search</b> to retrieve that course's information.</div>
           <div class="row">
-            <i><b>Step 2: Choose from the Options Found</b></i> 
+            <p><b><i>Step 2: Choose from the Options Found</i></b></p>
+            <button class="buttonHelp" id="autoStepTwoHelpButton" style="margin-top:0.5rem;" onclick="javascript:ShowHideMessage(document.getElementById('autoStepTwoMessageOnClick'),'40%');javascript:changeHelpButton(this)">About</button>
           </div>
           <div class="selectRow" style="margin-top:0.25rem;">
             <select id='suggestionSelected' style="min-width:84%;max-width:84%;"></select>
@@ -204,7 +207,7 @@
           <div class="row" style="min-width:65%;width:65%;max-width:65%;">
             <h3>Title&nbsp;</h3>
             <button class="buttonHelp" id="nameHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('nameMessageOnClick'),'40%'); javascript:changeHelpButton(this)">About</button> 
-            <div id="nameMessageOnClick" style="max-width:40%;width:0%;"><h4>About Title</h4>Data from 2026-27 Graduate Catalog</div>
+            <div id="nameMessageOnClick" style="margin-top:2rem;max-width:40%;width:0%;"><h4>About Title</h4>Data from 2026-27 Graduate Catalog</div>
           </div>
         </div>
 
@@ -226,7 +229,7 @@
           <div class="row" style="min-width:65%;width:65%;max-width:65%;">
             <h3>Historical Offerings&nbsp;</h3>
             <button class="buttonHelp" id="offeringsHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('offeringsMessageOnClick'),'40%'); javascript:changeHelpButton(this)">About</button> 
-            <div id="offeringsMessageOnClick" style="max-width:40%;width:0%;"><h4>About Historical Offerings (future offerings subject to change)</h4>Data manually updated from Class Search. Lists the semesters that the course was offered from Fall 2024-Fall 2026</div>
+            <div id="offeringsMessageOnClick" style="margin-top:2rem;max-width:40%;width:0%;"><h4>About Historical Offerings (future offerings subject to change)</h4>Data manually updated from Class Search. Lists the semesters that the course was offered from Fall 2024-Fall 2026</div>
           </div>
         </div>
         <div class="row">

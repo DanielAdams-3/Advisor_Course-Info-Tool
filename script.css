@@ -525,7 +525,8 @@ option{
 #notesMessageOnClick, #offeringsMessageOnClick,
 #regRestrictionsMessageOnClick, #DegreeReqsCSMessageOnClick, 
 #skillsLearnedMessageOnClick, #autocompleteMessageOnClick,
-#webpageMessageOnClick, #specialTopicsMessageOnClick, #rigorMessageOnClick, #reviewsMessageOnClick {
+#webpageMessageOnClick, #specialTopicsMessageOnClick, #rigorMessageOnClick, #reviewsMessageOnClick
+#autoStepOneMessageOnClick, #autoStepTwoMessageOnClick{
   height:fit-content;
   padding-top:0%;
   z-index:1;
