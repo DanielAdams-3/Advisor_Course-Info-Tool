@@ -35,6 +35,9 @@
     let reqAINTMSAI = document.getElementById('reqsAINTMSAI');
     let reqsNotes=document.getElementById('reqsNotes');
     let skills = document.getElementById('resultSkills');
+    let instructorReview = document.getElementById('reviewInstructor');
+    let courseloadReview = document.getElementById('reviewCourseload');
+    let inputReview = document.getElementById('reviewInput');
 
     if (!requestedCourse) {
       resultMessage.textContent = "Please enter a subject code";
@@ -53,6 +56,9 @@
       reqAINTMSAI.textContent="";
       reqsNotes.textContent="";
       skills.textContent="";
+      instructorReview.textContent="";
+      courseloadReview.textContent="";
+      inputReview.textContent="";
       return;
     }
 
@@ -73,6 +79,9 @@
       reqAINTMSAI.textContent="";
       reqsNotes.textContent="";
       skills.textContent="";
+      instructorReview.textContent="";
+      courseloadReview.textContent="";
+      inputReview.textContent="";
       return;
     }
 
@@ -112,6 +121,9 @@
     reqAINTMSAI.textContent=result.reqAINTMSAI;
     reqsNotes.textContent=result.reqNote;
     skills.textContent=result.skills;
+    instructorReview.textContent=result.reviewInstructor;
+    courseloadReview.textContent=result.reviewCourseload;
+    inputReview.textContent=result.reviewInput;
 
     resultMessage.textContent="Completed";
   }
@@ -374,6 +386,9 @@
         let reqAINTMSAI = document.getElementById('reqsAINTMSAI');
         let reqsNotes=document.getElementById('reqsNotes');
         let skills = document.getElementById('resultSkills');
+        let instructorReview = document.getElementById('reviewInstructor');
+        let courseloadReview = document.getElementById('reviewCourseload');
+        let inputReview = document.getElementById('reviewInput');
     
         subject.textContent=courseObj.courseSubject;
         title.textContent=courseObj.title;
@@ -390,6 +405,9 @@
         reqAINTMSAI.textContent=courseObj.reqAINTMSAI;
         reqsNotes.textContent=courseObj.reqNote;
         skills.textContent=courseObj.skills;
+        instructorReview.textContent=courseObj.reviewInstructor;
+        courseloadReview.textContent=courseObj.reviewCourseload;
+        inputReview.textContent=courseObj.reviewInput;
 
         searchResultMessage="Completed";
         return;
@@ -647,6 +665,9 @@
     let reqAINTMSAI = document.getElementById('reqsAINTMSAI');
     let reqsNotes=document.getElementById('reqsNotes');
     let skills = document.getElementById('resultSkills');
+    let instructorReview = document.getElementById('reviewInstructor');
+    let courseloadReview = document.getElementById('reviewCourseload');
+    let inputReview = document.getElementById('reviewInput');
     let rigor=document.getElementById('resultRigor');
     let topicsTermSelected=document.getElementById('topicsTermDisplayed');
     let topicsSectionSelected=document.getElementById('topicsDisplayed');
@@ -688,7 +709,9 @@
     reqAINTMSAI.textContent="";
     reqsNotes.textContent="";
     skills.textContent="";
-    
+    instructorReview.textContent="";
+    courseloadReview.textContent="";
+    inputReview.textContent="";
     searchResultMessage=document.getElementById('searchResultMessage');
     searchResultMessage.textContent="";
   }
