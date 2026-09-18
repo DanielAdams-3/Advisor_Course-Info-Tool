@@ -116,7 +116,7 @@ input[type="text"] {
   font-family:"Roboto",sans-serif;
 }
 
-/*Format the result boxes for Course description, notes Degree Reqs and Reg Restrictions*/
+/*Format the result boxes for certain result content*/
 #resultDescription, #resultNotes, #resultReqs, #resultRestrictions, #resultSkills, #resultSubject, #resultTitle, #resultHours, #resultOfferings, #resultRigor
 {
   padding: 0.25rem;
@@ -146,7 +146,7 @@ input[type="text"] {
   overflow-y:visible;
 }
 
-/*Formatting for primary buttons*/
+/*Formatting for buttons*/
 button, .buttonHelp {
   margin-left:1rem;
   font-size: 1rem;
@@ -520,13 +520,7 @@ option{
   max-height:0%;
 }
 
-#titleMessageOnClick, #searchMessageOnClick, #subjectMessageOnClick,
-#nameMessageOnClick, #hoursMessageOnClick, #descriptionMessageOnClick,
-#notesMessageOnClick, #offeringsMessageOnClick,
-#regRestrictionsMessageOnClick, #DegreeReqsCSMessageOnClick, 
-#skillsLearnedMessageOnClick, #autocompleteMessageOnClick,
-#webpageMessagOenClick, #specialTopicsMessageOnClick, #rigorMessageOnClick, #reviewsMessageOnClick,
-#autoStepOneMessageOnClick, #autoStepTwoMessageOnClick{
+.helpMessage{
   height:fit-content;
   padding-top:0%;
   z-index:1;
@@ -565,13 +559,7 @@ option{
   .tab button, .tablinks{
     font-size:12px;
   }
-  #titleMessageOnClick, #searchMessageOnClick, #subjectMessageOnClick,
-#nameMessageOnClick, #hoursMessageOnClick, #descriptionMessageOnClick,
-#notesMessageOnClick, #offeringsMessageOnClick,
-#regRestrictionsMessageOnClick, #DegreeReqsCSMessageOnClick, 
-#skillsLearnedMessageOnClick, #autocompleteMessageOnClick,
-#webpageMessageOnClick, #specialTopicsMessageOnClick, #rigorMessageOnClick, #reviewsMessageOnClick,
-#autoStepOneMessageOnClick, #autoStepTwoMessageOnClick {
+  .helpMessage{
     max-width:33%;
     width:33%;
   }

@@ -537,48 +537,33 @@
 
   function HideAllOtherMessages(x){
     const protectedMessage =x;
-    let searchHelp=document.getElementById('searchMessageOnClick');
+
+    var messageClass = document.getElementsByClassName("helpMessage");
+    var helpButtonClass=document.getElementsByClassName("buttonHelp");
+    /*
     let searchHelpButton=document.getElementById("searchStandardHelpButton");
-    let autoHelp=document.getElementById('autocompleteMessageOnClick');
     let autohelpButton=document.getElementById("autoHelpButton");
-    let autoStepTwoMessage=document.getElementById("autoStepTwoMessageOnClick");
-    let autoStepOneMessage=document.getElementById("autoStepOneMessageOnClick");
     let autohelpStepTwoButton=document.getElementById("autoStepTwoHelpButton");
     let autohelpStepOneButton=document.getElementById("autoStepOneHelpButton");
-    let reviewsMessage=document.getElementById('reviewsMessageOnClick');
     let reviewsMessageButton=document.getElementById('reviewsHelpButton');
-
-    let topicsHelp=document.getElementById('specialTopicsMessageOnClick');
     let searchTopicsHelpButton=document.getElementById("searchTopicsHelpButton");
-    let titleHelp=document.getElementById('titleMessageOnClick');
     let titleButton = document.getElementById('titleHelpButton');    
-    let subjectHelp=document.getElementById('subjectMessageOnClick');
     let subjectHelpButton=document.getElementById('subjectHelpButton');  
-    let nameHelp=document.getElementById('nameMessageOnClick');
     let nameHelpButton = document.getElementById("nameHelpButton");
-    let hoursHelp=document.getElementById('hoursMessageOnClick');
     let hoursHelpButton= document.getElementById("hoursHelpButton");
-    let descriptionHelp=document.getElementById('descriptionMessageOnClick');
     let descriptionHelpButton= document.getElementById("descriptionHelpButton");
-    let notesHelp=document.getElementById('notesMessageOnClick');    
     let notesHelpButton= document.getElementById("notesHelpButton");
-    let offeringsHelp=document.getElementById('offeringsMessageOnClick');
     let offeringsHelpButton = document.getElementById("offeringsHelpButton");
-    let regHelp=document.getElementById('regRestrictionsMessageOnClick');
     let regHelpButton= document.getElementById("regHelpButton");
-    let degreeHelp=document.getElementById('DegreeReqsCSMessageOnClick');
-    let rigorHelp=document.getElementById('rigorMessageOnClick');    
     let rigorHelpButton=document.getElementById('rigorHelpButton');
-    let skillsHelp=document.getElementById('skillsLearnedMessageOnClick');
     let skillsHelpButton = document.getElementById('skillsHelpButton')
-    let webpageHelp=document.getElementById('webpageMessageOnClick');
     let webpageHelpButton = document.getElementById("webpageHelpButton");
-
-    var messagesR = [titleHelp,searchHelp,subjectHelp,nameHelp,hoursHelp,descriptionHelp,notesHelp,offeringsHelp,regHelp,degreeHelp,skillsHelp,autoHelp,webpageHelp,topicsHelp,rigorHelp,autoStepOneMessage,autoStepTwoMessage,reviewsMessage];
-    var helpButtonR = [titleButton,searchHelpButton,subjectHelpButton,nameHelpButton,hoursHelpButton,descriptionHelpButton,notesHelpButton,offeringsHelpButton,regHelpButton,reqsHelpButton,skillsHelpButton,autohelpButton,autohelpStepOneButton,autohelpStepTwoButton,webpageHelpButton,searchTopicsHelpButton,rigorHelpButton,reviewsMessageButton];
+    */
+    //var helpButtonR = [titleButton,searchHelpButton,subjectHelpButton,nameHelpButton,hoursHelpButton,descriptionHelpButton,notesHelpButton,offeringsHelpButton,regHelpButton,reqsHelpButton,skillsHelpButton,autohelpButton,autohelpStepOneButton,autohelpStepTwoButton,webpageHelpButton,searchTopicsHelpButton,rigorHelpButton,reviewsMessageButton];
+    var helpButtonR = helpButtonClass;
+    var messagesR=messageClass;
 
     var i;
-
     for (i = 0; i < messagesR.length; i++) {
       let currMessage=messagesR[i];
       if (currMessage != protectedMessage){
@@ -631,7 +616,7 @@
   }
 
   async function goLink(x){
-    window.open(x,"_blank");
+    window.open(x);
   }
   
   function openSearchTab(x,tabName){
