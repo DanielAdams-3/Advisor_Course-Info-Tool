@@ -84,9 +84,7 @@ h5{
 }
 
 p{
-  font-family:"Roboto", sans-serif;
   font-size: 1rem;
-  line-height:1rem;
   margin-top:0;
   margin-bottom:0;
   word-wrap:normal;
@@ -113,7 +111,6 @@ input[type="text"] {
   padding: 0.5rem;
   font-size: 1rem;
   font-weight:lighter;
-  font-family:"Roboto",sans-serif;
 }
 
 /*Format the result boxes for certain result content*/

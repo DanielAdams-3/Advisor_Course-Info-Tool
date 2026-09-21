@@ -120,9 +120,9 @@
         <div class="tabContent" id="searchTraditionalTab">
           <div class="row">
           <h3>Search by Course Number</h3>  
-            <button class="buttonHelp" id="searchStandardHelpButton" style="margin-top:0.5rem;" onclick="javascript:ShowHideMessage(document.getElementById('searchMessageOnClick'),'40%'); javascript:changeHelpButton(this)">About</button>
+            <button class="buttonHelp" id="searchStandardHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('searchMessageOnClick'),'40%'); javascript:changeHelpButton(this)">About</button>
           </div>
-          <div class = "helpMessage" id="searchMessageOnClick" style="margin-top:0rem;max-width:55%;width:0%;display:none;"><h4>About Course Search</h4>Requires a full course number (aka subject code). For example, to get course information about 'CSCI 5214 Big Data Architecture', type CSCI5214, CSCI-5214, or CSCI 5214. If you do not know the full number, use autocomplete tab. For Special Topics courses, use the Special Topics Search tab.</div>
+          <div class = "helpMessage" id="searchMessageOnClick" style="margin-top:0rem;max-width:55%;width:0%;"><h4>About Course Search</h4>Requires a full course number (aka subject code). For example, to get course information about 'CSCI 5214 Big Data Architecture', type CSCI5214, CSCI-5214, or CSCI 5214. If you do not know the full number, use autocomplete tab. For Special Topics courses, use the Special Topics Search tab.</div>
           <p>Enter a course number (for ex: CSCI 5253) and click <strong>Search</strong></p>
           <div class="row" style="margin-top:0.5rem;">
             <input id="wordInput" type="text" placeholder="Enter a course subject code..." />
@@ -136,20 +136,19 @@
             <h3>Get Suggestions - AutoComplete</h3>
             <button class="buttonHelp" id="autoHelpButton" style="margin-top:0.5rem;" onclick="javascript:ShowHideMessage(document.getElementById('autocompleteMessageOnClick'),'40%');javascript:changeHelpButton(this)">About</button>
           </div>
-          <div class = "helpMessage" id="autocompleteMessageOnClick" style="margin-top:-2rem;max-width:40%;width:0%;display:none;"><h4>About AutoComplete</h4>Must start with beginning of subject code. All available results will match those characters.</div>
-          <p style="margin-top:0.25rem;margin-bottom:0.25rem;"></p>
+          <div class = "helpMessage" id="autocompleteMessageOnClick" style="margin-top:-2rem;max-width:40%;width:0%;"><h4>About AutoComplete</h4>Must start with beginning of subject code. All available results will match those characters.</div>
           <div class="row">
-            <p style="margin-top:0.25rem;"><b><i>Step 1: Start Typing a Course Number</i></b></p>
-            <button class="buttonHelp" id="autoStepOneHelpButton" style="margin-top:0.5rem;" onclick="javascript:ShowHideMessage(document.getElementById('autoStepOneMessageOnClick'),'40%');javascript:changeHelpButton(this)">About</button>
+            <p><b><i>Step 1: Start Typing a Course Number</i></b></p>
+            <button class="buttonHelp" id="autoStepOneHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('autoStepOneMessageOnClick'),'40%');javascript:changeHelpButton(this)">About</button>
           </div>
-          <div class = "helpMessage" id="autoStepOneMessageOnClick" style="margin-top:-2rem;max-width:40%;width:0%;display:none;"><h4>Step 1 Instructions:</h4><p>Enter the first letter(s) of a course subject code and click <b>Get Matching Courses</b> to retrieve suggestions. For example, entering 'CSCI 5' will retrieve all 5000-level CSCI courses</p></div>
+          <div class = "helpMessage" id="autoStepOneMessageOnClick" style="margin-top:-2rem;max-width:40%;width:0%;"><h4>Step 1 Instructions:</h4><p>Enter the first letter(s) of a course subject code and click <b>Get Matching Courses</b> to retrieve suggestions. For example, entering 'CSCI 5' will retrieve all 5000-level CSCI courses</p></div>
           <div class="row">
             <input id="prefixInput" type="text" placeholder="Enter the first letter(s) of a course subject code..." />
             <button class="searchButton" onclick="populateAutocompleteSuggestions()">Get Matching Courses</button>
           </div>
-          <div class = "helpMessage" id="autoStepTwoMessageOnClick" style="margin-top:-3rem;max-width:40%;width:0%;display:none;"><h4>Step 2 Instructions: </h4><p>After you select a suggested course from the dropdown menu, click <b>Search</b> to retrieve that course's information.</p></div>
+          <div class = "helpMessage" id="autoStepTwoMessageOnClick" style="margin-top:-3rem;max-width:40%;width:0%;"><h4>Step 2 Instructions: </h4><p>After you select a suggested course from the dropdown menu, click <b>Search</b> to retrieve that course's information.</p></div>
           <div class="row">
-            <p style="margin-top:0.25rem;"><b><i>Step 2: Choose from the Options Found</i></b></p>
+            <p><b><i>Step 2: Choose from the Options Found</i></b></p>
             <button class="buttonHelp" id="autoStepTwoHelpButton" style="margin-top:0.5rem;" onclick="javascript:ShowHideMessage(document.getElementById('autoStepTwoMessageOnClick'),'40%');javascript:changeHelpButton(this)">About</button>
           </div>
           <div class="selectRow" style="margin-top:0.25rem;">
@@ -165,7 +164,7 @@
           <button class="buttonHelp" id="searchTopicsHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('specialTopicsMessageOnClick'),'50%');
           javascript:changeHelpButton(this)">About</button>
         </div>
-        <div class = "helpMessage" id="specialTopicsMessageOnClick" style="max-width:50%;width:0%;margin-top:0rem;display:none;"><h4>About Special Topics Search</h4>This search method will show the </div>
+        <div class = "helpMessage" id="specialTopicsMessageOnClick" style="max-width:50%;width:0%;margin-top:0rem;"><h4>About Special Topics Search</h4>This search method will show the </div>
         <p>This tool lets you explore specific sections of topic courses by semester.</p>
         <div class="row" style="margin-top:0.25rem;margin-bottom:-0.75rem;line-height:0.5rem;">
           <p style="font-family:'Roboto Condensed', sans-serif;min-width:28%;max-width:28%;"><i><b>1-Select Course</b></i></p>
@@ -277,27 +276,27 @@
               <th style="background-color:#0A3758;color:#ffffff;">Requirements Satisfied by Course</th>
             </tr>
             <tr>
-              <th>CSEN-PhD</th>
+              <th>CS PhD</th>
               <td id="reqsCSENPHD"></td>
             </tr>
             <tr>
-              <th>CSEN-MS</th>
+              <th>CSMS</th>
               <td id="reqsCSENMS"></td>
             </tr>
             <tr>
-              <th>CSEN-MSCPS</th>
+              <th>MSCPS</th>
               <td id="reqsCSENMSCPS"></td>
             </tr>
             <tr>
-              <th>NTEN-MSNE</th>
+              <th>MSNE</th>
               <td id="reqsNTENMSNE"></td>
             </tr>
             <tr>
-              <th>AINT-MSAI</th>
+              <th>MSAI</th>
               <td id="reqsAINTMSAI"></td>
             </tr>
             <tr>
-              <th>GENERAL NOTES</th>
+              <th>General Notes</th>
               <td id="reqsNotes"></td>
             </tr>
           </table>
@@ -334,7 +333,7 @@
               <th style="background-color:#0A3758;color:#ffffff;">Student Review</th>
             </tr>
             <tr>
-              <th>Intructor</th>
+              <th>Instructor</th>
               <td id="reviewInstructor"></td>
             </tr>
             <tr>
@@ -351,7 +350,7 @@
       <hr/>
       <footer>
         <div class="row">
-          <p>Last updated 09.18.2026</p>
+          <p>Last updated 09.20.2026</p>
           <button class="buttonHelp" id="webpageHelpButton" style="margin-top:-0.25rem;" onclick="javascript:ShowHideMessage(document.getElementById('webpageMessageOnClick'),'40%'); javascript:changeHelpButton(this)">About</button>
           </div>
           <div class="row">
