@@ -523,6 +523,7 @@ option{
   z-index:1;
   min-height:2rem;
   width:0%;
+  max-width:0%;
   right:1%;
   max-width:50%;
   margin-top:-1rem;
