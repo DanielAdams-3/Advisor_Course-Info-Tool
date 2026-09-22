@@ -547,8 +547,8 @@ option{
   .body{
     left:0%;
     right:15%;
-    width:65%;
-    min-width:65%;
+    width:0%;
+    min-width:0%;
     max-width:65%;
   }
   #mySidebar{
@@ -559,7 +559,7 @@ option{
   }
   .helpMessage{
     max-width:33%;
-    width:33%;
+    width:0%;
   }
 }
 

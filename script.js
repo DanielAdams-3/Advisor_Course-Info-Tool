@@ -586,7 +586,7 @@
     }
   }
 
-  function ShowHideMessage(x,y){
+  function ShowHideMessage(x){
     const messageToDisplay=x;
     const courseSearchMessageHidden=messageToDisplay.style.width ==="0%";
 
@@ -595,7 +595,7 @@
     if (courseSearchMessageHidden === true)
     { 
       messageToDisplay.className="fade-in-messageDisplay";
-      messageToDisplay.style.width=y;
+      messageToDisplay.style.width="25%";
       messageToDisplay.style.opacity="1.0";
       messageToDisplay.style.paddingLeft="0.5%";
       messageToDisplay.style.paddingTop="0%";

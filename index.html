@@ -134,26 +134,26 @@
         <div class="tabContent" id="searchWithHelpTab">
           <div class="row">
             <h3>Get Suggestions - AutoComplete</h3>
-            <button class="buttonHelp" id="autoHelpButton" style="margin-top:0.5rem;" onclick="javascript:ShowHideMessage(document.getElementById('autocompleteMessageOnClick'),'40%');javascript:changeHelpButton(this)">About</button>
+            <button class="buttonHelp" id="autoHelpButton"onclick="javascript:ShowHideMessage(document.getElementById('autocompleteMessageOnClick'),'40%');javascript:changeHelpButton(this)">About</button>
           </div>
-          <div class = "helpMessage" id="autocompleteMessageOnClick" style="margin-top:-2rem;max-width:40%;width:0%;"><h4>About AutoComplete</h4>Must start with beginning of subject code. All available results will match those characters.</div>
+          <div class = "helpMessage" id="autocompleteMessageOnClick"><h4>About AutoComplete</h4>Must start with beginning of subject code. All available results will match those characters.</div>
           <div class="row">
-            <p><b><i>Step 1: Start Typing a Course Number</i></b></p>
+            <p><b><i>1: Start Typing a Course Number</i></b></p>
             <button class="buttonHelp" id="autoStepOneHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('autoStepOneMessageOnClick'),'40%');javascript:changeHelpButton(this)">About</button>
           </div>
-          <div class = "helpMessage" id="autoStepOneMessageOnClick" style="margin-top:-2rem;max-width:40%;width:0%;"><h4>Step 1 Instructions:</h4><p>Enter the first letter(s) of a course subject code and click <b>Get Matching Courses</b> to retrieve suggestions. For example, entering 'CSCI 5' will retrieve all 5000-level CSCI courses</p></div>
+          <div class = "helpMessage" id="autoStepOneMessageOnClick"><h4>Step 1 Instructions:</h4><p>Enter the first letter(s) of a course subject code and click <b>Get Matching Courses</b> to retrieve suggestions. For example, entering 'CSCI 5' will retrieve all 5000-level CSCI courses</p></div>
           <div class="row">
             <input id="prefixInput" type="text" placeholder="Enter the first letter(s) of a course subject code..." />
             <button class="searchButton" onclick="populateAutocompleteSuggestions()">Get Matching Courses</button>
           </div>
-          <div class = "helpMessage" id="autoStepTwoMessageOnClick" style="margin-top:-3rem;max-width:40%;width:0%;"><h4>Step 2 Instructions: </h4><p>After you select a suggested course from the dropdown menu, click <b>Search</b> to retrieve that course's information.</p></div>
+          <div class = "helpMessage" id="autoStepTwoMessageOnClick"><h4>Step 2 Instructions: </h4><p>After you select a suggested course from the dropdown menu, click <b>Search</b> to retrieve that course's information.</p></div>
           <div class="row">
-            <p><b><i>Step 2: Choose from the Options Found</i></b></p>
-            <button class="buttonHelp" id="autoStepTwoHelpButton" style="margin-top:0.5rem;" onclick="javascript:ShowHideMessage(document.getElementById('autoStepTwoMessageOnClick'),'40%');javascript:changeHelpButton(this)">About</button>
+            <p><b><i>2: Choose from the Options Found</i></b></p>
+            <button class="buttonHelp" id="autoStepTwoHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('autoStepTwoMessageOnClick'),'40%');javascript:changeHelpButton(this)">About</button>
           </div>
-          <div class="selectRow" style="margin-top:0.25rem;">
-            <select id='suggestionSelected' style="min-width:84%;max-width:84%;"></select>
-            <button class="searchButton" style="min-width:15%;max-width:15%;" onclick="javascript:autoCompleteSearch()">Search</button>
+          <div class="selectRow">
+            <select id='suggestionSelected'></select>
+            <button class="searchButton" onclick="javascript:autoCompleteSearch()">Search</button>
           </div>
         </div>
       </article>
@@ -180,18 +180,18 @@
             <option value="DTSC-5900" style="font-family:Roboto Condensed,sans-serif;">DTSC 5900 Special Topics</option>
             <option value="ATLS-5519" style="font-family:Roboto Condensed,sans-serif;">ATLS 5519 Advanced Topics</option>
           </select>
-          <select id='topicsTermDisplayed' onchange="populateTopics()" style="min-width:20%;max-width:20%;">
+          <select id='topicsTermDisplayed' onchange="populateTopics()">
             <option value="blank" selected></option>
           </select>
-          <select id='topicsDisplayed' style="min-width:30%;max-width:30%;">
+          <select id='topicsDisplayed'>
             <option value="blank" selected></option>
           </select> 
-          <button class="searchButton" style="max-width:20%;min-width:20%;" onclick="javascript:TopicsSearch()">Search</button>
+          <button class="searchButton" onclick="javascript:TopicsSearch()">Search</button>
         </div>
         <div>
       </article>
-      <div class="row" style="margin-top:0.5rem;">
-        <p style="font-family:'Roboto Condensed',sans-serif;margin-left:5%;margin-top:0rem;margin-bottom:0rem;"><i>Warning Messages: &nbsp;</i></p><p style="font-family:'Roboto Condensed',sans-serif;margin-top:0rem;margin-bottom:0rem;" id="searchResultMessage"><i></i></p>
+      <div class="row">
+        <p>Warning Messages: &nbsp;></p><p id="searchResultMessage"></p>
       </div>
       <hr/>
       <article>
@@ -199,8 +199,8 @@
         
         <div class="row">
           <h3>Course Subject&nbsp;</h3>
-          <button class="buttonHelp" id="subjectHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('subjectMessageOnClick'),'40%'); javascript:changeHelpButton(this)">About</button>
-          <div class = "helpMessage" id="subjectMessageOnClick" style="max-width:40%;width:0%;"><h4>About Subject</h4>Per Graduate Catalog AY26-27. If a course does not appear, it is not in the dataset, but can be requested by clicking the 'Contact CS Department' button at the bottom of the page</div>
+          <button class="buttonHelp" id="subjectHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('subjectMessageOnClick')); javascript:changeHelpButton(this)">About</button>
+          <div class = "helpMessage" id="subjectMessageOnClick"><h4>About Subject</h4>Per Graduate Catalog AY26-27. If a course does not appear, it is not in the dataset, but can be requested by clicking the 'Contact CS Department' button at the bottom of the page</div>
         </div>
         <div class="row">
           <div id="resultSubject"></div>
@@ -208,7 +208,7 @@
         
         <div class="row">
           <h3>Course Title&nbsp;</h3>
-          <button class="buttonHelp" id="nameHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('nameMessageOnClick'),'40%'); javascript:changeHelpButton(this)">About</button> 
+          <button class="buttonHelp" id="nameHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('nameMessageOnClick')); javascript:changeHelpButton(this)">About</button> 
           <div class = "helpMessage" id="nameMessageOnClick"><h4>About Title</h4>Data from 2026-27 Graduate Catalog</div>
         </div>
         <div class="row">
@@ -217,7 +217,7 @@
 
         <div class="row">
           <h3>Credit Hours&nbsp;</h3>
-          <button class="buttonHelp" id="hoursHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('hoursMessageOnClick'),'40%'); javascript:changeHelpButton(this)">About</button> 
+          <button class="buttonHelp" id="hoursHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('hoursMessageOnClick')); javascript:changeHelpButton(this)">About</button> 
          <div class = "helpMessage" id="hoursMessageOnClick"><h4>About Credit Hours</h4>Data from 2026-27 Graduate Catalog. If credit hours are variable, output will be listed as a range (for ex: 1-4)</div>
         </div>
         <div class="row">
@@ -226,7 +226,7 @@
         
         <div class="row">
           <h3>Historical Offerings&nbsp;</h3>
-          <button class="buttonHelp" id="offeringsHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('offeringsMessageOnClick'),'40%'); javascript:changeHelpButton(this)">About</button> 
+          <button class="buttonHelp" id="offeringsHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('offeringsMessageOnClick')); javascript:changeHelpButton(this)">About</button> 
           <div class = "helpMessage" id="offeringsMessageOnClick"><h4>About Historical Offerings (future offerings subject to change)</h4>Data manually updated from Class Search. Lists the semesters that the course was offered from Fall 2024-Fall 2026</div>
         </div>
         <div class="row">
@@ -235,7 +235,7 @@
 
         <div class="row">  
           <h3>Course Description&nbsp;</h3>
-          <button class="buttonHelp" id="descriptionHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('descriptionMessageOnClick'),'40%'); javascript:changeHelpButton(this)">About</button> 
+          <button class="buttonHelp" id="descriptionHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('descriptionMessageOnClick')); javascript:changeHelpButton(this)">About</button> 
         </div>
         <div class = "helpMessage" id="descriptionMessageOnClick" style="max-width:40%;width:0%;"><h4>About Course Description</h4>Data from 2026-27 Graduate Catalog. Results may also include cross-listed course numbers</div>
         <div class="row">
@@ -244,7 +244,7 @@
         
         <div class="row">
           <h3>Class Notes&nbsp;</h3>
-          <button class="buttonHelp" id="notesHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('notesMessageOnClick'),'40%'); javascript:changeHelpButton(this)">About</button> 
+          <button class="buttonHelp" id="notesHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('notesMessageOnClick')); javascript:changeHelpButton(this)">About</button> 
         </div>
         <div class = "helpMessage" id="notesMessageOnClick" style="max-width:40%;width:0%;"><h4>About Class Notes</h4>Data pulled from Class Search. Notes are from most recent offering from Fall 2024-Fall 2026. If mutliple sections were offered, notes are split by section</div>
         <div class="row">
@@ -253,7 +253,7 @@
         
         <div class="row">
           <h3>Registration Restrictions&nbsp;</h3>
-          <button class="buttonHelp" id="regHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('regRestrictionsMessageOnClick'),'40%'); javascript:changeHelpButton(this)">About</button> 
+          <button class="buttonHelp" id="regHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('regRestrictionsMessageOnClick')); javascript:changeHelpButton(this)">About</button> 
         </div>
         <div class = "helpMessage" id="regRestrictionsMessageOnClick" style="max-width:40%;width:0%;"><h4>About Registration Restrictions</h4>Data from 2026-27 Graduate Catalog. Restrictions are not listed for individual sections</div>
         <div class="row">  
@@ -262,7 +262,7 @@
         
         <div class="row">
           <h3>Degree Requirements&nbsp;</h3>
-          <button class="buttonHelp" id="reqsHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('DegreeReqsCSMessageOnClick'),'40%'); javascript:changeHelpButton(this)">About</button> 
+          <button class="buttonHelp" id="reqsHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('DegreeReqsCSMessageOnClick')); javascript:changeHelpButton(this)">About</button> 
         </div>
         <div class = "helpMessage" id="DegreeReqsCSMessageOnClick" style="max-width:40%;width:0%;"><h4>About Degree Requirements (CS)</h4>If you see any errors, please click the 'Contact CS Department'!</div>
         <div class="row" style="border:2px solid #CFB87C;">  
@@ -301,7 +301,7 @@
         
         <div class="row">
           <h3>Skills Learned*&nbsp;</h3>
-          <button class="buttonHelp" id="skillsHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('skillsLearnedMessageOnClick'),'40%'); javascript:changeHelpButton(this)">About</button> 
+          <button class="buttonHelp" id="skillsHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('skillsLearnedMessageOnClick')); javascript:changeHelpButton(this)">About</button> 
         </div>
         <div class = "helpMessage" id="skillsLearnedMessageOnClick"><h4>About Skills Learned (CS)</h4>Data available for courses listed in the 3.Skills Learnt document, which was last updated around 2019-2020</div>
         <div class="row">
@@ -310,7 +310,7 @@
         
         <div class="row">
           <h3>Course Rigor*&nbsp;</h3>
-          <button class="buttonHelp" id="rigorHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('rigorMessageOnClick'),'40%'); javascript:changeHelpButton(this)">About</button> 
+          <button class="buttonHelp" id="rigorHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('rigorMessageOnClick')); javascript:changeHelpButton(this)">About</button> 
         </div>
         <div class = "helpMessage" id="rigorMessageOnClick"><h4>About Rigor</h4>Data available for courses listed in the 3.Skills Learnt document, which was last updated around 2019-2020. Weightage of the class according to students in general. May not apply to all students as each student is different with their comfort level. Rigor should be considered with other factors.</div>
         <div class="row">
@@ -319,7 +319,7 @@
 
         <div class="row">
           <h3>CS GSA Class Reviews&nbsp;</h3>
-          <button class="buttonHelp" id="reviewsHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('reviewsMessageOnClick'),'40%'); javascript:changeHelpButton(this)">About</button> 
+          <button class="buttonHelp" id="reviewsHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('reviewsMessageOnClick')); javascript:changeHelpButton(this)">About</button> 
         </div>
         <div class = "helpMessage" id="reviewsMessageOnClick"><h4>About Reviews</h4>Data manually downloaded from CS-GSA website. Last data update was 09.11.2026</div>
         <div class="row">  
@@ -348,7 +348,7 @@
       <footer>
         <div class="row">
           <p>Last updated 09.22.2026</p>
-          <button class="buttonHelp" id="webpageHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('webpageMessageOnClick'),'40%'); javascript:changeHelpButton(this)">About</button>
+          <button class="buttonHelp" id="webpageHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('webpageMessageOnClick')); javascript:changeHelpButton(this)">About</button>
           </div>
           <div class="row">
           <p>Submit questions, corrections, or requests for additional data by clicking the 'Contact CS Department' button.</p>
