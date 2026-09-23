@@ -17,6 +17,7 @@ body {
 
 .sideBar {
   height: 100%;
+  min-height:100%;
   max-width:20%;
   position:fixed;
   left:0;             /*gap from left edge of the screen*/
@@ -36,20 +37,15 @@ body {
 section{
   background:white;
   border-radius:4px;
-  min-width:580px;
   padding: 2%;
   margin: auto;
   z-index: 1;
-  max-width:75%;
   float:right;
 }
 
 article, header, footer{
   max-width:95%;
   background:white;
-  background-attachment:fixed;
-  background-size:auto;
-  background-clip:content-box;
   position:relative;
 }
 
