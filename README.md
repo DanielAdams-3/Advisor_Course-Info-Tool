@@ -142,6 +142,8 @@
     ##### ../howto/tryit.asp?filename=tryhow_js_accordion_symbol
     ##### ../howto/tryit.asp?filename=tryhow_js_sidenav_dropdown
 
+    DHIWise.com
+    ##### ../post/a-simple-guide-how-to-make-divs-stack-vertically
 #### Archived References & Resources
     #### zyBook CSPB 2270: Data Structures - 7.12 Tries
     #### zyBook CSPB 2270: C++ Refresher - 9.5, 9.6, 9.7 File input and output
