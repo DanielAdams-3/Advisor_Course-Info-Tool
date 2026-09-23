@@ -41,6 +41,7 @@ section{
   margin: auto;
   z-index: 1;
   float:right;
+  position:relative;
 }
 
 article, header, footer{
