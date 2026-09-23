@@ -12,361 +12,362 @@
   <script src="topicsCourseCatalog.js"></script>
   <title>Course Information Retrieval Tool (CIRT)</title>
 </head>
-<article>
+<article style="background-color:#CFB87C;">
   <h2>NOTICE - this website is under construction. Visit the Project Course Tool site for a functional demo</h2>
   <button onclick="javascript:goLink('https://danieladams-3.github.io/Project-CourseTool/')">Project Course Tool Demo</button>
 </article>
 <body>
-  <div class="sideBar">
-    <div class="sidebarRow">
-      <div class="buttonNav" id="innerMenuButton" style="align-content:right;" onclick="javascript:showHide();javascript:changeMenu(document.getElementById('menuButton'));">
-        <div class="buttonNavBar1"></div>
-        <div class="buttonNavBar2"></div>
-        <div class="buttonNavBar3"></div>
-      </div>
-    </div>
-    <div class="sidebarHeader"></div>
-    <div class="sidebarRow" style="background:black;"></div>
-    <div class="sidebarSubHeaderRow">Course Information</div>
-    <button class="accordion">CU Boulder</button>
-    <div class="panel">
-      <button class="sidebarRow" onclick="javascript:goLink('https://catalog.colorado.edu/courses-a-z/')">Graduate Catalog AY26-27</button>
-      <button class="sidebarRow" onclick="javascript:goLink('https://classes.colorado.edu/')">Class Search (classes.colorado.edu)</button>
-    </div>
-    <button class="accordion">CSCI Course Info</button>
-    <div class="panel">
-      <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/graduate-programs/breadth-courses')">Breadth List</button>
-      <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/graduate-students/computer-science-professional-internship-class-csci-6930')">Professional Internship</button>
-      <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/guidelines-independent-study')">Master's Independent Study</button>
-      <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/professional-masters-computer-science-mscps-projects-requirement')">Professional MSCS Projects</button>
-      <button class="sidebarRow" onclick="javascript:goLink('https://docs.google.com/spreadsheets/d/10GefVmlLPtR8avL3Kjln62ebisCZMJJWeFko8VarKwE/edit?gid=0#gid=0')">Tentative Classes List (FA26)</button>
-      <button class="sidebarRow" onclick="javascript:goLink('https://docs.google.com/spreadsheets/d/1cyO2n1xfp6QEOjoUIr4CfAsfHH-fGB7LIWFB1ZFxfOY/edit?gid=0#gid=0')">3. Skills Learned by Course (2019)</button>
-      <button class="sidebarRow" onclick="javascript:goLink('https://bouldercsgrads.org/classes')">Class Reviews, CS-GSA</button>
-    </div>
-    <div class="sidebarSubHeaderRow">Degree Requirements</div>
-    <button class="accordion">Research MS, PhD</button>
-    <div class="panel">
-      <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/graduate-programs/master-science-computer-science/master-science-computer-science-degree')">Research MSCS (CSEN-MS)</button>
-      <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/graduate-programs/doctor-philosophy/degree-requirements')">CS PhD (CSEN-PhD)</button>
-    </div>
-    <button class="accordion">Professional MS</button>
-    <div class="panel">
-      <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/graduate-programs/professional-masters-artificial-intelligence/ms-ai-degree-requirements')">Professional MSAI (AINT-MSAI)</button>
-      <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/graduate-programs/professional-masters-computer-science/degree-requirements')">Professional MSCS (CSEN-MSCPS)</button>
-      <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/dual-professional-ms-engineering-management')">CS Reqs - Dual-Degree MSCPS/EMEN (D-CSENEMEN)</button>
-      <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/emp/graduate-programs/dual-graduate-degrees/computer-science-me-em-dual-degrees#accordion-efcb9804c1ad9ffc16d8883bba71ce629-1')">EMEN Reqs - Dual-Degree MSCPS/EMEN (D-CSENEMEN)</button>
-      <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/graduate-programs/professional-masters-network-engineering/professional-masters-network')">Professional MSNE (NTEN-MSNE)</button>
-    </div>
-    <button class="accordion">Bachelor-Acclerated-Master's (BAM)</button>
-    <div class="panel">
-      <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/undergraduate-programs/accelerated-masters-programs/computer-science-accelerated-masters-0#degree-requirements')">CS BAM</button>
-      <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/undergraduate-programs/accelerated-masters-programs/network-engineering-accelerated-0')">NE BAM</button>
-    </div>
-    <div class="sidebarSubHeaderRow">Admissions & Recruitment</div>
-    <button class="accordion">Traditional Admissions</button>
-    <div class="panel">
-      <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/admissions/graduate-admissions/discover-graduate-programs')">Fall 2027 Recruitment Page</button>
-      <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/admissions/graduate-admissions')">Grad Admissions Homepage</button>
-      <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/admissions/graduate-admissions/admissions-requirements')">CS Grad Programs Requirements</button>
-      <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/admissions/graduate-admissions/how-apply/how-apply-masters-program')">Spring 2027 Admissions Exception</button>
-    </div>
-    <button class="accordion">MS as non-CS PhD</button>
-    <div class="panel">
-      <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/students/graduate-students/forms-policies/earning-cs-ms-non-cs-phd-student')">Earning MSCPS as non-CS PhD</button>  
-      <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/students/graduate-students/forms-policies/earning-ms-ai-as-non-cs-phd-student')">Earning MSAI as non-CS PhD</button>
-    </div>
-    <button class="accordion">BAM Admissions</button>
-    <div class="panel">
-      <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/undergraduate-programs/accelerated-masters-programs')">BAM as a CS Undergrad</button>
-    </div>
-    <div class="sidebarSubHeaderRow">Special Program Info</div>
-    <button class="accordion">Online Programs</button>
-    <div class="panel">
-      <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/online-programs/mscs-coursera/curriculum')">MSCS Coursera (CSE3)</button>
-      <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/online-programs/ms-artificial-intelligence-coursera/ms-ai-online-curriculum-and-degree')">MSAI Coursera (AIN3)</button>
-      <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/program/data-science/coursera/curriculum')">MSDS Coursera (DTS3)</button>
-      <button class="sidebarRow" onclick="javascript:goLink('https://online.colorado.edu/applied-computer-science-bs/academics')">Post-Bacc (BS Applied CS)</button>
-    </div>
-    <button class="accordion">Archived Programs</button>
-    <div class="panel">
-      <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/graduate-programs/certificates')">Residential Graduate Certificates</button>
-      <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/graduate-programs/master-science-technology-cybersecurity-policy/master-science-technology')">MS Technology, Cybersecurity, Policy (TCEN)</button>
-    </div>
-  </div>
-  <header>
-    <div class="row">
-      <h1>Course Info Retrieval Tool (CIRT)</h1>
-      <button class="buttonHelp" id="titleHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('titleMessageOnClick'));javascript:changeHelpButton(this)">About</button>
-    </div>
-    <div class="helpMessageRow" id="titleMessageOnClick"><h4>About CIRT</h4>An internal advisor-facing tool to retrieve course information for graduate courses. Data is pre-collected, so information is not 'live'. To use the tool, select your preferred search method below from tabs below.</div>
-  </header>
-  <section> 
-    <article>
-      <div class="buttonNav" id="menuButton" onclick="javascript:showHide(); javascript:checkMainMenuButton()">
-        <div class="buttonNavBar1"></div>
-        <div class="buttonNavBar2"></div>
-        <div class="buttonNavBar3"></div>
-      </div>
-      <div class="row">
-        <h2>Search Options</h2>
-      </div>
-      <div class="tab">
-        <button class="tablinks" id = "defaultOpen" onclick="javascript:openSearchTab(this, 'searchTraditionalTab')">Search by Full Course Number</button>
-        <button class="tablinks" onclick="javascript:openSearchTab(this, 'searchByTopics')">Search for Special Topics</button>
-        <button class="tablinks" onclick="javascript:openSearchTab(this, 'searchWithHelpTab')">Search by Partial Course Number</button>
-      </div>      
-      <div class="tabContent" id="searchTraditionalTab">
-        <div class="row">
-          <h3>Search by Course Number</h3>  
-          <button class="buttonHelp" id="searchStandardHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('searchMessageOnClick')); javascript:changeHelpButton(this)">About</button>
+  <div class="grid-container">
+    <div class="grid-item">
+      <div class="sideBar">
+        <div class="buttonNav" id="innerMenuButton" style="align-content:right;" onclick="javascript:showHide();javascript:changeMenu(document.getElementById('menuButton'));">
+          <div class="buttonNavBar1"></div>
+          <div class="buttonNavBar2"></div>
+          <div class="buttonNavBar3"></div>
         </div>
-        <div class = "helpMessageRow" id="searchMessageOnClick"><h4>About Course Search</h4>Requires a full course number (aka subject code). For example, to get course information about 'CSCI 5214 Big Data Architecture', type CSCI5214, CSCI-5214, or CSCI 5214. If you do not know the full number, use autocomplete tab. For Special Topics courses, use the Special Topics Search tab.</div>
-        <p>Enter a course number (for ex: CSCI 5253) and click <strong>Search</strong></p>
-        <div class="row">
-          <input id="wordInput" type="text" placeholder="Enter a course subject code..." />
-          <button class="searchButton" onclick="searchBySubject(document.getElementById('wordInput').value.trim());">Search</button>
+        <div class="sidebarHeader"></div>
+        <div class="sidebarSubHeaderRow">Course Information</div>
+        <button class="accordion">CU Boulder</button>
+        <div class="panel">
+          <button class="sidebarRow" onclick="javascript:goLink('https://catalog.colorado.edu/courses-a-z/')">Graduate Catalog AY26-27</button>
+          <button class="sidebarRow" onclick="javascript:goLink('https://classes.colorado.edu/')">Class Search (classes.colorado.edu)</button>
+        </div>
+        <button class="accordion">CSCI Course Info</button>
+        <div class="panel">
+          <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/graduate-programs/breadth-courses')">Breadth List</button>
+          <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/graduate-students/computer-science-professional-internship-class-csci-6930')">Professional Internship</button>
+          <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/guidelines-independent-study')">Master's Independent Study</button>
+          <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/professional-masters-computer-science-mscps-projects-requirement')">Professional MSCS Projects</button>
+          <button class="sidebarRow" onclick="javascript:goLink('https://docs.google.com/spreadsheets/d/10GefVmlLPtR8avL3Kjln62ebisCZMJJWeFko8VarKwE/edit?gid=0#gid=0')">Tentative Classes List (FA26)</button>
+          <button class="sidebarRow" onclick="javascript:goLink('https://docs.google.com/spreadsheets/d/1cyO2n1xfp6QEOjoUIr4CfAsfHH-fGB7LIWFB1ZFxfOY/edit?gid=0#gid=0')">3. Skills Learned by Course (2019)</button>
+          <button class="sidebarRow" onclick="javascript:goLink('https://bouldercsgrads.org/classes')">Class Reviews, CS-GSA</button>
+        </div>
+        <div class="sidebarSubHeaderRow">Degree Requirements</div>
+        <button class="accordion">Research MS, PhD</button>
+        <div class="panel">
+          <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/graduate-programs/master-science-computer-science/master-science-computer-science-degree')">Research MSCS (CSEN-MS)</button>
+          <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/graduate-programs/doctor-philosophy/degree-requirements')">CS PhD (CSEN-PhD)</button>
+        </div>
+        <button class="accordion">Professional MS</button>
+        <div class="panel">
+          <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/graduate-programs/professional-masters-artificial-intelligence/ms-ai-degree-requirements')">Professional MSAI (AINT-MSAI)</button>
+          <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/graduate-programs/professional-masters-computer-science/degree-requirements')">Professional MSCS (CSEN-MSCPS)</button>
+          <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/dual-professional-ms-engineering-management')">CS Reqs - Dual-Degree MSCPS/EMEN (D-CSENEMEN)</button>
+          <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/emp/graduate-programs/dual-graduate-degrees/computer-science-me-em-dual-degrees#accordion-efcb9804c1ad9ffc16d8883bba71ce629-1')">EMEN Reqs - Dual-Degree MSCPS/EMEN (D-CSENEMEN)</button>
+          <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/graduate-programs/professional-masters-network-engineering/professional-masters-network')">Professional MSNE (NTEN-MSNE)</button>
+        </div>
+        <button class="accordion">Bachelor-Acclerated-Master's (BAM)</button>
+        <div class="panel">
+          <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/undergraduate-programs/accelerated-masters-programs/computer-science-accelerated-masters-0#degree-requirements')">CS BAM</button>
+          <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/undergraduate-programs/accelerated-masters-programs/network-engineering-accelerated-0')">NE BAM</button>
+        </div>
+        <div class="sidebarSubHeaderRow">Admissions & Recruitment</div>
+        <button class="accordion">Traditional Admissions</button>
+        <div class="panel">
+          <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/admissions/graduate-admissions/discover-graduate-programs')">Fall 2027 Recruitment Page</button>
+          <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/admissions/graduate-admissions')">Grad Admissions Homepage</button>
+          <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/admissions/graduate-admissions/admissions-requirements')">CS Grad Programs Requirements</button>
+          <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/admissions/graduate-admissions/how-apply/how-apply-masters-program')">Spring 2027 Admissions Exception</button>
+        </div>
+        <button class="accordion">MS as non-CS PhD</button>
+        <div class="panel">
+          <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/students/graduate-students/forms-policies/earning-cs-ms-non-cs-phd-student')">Earning MSCPS as non-CS PhD</button>  
+          <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/students/graduate-students/forms-policies/earning-ms-ai-as-non-cs-phd-student')">Earning MSAI as non-CS PhD</button>
+        </div>
+        <button class="accordion">BAM Admissions</button>
+        <div class="panel">
+          <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/undergraduate-programs/accelerated-masters-programs')">BAM as a CS Undergrad</button>
+        </div>
+        <div class="sidebarSubHeaderRow">Special Program Info</div>
+        <button class="accordion">Online Programs</button>
+        <div class="panel">
+          <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/online-programs/mscs-coursera/curriculum')">MSCS Coursera (CSE3)</button>
+          <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/online-programs/ms-artificial-intelligence-coursera/ms-ai-online-curriculum-and-degree')">MSAI Coursera (AIN3)</button>
+          <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/program/data-science/coursera/curriculum')">MSDS Coursera (DTS3)</button>
+          <button class="sidebarRow" onclick="javascript:goLink('https://online.colorado.edu/applied-computer-science-bs/academics')">Post-Bacc (BS Applied CS)</button>
+        </div>
+        <button class="accordion">Archived Programs</button>
+        <div class="panel">
+          <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/graduate-programs/certificates')">Residential Graduate Certificates</button>
+          <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/graduate-programs/master-science-technology-cybersecurity-policy/master-science-technology')">MS Technology, Cybersecurity, Policy (TCEN)</button>
         </div>
       </div>
-
-      <div class="tabContent" id="searchWithHelpTab">
+    </div>
+    <div class="grid-item">
+      <header>
         <div class="row">
-          <h3>Get Suggestions - AutoComplete</h3>
-          <button class="buttonHelp" id="autoHelpButton"onclick="javascript:ShowHideMessageRow(document.getElementById('autocompleteMessageOnClick'));javascript:changeHelpButton(this)">About</button>
+          <h1>Course Info Retrieval Tool (CIRT)</h1>
+          <button class="buttonHelp" id="titleHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('titleMessageOnClick'));javascript:changeHelpButton(this)">About</button>
         </div>
-        <div class = "helpMessageRow" id="autocompleteMessageOnClick"><h4>About AutoComplete</h4>Must start with beginning of subject code. All available results will match those characters.</div>
-        <div class="row">
-          <p>1: Type the beginning of any course number, then press <b>Get Matching Courses</b></p>
-          <button class="buttonHelp" id="autoStepOneHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('autoStepOneMessageOnClick'));javascript:changeHelpButton(this)">About</button>
-        </div>
-        <div class = "helpMessageRow" id="autoStepOneMessageOnClick"><h4>Step 1 Instructions:</h4><p>Enter the first letter(s) of a course subject code and click <b>Get Matching Courses</b> to retrieve suggestions. For example, entering 'CSCI 5' will retrieve all 5000-level CSCI courses</p></div>
-        <div class="row">
-          <input id="prefixInput" type="text" placeholder="Enter the first letter(s) of a course subject code..." />
-          <button class="searchButton" onclick="populateAutocompleteSuggestions()">Get Matching Courses</button>
-        </div>
-        <div class = "helpMessageRow" id="autoStepTwoMessageOnClick"><h4>Step 2 Instructions: </h4><p>After you select a suggested course from the dropdown menu, click <b>Search</b> to retrieve that course's information.</p></div>
-        <div class="row">
-          <p>2: Select an option from the dropdown list, then press <b></b>Search</b></p>
-          <button class="buttonHelp" id="autoStepTwoHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('autoStepTwoMessageOnClick'));javascript:changeHelpButton(this)">About</button>
-        </div>
-        <div class="selectRow">
-          <select id='suggestionSelected'></select>
-          <button class="searchButton" onclick="javascript:autoCompleteSearch()">Search</button>
-        </div>
-      </div>
-
-      <div class="tabContent" id="searchByTopics">
-        <div class = "row">
-          <h3>Search by Special Topic</h3>
-          <button class="buttonHelp" id="searchTopicsHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('specialTopicsMessageOnClick'));
-          javascript:changeHelpButton(this)">About</button>
-        </div>
-        <div class = "helpMessageRow" id="specialTopicsMessageOnClick"><h4>About Special Topics Search</h4>This search method will show the </div>
-        <p>This tool lets you explore specific sections of topic courses by semester.</p>
-        <div class="row">
-          <h5>1-Select Course</h5>
-        </div>
-        <div class="selectRow">
-          <select id='topicsCourseSelected' onchange="populateTopicTerms()">
-            <option value="blank" selected></option>
-            <option value="CSCI-7000">CSCI 7000 Current Topics in Computer Science</option>
-            <option value="CYBR-5830">CYBR 5830 Special Topics</option>
-            <option value="ROBO-7000">ROBO 7000 Special Topics in Robotics</option>
-            <option value="DTSC-5900">DTSC 5900 Special Topics</option>
-            <option value="ATLS-5519">ATLS 5519 Advanced Topics</option>
-          </select>
+        <div class="helpMessageRow" id="titleMessageOnClick"><h4>About CIRT</h4>An internal advisor-facing tool to retrieve course information for graduate courses. Data is pre-collected, so information is not 'live'. To use the tool, select your preferred search method below from tabs below.</div>
+      </header>
+      <article>
+        <div class="buttonNav" id="menuButton" onclick="javascript:showHide(); javascript:checkMainMenuButton()">
+          <div class="buttonNavBar1"></div>
+          <div class="buttonNavBar2"></div>
+          <div class="buttonNavBar3"></div>
         </div>
         <div class="row">
-          <h5>2-Select Term</h5>
+          <h2>Search Options</h2>
         </div>
-        <div class="selectRow">
-          <select id='topicsTermDisplayed' onchange="populateTopics()">
-            <option value="blank" selected></option>
-          </select>
-        </div>
-        <div class="row">
-          <h5>3-Select Section</h5>
-        </div>
-        <div class="selectRow">
-          <select id='topicsDisplayed'>
-            <option value="blank" selected></option>
-          </select> 
-        </div>
-        <div class="row">
-          <button class="searchButton" onclick="javascript:TopicsSearch()">Search</button>
-        </div>
-    </article>
-    <hr/>
-    <article>
-      <div class="row">
-        <h4>Search Result Message &nbsp;</h4>
-        <p id="searchResultMessage"></p>
-      </div>
-    </article>
-    <hr/>
-    <article>
-      <h2>Course Information</h2>
-      <div class="row">
-        <h3>Course Subject&nbsp;</h3>
-        <button class="buttonHelp" id="subjectHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('subjectMessageOnClick')); javascript:changeHelpButton(this)">About</button>
-        <div class = "helpMessageRow" id="subjectMessageOnClick"><h4>About Subject</h4>Per Graduate Catalog AY26-27. If a course does not appear, it is not in the dataset, but can be requested by clicking the 'Contact CS Department' button at the bottom of the page</div>
-      </div>
-      <div class="row">
-        <div id="resultSubject"></div>
-      </div>
-        
-      <div class="row">
-        <h3>Course Title&nbsp;</h3>
-        <button class="buttonHelp" id="nameHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('nameMessageOnClick')); javascript:changeHelpButton(this)">About</button> 
-      </div>
-      <div class = "helpMessageRow" id="nameMessageOnClick"><h4>About Title</h4>Data from 2026-27 Graduate Catalog</div>
-      <div class="row">
-        <div id="resultTitle"></div>
-      </div>
-
-      <div class="row">
-        <h3>Credit Hours&nbsp;</h3>
-        <button class="buttonHelp" id="hoursHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('hoursMessageOnClick')); javascript:changeHelpButton(this)">About</button> 
-      </div>
-      <div class = "helpMessageRow" id="hoursMessageOnClick"><h4>About Credit Hours</h4>Data from 2026-27 Graduate Catalog. If credit hours are variable, output will be listed as a range (for ex: 1-4)</div>
-      <div class="row">
-        <div id="resultHours"></div>
-      </div>
-        
-      <div class="row">
-        <h3>Historical Offerings&nbsp;</h3>
-        <button class="buttonHelp" id="offeringsHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('offeringsMessageOnClick')); javascript:changeHelpButton(this)">About</button> 
-      </div>
-      <div class = "helpMessageRow" id="offeringsMessageOnClick"><h4>About Historical Offerings (future offerings subject to change)</h4>Data manually updated from Class Search. Lists the semesters that the course was offered from Fall 2024-Fall 2026</div>
-        <div class="row">
-          <div id="resultOfferings"></div>
+        <div class="tab">
+          <button class="tablinks" id = "defaultOpen" onclick="javascript:openSearchTab(this, 'searchTraditionalTab')">Search by Full Course Number</button>
+          <button class="tablinks" onclick="javascript:openSearchTab(this, 'searchByTopics')">Search for Special Topics</button>
+          <button class="tablinks" onclick="javascript:openSearchTab(this, 'searchWithHelpTab')">Search by Partial Course Number</button>
+        </div>      
+        <div class="tabContent" id="searchTraditionalTab">
+          <div class="row">
+            <h3>Search by Course Number</h3>  
+            <button class="buttonHelp" id="searchStandardHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('searchMessageOnClick')); javascript:changeHelpButton(this)">About</button>
+          </div>
+          <div class = "helpMessageRow" id="searchMessageOnClick"><h4>About Course Search</h4>Requires a full course number (aka subject code). For example, to get course information about 'CSCI 5214 Big Data Architecture', type CSCI5214, CSCI-5214, or CSCI 5214. If you do not know the full number, use autocomplete tab. For Special Topics courses, use the Special Topics Search tab.</div>
+          <p>Enter a course number (for ex: CSCI 5253) and click <strong>Search</strong></p>
+          <div class="row">
+            <input id="wordInput" type="text" placeholder="Enter a course subject code..." />
+            <button class="searchButton" onclick="searchBySubject(document.getElementById('wordInput').value.trim());">Search</button>
+          </div>
         </div>
 
-        <div class="row">  
-          <h3>Course Description&nbsp;</h3>
-          <button class="buttonHelp" id="descriptionHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('descriptionMessageOnClick')); javascript:changeHelpButton(this)">About</button> 
-        </div>
-        <div class = "helpMessageRow" id="descriptionMessageOnClick" style="max-width:40%;width:0%;"><h4>About Course Description</h4>Data from 2026-27 Graduate Catalog. Results may also include cross-listed course numbers</div>
-        <div class="row">
-          <div id="resultDescription"></div>
-        </div>  
-        
-        <div class="row">
-          <h3>Class Notes&nbsp;</h3>
-          <button class="buttonHelp" id="notesHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('notesMessageOnClick')); javascript:changeHelpButton(this)">About</button> 
-        </div>
-        <div class = "helpMessageRow" id="notesMessageOnClick"><h4>About Class Notes</h4>Data pulled from Class Search. Notes are from most recent offering from Fall 2024-Fall 2026. If mutliple sections were offered, notes are split by section</div>
-        <div class="row">
-          <div id="resultNotes"></div>
-        </div>
-        
-        <div class="row">
-          <h3>Registration Restrictions&nbsp;</h3>
-          <button class="buttonHelp" id="regHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('regRestrictionsMessageOnClick')); javascript:changeHelpButton(this)">About</button> 
-        </div>
-        <div class = "helpMessageRow" id="regRestrictionsMessageOnClick"><h4>About Registration Restrictions</h4>Data from 2026-27 Graduate Catalog. Restrictions are not listed for individual sections</div>
-        <div class="row">  
-          <div id="resultRestrictions"></div>
-        </div>
-        
-        <div class="row">
-          <h3>Degree Requirements&nbsp;</h3>
-          <button class="buttonHelp" id="reqsHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('DegreeReqsCSMessageOnClick')); javascript:changeHelpButton(this)">About</button> 
-        </div>
-        <div class = "helpMessageRow" id="DegreeReqsCSMessageOnClick"><h4>About Degree Requirements (CS)</h4>If you see any errors, please click the 'Contact CS Department'!</div>
-        <div class="row">  
-          <table>
-            <caption>Degree Requirements Satisfied by Course</caption>
-            <tr>
-              <th style="background-color:#0A3758;color:#ffffff;">Program</th>
-              <th style="background-color:#0A3758;color:#ffffff;">Requirements Satisfied by Course</th>
-            </tr>
-            <tr>
-              <th>CS PhD</th>
-              <td id="reqsCSENPHD"></td>
-            </tr>
-            <tr>
-              <th>CSMS</th>
-              <td id="reqsCSENMS"></td>
-            </tr>
-            <tr>
-              <th>MSCPS</th>
-              <td id="reqsCSENMSCPS"></td>
-            </tr>
-            <tr>
-              <th>MSNE</th>
-              <td id="reqsNTENMSNE"></td>
-            </tr>
-            <tr>
-              <th>MSAI</th>
-              <td id="reqsAINTMSAI"></td>
-            </tr>
-            <tr>
-              <th>General Notes</th>
-              <td id="reqsNotes"></td>
-            </tr>
-          </table>
-        </div>
-        
-        <div class="row">
-          <h3>Skills Learned*&nbsp;</h3>
-          <button class="buttonHelp" id="skillsHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('skillsLearnedMessageOnClick')); javascript:changeHelpButton(this)">About</button> 
-        </div>
-        <div class = "helpMessageRow" id="skillsLearnedMessageOnClick"><h4>About Skills Learned (CS)</h4>Data available for courses listed in the 3.Skills Learnt document, which was last updated around 2019-2020</div>
-        <div class="row">
-          <div id="resultSkills"></div>
-        </div>
-        
-        <div class="row">
-          <h3>Course Rigor*&nbsp;</h3>
-          <button class="buttonHelp" id="rigorHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('rigorMessageOnClick')); javascript:changeHelpButton(this)">About</button> 
-        </div>
-        <div class = "helpMessageRow" id="rigorMessageOnClick"><h4>About Rigor</h4>Data available for courses listed in the 3.Skills Learnt document, which was last updated around 2019-2020. Weightage of the class according to students in general. May not apply to all students as each student is different with their comfort level. Rigor should be considered with other factors.</div>
-        <div class="row">
-          <div id="resultRigor"></div>
+        <div class="tabContent" id="searchWithHelpTab">
+          <div class="row">
+            <h3>Get Suggestions - AutoComplete</h3>
+            <button class="buttonHelp" id="autoHelpButton"onclick="javascript:ShowHideMessageRow(document.getElementById('autocompleteMessageOnClick'));javascript:changeHelpButton(this)">About</button>
+          </div>
+          <div class = "helpMessageRow" id="autocompleteMessageOnClick"><h4>About AutoComplete</h4>Must start with beginning of subject code. All available results will match those characters.</div>
+          <div class="row">
+            <p>1: Type the beginning of any course number, then press <b>Get Matching Courses</b></p>
+            <button class="buttonHelp" id="autoStepOneHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('autoStepOneMessageOnClick'));javascript:changeHelpButton(this)">About</button>
+          </div>
+          <div class = "helpMessageRow" id="autoStepOneMessageOnClick"><h4>Step 1 Instructions:</h4><p>Enter the first letter(s) of a course subject code and click <b>Get Matching Courses</b> to retrieve suggestions. For example, entering 'CSCI 5' will retrieve all 5000-level CSCI courses</p></div>
+          <div class="row">
+            <input id="prefixInput" type="text" placeholder="Enter the first letter(s) of a course subject code..." />
+            <button class="searchButton" onclick="populateAutocompleteSuggestions()">Get Matching Courses</button>
+          </div>
+          <div class = "helpMessageRow" id="autoStepTwoMessageOnClick"><h4>Step 2 Instructions: </h4><p>After you select a suggested course from the dropdown menu, click <b>Search</b> to retrieve that course's information.</p></div>
+          <div class="row">
+            <p>2: Select an option from the dropdown list, then press <b></b>Search</b></p>
+            <button class="buttonHelp" id="autoStepTwoHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('autoStepTwoMessageOnClick'));javascript:changeHelpButton(this)">About</button>
+          </div>
+          <div class="selectRow">
+            <select id='suggestionSelected'></select>
+            <button class="searchButton" onclick="javascript:autoCompleteSearch()">Search</button>
+          </div>
         </div>
 
+        <div class="tabContent" id="searchByTopics">
+          <div class = "row">
+            <h3>Search by Special Topic</h3>
+            <button class="buttonHelp" id="searchTopicsHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('specialTopicsMessageOnClick'));
+            javascript:changeHelpButton(this)">About</button>
+          </div>
+          <div class = "helpMessageRow" id="specialTopicsMessageOnClick"><h4>About Special Topics Search</h4>This search method will show the </div>
+          <p>This tool lets you explore specific sections of topic courses by semester.</p>
+          <div class="row">
+            <h5>1-Select Course</h5>
+          </div>
+          <div class="selectRow">
+            <select id='topicsCourseSelected' onchange="populateTopicTerms()">
+              <option value="blank" selected></option>
+              <option value="CSCI-7000">CSCI 7000 Current Topics in Computer Science</option>
+              <option value="CYBR-5830">CYBR 5830 Special Topics</option>
+              <option value="ROBO-7000">ROBO 7000 Special Topics in Robotics</option>
+              <option value="DTSC-5900">DTSC 5900 Special Topics</option>
+              <option value="ATLS-5519">ATLS 5519 Advanced Topics</option>
+            </select>
+          </div>
+          <div class="row">
+            <h5>2-Select Term</h5>
+          </div>
+          <div class="selectRow">
+            <select id='topicsTermDisplayed' onchange="populateTopics()">
+              <option value="blank" selected></option>
+            </select>
+          </div>
+          <div class="row">
+            <h5>3-Select Section</h5>
+          </div>
+          <div class="selectRow">
+            <select id='topicsDisplayed'>
+              <option value="blank" selected></option>
+            </select> 
+          </div>
+          <div class="row">
+            <button class="searchButton" onclick="javascript:TopicsSearch()">Search</button>
+          </div>
+      </article>
+      <hr/>
+      <article>
         <div class="row">
-          <h3>CS GSA Class Reviews&nbsp;</h3>
-          <button class="buttonHelp" id="reviewsHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('reviewsMessageOnClick')); javascript:changeHelpButton(this)">About</button> 
-        </div>
-        <div class = "helpMessageRow" id="reviewsMessageOnClick"><h4>About Reviews</h4>Data manually downloaded from CS-GSA website. Last data update was 09.11.2026</div>
-        <div class="row">  
-          <table>
-            <caption>CS GSA Class Reviews</caption>
-            <tr>
-              <th style="background-color:#0A3758;color:#ffffff;">Course Details</th>
-              <th style="background-color:#0A3758;color:#ffffff;">Student Review</th>
-            </tr>
-            <tr>
-              <th>Instructor</th>
-              <td id="reviewInstructor"></td>
-            </tr>
-            <tr>
-              <th>Rigor</th>
-              <td id="reviewCourseload"></td>
-            </tr>
-            <tr>
-              <th>Input</th>
-              <td id="reviewInput"></td>
-            </tr>
-          </table>
+          <h4>Search Result Message &nbsp;</h4>
+          <p id="searchResultMessage"></p>
         </div>
       </article>
       <hr/>
-      <footer>
+      <article>
+        <h2>Course Information</h2>
         <div class="row">
-          <p>Last updated 09.23.2026</p>
-          <button class="buttonHelp" id="webpageHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('webpageMessageOnClick')); javascript:changeHelpButton(this)">About</button>
-          </div>
+          <h3>Course Subject&nbsp;</h3>
+          <button class="buttonHelp" id="subjectHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('subjectMessageOnClick')); javascript:changeHelpButton(this)">About</button>
+          <div class = "helpMessageRow" id="subjectMessageOnClick"><h4>About Subject</h4>Per Graduate Catalog AY26-27. If a course does not appear, it is not in the dataset, but can be requested by clicking the 'Contact CS Department' button at the bottom of the page</div>
+        </div>
+        <div class="row">
+          <div id="resultSubject"></div>
+        </div>
+          
+        <div class="row">
+          <h3>Course Title&nbsp;</h3>
+          <button class="buttonHelp" id="nameHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('nameMessageOnClick')); javascript:changeHelpButton(this)">About</button> 
+        </div>
+        <div class = "helpMessageRow" id="nameMessageOnClick"><h4>About Title</h4>Data from 2026-27 Graduate Catalog</div>
+        <div class="row">
+          <div id="resultTitle"></div>
+        </div>
+
+        <div class="row">
+          <h3>Credit Hours&nbsp;</h3>
+          <button class="buttonHelp" id="hoursHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('hoursMessageOnClick')); javascript:changeHelpButton(this)">About</button> 
+        </div>
+        <div class = "helpMessageRow" id="hoursMessageOnClick"><h4>About Credit Hours</h4>Data from 2026-27 Graduate Catalog. If credit hours are variable, output will be listed as a range (for ex: 1-4)</div>
+        <div class="row">
+          <div id="resultHours"></div>
+        </div>
+          
+        <div class="row">
+          <h3>Historical Offerings&nbsp;</h3>
+          <button class="buttonHelp" id="offeringsHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('offeringsMessageOnClick')); javascript:changeHelpButton(this)">About</button> 
+        </div>
+        <div class = "helpMessageRow" id="offeringsMessageOnClick"><h4>About Historical Offerings (future offerings subject to change)</h4>Data manually updated from Class Search. Lists the semesters that the course was offered from Fall 2024-Fall 2026</div>
           <div class="row">
-          <p>Submit questions, corrections, or requests for additional data by clicking the 'Contact CS Department' button.</p>
-        </div>
-        <div class = "helpMessageRow" id="webpageMessageOnClick"><h4>Note</h4>Developed by Daniel Adams, Sr. GPS, Department of Computer Science</div>
-        <div class="row">
-          <button class="searchButton" onclick="javascript:goLink('mailto:Daniel.Adams-3@colorado.edu')">Contact CS Department</button>
-        </div>
-      </footer>
+            <div id="resultOfferings"></div>
+          </div>
+
+          <div class="row">  
+            <h3>Course Description&nbsp;</h3>
+            <button class="buttonHelp" id="descriptionHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('descriptionMessageOnClick')); javascript:changeHelpButton(this)">About</button> 
+          </div>
+          <div class = "helpMessageRow" id="descriptionMessageOnClick" style="max-width:40%;width:0%;"><h4>About Course Description</h4>Data from 2026-27 Graduate Catalog. Results may also include cross-listed course numbers</div>
+          <div class="row">
+            <div id="resultDescription"></div>
+          </div>  
+          
+          <div class="row">
+            <h3>Class Notes&nbsp;</h3>
+            <button class="buttonHelp" id="notesHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('notesMessageOnClick')); javascript:changeHelpButton(this)">About</button> 
+          </div>
+          <div class = "helpMessageRow" id="notesMessageOnClick"><h4>About Class Notes</h4>Data pulled from Class Search. Notes are from most recent offering from Fall 2024-Fall 2026. If mutliple sections were offered, notes are split by section</div>
+          <div class="row">
+            <div id="resultNotes"></div>
+          </div>
+          
+          <div class="row">
+            <h3>Registration Restrictions&nbsp;</h3>
+            <button class="buttonHelp" id="regHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('regRestrictionsMessageOnClick')); javascript:changeHelpButton(this)">About</button> 
+          </div>
+          <div class = "helpMessageRow" id="regRestrictionsMessageOnClick"><h4>About Registration Restrictions</h4>Data from 2026-27 Graduate Catalog. Restrictions are not listed for individual sections</div>
+          <div class="row">  
+            <div id="resultRestrictions"></div>
+          </div>
+          
+          <div class="row">
+            <h3>Degree Requirements&nbsp;</h3>
+            <button class="buttonHelp" id="reqsHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('DegreeReqsCSMessageOnClick')); javascript:changeHelpButton(this)">About</button> 
+          </div>
+          <div class = "helpMessageRow" id="DegreeReqsCSMessageOnClick"><h4>About Degree Requirements (CS)</h4>If you see any errors, please click the 'Contact CS Department'!</div>
+          <div class="row">  
+            <table>
+              <caption>Degree Requirements Satisfied by Course</caption>
+              <tr>
+                <th style="background-color:#0A3758;color:#ffffff;">Program</th>
+                <th style="background-color:#0A3758;color:#ffffff;">Requirements Satisfied by Course</th>
+              </tr>
+              <tr>
+                <th>CS PhD</th>
+                <td id="reqsCSENPHD"></td>
+              </tr>
+              <tr>
+                <th>CSMS</th>
+                <td id="reqsCSENMS"></td>
+              </tr>
+              <tr>
+                <th>MSCPS</th>
+                <td id="reqsCSENMSCPS"></td>
+              </tr>
+              <tr>
+                <th>MSNE</th>
+                <td id="reqsNTENMSNE"></td>
+              </tr>
+              <tr>
+                <th>MSAI</th>
+                <td id="reqsAINTMSAI"></td>
+              </tr>
+              <tr>
+                <th>General Notes</th>
+                <td id="reqsNotes"></td>
+              </tr>
+            </table>
+          </div>
+          
+          <div class="row">
+            <h3>Skills Learned*&nbsp;</h3>
+            <button class="buttonHelp" id="skillsHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('skillsLearnedMessageOnClick')); javascript:changeHelpButton(this)">About</button> 
+          </div>
+          <div class = "helpMessageRow" id="skillsLearnedMessageOnClick"><h4>About Skills Learned (CS)</h4>Data available for courses listed in the 3.Skills Learnt document, which was last updated around 2019-2020</div>
+          <div class="row">
+            <div id="resultSkills"></div>
+          </div>
+          
+          <div class="row">
+            <h3>Course Rigor*&nbsp;</h3>
+            <button class="buttonHelp" id="rigorHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('rigorMessageOnClick')); javascript:changeHelpButton(this)">About</button> 
+          </div>
+          <div class = "helpMessageRow" id="rigorMessageOnClick"><h4>About Rigor</h4>Data available for courses listed in the 3.Skills Learnt document, which was last updated around 2019-2020. Weightage of the class according to students in general. May not apply to all students as each student is different with their comfort level. Rigor should be considered with other factors.</div>
+          <div class="row">
+            <div id="resultRigor"></div>
+          </div>
+
+          <div class="row">
+            <h3>CS GSA Class Reviews&nbsp;</h3>
+            <button class="buttonHelp" id="reviewsHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('reviewsMessageOnClick')); javascript:changeHelpButton(this)">About</button> 
+          </div>
+          <div class = "helpMessageRow" id="reviewsMessageOnClick"><h4>About Reviews</h4>Data manually downloaded from CS-GSA website. Last data update was 09.11.2026</div>
+          <div class="row">  
+            <table>
+              <caption>CS GSA Class Reviews</caption>
+              <tr>
+                <th style="background-color:#0A3758;color:#ffffff;">Course Details</th>
+                <th style="background-color:#0A3758;color:#ffffff;">Student Review</th>
+              </tr>
+              <tr>
+                <th>Instructor</th>
+                <td id="reviewInstructor"></td>
+              </tr>
+              <tr>
+                <th>Rigor</th>
+                <td id="reviewCourseload"></td>
+              </tr>
+              <tr>
+                <th>Input</th>
+                <td id="reviewInput"></td>
+              </tr>
+            </table>
+          </div>
+        </article>
+        <hr/>
+        <footer>
+          <div class="row">
+            <p>Last updated 09.23.2026</p>
+            <button class="buttonHelp" id="webpageHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('webpageMessageOnClick')); javascript:changeHelpButton(this)">About</button>
+            </div>
+            <div class="row">
+            <p>Submit questions, corrections, or requests for additional data by clicking the 'Contact CS Department' button.</p>
+          </div>
+          <div class = "helpMessageRow" id="webpageMessageOnClick"><h4>Note</h4>Developed by Daniel Adams, Sr. GPS, Department of Computer Science</div>
+          <div class="row">
+            <button class="searchButton" onclick="javascript:goLink('mailto:Daniel.Adams-3@colorado.edu')">Contact CS Department</button>
+          </div>
+        </footer>
+      </div>
     </div>
-  </section>
+  </div>
 </body>
 </html>
