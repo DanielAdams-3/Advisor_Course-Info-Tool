@@ -578,7 +578,7 @@ option{
 
 /*FIXME not actually accessing the screen*/
 /*need to compute the values?*/
-@media screen and (max-width: 800px){ 
+@media screen and (max-width< 800px){ 
   .body{
     left:0%;
     right:0%;
