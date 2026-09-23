@@ -128,7 +128,7 @@ input[type="text"] {
 }
 
 /*Format the result boxes for certain result content*/
-#resultDescription, #resultNotes, #resultReqs, #resultRestrictions, #resultSkills, #resultSubject, #resultTitle, #resultHours, #resultOfferings, #resultRigor
+#resultDescription, #resultNotes, #resultReqs, #resultRestrictions, #resultSkills, #resultSubject, #resultTitle, #resultHours, #resultOfferings, #resultRigor, #searchResultMessage
 {
   padding: 0.25rem;
   background: #ffff;
@@ -617,8 +617,8 @@ option{
   color:#000000;
   min-width:33.3333%;
   max-width:33.3333%;
-  min-height:max-content;
-  max-height:max-content;
+  min-height:100%;
+  max-height:100%;
   display:flex;
   align-items:flex-end;
   justify-content:center;
