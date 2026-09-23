@@ -541,26 +541,6 @@
 
     var messageClass = document.getElementsByClassName("helpMessage");
     var helpButtonClass=document.getElementsByClassName("buttonHelp");
-    /*
-    let searchHelpButton=document.getElementById("searchStandardHelpButton");
-    let autohelpButton=document.getElementById("autoHelpButton");
-    let autohelpStepTwoButton=document.getElementById("autoStepTwoHelpButton");
-    let autohelpStepOneButton=document.getElementById("autoStepOneHelpButton");
-    let reviewsMessageButton=document.getElementById('reviewsHelpButton');
-    let searchTopicsHelpButton=document.getElementById("searchTopicsHelpButton");
-    let titleButton = document.getElementById('titleHelpButton');    
-    let subjectHelpButton=document.getElementById('subjectHelpButton');  
-    let nameHelpButton = document.getElementById("nameHelpButton");
-    let hoursHelpButton= document.getElementById("hoursHelpButton");
-    let descriptionHelpButton= document.getElementById("descriptionHelpButton");
-    let notesHelpButton= document.getElementById("notesHelpButton");
-    let offeringsHelpButton = document.getElementById("offeringsHelpButton");
-    let regHelpButton= document.getElementById("regHelpButton");
-    let rigorHelpButton=document.getElementById('rigorHelpButton');
-    let skillsHelpButton = document.getElementById('skillsHelpButton')
-    let webpageHelpButton = document.getElementById("webpageHelpButton");
-    */
-    //var helpButtonR = [titleButton,searchHelpButton,subjectHelpButton,nameHelpButton,hoursHelpButton,descriptionHelpButton,notesHelpButton,offeringsHelpButton,regHelpButton,reqsHelpButton,skillsHelpButton,autohelpButton,autohelpStepOneButton,autohelpStepTwoButton,webpageHelpButton,searchTopicsHelpButton,rigorHelpButton,reviewsMessageButton];
     var helpButtonR = helpButtonClass;
     var messagesR=messageClass;
 
@@ -570,13 +550,7 @@
       if (currMessage != protectedMessage){
         if (currMessage.style.width != "0%"){
           currMessage.className="fade-out-messageDisplay";
-          currMessage.style.width="0%";
-          currMessage.style.opacity="0.0";
-          currMessage.style.paddingLeft="0%";
-          currMessage.style.paddingTop="0%";
-          currMessage.style.paddingRight="0%";
-          currMessage.style.paddingBottom="0%";
-          currMessage.style.display="none";
+          currMessage.classList.toggle("available");
         }
         //https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
         let redButton = helpButtonR[i].classList.contains("opened") === true
@@ -594,8 +568,6 @@
     { 
       messageRowToDisplay.className="fade-in-messageRow";
       messageRowToDisplay.style.height="25%";
-      messageRowToDisplay.style.opacity="1.0";
-      messageRowToDisplay.style.visibility="visible";
     }
     else{
       messageRowToDisplay.className="fade-out-messageRow";
@@ -615,23 +587,12 @@
     if (courseSearchMessageHidden === true)
     { 
       messageToDisplay.className="fade-in-messageDisplay";
-      messageToDisplay.style.width="25%";
-      messageToDisplay.style.opacity="1.0";
-      messageToDisplay.style.paddingLeft="0.5%";
-      messageToDisplay.style.paddingTop="0%";
-      messageToDisplay.style.paddingRight="0.5%";
-      messageToDisplay.style.paddingBottom="0.5%";
-      messageToDisplay.style.display="block";
+      messageToDisplay.classList.toggle("available");
     }
     else {
       messageToDisplay.className="fade-out-messageDisplay";
-      messageToDisplay.style.width="0%";
-      messageToDisplay.style.opacity="0.0";
-      messageToDisplay.style.paddingLeft="0%";
-      messageToDisplay.style.paddingTop="0%";
-      messageToDisplay.style.paddingRight="0%";
-      messageToDisplay.style.paddingBottom="0%";
-      messageToDisplay.style.display="none";
+      messageToDisplay.classList.toggle("available");
+
     }    
   }
 
