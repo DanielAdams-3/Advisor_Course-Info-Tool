@@ -35,6 +35,7 @@ body {
 
 section, header{
   background:white;
+  display:flexbox;
   border-radius:4px;
   padding: 2%;
   margin: auto;
@@ -43,6 +44,7 @@ section, header{
   position:relative;
   max-width:80%;
 }
+
 
 article, footer{
   max-width:95%;
