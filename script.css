@@ -9,20 +9,21 @@ body {
   min-width:100%;
   width:100%;
   background-color:#777777;
-  position:relative;
   display:grid;
-  place-items:center;
+  grid-template-columns:2;
+  padding: 0.25rem;
 }
 
 .sideBar {
   height: 1vw;
   min-height:1vw;
   max-width:20%;
-  position:static;
-  left:0;             /*gap from left edge of the screen*/
-  z-index: 1;        /* higher index values stack on top of lower indexed items*/
-  top: 0;            /*gap from the top of screen*/
-  width:0%;         /*hidden by default*/
+  position:relative;
+  left:0;                 /*gap from left edge of the screen*/
+  z-index: 1;             /* higher index values stack on top of lower indexed items*/
+  top: 0;                 /*gap from the top of screen*/
+  width:0%;               /*hidden by default*/
+  opacity:0;
   background-color:#777777;
   overflow-y:scroll;
   overflow-x:hidden;     /* Disable horizontal scroll */
@@ -34,13 +35,10 @@ body {
 
 section, header{
   background:white;
-  display:flexbox;
+  gap: 10px;
   border-radius:4px;
   padding: 2%;
   margin: auto;
-  z-index: 1;
-  float:right;
-  position:relative;
   max-width:80%;
 }
 
@@ -48,7 +46,6 @@ section, header{
 article, footer{
   max-width:95%;
   background:white;
-  position:relative;
 }
 
 /*Define header styles*/

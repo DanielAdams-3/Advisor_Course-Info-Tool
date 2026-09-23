@@ -97,16 +97,12 @@
     <div class="helpMessageRow" id="titleMessageOnClick"><h4>About CIRT</h4>An internal advisor-facing tool to retrieve course information for graduate courses. Data is pre-collected, so information is not 'live'. To use the tool, select your preferred search method below from tabs below.</div>
   </header>
   <section> 
-    <div class="buttonNav" id="menuButton" onclick="javascript:showHide(); javascript:checkMainMenuButton()">
-      <div class="buttonNavBar1"></div>
-      <div class="buttonNavBar2"></div>
-      <div class="buttonNavBar3"></div>
-    </div>
-    <div class="row">
-      <h4>Search Result Message &nbsp;</h4>
-      <p id="searchResultMessage"></p>
-    </div>
     <article>
+      <div class="buttonNav" id="menuButton" onclick="javascript:showHide(); javascript:checkMainMenuButton()">
+        <div class="buttonNavBar1"></div>
+        <div class="buttonNavBar2"></div>
+        <div class="buttonNavBar3"></div>
+      </div>
       <div class="row">
         <h2>Search Options</h2>
       </div>
@@ -164,8 +160,6 @@
         <p>This tool lets you explore specific sections of topic courses by semester.</p>
         <div class="row">
           <h5>1-Select Course</h5>
-          <h5>2-Select Term</h5>
-          <h5>3-Select Section</h5>
         </div>
         <div class="selectRow">
           <select id='topicsCourseSelected' onchange="populateTopicTerms()">
@@ -176,14 +170,33 @@
             <option value="DTSC-5900">DTSC 5900 Special Topics</option>
             <option value="ATLS-5519">ATLS 5519 Advanced Topics</option>
           </select>
+        </div>
+        <div class="row">
+          <h5>2-Select Term</h5>
+        </div>
+        <div class="selectRow">
           <select id='topicsTermDisplayed' onchange="populateTopics()">
             <option value="blank" selected></option>
           </select>
+        </div>
+        <div class="row">
+          <h5>3-Select Section</h5>
+        </div>
+        <div class="selectRow">
           <select id='topicsDisplayed'>
             <option value="blank" selected></option>
           </select> 
+        </div>
+        <div class="row">
           <button class="searchButton" onclick="javascript:TopicsSearch()">Search</button>
         </div>
+    </article>
+    <hr/>
+    <article>
+      <div class="row">
+        <h4>Search Result Message &nbsp;</h4>
+        <p id="searchResultMessage"></p>
+      </div>
     </article>
     <hr/>
     <article>
@@ -338,7 +351,7 @@
       <hr/>
       <footer>
         <div class="row">
-          <p>Last updated 09.22.2026</p>
+          <p>Last updated 09.23.2026</p>
           <button class="buttonHelp" id="webpageHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('webpageMessageOnClick')); javascript:changeHelpButton(this)">About</button>
           </div>
           <div class="row">
