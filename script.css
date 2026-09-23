@@ -1,23 +1,19 @@
-/*style guide notes*/
+/*color pallette quickreference*/
 /*dark grey: #777777, black: #000000, white: #ffffff, gold: #CFB87C*/
-/*coral: ff6060, green: 00a491, blue:#73c8e2:*/
-/*REMINDER - when using div  class ="", need to use a href="javascript", but with button class, use onclick()*/
+/*coral: ff6060, green: 00a491*/
 
 /*define style for body*/
 body {
   font-family: "Roboto", sans-serif;
   line-height: 1rem;
-  min-width:50%;
-  width:50%;
-  max-width:70%;
-  max-height:70%;
+  min-width:100%;
+  width:100%;
+  right:0;
   background-image: url('background.png');
   background-attachment: fixed;
   background-size: cover;
   position:absolute;
-  overflow-y:visible;
-  margin-left:25%;
-  margin-right:25%;      
+  overflow-y:visible;    
 }
 /*added a layer to get around a CSS restriction so the backgrounds worked as intended*/
 section{
@@ -186,7 +182,7 @@ button:hover, .buttonHelp:hover
   border-color:#0A3758;
 }
 
-#mySidebar {
+.mySidebar {
   height: 100%;
   max-width:20%;
   position:fixed;
@@ -582,24 +578,23 @@ option{
 
 /*FIXME not actually accessing the screen*/
 /*need to compute the values?*/
-@media screen and (max-width: 900px){ 
+@media screen and (max-width: 800px){ 
   .body{
     left:0%;
     right:0%;
-    width:0%;
-    min-width:99%;
-    max-width:99%;
+    width:100%;
+    min-width:100%;
+    max-width:100%;
   }
-  #mySidebar{
-    min-width:99%;
-    max-width:99%;
+  .mySidebar{
+    left:0;
+    right:0;
+    width:100%;
+    min-width:100%;
+    max-width:100%;
   }
   .tab button, .tablinks{
     font-size:2rem;
-  }
-  .helpMessage{
-    max-width:99%;
-    width:0%;
   }
 }
 
