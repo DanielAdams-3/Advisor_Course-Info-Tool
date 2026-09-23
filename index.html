@@ -101,14 +101,14 @@
       <header>
         <div class="row">
           <h1>Course Info Retrieval Tool (CIRT)</h1>
-          <button class="buttonHelp" id="titleHelpButton" style="margin-top:1.5rem;" onclick="javascript:ShowHideMessage(document.getElementById('titleMessageOnClick'));javascript:changeHelpButton(this)">About</button>
+          <button class="buttonHelp" id="titleHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('titleMessageOnClick'));javascript:changeHelpButton(this)">About</button>
         </div>
-        <div class="helpMessage" id="titleMessageOnClick" style="margin-top:0rem;max-width:35%;width:0%;"><h4>About CIRT</h4>An internal advisor-facing tool to retrieve course information for graduate courses. Data is pre-collected, so information is not 'live'.</div>
+        <div class="helpMessage" id="titleMessageOnClick"><h4>About CIRT</h4>An internal advisor-facing tool to retrieve course information for graduate courses. Data is pre-collected, so information is not 'live'.</div>
         <div class="row">
           <h2>Search Options</h2>
         </div>
         <div class="row">
-          <p style="margin-top:0.25rem;margin-bottom:0.5rem;">Use the appropriate tab to search for course information</p>
+          <p">Use the appropriate tab to search for course information</p>
         </div>
       </header>
       <div class="tab">
@@ -122,7 +122,7 @@
           <h3>Search by Course Number</h3>  
             <button class="buttonHelp" id="searchStandardHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('searchMessageOnClick')); javascript:changeHelpButton(this)">About</button>
           </div>
-          <div class = "helpMessage" id="searchMessageOnClick" style="margin-top:0rem;max-width:55%;width:0%;"><h4>About Course Search</h4>Requires a full course number (aka subject code). For example, to get course information about 'CSCI 5214 Big Data Architecture', type CSCI5214, CSCI-5214, or CSCI 5214. If you do not know the full number, use autocomplete tab. For Special Topics courses, use the Special Topics Search tab.</div>
+          <div class = "helpMessage" id="searchMessageOnClick"><h4>About Course Search</h4>Requires a full course number (aka subject code). For example, to get course information about 'CSCI 5214 Big Data Architecture', type CSCI5214, CSCI-5214, or CSCI 5214. If you do not know the full number, use autocomplete tab. For Special Topics courses, use the Special Topics Search tab.</div>
           <p>Enter a course number (for ex: CSCI 5253) and click <strong>Search</strong></p>
           <div class="row">
             <input id="wordInput" type="text" placeholder="Enter a course subject code..." />
@@ -164,15 +164,15 @@
           <button class="buttonHelp" id="searchTopicsHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('specialTopicsMessageOnClick'));
           javascript:changeHelpButton(this)">About</button>
         </div>
-        <div class = "helpMessageRow" id="specialTopicsMessageOnClick" style="max-width:50%;width:0%;margin-top:0rem;"><h4>About Special Topics Search</h4>This search method will show the </div>
+        <div class = "helpMessageRow" id="specialTopicsMessageOnClick"><h4>About Special Topics Search</h4>This search method will show the </div>
         <p>This tool lets you explore specific sections of topic courses by semester.</p>
-        <div class="row" style="margin-top:0.25rem;margin-bottom:-0.75rem;line-height:0.5rem;">
-          <p style="font-family:'Roboto Condensed', sans-serif;min-width:28%;max-width:28%;"><i><b>1-Select Course</b></i></p>
-          <p style="font-family:'Roboto Condensed', sans-serif;min-width:21%;max-width:21%;"><i><b>2-Select Term</b></i></p>
-          <p style="font-family:'Roboto Condensed', sans-serif;min-width:35%;max-width:35%;"><i><b>3-Select Section</b></i></p>
+        <div class="row">
+          <p><i><b>1-Select Course</b></i></p>
+          <p><i><b>2-Select Term</b></i></p>
+          <p><i><b>3-Select Section</b></i></p>
         </div>
         <div class="selectRow">
-          <select id='topicsCourseSelected' onchange="populateTopicTerms()" style="min-width:27%;max-width:27%;">
+          <select id='topicsCourseSelected' onchange="populateTopicTerms()">
             <option value="blank" selected></option>
             <option value="CSCI-7000" style="font-family:Roboto Condensed,sans-serif;">CSCI 7000 Current Topics in Computer Science</option>
             <option value="CYBR-5830" style="font-family:Roboto Condensed,sans-serif;">CYBR 5830 Special Topics</option>
@@ -246,7 +246,7 @@
           <h3>Class Notes&nbsp;</h3>
           <button class="buttonHelp" id="notesHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('notesMessageOnClick')); javascript:changeHelpButton(this)">About</button> 
         </div>
-        <div class = "helpMessageRow" id="notesMessageOnClick" style="max-width:40%;width:0%;"><h4>About Class Notes</h4>Data pulled from Class Search. Notes are from most recent offering from Fall 2024-Fall 2026. If mutliple sections were offered, notes are split by section</div>
+        <div class = "helpMessageRow" id="notesMessageOnClick"><h4>About Class Notes</h4>Data pulled from Class Search. Notes are from most recent offering from Fall 2024-Fall 2026. If mutliple sections were offered, notes are split by section</div>
         <div class="row">
           <div id="resultNotes"></div>
         </div>
@@ -255,7 +255,7 @@
           <h3>Registration Restrictions&nbsp;</h3>
           <button class="buttonHelp" id="regHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('regRestrictionsMessageOnClick')); javascript:changeHelpButton(this)">About</button> 
         </div>
-        <div class = "helpMessageRow" id="regRestrictionsMessageOnClick" style="max-width:40%;width:0%;"><h4>About Registration Restrictions</h4>Data from 2026-27 Graduate Catalog. Restrictions are not listed for individual sections</div>
+        <div class = "helpMessageRow" id="regRestrictionsMessageOnClick"><h4>About Registration Restrictions</h4>Data from 2026-27 Graduate Catalog. Restrictions are not listed for individual sections</div>
         <div class="row">  
           <div id="resultRestrictions"></div>
         </div>
@@ -264,7 +264,7 @@
           <h3>Degree Requirements&nbsp;</h3>
           <button class="buttonHelp" id="reqsHelpButton" onclick="javascript:ShowHideMessage(document.getElementById('DegreeReqsCSMessageOnClick')); javascript:changeHelpButton(this)">About</button> 
         </div>
-        <div class = "helpMessageRow" id="DegreeReqsCSMessageOnClick" style="max-width:40%;width:0%;"><h4>About Degree Requirements (CS)</h4>If you see any errors, please click the 'Contact CS Department'!</div>
+        <div class = "helpMessageRow" id="DegreeReqsCSMessageOnClick"><h4>About Degree Requirements (CS)</h4>If you see any errors, please click the 'Contact CS Department'!</div>
         <div class="row" style="border:2px solid #CFB87C;">  
           <table>
             <caption>Degree Requirements Satisfied by Course</caption>

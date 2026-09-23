@@ -598,6 +598,7 @@
       messageRowToDisplay.style.height="0%";
     }
   }
+  
   /*replace?*/
   function ShowHideMessage(x){
     const messageToDisplay=x;
