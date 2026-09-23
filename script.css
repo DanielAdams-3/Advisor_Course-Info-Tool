@@ -262,6 +262,53 @@ button:hover, .buttonHelp:hover
   }
 }
 
+
+.fade-in-messageRow{
+  animation-duration:0.25s;
+  animation-name: fade-in-messageRow;
+}
+.fade-out-messageRow{
+  animation-duration:0.25s;
+  animation-name: fade-out-messageRow;
+}
+
+@keyframes fade-in-messageRow {
+  0% {
+    opacity:0.0;
+    min-height:0%;
+    max-height:0%;
+    height:0%;
+  }
+  95%{
+    opacity:0.0;
+  }
+  100%{
+    opacity:1.0;
+    min-height:100%;
+    max-height:fit-content;
+    height:fit-content;
+  }
+}
+@keyframes fade-out-messageRow {
+  0% {
+    opacity:1.0;
+    min-height:100%;
+    max-height:fit-content;
+    height:fit-content;
+  }
+  5%{
+    opacity:0.0;
+  }
+  100%{
+    opacity:0.0;
+    min-height:0%;
+    max-height:0%;
+    height:0%;
+  }
+}
+
+
+
 /*handles reposition animation for left sidebar*/
 .fade-in{
   animation-duration:0.35s;

@@ -585,7 +585,7 @@
     }
   }
 
-  function showHideMessageRow(x){
+  function ShowHideMessageRow(x){
     const messageRowToDisplay=x;
     const messageHidden=messageRowToDisplay.style.width==="0%";
     if (messageHidden === true)
@@ -598,7 +598,7 @@
       messageRowToDisplay.style.height="0%";
     }
   }
-  
+
   /*replace?*/
   function ShowHideMessage(x){
     const messageToDisplay=x;
