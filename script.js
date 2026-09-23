@@ -416,7 +416,6 @@
     searchResultMessage.textContent="Error, search failed";
     return;
   }
-  
 
   function populateAutocompleteSuggestions(){
     //Step 1 - clear out all previous suggestions
@@ -586,6 +585,20 @@
     }
   }
 
+  function showHideMessageRow(x){
+    const messageRowToDisplay=x;
+    const messageHidden=messageRowToDisplay.style.width==="0%";
+    if (messageHidden === true)
+    { 
+      messageRowToDisplay.className="fade-in-messageRow";
+      messageRowToDisplay.style.height="25%";
+    }
+    else{
+      messageRowToDisplay.className="fade-out-messageRow";
+      messageRowToDisplay.style.height="0%";
+    }
+  }
+  /*replace?*/
   function ShowHideMessage(x){
     const messageToDisplay=x;
     const courseSearchMessageHidden=messageToDisplay.style.width ==="0%";
