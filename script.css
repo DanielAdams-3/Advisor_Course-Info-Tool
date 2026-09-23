@@ -565,7 +565,7 @@ option{
 .helpMessageRow{
   margin-top:0rem;
   margin-bottom:0rem;
-  display:flex;
+  display:none;
   flex-direction:row;
   flex-wrap:wrap;
   white-space:pre-line;

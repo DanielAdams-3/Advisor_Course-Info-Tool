@@ -122,7 +122,7 @@
           <h3>Search by Course Number</h3>  
             <button class="buttonHelp" id="searchStandardHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('searchMessageOnClick')); javascript:changeHelpButton(this)">About</button>
           </div>
-          <div class = "helpMessage" id="searchMessageOnClick"><h4>About Course Search</h4>Requires a full course number (aka subject code). For example, to get course information about 'CSCI 5214 Big Data Architecture', type CSCI5214, CSCI-5214, or CSCI 5214. If you do not know the full number, use autocomplete tab. For Special Topics courses, use the Special Topics Search tab.</div>
+          <div class = "helpMessageRow" id="searchMessageOnClick"><h4>About Course Search</h4>Requires a full course number (aka subject code). For example, to get course information about 'CSCI 5214 Big Data Architecture', type CSCI5214, CSCI-5214, or CSCI 5214. If you do not know the full number, use autocomplete tab. For Special Topics courses, use the Special Topics Search tab.</div>
           <p>Enter a course number (for ex: CSCI 5253) and click <strong>Search</strong></p>
           <div class="row">
             <input id="wordInput" type="text" placeholder="Enter a course subject code..." />
@@ -200,7 +200,7 @@
         <div class="row">
           <h3>Course Subject&nbsp;</h3>
           <button class="buttonHelp" id="subjectHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('subjectMessageOnClick')); javascript:changeHelpButton(this)">About</button>
-          <div class = "helpMessage" id="subjectMessageOnClick"><h4>About Subject</h4>Per Graduate Catalog AY26-27. If a course does not appear, it is not in the dataset, but can be requested by clicking the 'Contact CS Department' button at the bottom of the page</div>
+          <div class = "helpMessageRow" id="subjectMessageOnClick"><h4>About Subject</h4>Per Graduate Catalog AY26-27. If a course does not appear, it is not in the dataset, but can be requested by clicking the 'Contact CS Department' button at the bottom of the page</div>
         </div>
         <div class="row">
           <div id="resultSubject"></div>
