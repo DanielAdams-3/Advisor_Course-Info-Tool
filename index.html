@@ -23,7 +23,7 @@
     </div>
     <div class="sidebarHeader"></div>
     <div class="sidebarRow" style="background:black;"></div>
-    <div class="sidebarHeader" style="background:#CFB87C;color:#000000;min-height:0%">Course Information</div>
+    <div class="sidebarHeader" style="background:#CFB87C;color:#000000;">Course Information</div>
     <button class="accordion">CU Boulder</button>
     <div class="panel">
       <button class="sidebarRow" onclick="javascript:goLink('https://catalog.colorado.edu/courses-a-z/')">Graduate Catalog AY26-27</button>
@@ -39,7 +39,7 @@
       <button class="sidebarRow" onclick="javascript:goLink('https://docs.google.com/spreadsheets/d/1cyO2n1xfp6QEOjoUIr4CfAsfHH-fGB7LIWFB1ZFxfOY/edit?gid=0#gid=0')">3. Skills Learned by Course (2019)</button>
       <button class="sidebarRow" onclick="javascript:goLink('https://bouldercsgrads.org/classes')">Class Reviews, CS-GSA</button>
     </div>
-  <div class="sidebarHeader" style="background:#CFB87C;color:#000000;min-height:0%">Degree Requirements</div>
+    <div class="sidebarHeader" style="background:#CFB87C;color:#000000;min-height:0%">Degree Requirements</div>
     <button class="accordion">Research MS, PhD</button>
     <div class="panel">
       <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/graduate-programs/master-science-computer-science/master-science-computer-science-degree')">Research MSCS (CSEN-MS)</button>
@@ -65,7 +65,7 @@
       <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/admissions/graduate-admissions')">Grad Admissions Homepage</button>
       <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/admissions/graduate-admissions/admissions-requirements')">CS Grad Programs Requirements</button>
       <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/admissions/graduate-admissions/how-apply/how-apply-masters-program')">Spring 2027 Admissions Exception</button>
-  </div>
+    </div>
     <button class="accordion">MS as non-CS PhD</button>
     <div class="panel">
       <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/students/graduate-students/forms-policies/earning-cs-ms-non-cs-phd-student')">Earning MSCPS as non-CS PhD</button>  
@@ -89,32 +89,32 @@
       <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/graduate-programs/master-science-technology-cybersecurity-policy/master-science-technology')">MS Technology, Cybersecurity, Policy (TCEN)</button>
     </div>
   </div>
+  <header>
+    <div class="row">
+      <h1>Course Info Retrieval Tool (CIRT)</h1>
+      <button class="buttonHelp" id="titleHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('titleMessageOnClick'));javascript:changeHelpButton(this)">About</button>
+    </div>
+    <div class="helpMessageRow" id="titleMessageOnClick"><h4>About CIRT</h4>An internal advisor-facing tool to retrieve course information for graduate courses. Data is pre-collected, so information is not 'live'. To use the tool, select your preferred search method below from tabs below.</div>
+  </header>
   <section> 
     <div class="buttonNav" id="menuButton" onclick="javascript:showHide(); javascript:checkMainMenuButton()">
       <div class="buttonNavBar1"></div>
       <div class="buttonNavBar2"></div>
       <div class="buttonNavBar3"></div>
     </div>
-    <header>
-      <div class="row">
-        <h1>Course Info Retrieval Tool (CIRT)</h1>
-        <button class="buttonHelp" id="titleHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('titleMessageOnClick'));javascript:changeHelpButton(this)">About</button>
-      </div>
-      <div class="helpMessageRow" id="titleMessageOnClick"><h4>About CIRT</h4>An internal advisor-facing tool to retrieve course information for graduate courses. Data is pre-collected, so information is not 'live'. To use the tool, select your preferred search method below from tabs below.</div>
+    <div class="row">
+      <h4>Search Result Message &nbsp;</h4>
+      <p id="searchResultMessage"></p>
+    </div>
+    <article>
       <div class="row">
         <h2>Search Options</h2>
       </div>
-    <div class="tab">
-      <button class="tablinks" id = "defaultOpen" onclick="javascript:openSearchTab(this, 'searchTraditionalTab')">Search by Full Course Number</button>
-      <button class="tablinks" onclick="javascript:openSearchTab(this, 'searchByTopics')">Search for Special Topics</button>
-      <button class="tablinks" onclick="javascript:openSearchTab(this, 'searchWithHelpTab')">Search by Partial Course Number</button>
-    </div>      
-    <div class="row">
-      <h4>Search Result Message: &nbsp;</h4>
-      <p id="searchResultMessage"></p>
-    </div>
-    </header>
-    <article>
+      <div class="tab">
+        <button class="tablinks" id = "defaultOpen" onclick="javascript:openSearchTab(this, 'searchTraditionalTab')">Search by Full Course Number</button>
+        <button class="tablinks" onclick="javascript:openSearchTab(this, 'searchByTopics')">Search for Special Topics</button>
+        <button class="tablinks" onclick="javascript:openSearchTab(this, 'searchWithHelpTab')">Search by Partial Course Number</button>
+      </div>      
       <div class="tabContent" id="searchTraditionalTab">
         <div class="row">
           <h3>Search by Course Number</h3>  

@@ -33,7 +33,6 @@ body {
   border-radius:5px;
 }
 
-/*added a layer to get around a CSS restriction so the backgrounds worked as intended*/
 section{
   background:white;
   border-radius:4px;
@@ -606,8 +605,7 @@ option{
 .tab {
   overflow: hidden;
   max-width:100%;
-  margin-left:5%;
-  margin-right:5%;
+  min-height:100%;
   border:2px solid #777777;
   background-color: #ffffff;
   position:relative;
