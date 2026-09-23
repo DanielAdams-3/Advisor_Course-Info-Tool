@@ -508,7 +508,7 @@
   }
   
   function showHide() {
-    let navList=getElementsByClassName("sideBar");
+    let navList=document.getElementsByClassName("sideBar");
     const visibleNav = navList[0]; 
 
     //https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
@@ -725,7 +725,7 @@
   function checkInnerMenuButton(){
     let innerMenuButton=document.getElementById('innerMenuButton');
     let redInnerButton=innerMenuButton.classList.contains("opened") === true;
-    let navList=getElementsByClassName("sideBar");
+    let navList=document.getElementsByClassName("sideBar");
     const navBar = navList[0];
     const navBarHidden = navBar.style.width === "0%";
 
@@ -746,7 +746,7 @@
   function checkMainMenuButton(){
     let mainMenuButton=document.getElementById("menuButton");
     let redMainButton = menuButton.classList.contains("opened") === true;
-    let navList=getElementsByClassName("sideBar");
+    let navList=document.getElementsByClassName("sideBar");
     const navBar = navList[0];
     const navBarHidden = navBar.style.width === "0%";
 
@@ -790,9 +790,9 @@
   });
 
   function openSideBar(){
-    let navList=getElementsByClassName("sideBar");
+    let navList=document.getElementsByClassName("sideBar");
     let sideBar = navList[0];
-    
+
     var i, menuButtons;
     menuButtons=document.getElementsByClassName("buttonNav");
     for (i=0;i<menuButtons.length;i++){
