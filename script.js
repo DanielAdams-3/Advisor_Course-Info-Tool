@@ -587,7 +587,7 @@
 
   function ShowHideMessageRow(x){
     const messageRowToDisplay=x;
-    const messageHidden=messageRowToDisplay.style.width==="0%";
+    const messageHidden=messageRowToDisplay.style.height==="0%";
     if (messageHidden === true)
     { 
       messageRowToDisplay.className="fade-in-messageRow";
@@ -599,7 +599,7 @@
       messageRowToDisplay.className="fade-out-messageRow";
       messageRowToDisplay.style.height="0%";
       messageRowToDisplay.style.opacity="0.0";
-      messageRowToDisplay.style.visibility="none";
+      messageRowToDisplay.style.visibility="hidden";
     }
   }
 
