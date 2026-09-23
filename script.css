@@ -373,8 +373,7 @@ button:hover, .buttonHelp:hover
 .accordion {
   background-color:#EEF5F8; 
   color: #0A3758;
-  text-transform:uppercase;
-  padding: 12px 12px 12px 12px;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   margin:0px;
   max-height:fit-content;
   font-size: 1rem;
