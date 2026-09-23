@@ -166,9 +166,9 @@
         <div class = "helpMessageRow" id="specialTopicsMessageOnClick"><h4>About Special Topics Search</h4>This search method will show the </div>
         <p>This tool lets you explore specific sections of topic courses by semester.</p>
         <div class="row">
-          <p><i><b>1-Select Course</b></i></p>
-          <p><i><b>2-Select Term</b></i></p>
-          <p><i><b>3-Select Section</b></i></p>
+          <h5>1-Select Course</h5>
+          <h5>2-Select Term</h5>
+          <h5>3-Select Section</h5>
         </div>
         <div class="selectRow">
           <select id='topicsCourseSelected' onchange="populateTopicTerms()">
@@ -191,7 +191,6 @@
       <hr/>
       <article>
         <h2>Course Information</h2>
-        
         <div class="row">
           <h3>Course Subject&nbsp;</h3>
           <button class="buttonHelp" id="subjectHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('subjectMessageOnClick')); javascript:changeHelpButton(this)">About</button>
@@ -260,7 +259,7 @@
           <button class="buttonHelp" id="reqsHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('DegreeReqsCSMessageOnClick')); javascript:changeHelpButton(this)">About</button> 
         </div>
         <div class = "helpMessageRow" id="DegreeReqsCSMessageOnClick"><h4>About Degree Requirements (CS)</h4>If you see any errors, please click the 'Contact CS Department'!</div>
-        <div class="row" style="border:2px solid #CFB87C;">  
+        <div class="row">  
           <table>
             <caption>Degree Requirements Satisfied by Course</caption>
             <tr>
