@@ -5,11 +5,15 @@
 /*define style for body*/
 body {
   font-family: "Roboto", sans-serif;
-  font-size:1rem;
+  font-size:2rem;
   line-height: 1rem;
   min-width:100%;
   width:100%;
   background-color:#777777;
+  padding-top:0rem;
+  padding-bottom:0rem;
+  margin-top:0rem;
+  margin-bottom:0rem;
 }
 .grid-container{
   display:grid;
@@ -57,14 +61,13 @@ h2{
 h3{
   font-family: "Roboto Condensed", sans-serif;
   font-size:1.2rem;
-  line-height:1.2rem;
-  padding-top:0rem;
+  line-height:1rem;
   font-style:italic;
 } 
 h4, caption{
   font-family: "Roboto Condensed", sans-serif;
   font-size:1.2rem;
-  line-height:1.2rem;
+  line-height:1rem;
   padding-top:0rem;
   font-weight:bold;
 }
@@ -442,35 +445,19 @@ option{
 }
 
 .sidebarHeader{      
-  font-size:1.25rem;
-  line-height:1.5rem;
-  font-weight:bold;
-  font-family:"Roboto Condensed", sans-serif;
+  line-height:5rem;
   text-align:center;
-
-  word-wrap:normal;
-  white-space:normal;
-  overflow-x:hidden;
-  overflow-y:hidden;
-
-  min-height:10%;
-  max-height:20%;
   width:100%;
-  
-  cursor:default;
   border:none;
-  outline:none;
   background-color:#0A3758;
   background:black url("sidebarHeader.png");
   background-position:top;
   background-size:contain;
   background-repeat:no-repeat;
-  margin:0rem;
-  padding: 12px 0px 12px 0px;
-  border-radius: 0px;
+  padding: 12px 12px 12px 12px;
 }
 .sidebarSubHeaderRow{
-  font-size:1.25rem;
+  font-size:1.5rem;
   line-height:1.5rem;
   font-weight:bold;
   font-family:"Roboto Condensed", sans-serif;

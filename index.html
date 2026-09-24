@@ -125,17 +125,17 @@
           </div>
           <div class = "helpMessageRow" id="autocompleteMessageOnClick"><h4>About AutoComplete</h4>Must start with beginning of subject code. All available results will match those characters.</div>
           <div class="row">
-            <p>1: Type the beginning of any course number, then press <b>Get Matching Courses</b></p>
+            <h4>1: Get Matching Courses</h4>
             <button class="buttonHelp" id="autoStepOneHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('autoStepOneMessageOnClick'));javascript:changeHelpButton(this)">About</button>
           </div>
-          <div class = "helpMessageRow" id="autoStepOneMessageOnClick"><h4>Step 1 Instructions:</h4><p>Enter the first letter(s) of a course subject code and click <b>Get Matching Courses</b> to retrieve suggestions. For example, entering 'CSCI 5' will retrieve all 5000-level CSCI courses</p></div>
+          <div class = "helpMessageRow" id="autoStepOneMessageOnClick"><h4>Step 1 Instructions:</h4><p>Enter the beginning letter(s) of a course number and select <b>Get Matching Courses</b> to retrieve suggestions. For example, entering 'CSCI 5' will retrieve all 5000-level CSCI courses</p></div>
           <div class="row">
             <input id="prefixInput" type="text" placeholder="Enter the first letter(s) of a course subject code..." />
             <button class="searchButton" onclick="populateAutocompleteSuggestions()">Get Matching Courses</button>
           </div>
           <div class = "helpMessageRow" id="autoStepTwoMessageOnClick"><h4>Step 2 Instructions: </h4><p>After you select a suggested course from the dropdown menu, click <b>Search</b> to retrieve that course's information.</p></div>
           <div class="row">
-            <p>2: Select an option from the dropdown list, then press <b></b>Search</b></p>
+            <h4>2: Search by Dropdown list</h4>
             <button class="buttonHelp" id="autoStepTwoHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('autoStepTwoMessageOnClick'));javascript:changeHelpButton(this)">About</button>
           </div>
           <div class="selectRow">
