@@ -571,6 +571,7 @@
       messageRowToDisplay.style.opacity="1.0";
       messageRowToDisplay.style.visibility="visible";
       messageRowToDisplay.style.display="block";
+      messageRowToDisplay.style.backgroundColor="#CFB87C";
     }
     else{
       messageRowToDisplay.className="fade-out-messageRow";
@@ -578,6 +579,7 @@
       messageRowToDisplay.style.opacity="0.0";
       messageRowToDisplay.style.visibility="hidden";
       messageRowToDisplay.style.display="none";
+      messageRowToDisplay.style.backgroundColor="#ffffff";
     }
   }
 
