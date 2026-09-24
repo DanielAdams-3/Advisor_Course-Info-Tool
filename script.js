@@ -723,11 +723,15 @@
       }
     }
   }
-
+  
+  document.addEventListener("DOMContentLoaded",function(){
+    addListeners();
+  });
+  
   function addListeners(){
     var accordionR = document.getElementsByClassName("accordion");
     var i;
-    var panel = document.getElementsByClassName("panel");
+    //var panel = document.getElementsByClassName("panel");
     for (i = 0; i < accordionR.length; i++) {
       accordionR[i].addEventListener("click", function() {
         this.classList.toggle("active");
@@ -741,15 +745,10 @@
     theTab=document.getElementById("defaultOpen");
     openSearchTab(theTab,"searchTraditionalTab");
   });
-  
+  /*
   document.addEventListener("DOMContentLoaded",function(){
     openSideBar();
   });
-
-  document.addEventListener("DOMContentLoaded",function(){
-    addListeners();
-  });
-
   function openSideBar(){
     let navList=document.getElementsByClassName("sideBar");
     let sideBar = navList[0];
@@ -767,3 +766,7 @@
     sideBar.style.width="20%";
     sideBar.style.minWidth="200px";
   }
+
+  */
+
+
