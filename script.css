@@ -23,7 +23,7 @@ body {
   padding:1vw;
 }
 .sideBar {   
-  padding:0;
+  padding:0%;
   opacity:1.0; 
   background-color:#777777; 
   overflow-y:scroll;
@@ -59,7 +59,7 @@ h3{
   font-size:1.2rem;
   margin-top:0.75rem;
   line-height:1.2rem;
-  padding-top:0;
+  padding-top:0rem;
   margin-bottom:0.25rem;
   font-style:italic;
 } 
@@ -68,7 +68,7 @@ h4, caption{
   font-size:1.2rem;
   margin-top:0.75rem;
   line-height:1.2rem;
-  padding-top:0;
+  padding-top:0rem;
   margin-bottom:0.25rem;
   font-weight:bold;
 }
@@ -173,10 +173,10 @@ button:hover, .buttonHelp:hover
   background-color: #0A3758;
   color:#EEF5F8;
   font-family: "Roboto Condensed", sans-serif;
-  margin-left:0;
+  margin-left:0rem;
   min-height:100%;
   max-height:100%;
-  margin-top:0;
+  margin-top:0rem;
   cursor: pointer;
   border-radius:4px;
   border-color:#0A3758;
@@ -412,7 +412,7 @@ select, select>option, option{
   overflow:visible;
   justify-content:left;
   align-items:end;
-  margin:0;
+  margin:0rem;
   padding:2px;
   height:auto;
   background-color:#EEF5F8;
@@ -426,7 +426,7 @@ option{
   overflow:visible;
   justify-content:left;
   align-items:center;
-  margin:0;
+  margin:0rem;
   padding:2px;
   height:auto;
   background-color:#EEF5F8;
@@ -434,7 +434,7 @@ option{
 
 .panel, .panel a{
   padding:0px;
-  margin:0;
+  margin:0rem;
   max-width:100%;
   white-space:normal;
   overflow-x:hidden;
@@ -474,7 +474,7 @@ option{
   background-position:top;
   background-size:contain;
   background-repeat:no-repeat;
-  margin:0;
+  margin:0rem;
   padding: 12px 0px 12px 0px;
   border-radius: 0px;
 }
@@ -513,9 +513,9 @@ option{
   white-space:normal;
   padding:8px 4px 8px 4px;
   margin:0px;
-  max-height:0;
-  height:0;
-  min-height:0;
+  max-height:0%;
+  height:0%;
+  min-height:0%;
   width:100%;
   visibility:hidden;
   overflow-x:hidden;
@@ -526,17 +526,17 @@ option{
 }
 
 .show{
-  max-height:100;
-  height:100;
-  min-height:100;
+  max-height:100%;
+  height:100%;
+  min-height:100%;
   visibility:visible;
 }
 .hide{
-  max-height:0;
+  max-height:0%;
 }
 
 .helpMessageRow{
-  opacity:0.0;
+  opacity:0.0%;
   min-height:0%;
   max-height:0%;
   visibility:hidden;
@@ -568,8 +568,8 @@ option{
     max-width:100%;
   }
   .sideBar{
-    left:0;
-    right:0;
+    left:0rem;
+    right:0rem;
     width:100%;
     min-width:100%;
     max-width:100%;
@@ -599,7 +599,7 @@ option{
   padding: 8px 8px 8px 8px;
   transition: 0.3s;
   font-size: 15px;
-  margin:0;
+  margin:0%;
   color:#000000;
   min-width:33.3333%;
   max-width:33.3333%;
