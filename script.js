@@ -567,19 +567,9 @@
     if (messageHidden === true)
     { 
       messageRowToDisplay.className="fade-in-messageRow";
-      messageRowToDisplay.style.height="25%";
-      messageRowToDisplay.style.opacity="1.0";
-      messageRowToDisplay.style.visibility="visible";
-      messageRowToDisplay.style.display="block";
-      messageRowToDisplay.style.backgroundColor="#CFB87C";
     }
     else{
       messageRowToDisplay.className="fade-out-messageRow";
-      messageRowToDisplay.style.height="0%";
-      messageRowToDisplay.style.opacity="0.0";
-      messageRowToDisplay.style.visibility="hidden";
-      messageRowToDisplay.style.display="none";
-      messageRowToDisplay.style.backgroundColor="#ffffff";
     }
   }
 

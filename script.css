@@ -179,7 +179,7 @@ button:hover, .buttonHelp:hover
   border-radius:4px;
   border-color:#0A3758;
 }
-
+/*
 .fade-in-messageDisplay{
   animation-duration:0.25s;
   animation-name: fade-in-messageDisplay;
@@ -238,7 +238,7 @@ button:hover, .buttonHelp:hover
     padding-top:0%;
     display:block;
   }
-}
+} */
 
 
 .fade-in-messageRow{
@@ -266,6 +266,13 @@ button:hover, .buttonHelp:hover
     opacity:0.0;
     min-height:0%;
     max-height:0%;
+    height:0%;
+    visibility:hidden;
+    display:none;
+    background-color:#ffffff;
+    border-radius:0vw;
+    border-color:#ffffff;
+    border:#ffffff;
   }
   95%{
     opacity:0.0;
@@ -274,6 +281,13 @@ button:hover, .buttonHelp:hover
     opacity:1.0;
     min-height:100%;
     max-height:fit-content;
+    height:100%;
+    visibility:visible;
+    display:contents;
+    background-color:#CFB87C;
+    border-radius:2vw;
+    border-color:#000000;
+    border:#000000;
   }
 }
 @keyframes fade-out-messageRow {
@@ -281,6 +295,13 @@ button:hover, .buttonHelp:hover
     opacity:1.0;
     min-height:100%;
     max-height:fit-content;
+    height:100%;
+    visibility:visible;
+    display:contents;
+    background-color:#CFB87C;
+    border-radius:2vw;
+    border-color:#000000;
+    border:#000000;
   }
   5%{
     opacity:0.0;
@@ -289,6 +310,13 @@ button:hover, .buttonHelp:hover
     opacity:0.0;
     min-height:0%;
     max-height:0%;
+    height:0%;
+    visibility:hidden;
+    display:none;
+    background-color:#ffffff;
+    border-radius:0vw;
+    border-color:#ffffff;
+    border:#ffffff;
   }
 }
 
