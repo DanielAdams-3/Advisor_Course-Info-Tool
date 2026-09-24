@@ -570,12 +570,14 @@
       messageRowToDisplay.style.height="25%";
       messageRowToDisplay.style.opacity="1.0";
       messageRowToDisplay.style.visibility="visible";
+      messageRowToDisplay.style.display="block";
     }
     else{
       messageRowToDisplay.className="fade-out-messageRow";
       messageRowToDisplay.style.height="0%";
       messageRowToDisplay.style.opacity="0.0";
       messageRowToDisplay.style.visibility="hidden";
+      messageRowToDisplay.style.display="none";
     }
   }
 
