@@ -442,6 +442,7 @@ option{
   max-height: 0%;
   height:0%;
   text-transform:capitalize;
+  display:none;
 }
 
 .accordion:hover, .accordion a:hover .panel a:hover, .sidebarRow a:hover, .sidebarRow:hover{
@@ -530,9 +531,15 @@ option{
   height:100%;
   min-height:100%;
   visibility:visible;
+  display:contents;
 }
 .hide{
   max-height:0%;
+  max-height:100%;
+  height:100%;
+  min-height:0%;
+  visibility:hidden;
+  display:none;
 }
 
 .helpMessageRow{
