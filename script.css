@@ -46,26 +46,36 @@ h1 {
   font-family: "Roboto Condensed", sans-serif;
   font-size:2rem;
   font-weight:bolder;
+  margin-top:1vw;
+  margin-bottom:1vw;
 }
 h2{
   font-family: "Roboto Condensed", sans-serif;
   font-size: 1.75rem;
+  margin-top:1vw;
+  margin-bottom:1vw;
 }
 h3{
   font-family: "Roboto Condensed", sans-serif;
   font-size:1.5rem;
   font-style:bold;
+  margin-top:1vw;
+  margin-bottom:1vw;
 } 
 h4 {
   font-family: "Roboto Condensed", sans-serif;
   font-size:1.25rem;
   padding-top:0rem;
   font-weight:bold;
+  margin-top:1vw;
+  margin-bottom:1vw;
 }
 h5{
   font-family:"Roboto Condensed", sans-serif;
   font-size:1.25rem;
   font-weight:italic;
+  margin-top:1vw;
+  margin-bottom:1vw;
 }
 
 p{
@@ -73,6 +83,8 @@ p{
   word-wrap:normal;
   white-space:normal;
   justify-content:center;
+  margin-top:1vw;
+  margin-bottom:1vw;
 }
 caption {
   font-family: "Roboto Condensed", sans-serif;
@@ -82,8 +94,8 @@ caption {
 }
 /*Define formatting for rows*/
 .row {
-  margin-top:0%;
-  margin-bottom:0%;
+  margin-top:0.5vw;
+  margin-bottom:0.5vw;
   display:flex;
   flex-direction:row;
   flex-wrap:wrap;
@@ -328,7 +340,7 @@ button:hover, .buttonHelp:hover
   overflow-y:visible;
   width:100%;
   text-align:center;
-  border-radius: 0px;
+  border:none;
 }
 
 .active, .accordion.active:hover, .active:hover {
@@ -424,12 +436,11 @@ option{
   width:100%;
   
   cursor:default;
-  border:none;
   outline:none;
   background-color:#CFB87C;
   color:#000000;
   padding: 12px 0px 12px 0px;
-  border-radius: 0px;
+  border:none;
 }
 
 .sidebarRow, .sidebarRow a {
