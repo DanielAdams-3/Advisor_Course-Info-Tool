@@ -29,7 +29,7 @@ body {
 .sideBar {   
   padding:0%;
   opacity:1.0; 
-  background-color:#777777; 
+  background-color:#CFB87C; 
   overflow-y:scroll;
   overflow-x:hidden;     /* Disable horizontal scroll */
   /*padding-inline: 0px;*/
@@ -265,13 +265,13 @@ button:hover, .buttonHelp:hover
 
 /* Style the accordion folder buttons */
 .accordion {
-  background-color:#EEF5F8; 
-  color: #0A3758;
+  background-color:#000000; 
+  color: #CFB87C;
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   margin:0px;
   max-height:fit-content;
   font-size: 1rem;
-  line-height:1.25rem;
+  line-height:2rem;
   font-weight:bold;
   word-wrap:normal;
   white-space:normal;
@@ -315,13 +315,10 @@ button:hover, .buttonHelp:hover
 
 select, select>option{ 
   font-size:1rem;
-  display:flex;
-  flex-direction:row;
-  flex-wrap:wrap;
+  display:block;
+  min-width:98%;
   max-width:98%;
   overflow:clip;
-  justify-content:left;
-  align-items:end;
   background-color:#EEF5F8;
 }
 

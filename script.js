@@ -124,7 +124,6 @@
     instructorReview.textContent=result.reviewInstructor;
     courseloadReview.textContent=result.reviewCourseload;
     inputReview.textContent=result.reviewInput;
-
     resultMessage.textContent="Completed";
   }
 
@@ -541,7 +540,6 @@
 
     var messageClass = document.getElementsByClassName("helpMessageRow");
     var helpButtonClass=document.getElementsByClassName("buttonHelp");
-    var helpButtonR = helpButtonClass;
     var messagesR=messageClass;
 
     var i;
@@ -553,9 +551,9 @@
         }
 
         /*change the help button*/
-        let redButton = helpButtonR[i].classList.contains("opened") === true
+        let redButton = helpButtonClass[i].classList.contains("opened") === true;
         if (redButton === true){
-          changeHelpButton(helpButtonR[i]);
+          changeHelpButton(helpButtonClass[i]);
         }
       }
     }
