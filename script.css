@@ -362,15 +362,15 @@ button:hover, .buttonHelp:hover
 
 .selectRow{
   max-width:100%;
-  min-width:100%; 
-  margin-top:1rem;     
+  min-width:80%; 
+  margin-top:0.25rem;     
   font-family:'Roboto Condensed', sans-serif;
 }
 
 select, select>option{ 
   font-size:1rem;
   max-width:100%;
-  min-width:100%;
+  min-width:800%;
   overflow:clip;
   justify-content:left;
   align-items:end;
@@ -489,7 +489,7 @@ option{
   display:none;
 
   background-color:#ffffff;
-  border-radius:0px;
+  border-radius:2vw;
   border-color:#ffffff;
 
   margin-top:0rem;
