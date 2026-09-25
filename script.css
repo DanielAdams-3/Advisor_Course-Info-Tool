@@ -89,9 +89,8 @@ p{
 }
 caption {
   font-family: "Roboto Condensed", sans-serif;
-  font-size:1.5rem;
+  font-size:1.25rem;
   margin-bottom:0.5rem;
-  font-weight: bold;
 }
 /*Define formatting for rows*/
 .row {
@@ -100,7 +99,7 @@ caption {
   flex-wrap:wrap;
   white-space:pre-line;
   word-wrap:normal;
-  align-items:center;
+  align-items:left;
   max-width:100%;
 }
 
@@ -173,8 +172,8 @@ button:hover, .buttonHelp:hover
   color:#EEF5F8;
   font-family: "Roboto Condensed", sans-serif;
   margin-left:0rem;
-  min-height:100%;
-  max-height:100%;
+  max-height:2rem;
+  min-height:2rem;
   margin-top:0rem;
   border-radius:4px;
   border-color:#0A3758;
@@ -361,10 +360,14 @@ button:hover, .buttonHelp:hover
 }
 
 .selectRow{
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  white-space:pre-line;
+  word-wrap:normal;
+  align-items:left;
   max-width:100%;
-  min-width:80%; 
   margin-top:0.25rem;     
-  font-family:'Roboto Condensed', sans-serif;
 }
 
 select, select>option{ 
@@ -584,7 +587,7 @@ table {
   max-width:95%;
   border-collapse: collapse;
   border: 2px solid #777777;
-  font-size: 1rem;
+  font-size: 1.25rem;
   margin-bottom:1rem;
 }
 
@@ -595,10 +598,11 @@ td,th {
 th{
   font-family:'Roboto Condensed', sans-serif;
   background-color: #096FAE;
+  text-align:center;
 }
 
 td {
-  text-align: center;
+  text-align: left;
 }
 
 tr:nth-child(even) td {

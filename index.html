@@ -111,7 +111,6 @@
             <button class="buttonHelp" id="searchStandardHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('searchMessageOnClick')); javascript:changeHelpButton(this)">About</button>
           </div>
           <div class = "helpMessageRow" id="searchMessageOnClick"><h4>About Course Search</h4>Requires a full course number (aka subject code). For example, to get course information about 'CSCI 5214 Big Data Architecture', type CSCI5214, CSCI-5214, or CSCI 5214. If you do not know the full number, use autocomplete tab. For Special Topics courses, use the Special Topics Search tab.</div>
-          <p>Enter a course number (for ex: CSCI 5253) and click <strong>Search</strong></p>
           <div class="row">
             <input id="wordInput" type="text" placeholder="Enter a course subject code..." />
             <button class="searchButton" onclick="searchBySubject(document.getElementById('wordInput').value.trim());">Search</button>
@@ -150,8 +149,8 @@
             <button class="buttonHelp" id="searchTopicsHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('specialTopicsMessageOnClick'));
             javascript:changeHelpButton(this)">About</button>
           </div>
-          <div class = "helpMessageRow" id="specialTopicsMessageOnClick"><h4>About Special Topics Search</h4>This search method will show the </div>
-          <p>This tool lets you explore specific sections of topic courses by semester.</p>
+          <div class = "helpMessageRow" id="specialTopicsMessageOnClick"><h4>About Special Topics Search</h4>Special Topics Search allows search for specific sections of the available Special Topics courses, filtered by semester.</p>
+          </div>
           <div class="row">
             <h5>1-Select Course</h5>
           </div>
