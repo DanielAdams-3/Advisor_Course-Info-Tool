@@ -280,8 +280,8 @@ button:hover, .buttonHelp:hover
 
 /* Style the accordion folder buttons */
 .accordion {
-  background-color:#000000; 
-  color: #CFB87C;
+  background-color:#CFB87C; 
+  color: #000000;
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   margin:0px;
   max-height:fit-content;
@@ -323,7 +323,7 @@ button:hover, .buttonHelp:hover
   white-space:pre-line;
   justify-content:left;
   word-wrap:normal;
-  align-items:end;
+  align-items:left;
   margin-top:0.25rem;    
   max-width:98%; 
 }
