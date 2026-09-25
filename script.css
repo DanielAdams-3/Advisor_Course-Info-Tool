@@ -33,7 +33,14 @@ body {
   padding: 0.25rem;
   gap:4vw;
 }
-.grid-item{
+.grid-item1{
+  text-align:left;
+  background:#000000;
+  border-radius:0.5vw;
+  padding:1vw;
+  overflow:hidden;
+}
+.grid-item2{
   text-align:left;
   background:white;
   border-radius:0.5vw;
@@ -136,19 +143,6 @@ input[type="text"] {
   white-space: pre-wrap;
   cursor: text;
   font-size: 1rem;
-}
-#suggestions {
-  padding: 0.25rem;
-  border: 2px solid #CFB87C;
-  background: #ffff;
-  min-height: 1rem;
-  white-space: pre-wrap;
-  cursor: text;
-  font-size: 1rem;
-  word-wrap: normal;
-  max-height:4rem;
-  overflow-x:hidden;
-  overflow-y:visible;
 }
 /*Formatting for buttons*/
 button, .buttonHelp {
