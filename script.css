@@ -3,6 +3,22 @@
 /*coral: ff6060, green: 00a491*/
 
 /*define style for body*/
+.headerBar{
+  padding-top:1vw;
+  padding-bottom:1vw;
+  background-color:#000000;
+}
+
+.articleHeader{      
+  width:auto;
+  height:4vw;
+  background:black url("sidebarHeader.png");
+  background-position:top;
+  background-size:contain;
+  background-repeat:no-repeat;
+}
+
+
 body {
   font-family: "Roboto", sans-serif;
   font-size:1.5rem;
@@ -11,7 +27,6 @@ body {
   background-color:#777777;
   padding-top:0rem;
   padding-bottom:0rem;
-
 }
 .grid-container{
   display:grid;
@@ -350,29 +365,6 @@ option{
   background-color:#0A3758;
   color:#ffffff;
   transition-duration:0.25s;
-}
-
-/*.sidebarHeader{      
-  line-height:5rem;
-  text-align:center;
-  width:100%;
-  border:none;
-  background-color:#0A3758;
-  background:black url("sidebarHeader.png");
-  background-position:top;
-  background-size:contain;
-  background-repeat:no-repeat;
-  padding: 12px 12px 12px 12px;
-}*/
-.articleHeader{      
-  width:30%;
-  height:auto;
-  border-radius:2vw;
-  background:black url("sidebarHeader.png");
-  background-position:top;
-  background-size:contain;
-  z-index:1;
-  background-repeat:no-repeat;
 }
 
 .sidebarSubHeaderRow{
