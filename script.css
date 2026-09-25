@@ -572,11 +572,11 @@ option{
 /* Style the tab content */
 /*affects ids= #searchWithHelpTab, #searchTraditionalTab, #searchByTopics*/
 .tabContent {
-  display: none;
-  padding: 6vw 12vw;
+  display: block;
+  padding: 2vw 2vw;
   border: 2px solid #777777;
   border-top: none;
-  max-width:min-content;
+  max-width:100%;
 }
 
 table {
@@ -586,7 +586,7 @@ table {
   max-width:95%;
   border-collapse: collapse;
   border: 2px solid #777777;
-  font-size: 0.95rem;
+  font-size: 1rem;
   margin-bottom:1rem;
 }
 
