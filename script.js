@@ -562,14 +562,14 @@
   }
 
   function ShowHideMessageRow(x){
-    const messageRowToDisplay=x;
-    const messageHidden=messageRowToDisplay.style.height==="0%";
+    const helpMessageRowToDisplay=x;
+    const messageHidden=helpMessageRowToDisplay.style.height==="0%";
     if (messageHidden === true)
     { 
-      messageRowToDisplay.className="fade-in-messageRow";
+      helpMessageRowToDisplay.className="fade-in-messageRow";
     }
     else{
-      messageRowToDisplay.className="fade-out-messageRow";
+      helpMessageRowToDisplay.className="fade-out-messageRow";
     }
   }
 
