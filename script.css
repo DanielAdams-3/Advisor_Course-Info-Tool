@@ -20,7 +20,7 @@ body {
   gap:4vw;
 }
 .grid-item{
-  text-align:center;
+  text-align:left;
   background:white;
   border-radius:2vw;
   padding:1vw;
