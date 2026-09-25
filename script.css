@@ -116,8 +116,7 @@ caption {
 
 /*Define formatting for input text when provided by user*/
 input[type="text"] {
-  flex: 1;
-  padding: 0.5rem;
+  padding: 0.25rem;
   font-size: 1rem;
   font-weight:lighter;
 }
