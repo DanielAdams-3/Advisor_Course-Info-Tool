@@ -16,8 +16,21 @@
   <h2>NOTICE - this website is under construction. Visit the Project Course Tool site for a functional demo</h2>
   <button onclick="javascript:goLink('https://danieladams-3.github.io/Project-CourseTool/')">Project Course Tool Demo</button>
 </article>
-<div class="headerBar">
-  <div class = "articleHeader"></div>
+<div class="grid-container">
+  <div class="grid-item">
+    <div class="headerBar">
+      <div class = "articleHeader"></div>
+    </div>
+  </div>
+  <div class="grid-item">
+    <header>
+      <div class="row">
+        <h1>Course Info Retrieval Tool (CIRT)</h1>
+        <button class="buttonHelp" id="titleHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('titleMessageOnClick'));javascript:changeHelpButton(this)">About</button>
+      </div>
+      <div class="helpMessageRow" id="titleMessageOnClick"><h4>About CIRT</h4><p>An internal advisor-facing tool to retrieve course information for graduate courses. Data is pre-collected, so information is not 'live'. To use the tool, select your preferred search method below from tabs below.</p></div>
+    </header>
+  </div>
 </div>
 <body>
   <div class="grid-container">
@@ -92,13 +105,6 @@
       </div>
     </div>
     <div class="grid-item">
-      <header>
-        <div class="row">
-          <h1>Course Info Retrieval Tool (CIRT)</h1>
-          <button class="buttonHelp" id="titleHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('titleMessageOnClick'));javascript:changeHelpButton(this)">About</button>
-        </div>
-        <div class="helpMessageRow" id="titleMessageOnClick"><h4>About CIRT</h4><p>An internal advisor-facing tool to retrieve course information for graduate courses. Data is pre-collected, so information is not 'live'. To use the tool, select your preferred search method below from tabs below.</p></div>
-      </header>
       <article>
         <div class="row">
           <h2>Search Options</h2>
