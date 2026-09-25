@@ -120,7 +120,8 @@ input[type="text"] {
   min-height: 1rem;
   max-height: fit-content;
   resize:vertical;
-  overflow:auto;
+  overflow-x:visible;
+  overflow-y:hidden;
   width:100%;
   border: 2px solid #CFB87C;
   white-space: pre-wrap;
@@ -498,7 +499,7 @@ option{
   
   white-space:pre-line;
   word-wrap:normal;
-  font-size:1.5rem;
+  font-size:1.25rem;
   color:#000000;
 } 
 
