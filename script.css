@@ -22,7 +22,7 @@ body {
 .grid-item{
   text-align:left;
   background:white;
-  border-radius:2vw;
+  border-radius:0.5vw;
   padding:1vw;
   overflow:hidden;
 }
@@ -34,7 +34,7 @@ body {
   overflow-x:hidden;     /* Disable horizontal scroll */
   /*padding-inline: 0px;*/
   word-wrap:normal;
-  border-radius:5px;
+  border-radius:0.5vw;
 }
 
 article, footer{
@@ -148,7 +148,7 @@ button, .buttonHelp {
   max-height:2rem;
   min-height:2rem;
   font-weight: bold;
-  border-radius:4px;
+  border-radius:0.25rem;
   border-color:#0A3758;
   border-style:solid;
   cursor: pointer;
@@ -175,7 +175,7 @@ button:hover, .buttonHelp:hover
   max-height:2rem;
   min-height:2rem;
   margin-top:0rem;
-  border-radius:4px;
+  border-radius:0.25rem;
   border-color:#0A3758;
 }
 
@@ -195,7 +195,7 @@ button:hover, .buttonHelp:hover
   max-height:fit-content;
   height:fit-content;
   background-color:#cfb87C;
-  border-radius:2px;
+  border-radius:0.25rem;
   border-color:#000000;
 }
 
@@ -223,7 +223,7 @@ button:hover, .buttonHelp:hover
     visibility:visible;
     display:contents;
     background-color:#CFB87C;
-    border-radius:2vw;
+    border-radius:1vw;
     border-color:#000000;
     border:#000000;
   }
@@ -237,7 +237,7 @@ button:hover, .buttonHelp:hover
     visibility:visible;
     display:contents;
     background-color:#CFB87C;
-    border-radius:2vw;
+    border-radius:1vw;
     border-color:#000000;
     border:#000000;
   }
@@ -258,67 +258,11 @@ button:hover, .buttonHelp:hover
   }
 }
 
-/*Styles for the button we use to open/close the sidebar*/
-.buttonNav {
-  position: relative;
-  cursor: pointer;
-  display:inline-block;
-  background-color: #777777;
-  outline: 2px black;
-  border-radius: 6px;
-  padding: 10px 26px 10px 13px;
-  margin: 0px;
-  transition-duration:0.5s;
-}
-
-.buttonNavBar1, .buttonNavBar2, .buttonNavBar3{
-  width:200%;
-  height:2px;
-  background-color:#ffffff;
-  margin:4px;
-  transition:0.35s;
-}
-
-.change .buttonNavBar1 {
-  rotate: -45deg;
-  translate:0% 310%;
-  background-color:#000000;
-  /*translate(0px,4px)*/
-}
-
-.change .buttonNavBar2 {
-  opacity:0%;
-  /*
-  translate:5%;
-  background-color:#000000;
-  */
-}
-
-.change .buttonNavBar3 {
-  rotate: 45deg;
-  translate:0% -310%;
-  background-color:#000000;
-}
-
 /*for menu buttons when opened*/
 .opened{
   background-color:#ff6060;
-}
-
-.buttonHelp.opened{
-  background-color:#ff6060;
   color:#000000;
   border-color:#000000;
-}
-
-.buttonNav.opened,.buttonNav.opened:hover, .buttonNav.active:hover{
-  background-color:#ff6060;
-}
-
-.buttonNav:hover {
-  background-color: #0A3758;
-  color:#EEF5F8;
-  animation-duration:0.35s;
 }
 
 /* Style the accordion folder buttons */
@@ -364,16 +308,18 @@ button:hover, .buttonHelp:hover
   flex-direction:row;
   flex-wrap:wrap;
   white-space:pre-line;
+  justify-content:left;
   word-wrap:normal;
-  align-items:left;
-  max-width:100%;
+  align-items:end;
   margin-top:0.25rem;     
 }
 
 select, select>option{ 
   font-size:1rem;
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
   max-width:100%;
-  min-width:800%;
   overflow:clip;
   justify-content:left;
   align-items:end;
@@ -382,11 +328,12 @@ select, select>option{
 
 option{
   font-size:1rem;
-  max-width:100%;
-  min-width:100%;
-  overflow:visible;
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  overflow:clip;
   justify-content:left;
-  align-items:center;
+  align-items:left;
   background-color:#EEF5F8;
 }
 
@@ -423,11 +370,12 @@ option{
 }*/
 .articleHeader{      
   width:30%;
+  height:auto;
   border-radius:2vw;
-  background-color:#0A3758;
   background:black url("sidebarHeader.png");
-  background-position:tpo;
+  background-position:top;
   background-size:contain;
+  z-index:1;
   background-repeat:no-repeat;
 }
 
