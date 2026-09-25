@@ -133,11 +133,11 @@
             <input id="prefixInput" type="text" placeholder="Enter the first letter(s) of a course subject code..." />
             <button class="searchButton" onclick="populateAutocompleteSuggestions()">Get Matching Courses</button>
           </div>
-          <div class = "helpMessageRow" id="autoStepTwoMessageOnClick"><h4>Step 2 Instructions: </h4><p>After you select a suggested course from the dropdown menu, click <b>Search</b> to retrieve that course's information.</p></div>
           <div class="row">
             <h4>2: Search by Dropdown list</h4>
             <button class="buttonHelp" id="autoStepTwoHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('autoStepTwoMessageOnClick'));javascript:changeHelpButton(this)">About</button>
           </div>
+          <div class = "helpMessageRow" id="autoStepTwoMessageOnClick"><h4>Step 2 Instructions: </h4><p>After you select a suggested course from the dropdown menu, click <b>Search</b> to retrieve that course's information.</p></div>
           <div class="selectRow">
             <select id='suggestionSelected'></select>
             <button class="searchButton" onclick="javascript:autoCompleteSearch()">Search</button>
