@@ -15,9 +15,9 @@ body {
 }
 .grid-container{
   display:grid;
-  grid-template-columns:4fr 1fr 6fr 1fr;
+  grid-template-columns:4fr 8fr;
   padding: 0.25rem;
-  gap:15vw;
+  gap:10vw;
 }
 .grid-item{
   text-align:center;
