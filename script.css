@@ -92,7 +92,7 @@ h5{
 }
 
 p{
-  font-size:1.25rem;
+  font-size:1rem;
   word-wrap:normal;
   white-space:normal;
   justify-content:center;
@@ -518,7 +518,7 @@ option{
 /*affects ids= #searchWithHelpTab, #searchTraditionalTab, #searchByTopics*/
 .tabContent {
   display: block;
-  padding: 0j.5vw 0.5vw;
+  padding: 0.5vw 0.5vw;
   border: 2px solid #777777;
   border-top: none;
   max-width:100%;
