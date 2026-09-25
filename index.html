@@ -130,22 +130,26 @@
             <h4>1: Get Matching Courses</h4>
             <button class="buttonHelp" id="autoStepOneHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('autoStepOneMessageOnClick'));javascript:changeHelpButton(this)">About</button>
           </div>
-          <div class = "helpMessageRow" id="autoStepOneMessageOnClick"><h4>Step 1 Instructions:</h4><p>Enter the beginning letter(s) of a course number and select <b>Get Matching Courses</b> to retrieve suggestions. For example, entering 'CSCI 5' will retrieve all 5000-level CSCI courses</p></div>
+          <div class = "helpMessageRow" id="autoStepOneMessageOnClick"><h4>Instructions for 1: Get Matching Courses:</h4><p>Enter the beginning letter(s) of a course number and select <b>Get Matching Courses</b> to retrieve suggestions. For example, entering 'CSCI 5' will retrieve all 5000-level CSCI courses</p></div>
           <div class="row">
             <input id="prefixInput" type="text" placeholder="Enter the first letter(s) of a course subject code..." />
             <button class="searchButton" onclick="populateAutocompleteSuggestions()">Get Matching Courses</button>
           </div>
           <div class="row">
-            <h4>2: Search by Dropdown list</h4>
+            <h4>2: Select a Suggestion</h4>
             <button class="buttonHelp" id="autoStepTwoHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('autoStepTwoMessageOnClick'));javascript:changeHelpButton(this)">About</button>
           </div>
-          <div class = "helpMessageRow" id="autoStepTwoMessageOnClick"><h4>Step 2 Instructions: </h4><p>After you select a suggested course from the dropdown menu, click <b>Search</b> to retrieve that course's information.</p></div>
+          <div class = "helpMessageRow" id="autoStepTwoMessageOnClick"><h4>Instructions for 2: Select a Suggestion: </h4><p>If any suggestions are provided, choose one from the dropdown menu</p></div>
           <div class="selectRow">
             <select id='suggestionSelected'></select>
             <button class="searchButton" onclick="javascript:autoCompleteSearch()">Search</button>
           </div>
+          <div class="row">
+            <h4>3: Press Search</h4>
+            <button class="buttonHelp" id="autoStepThreeHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('autoStepThreeMessageOnClick'));javascript:changeHelpButton(this)">About</button>
+          </div>
+          <div class = "helpMessageRow" id="autoStepThreeMessageOnClick"><h4>Instructions for 3: Press Search: </h4><p>Press <b>Search</b> to retrieve the selected course's information</p></div>
         </div>
-
         <div class="tabContent" id="searchByTopics">
           <div class = "row">
             <h3>Search by Special Topic</h3>
