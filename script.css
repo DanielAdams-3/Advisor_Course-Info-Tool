@@ -45,8 +45,7 @@ body {
   opacity:1.0; 
   background-color:#CFB87C; 
   overflow-y:scroll;
-  overflow-x:hidden;     /* Disable horizontal scroll */
-  /*padding-inline: 0px;*/
+  overflow-x:hidden;
   word-wrap:normal;
   border-radius:0.5vw;
 }
@@ -385,8 +384,8 @@ option{
   
   cursor:default;
   outline:none;
-  background-color:#CFB87C;
-  color:#000000;
+  background-color:#000000;
+  color:#CFB87C;
   padding: 12px 0px 12px 0px;
   border:none;
 }
