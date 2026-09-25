@@ -18,7 +18,6 @@
   background-repeat:no-repeat;
 }
 
-
 body {
   font-family: "Roboto", sans-serif;
   font-size:1.5rem;
@@ -204,6 +203,7 @@ button:hover, .buttonHelp:hover
 .helpMessageRow.available{
   opacity:1.0;
   min-height:100%;
+  font-size:1rem;
   visibility:initial;
   max-height:fit-content;
   height:fit-content;
