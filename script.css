@@ -38,7 +38,6 @@ body {
 }
 
 article, footer{
-  /*max-width:95%;*/
   background:white;
 }
 
@@ -99,8 +98,7 @@ caption {
   flex-wrap:wrap;
   white-space:pre-line;
   word-wrap:normal;
-  align-items:left;
-  max-width:100%;
+  max-width:98%;
 }
 
 /*Define formatting for input text when provided by user*/
@@ -312,7 +310,7 @@ button:hover, .buttonHelp:hover
   word-wrap:normal;
   align-items:end;
   margin-top:0.25rem;    
-  max-width:100%; 
+  max-width:98%; 
 }
 
 select, select>option{ 
@@ -320,7 +318,7 @@ select, select>option{
   display:flex;
   flex-direction:row;
   flex-wrap:wrap;
-  max-width:100%;
+  max-width:98%;
   overflow:clip;
   justify-content:left;
   align-items:end;
