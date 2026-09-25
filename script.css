@@ -584,7 +584,7 @@ option{
 /*affects ids= #searchWithHelpTab, #searchTraditionalTab, #searchByTopics*/
 .tabContent {
   display: block;
-  padding: 2vw 2vw;
+  padding: 0j.5vw 0.5vw;
   border: 2px solid #777777;
   border-top: none;
   max-width:100%;
