@@ -539,7 +539,7 @@
   function HideAllOtherMessages(x){
     const protectedMessage =x;
 
-    var messageClass = document.getElementsByClassName("helpMessage");
+    var messageClass = document.getElementsByClassName("helpMessageRow");
     var helpButtonClass=document.getElementsByClassName("buttonHelp");
     var helpButtonR = helpButtonClass;
     var messagesR=messageClass;
@@ -548,11 +548,11 @@
     for (i = 0; i < messagesR.length; i++) {
       let currMessage=messagesR[i];
       if (currMessage != protectedMessage){
-        if (currMessage.style.width != "0%"){
+        if (currMessage.style.display != "none"){
           currMessage.className="fade-out-messageDisplay";
-          currMessage.classList.toggle("available");
         }
-        //https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
+
+        /*change the help button*/
         let redButton = helpButtonR[i].classList.contains("opened") === true
         if (redButton === true){
           changeHelpButton(helpButtonR[i]);
@@ -560,10 +560,14 @@
       }
     }
   }
-
+  
+  //https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
   function ShowHideMessageRow(x){
     const helpMessageRowToDisplay=x;
-    const messageHidden=helpMessageRowToDisplay.style.height==="0%";
+    /*hide all other messages */
+    HideAllOtherMessages(helpMessageRowToDisplay);
+
+    const messageHidden=helpMessageRowToDisplay.style.display==="none";
     if (messageHidden === true)
     { 
       helpMessageRowToDisplay.className="fade-in-messageRow";
@@ -592,7 +596,7 @@
     }
   }
 
-  /*replace?*/
+  /*
   function ShowHideMessage(x){
     const messageToDisplay=x;
     const courseSearchMessageHidden=messageToDisplay.style.width ==="0%";
@@ -609,7 +613,7 @@
       messageToDisplay.classList.toggle("available");
 
     }    
-  }
+  }*/
 
   async function goLink(x){
     window.open(x);
@@ -698,46 +702,6 @@
     searchResultMessage.textContent="";
   }
 
-  function checkInnerMenuButton(){
-    let innerMenuButton=document.getElementById('innerMenuButton');
-    let redInnerButton=innerMenuButton.classList.contains("opened") === true;
-    let navList=document.getElementsByClassName("sideBar");
-    const navBar = navList[0];
-    const navBarHidden = navBar.style.width === "0%";
-
-    if (navBarHidden === true){
-      if (redInnerButton === true)
-      {
-        changeMenu(innerMenuButton);
-      }
-    }
-    else{
-      if (redInnerButton === false)
-      {
-        changeMenu(innerMenuButton);
-      }
-    }
-  }
-
-  function checkMainMenuButton(){
-    let mainMenuButton=document.getElementById("menuButton");
-    let redMainButton = menuButton.classList.contains("opened") === true;
-    let navList=document.getElementsByClassName("sideBar");
-    const navBar = navList[0];
-    const navBarHidden = navBar.style.width === "0%";
-
-    if (navBarHidden === true){
-      if (redMainButton === true){
-        changeMenu(mainMenuButton);
-      }
-    }
-    else{
-      if (redMainButton === false)
-      {
-        changeMenu(mainMenuButton);
-      }
-    }
-  }
   
   document.addEventListener("DOMContentLoaded",function(){
     addListeners();
@@ -746,7 +710,6 @@
   function addListeners(){
     var accordionR = document.getElementsByClassName("accordion");
     var i;
-    //var panel = document.getElementsByClassName("panel");
     for (i = 0; i < accordionR.length; i++) {
       accordionR[i].addEventListener("click", function() {
         this.classList.toggle("active");
@@ -760,28 +723,3 @@
     theTab=document.getElementById("defaultOpen");
     openSearchTab(theTab,"searchTraditionalTab");
   });
-  /*
-  document.addEventListener("DOMContentLoaded",function(){
-    openSideBar();
-  });
-  function openSideBar(){
-    let navList=document.getElementsByClassName("sideBar");
-    let sideBar = navList[0];
-
-    var i, menuButtons;
-    menuButtons=document.getElementsByClassName("buttonNav");
-    for (i=0;i<menuButtons.length;i++){
-      menuButtons[i].className += " change";
-      menuButtons[i].className += " opened";
-    }
-    
-    //open the sideBar;
-    sideBar.style.display="block";
-    sideBar.className+= " fade-in";
-    sideBar.style.width="20%";
-    sideBar.style.minWidth="200px";
-  }
-
-  */
-
-
