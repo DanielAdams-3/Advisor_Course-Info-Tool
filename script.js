@@ -540,11 +540,10 @@
 
     var messageClass = document.getElementsByClassName("helpMessageRow");
     var helpButtonClass=document.getElementsByClassName("buttonHelp");
-    var messagesR=messageClass;
 
-    var i;
-    for (i = 0; i < messagesR.length; i++) {
-      let currMessage=messagesR[i];
+    var i, currMessage;
+    for (i = 0; i < messageClass.length; i++) {
+      currMessage=messageClass[i];
       if (currMessage != protectedMessage){
         if (currMessage.style.display != "none"){
           currMessage.className="fade-out-messageDisplay";
