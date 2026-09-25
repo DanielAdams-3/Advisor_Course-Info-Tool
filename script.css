@@ -15,7 +15,7 @@ body {
 }
 .grid-container{
   display:grid;
-  grid-template-columns:3fr 1fr 6fr 1fr;
+  grid-template-columns:4fr 1fr 8fr 1fr;
   padding: 0.25rem;
   gap:15vw;
 }
