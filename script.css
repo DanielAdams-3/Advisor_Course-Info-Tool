@@ -573,9 +573,10 @@ option{
 /*affects ids= #searchWithHelpTab, #searchTraditionalTab, #searchByTopics*/
 .tabContent {
   display: none;
-  padding: 6px 12px;
+  padding: 6vw 12vw;
   border: 2px solid #777777;
   border-top: none;
+  max-width:min-content;
 }
 
 table {
