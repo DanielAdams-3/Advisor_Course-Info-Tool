@@ -567,9 +567,26 @@
     if (messageHidden === true)
     { 
       helpMessageRowToDisplay.className="fade-in-messageRow";
+      helpMessageRowToDisplay.style.opacity="1.0";
+      helpMessageRowToDisplay.style.minHeight="100%";
+      helpMessageRowToDisplay.style.maxHeight="fit-content";
+      helpMessageRowToDisplay.style.height="fit-content";
+      helpMessageRowToDisplay.style.visibility="initial";
+      helpMessageRowToDisplay.style.backgroundColor="#cfb87C";
+      helpMessageRowToDisplay.style.borderRadius="2px";
+      helpMessageRowToDisplay.style.borderColor="#000000";
     }
     else{
       helpMessageRowToDisplay.className="fade-out-messageRow";
+      helpMessageRowToDisplay.style.opacity="0.0";
+      helpMessageRowToDisplay.style.minHeight="0%";
+      helpMessageRowToDisplay.style.visibility="hidden";
+      helpMessageRowToDisplay.style.maxHeight="0%";
+      helpMessageRowToDisplay.style.height="0%";
+      helpMessageRowToDisplay.style.backgroundColor="#FFFFFF";
+      helpMessageRowToDisplay.style.borderRadius="0vw";
+      helpMessageRowToDisplay.style.borderColor="#FFFFFF";
+      helpMessageRowToDisplay.style.border="#FFFFFF";
     }
   }
 

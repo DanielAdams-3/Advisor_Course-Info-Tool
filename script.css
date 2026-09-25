@@ -17,12 +17,12 @@ body {
   display:grid;
   grid-template-columns:4fr 8fr;
   padding: 0.25rem;
-  gap:10vw;
+  gap:4vw;
 }
 .grid-item{
   text-align:center;
   background:white;
-  border-radius:1vw;
+  border-radius:2vw;
   padding:1vw;
   overflow:hidden;
 }
@@ -175,7 +175,6 @@ button:hover, .buttonHelp:hover
   min-height:100%;
   max-height:100%;
   margin-top:0rem;
-  cursor: pointer;
   border-radius:4px;
   border-color:#0A3758;
 }
