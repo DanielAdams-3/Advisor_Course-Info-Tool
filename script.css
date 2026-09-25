@@ -15,7 +15,7 @@ body {
 }
 .grid-container{
   display:grid;
-  grid-template-columns:2fr 6fr 1fr;
+  grid-template-columns:3fr 1fr 6fr 1fr;
   padding: 0.25rem;
   gap:15vw;
 }
@@ -142,7 +142,6 @@ input[type="text"] {
   overflow-x:hidden;
   overflow-y:visible;
 }
-
 /*Formatting for buttons*/
 button, .buttonHelp {
   margin-left:1rem;
