@@ -311,7 +311,8 @@ button:hover, .buttonHelp:hover
   justify-content:left;
   word-wrap:normal;
   align-items:end;
-  margin-top:0.25rem;     
+  margin-top:0.25rem;    
+  max-width:100%; 
 }
 
 select, select>option{ 
