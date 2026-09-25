@@ -546,7 +546,7 @@
       currMessage=messageClass[i];
       if (currMessage != protectedMessage){
         if (currMessage.style.display != "none"){
-          currMessage.className="fade-out-messageDisplay";
+          currMessage.className="fade-out-messageRow";
         }
 
         /*change the help button*/
