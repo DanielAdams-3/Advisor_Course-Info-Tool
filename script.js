@@ -575,6 +575,7 @@
       helpMessageRowToDisplay.style.backgroundColor="#cfb87C";
       helpMessageRowToDisplay.style.borderRadius="2px";
       helpMessageRowToDisplay.style.borderColor="#000000";
+      helpMessageRowToDisplay.style.display="block";
     }
     else{
       helpMessageRowToDisplay.className="fade-out-messageRow";
@@ -587,6 +588,7 @@
       helpMessageRowToDisplay.style.borderRadius="0vw";
       helpMessageRowToDisplay.style.borderColor="#FFFFFF";
       helpMessageRowToDisplay.style.border="#FFFFFF";
+      helpMessageRowToDisplay.style.display="none";
     }
   }
 
