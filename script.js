@@ -582,7 +582,7 @@
     }
     else{
       helpMessageRowToDisplay.className="fade-out-messageRow";
-      helpMessageRowToDisplay.style.opacity="0.0";
+      /*helpMessageRowToDisplay.style.opacity="0.0";
       helpMessageRowToDisplay.style.minHeight="0%";
       helpMessageRowToDisplay.style.visibility="hidden";
       helpMessageRowToDisplay.style.maxHeight="0%";
@@ -591,7 +591,7 @@
       helpMessageRowToDisplay.style.borderRadius="0vw";
       helpMessageRowToDisplay.style.borderColor="#FFFFFF";
       helpMessageRowToDisplay.style.border="#FFFFFF";
-      helpMessageRowToDisplay.style.display="none";
+      helpMessageRowToDisplay.style.display="none";*/
     }
   }
 

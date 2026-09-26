@@ -203,10 +203,29 @@ button:hover, .buttonHelp:hover
 .fade-in-messageRow{
   animation-duration:0.25s;
   animation-name: fade-in-messageRow;
+  opacity:1.0;
+  min-height:100%;
+  font-size:1rem;
+  visibility:initial;
+  max-height:fit-content;
+  height:fit-content;
+  background-color:#cfb87C;
+  border-radius:0.25rem;
+  border-color:#000000;
 }
 .fade-out-messageRow{
   animation-duration:0.25s;
   animation-name: fade-out-messageRow;
+  opacity:0.0;
+  min-height:0%;
+  max-height:0%;
+  height:0%;
+  visibility:hidden;
+  display:none;
+  background-color:#ffffff;
+  border-radius:0vw;
+  border-color:#ffffff;
+  border:#ffffff;
 }
 
 .helpMessageRow.available{
