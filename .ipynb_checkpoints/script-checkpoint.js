@@ -1,12 +1,3 @@
-  //https://www.geeksforgeeks.org/javascript/how-to-insert-a-string-at-a-specific-index-in-javascript/
-  //https://www.geeksforgeeks.org/html/html-clearing-the-input-field/
-  //https://stackoverflow.com/questions/799981/document-ready-equivalent-without-jquery
-  //https://www.geeksforgeeks.org/javascript/javascript-string-startswith-method/
-  //https://www.geeksforgeeks.org/javascript/javascript-array-sort-method/
-  //https://www.geeksforgeeks.org/javascript/javascript-array-splice-method/
-  //https://www.geeksforgeeks.org/javascript/how-to-include-a-javascript-file-in-another-javascript-file/
-  
-  
   //helper function for traditional search
   //returns the course object
   function retrieveCourseObject(requestedSubject) {
@@ -35,9 +26,18 @@
     let description = document.getElementById('resultDescription');
     let notes = document.getElementById('resultNotes');
     let restrictions = document.getElementById('resultRestrictions');
-    let requirements = document.getElementById('resultReqs');
+    let offerings = document.getElementById('resultOfferings');
+    let rigor=document.getElementById('resultRigor');
+    let reqCSENPHD = document.getElementById('reqsCSENPHD');
+    let reqCSENMS = document.getElementById('reqsCSENMS');
+    let reqCSENMSCPS = document.getElementById('reqsCSENMSCPS');
+    let reqNTENMSNE = document.getElementById('reqsNTENMSNE');
+    let reqAINTMSAI = document.getElementById('reqsAINTMSAI');
+    let reqsNotes=document.getElementById('reqsNotes');
     let skills = document.getElementById('resultSkills');
-
+    let instructorReview = document.getElementById('reviewInstructor');
+    let courseloadReview = document.getElementById('reviewCourseload');
+    let inputReview = document.getElementById('reviewInput');
 
     if (!requestedCourse) {
       resultMessage.textContent = "Please enter a subject code";
@@ -46,9 +46,19 @@
       hours.textContent="";
       description.textContent="";
       notes.textContent="";
+      offerings.textContent="";
       restrictions.textContent="";
-      requirements.textContent="";
+      rigor.textContent="";
+      reqCSENPHD.textContent="";
+      reqCSENMS.textContent="";
+      reqCSENMSCPS.textContent="";
+      reqNTENMSNE.textContent="";
+      reqAINTMSAI.textContent="";
+      reqsNotes.textContent="";
       skills.textContent="";
+      instructorReview.textContent="";
+      courseloadReview.textContent="";
+      inputReview.textContent="";
       return;
     }
 
@@ -59,9 +69,19 @@
       hours.textContent="";
       description.textContent="";
       notes.textContent="";
+      offerings.textContent="";
       restrictions.textContent="";
-      requirements.textContent="";
+      rigor.textContent="";
+      reqCSENPHD.textContent="";
+      reqCSENMS.textContent="";
+      reqCSENMSCPS.textContent="";
+      reqNTENMSNE.textContent="";
+      reqAINTMSAI.textContent="";
+      reqsNotes.textContent="";
       skills.textContent="";
+      instructorReview.textContent="";
+      courseloadReview.textContent="";
+      inputReview.textContent="";
       return;
     }
 
@@ -91,11 +111,19 @@
     hours.textContent=result.credits;
     description.textContent=result.description;
     notes.textContent=result.notes;
+    offerings.textContent=result.offerings;
     restrictions.textContent=result.restrictions;
-    requirements.textContent= "CSEN-PhD: " + result.reqCSENPHD+"\n" + "CSEN-MS: "+result.reqCSENMS+"\n" + "CSEN-MSCPS: "+
-    result.reqCSENMSCPS+"\n" + "NTEN-MSNE: "+result.reqNTENMSNE+"\n" +"AINT-MSAI: "+result.reqAINTMSAI+"\n";
+    rigor.textContent=result.rigor;
+    reqCSENPHD.textContent=result.reqCSENPHD;
+    reqCSENMS.textContent=result.reqCSENMS;
+    reqCSENMSCPS.textContent=result.reqCSENMSCPS;
+    reqNTENMSNE.textContent=result.reqNTENMSNE;
+    reqAINTMSAI.textContent=result.reqAINTMSAI;
+    reqsNotes.textContent=result.reqNote;
     skills.textContent=result.skills;
-
+    instructorReview.textContent=result.reviewInstructor;
+    courseloadReview.textContent=result.reviewCourseload;
+    inputReview.textContent=result.reviewInput;
     resultMessage.textContent="Completed";
   }
 
@@ -266,22 +294,6 @@
       return;
     }
     
-    //sort the list (should be sorted by default)
-    /*if (listCourseObjs.length>1){
-      let sortedList=[];
-      sortedList.push(listCourseObjs[0]); //start by adding the first element to the list
-      for (let i=1;i<listCourseObjs.length;i++){
-        let newSection=parseInt(listCourseObjs[i].section); //section of the new element we're trying to add
-        for (let j=0;j<sortedList.length;j++){
-          let sortedSection=parseInt(sortedList[j].section); //section of the sorted list element we're at rn
-          if (newSection<sortedSection){
-            sortedList.splice(j,0,listCourseObjs[i]);       
-          }
-        }
-      }
-      listCourseObjs=sortedList;
-    }*/
-
     //populate the options
     for (let k=0;k<listCourseObjs.length;k++){
       let newTopic=document.createElement("option");
@@ -363,28 +375,46 @@
         let hours = document.getElementById('resultHours');
         let description = document.getElementById('resultDescription');
         let notes = document.getElementById('resultNotes');
+        let offerings = document.getElementById('resultOfferings');
         let restrictions = document.getElementById('resultRestrictions');
-        let requirements = document.getElementById('resultReqs');
+        let rigor = document.getElementById('resultRigor');
+        let reqCSENPHD = document.getElementById('reqsCSENPHD');
+        let reqCSENMS = document.getElementById('reqsCSENMS');
+        let reqCSENMSCPS = document.getElementById('reqsCSENMSCPS');
+        let reqNTENMSNE = document.getElementById('reqsNTENMSNE');
+        let reqAINTMSAI = document.getElementById('reqsAINTMSAI');
+        let reqsNotes=document.getElementById('reqsNotes');
         let skills = document.getElementById('resultSkills');
+        let instructorReview = document.getElementById('reviewInstructor');
+        let courseloadReview = document.getElementById('reviewCourseload');
+        let inputReview = document.getElementById('reviewInput');
     
-        subject.textContent=courseObj.courseSubject;;
+        subject.textContent=courseObj.courseSubject;
         title.textContent=courseObj.title;
         hours.textContent=courseObj.credits;
         description.textContent=courseObj.description;
         notes.textContent=courseObj.notes;
+        offerings.textContent=courseObj.offerings;
+        rigor.texContent=courseObj.rigor;
         restrictions.textContent=courseObj.restrictions;
-        requirements.textContent="CSEN-PhD: "+courseObj.reqCSENPHD+"\n" + "CSEN-MS: "+courseObj.reqCSENMS+"\n" + "CSEN-MSCPS: "+
-        courseObj.reqCSENMSCPS+"\n" + "NTEN-MSNE: "+courseObj.reqNTENMSNE+"\n" +"AINT-MSAI: "+courseObj.reqAINTMSAI+"\n";
+        reqCSENPHD.textContent=courseObj.reqCSENPHD;
+        reqCSENMS.textContent=courseObj.reqCSENMS;
+        reqCSENMSCPS.textContent=courseObj.reqCSENMSCPS;
+        reqNTENMSNE.textContent=courseObj.reqNTENMSNE;
+        reqAINTMSAI.textContent=courseObj.reqAINTMSAI;
+        reqsNotes.textContent=courseObj.reqNote;
         skills.textContent=courseObj.skills;
+        instructorReview.textContent=courseObj.reviewInstructor;
+        courseloadReview.textContent=courseObj.reviewCourseload;
+        inputReview.textContent=courseObj.reviewInput;
 
-        searchResultMessage="";
+        searchResultMessage="Completed";
         return;
       }
     }
     searchResultMessage.textContent="Error, search failed";
     return;
   }
-  
 
   function populateAutocompleteSuggestions(){
     //Step 1 - clear out all previous suggestions
@@ -415,13 +445,6 @@
       searchResultMessage.textContent="No suggestions available";
       return;
     }
-
-    /*
-    //list should be sorted already
-    if (listSemester.length>1){
-      listSemester.sort((a,b)=> a-b);
-    }
-    */
 
     //Step 3 - if any results, populate the suggestions dropdown
     for (let m=0;m<listSuggestions.length;m++){
@@ -479,36 +502,29 @@
     let currSearch=courseSelected;
     searchBySubject(currSearch);
     
-    searchResultMessage.textContent = "";
+    searchResultMessage.textContent = "Completed";
     return;
   }
   
+  /*
   function showHide() {
-    const visibleNav = document.getElementById("mySidebar");    
+    let navList=document.getElementsByClassName("sideBar");
+    const visibleNav = navList[0]; 
 
-    if (visibleNav.style.width === '20%' || visibleNav.style.minWidth === '200px') {
+
+
+    if (visibleNav.style.width === '20%' || visibleNav.style.width === '200px') {
       visibleNav.className="fade-out";
       visibleNav.style.width="0%";
-      visibleNav.style.minWidth="0px";
+      visibleNav.style.minWidth="0px";  
     }
+
     else {
       visibleNav.className="fade-in";
       visibleNav.style.width="20%";
       visibleNav.style.minWidth="200px";
     }
-  
-    var accordionR = document.getElementsByClassName("accordion");
-    var i;
-    var panel = document.getElementsByClassName("panel");
-    for (i = 0; i < accordionR.length; i++) {
-      accordionR[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-
-        var currPanel=this.nextElementSibling;
-        currPanel.classList.toggle("show");
-      });
-    }
-  }
+  }*/
 
   function changeMenu(x) {
     x.classList.toggle("change");
@@ -517,43 +533,72 @@
 
   function changeHelpButton(x){
     x.classList.toggle("opened");
+    x.classList.toggle("change");
   }
+  
+  //https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
+  function HideAllOtherMessages(x){
+    const protectedMessage = x;
 
-  function ShowHideMessage(x,y){
-    const messageToDisplay=x;
-    const courseSearchMessageHidden=messageToDisplay.style.width ==="0%";
-    //first, close all other messages
-    
-    if (courseSearchMessageHidden === true)
-    { 
-      messageToDisplay.className="fade-in-messageDisplay";
-      messageToDisplay.style.width=y;
-      messageToDisplay.style.opacity="1.0";
-      messageToDisplay.style.paddingLeft="0.5%";
-      messageToDisplay.style.paddingTop="0%";
-      messageToDisplay.style.paddingRight="0.5%";
-      messageToDisplay.style.paddingBottom="0.5%";
-      messageToDisplay.style.display="block";
+    var messageClass = document.getElementsByClassName("helpMessageRow");
+    var helpButtonClass=document.getElementsByClassName("buttonHelp");
+
+    var i, currMessage;
+    for (i = 0; i < messageClass.length; i++) {
+      currMessage=messageClass[i];
+      if (currMessage != protectedMessage){
+        if (currMessage.style.display != "none"){
+          currMessage.className="fade-out-messageRow";
+        }
+      }
+      /*change the help button*/
+      let redButton = helpButtonClass[i].classList.contains("opened") === true;
+      if (redButton === true){
+        changeHelpButton(helpButtonClass[i]);
+      }
+
     }
-    else {
-      messageToDisplay.className="fade-out-messageDisplay";
-      messageToDisplay.style.width="0%";
-      messageToDisplay.style.opacity="0.0";
-      messageToDisplay.style.paddingLeft="0%";
-      messageToDisplay.style.paddingTop="0%";
-      messageToDisplay.style.paddingRight="0%";
-      messageToDisplay.style.paddingBottom="0%";
-      messageToDisplay.style.display="none";
-    }    
   }
+  
+  //https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
+  function ShowHideMessageRow(x){
+    const helpMessageRowToDisplay=x;
 
+    HideAllOtherMessages(helpMessageRowToDisplay);
 
+    const messageShown=helpMessageRowToDisplay.classList.contains("fade-in-messageRow");
+    if (messageShown === false)
+    { 
+      helpMessageRowToDisplay.className="fade-in-messageRow";
+      //helpMessageRowToDisplay.style.opacity="1.0";
+      //helpMessageRowToDisplay.style.minHeight="100%";
+      //helpMessageRowToDisplay.style.maxHeight="fit-content";
+      //helpMessageRowToDisplay.style.height="fit-content";
+      //helpMessageRowToDisplay.style.visibility="initial";
+      //helpMessageRowToDisplay.style.backgroundColor="#cfb87C";
+      //helpMessageRowToDisplay.style.borderRadius="2px";
+      //helpMessageRowToDisplay.style.borderColor="#000000";
+      //helpMessageRowToDisplay.style.display="block";
+    }
+    else{
+      helpMessageRowToDisplay.className="fade-out-messageRow";
+      /*helpMessageRowToDisplay.style.opacity="0.0";
+      helpMessageRowToDisplay.style.minHeight="0%";
+      helpMessageRowToDisplay.style.visibility="hidden";
+      helpMessageRowToDisplay.style.maxHeight="0%";
+      helpMessageRowToDisplay.style.height="0%";
+      helpMessageRowToDisplay.style.backgroundColor="#FFFFFF";
+      helpMessageRowToDisplay.style.borderRadius="0vw";
+      helpMessageRowToDisplay.style.borderColor="#FFFFFF";
+      helpMessageRowToDisplay.style.border="#FFFFFF";
+      helpMessageRowToDisplay.style.display="none";*/
+    }
+  }
 
   async function goLink(x){
-    window.open(x,"_blank");
+    window.open(x);
   }
-
-
+  
   function openSearchTab(x,tabName){
     var i, tabContent, tablinks;
     tabContent=document.getElementsByClassName("tabContent");
@@ -566,8 +611,8 @@
     }
     document.getElementById(tabName).style.display="block";
     x.className+= " active";
+
     //clear out the current course's results and user inputs
-    
     let prefixInput = document.getElementById('prefixInput');
     let topicsInput = document.getElementById('topicsCourseSelected');
     let courseInput = document.getElementById('wordInput');
@@ -577,10 +622,19 @@
     let hours = document.getElementById('resultHours');
     let description = document.getElementById('resultDescription');
     let notes = document.getElementById('resultNotes');
+    let offerings=document.getElementById('resultOfferings');
     let restrictions = document.getElementById('resultRestrictions');
-    let requirements = document.getElementById('resultReqs');
+    let reqCSENPHD = document.getElementById('reqsCSENPHD');
+    let reqCSENMS = document.getElementById('reqsCSENMS');
+    let reqCSENMSCPS = document.getElementById('reqsCSENMSCPS');
+    let reqNTENMSNE = document.getElementById('reqsNTENMSNE');
+    let reqAINTMSAI = document.getElementById('reqsAINTMSAI');
+    let reqsNotes=document.getElementById('reqsNotes');
     let skills = document.getElementById('resultSkills');
-
+    let instructorReview = document.getElementById('reviewInstructor');
+    let courseloadReview = document.getElementById('reviewCourseload');
+    let inputReview = document.getElementById('reviewInput');
+    let rigor=document.getElementById('resultRigor');
     let topicsTermSelected=document.getElementById('topicsTermDisplayed');
     let topicsSectionSelected=document.getElementById('topicsDisplayed');
     let autocompletesuggestionSelected=document.getElementById('suggestionSelected');
@@ -611,21 +665,40 @@
     hours.textContent="";
     description.textContent="";
     notes.textContent="";
+    offerings.textContent="";
     restrictions.textContent="";
-    requirements.textContent="";
+    rigor.textContent="";
+    reqCSENPHD.textContent="";
+    reqCSENMS.textContent="";
+    reqCSENMSCPS.textContent="";
+    reqNTENMSNE.textContent="";
+    reqAINTMSAI.textContent="";
+    reqsNotes.textContent="";
     skills.textContent="";
+    instructorReview.textContent="";
+    courseloadReview.textContent="";
+    inputReview.textContent="";
     searchResultMessage=document.getElementById('searchResultMessage');
     searchResultMessage.textContent="";
+  }
+  
+  document.addEventListener("DOMContentLoaded",function(){
+    addListeners();
+  });
 
+  function addListeners(){
+    var accordionR = document.getElementsByClassName("accordion");
+    var i;
+    for (i = 0; i < accordionR.length; i++) {
+      accordionR[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var currPanel=this.nextElementSibling;
+        currPanel.classList.toggle("show");
+      });
+    }
   }
 
   document.addEventListener("DOMContentLoaded", function() { 
     theTab=document.getElementById("defaultOpen");
     openSearchTab(theTab,"searchTraditionalTab");
-  });
-  
-  document.addEventListener("DOMContentLoaded", function() { 
-    menuButton=document.getElementById("menuButton");
-    showHide();
-    changeMenu(menuButton);
   });
