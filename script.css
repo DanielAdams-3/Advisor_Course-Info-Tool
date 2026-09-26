@@ -31,17 +31,25 @@ body {
   display:grid;
   grid-template-columns:4fr 8fr;
   padding: 0.25rem;
-  gap:4vw;
+  gap:1vw;
 }
-.grid-item1{
+
+.grid-item{
   text-align:left;
   background:#000000;
   border-radius:0.5vw;
   padding:1vw;
   overflow:hidden;
 }
-.grid-item2{
-  text-align:left;
+.grid-container-header{
+  display:grid;
+  grid-template-columns:10fr;
+  padding: 0.25rem;
+  gap:0.5vw;
+}
+
+.grid-item-header{
+  text-align:center;
   background:white;
   border-radius:0.5vw;
   padding:1vw;

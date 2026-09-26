@@ -502,15 +502,16 @@
     let currSearch=courseSelected;
     searchBySubject(currSearch);
     
-    //searchResultMessage.textContent = "Completed";
+    searchResultMessage.textContent = "Completed";
     return;
   }
   
+  /*
   function showHide() {
     let navList=document.getElementsByClassName("sideBar");
     const visibleNav = navList[0]; 
 
-    //https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
+
 
     if (visibleNav.style.width === '20%' || visibleNav.style.width === '200px') {
       visibleNav.className="fade-out";
@@ -523,7 +524,7 @@
       visibleNav.style.width="20%";
       visibleNav.style.minWidth="200px";
     }
-  }
+  }*/
 
   function changeMenu(x) {
     x.classList.toggle("change");
@@ -534,9 +535,10 @@
     x.classList.toggle("opened");
     x.classList.toggle("change");
   }
-
+  
+  //https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
   function HideAllOtherMessages(x){
-    const protectedMessage =x;
+    const protectedMessage = x;
 
     var messageClass = document.getElementsByClassName("helpMessageRow");
     var helpButtonClass=document.getElementsByClassName("buttonHelp");
@@ -561,7 +563,7 @@
   //https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
   function ShowHideMessageRow(x){
     const helpMessageRowToDisplay=x;
-    /*hide all other messages */
+
     HideAllOtherMessages(helpMessageRowToDisplay);
 
     const messageHidden=helpMessageRowToDisplay.style.display==="none";
@@ -593,25 +595,6 @@
     }
   }
 
-  /*
-  function ShowHideMessage(x){
-    const messageToDisplay=x;
-    const courseSearchMessageHidden=messageToDisplay.style.width ==="0%";
-
-    HideAllOtherMessages(x);
-
-    if (courseSearchMessageHidden === true)
-    { 
-      messageToDisplay.className="fade-in-messageDisplay";
-      messageToDisplay.classList.toggle("available");
-    }
-    else {
-      messageToDisplay.className="fade-out-messageDisplay";
-      messageToDisplay.classList.toggle("available");
-
-    }    
-  }*/
-
   async function goLink(x){
     window.open(x);
   }
@@ -628,8 +611,8 @@
     }
     document.getElementById(tabName).style.display="block";
     x.className+= " active";
+
     //clear out the current course's results and user inputs
-    
     let prefixInput = document.getElementById('prefixInput');
     let topicsInput = document.getElementById('topicsCourseSelected');
     let courseInput = document.getElementById('wordInput');
@@ -698,7 +681,6 @@
     searchResultMessage=document.getElementById('searchResultMessage');
     searchResultMessage.textContent="";
   }
-
   
   document.addEventListener("DOMContentLoaded",function(){
     addListeners();
