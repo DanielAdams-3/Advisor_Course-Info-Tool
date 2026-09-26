@@ -550,13 +550,13 @@
         if (currMessage.style.display != "none"){
           currMessage.className="fade-out-messageRow";
         }
-
-        /*change the help button*/
-        let redButton = helpButtonClass[i].classList.contains("opened") === true;
-        if (redButton === true){
-          changeHelpButton(helpButtonClass[i]);
-        }
       }
+      /*change the help button*/
+      let redButton = helpButtonClass[i].classList.contains("opened") === true;
+      if (redButton === true){
+        changeHelpButton(helpButtonClass[i]);
+      }
+
     }
   }
   
