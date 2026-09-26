@@ -570,15 +570,15 @@
     if (messageHidden === true)
     { 
       helpMessageRowToDisplay.className="fade-in-messageRow";
-      helpMessageRowToDisplay.style.opacity="1.0";
-      helpMessageRowToDisplay.style.minHeight="100%";
-      helpMessageRowToDisplay.style.maxHeight="fit-content";
-      helpMessageRowToDisplay.style.height="fit-content";
-      helpMessageRowToDisplay.style.visibility="initial";
-      helpMessageRowToDisplay.style.backgroundColor="#cfb87C";
-      helpMessageRowToDisplay.style.borderRadius="2px";
-      helpMessageRowToDisplay.style.borderColor="#000000";
-      helpMessageRowToDisplay.style.display="block";
+      //helpMessageRowToDisplay.style.opacity="1.0";
+      //helpMessageRowToDisplay.style.minHeight="100%";
+      //helpMessageRowToDisplay.style.maxHeight="fit-content";
+      //helpMessageRowToDisplay.style.height="fit-content";
+      //helpMessageRowToDisplay.style.visibility="initial";
+      //helpMessageRowToDisplay.style.backgroundColor="#cfb87C";
+      //helpMessageRowToDisplay.style.borderRadius="2px";
+      //helpMessageRowToDisplay.style.borderColor="#000000";
+      //helpMessageRowToDisplay.style.display="block";
     }
     else{
       helpMessageRowToDisplay.className="fade-out-messageRow";
