@@ -36,7 +36,7 @@ body {
 
 .grid-item{
   text-align:left;
-  background:#000000;
+  background:#ffffff;
   border-radius:0.5vw;
   padding:1vw;
   overflow:hidden;
@@ -50,7 +50,8 @@ body {
 
 .grid-item-header{
   text-align:center;
-  background:white;
+  align-self:center;
+  background:black;
   border-radius:0.5vw;
   padding:1vw;
   overflow:hidden;
@@ -76,6 +77,7 @@ h1 {
   font-weight:bolder;
   margin-top:0vw;
   margin-bottom:0vw;
+  color:#ffffff;
 }
 h2{
   font-family: "Roboto Condensed", sans-serif;
