@@ -309,15 +309,18 @@ button:hover, .buttonHelp:hover
 }
 
 .selectRow{
-  display:flex;
+  /*display:flex;
   flex-direction:row;
-  flex-wrap:wrap;
+  flex-wrap:wrap;*/
   white-space:pre-line;
   justify-content:left;
-  word-wrap:normal;
   align-items:left;
-  margin-top:0.25rem;    
-  max-width:98%; 
+  margin-top:0.25rem;
+  font-size:1rem;
+  display:block;
+  min-width:98%;
+  max-width:98%;
+  overflow:clip;
 }
 
 select, select>option{ 
