@@ -95,7 +95,7 @@ h2{
 h3{
   font-family: "Roboto Condensed", sans-serif;
   font-size:1.5rem;
-  font-style:bold;
+  font-weight:bold;
   margin-top:0vw;
   margin-bottom:0vw;
 } 
@@ -110,7 +110,7 @@ h4 {
 h5{
   font-family:"Roboto Condensed", sans-serif;
   font-size:1.25rem;
-  font-weight:italic;
+  font-style:italic;
   margin-top:0vw;
   margin-bottom:0vw;
 }
