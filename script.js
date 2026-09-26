@@ -567,7 +567,7 @@
     HideAllOtherMessages(helpMessageRowToDisplay);
 
     const messageHidden=helpMessageRowToDisplay.style.display==="none";
-    if (messageHidden === false)
+    if (messageHidden === true)
     { 
       helpMessageRowToDisplay.className="fade-in-messageRow";
       helpMessageRowToDisplay.style.opacity="1.0";

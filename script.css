@@ -56,6 +56,13 @@ body {
   padding:1vw;
   overflow:hidden;
 }
+
+.grid-container-resources{
+  display:grid;
+  grid-template-columns:1fr;
+}
+
+
 .sideBar {   
   padding:0%;
   opacity:1.0; 
