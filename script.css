@@ -43,9 +43,9 @@ body {
 }
 .grid-container-header{
   display:grid;
-  grid-template-columns:10fr;
+  grid-template-columns:4fr 6fr;
   padding: 0.25rem;
-  gap:0.5vw;
+  gap:1vw;
 }
 
 .grid-item-header{
@@ -59,7 +59,21 @@ body {
 
 .grid-container-resources{
   display:grid;
-  grid-template-columns:1fr;
+  grid-template-columns:5fr 5fr;
+  grid-template-rows:2fr;
+  background:black;
+  padding:1vw;
+  overflow:hidden;
+  align-self:left;
+  text-align:center;
+}
+.grid-item-resources{
+  text-align:left;
+  background:black;
+  border-radius:0.5vw;
+  
+  padding:1vw;
+  overflow:hidden;
 }
 
 

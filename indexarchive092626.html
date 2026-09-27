@@ -23,6 +23,8 @@
       </div>
     </div>
   </div>
+</div>
+<div class="grid-container-header">
   <div class="grid-item">
     <header>
       <div class="row">
@@ -30,58 +32,48 @@
         <button class="buttonHelp" id="titleHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('titleMessageOnClick'));javascript:changeHelpButton(this)">About</button>
       </div>
       <div class="helpMessageRow" id="titleMessageOnClick"><h4>About CIRT</h4><p>An internal advisor-facing tool to retrieve course information for graduate courses. Data is pre-collected, so information is not 'live'. To use the tool, select your preferred search method below from tabs below.</p></div>
-    </header>
-  </div>
+  </header>
 </div>
-<div class="grid-container-resources">
-  <div class="grid-item-resources">
-    <div class="sideBar">
-      <div class="sidebarSubHeaderRow">Course Information</div>
-      <button class="accordion">CU Boulder</button>
-      <div class="panel">
-        <button class="sidebarRow" onclick="javascript:goLink('https://catalog.colorado.edu/courses-a-z/')">Graduate Catalog AY26-27</button>
-        <button class="sidebarRow" onclick="javascript:goLink('https://classes.colorado.edu/')">Class Search (classes.colorado.edu)</button>
-      </div>
-      <button class="accordion">Computer Science Courses</button>
-      <div class="panel">
-        <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/graduate-programs/breadth-courses')">Breadth List</button>
-        <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/graduate-students/computer-science-professional-internship-class-csci-6930')">Professional Internship</button>
-        <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/guidelines-independent-study')">Master's Independent Study</button>
-        <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/professional-masters-computer-science-mscps-projects-requirement')">Professional MSCS Projects</button>
-        <button class="sidebarRow" onclick="javascript:goLink('https://docs.google.com/spreadsheets/d/10GefVmlLPtR8avL3Kjln62ebisCZMJJWeFko8VarKwE/edit?gid=0#gid=0')">Tentative Classes List (FA26)</button>
-        <button class="sidebarRow" onclick="javascript:goLink('https://docs.google.com/spreadsheets/d/1cyO2n1xfp6QEOjoUIr4CfAsfHH-fGB7LIWFB1ZFxfOY/edit?gid=0#gid=0')">3. Skills Learned by Course (2019)</button>
-        <button class="sidebarRow" onclick="javascript:goLink('https://bouldercsgrads.org/classes')">Class Reviews, CS-GSA</button>
-      </div>
-    </div>
-  </div>
-  <div class="grid-item-resources">
-    <div class="sideBar">
-      <div class="sidebarSubHeaderRow">Degree Requirements</div>
-      <button class="accordion">Research MS, PhD</button>
-      <div class="panel">
-        <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/graduate-programs/master-science-computer-science/master-science-computer-science-degree')">Research MSCS (CSEN-MS)</button>
-        <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/graduate-programs/doctor-philosophy/degree-requirements')">CS PhD (CSEN-PhD)</button>
-      </div>
-      <button class="accordion">Professional MS</button>
-      <div class="panel">
-        <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/graduate-programs/professional-masters-artificial-intelligence/ms-ai-degree-requirements')">MS Artificial Intelligence (course-based)</button>
-        <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/graduate-programs/professional-masters-computer-science/degree-requirements')">MS Computer Science (course-based)</button>
-        <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/dual-professional-ms-engineering-management')">Dual-Degree MSCPS + ME-EMEN - Computer Science Requirements</button>
-        <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/emp/graduate-programs/dual-graduate-degrees/computer-science-me-em-dual-degrees#accordion-efcb9804c1ad9ffc16d8883bba71ce629-1')">Dual-Degree MSCPS + ME-EMEN - Engineering Management Requirements</button>
-        <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/graduate-programs/professional-masters-network-engineering/professional-masters-network')">MS Network Engineering (course-based)</button>
-      </div>
-      <button class="accordion">Bachelor-Acclerated Masters (BAM)</button>
-      <div class="panel">
+<div class="grid-container">
+    <div class="grid-item">
+      <div class="sideBar">
+        <div class="sidebarHeader"></div>
+        <div class="sidebarSubHeaderRow">Course Information</div>
+        <button class="accordion">CU Boulder</button>
+        <div class="panel">
+          <button class="sidebarRow" onclick="javascript:goLink('https://catalog.colorado.edu/courses-a-z/')">Graduate Catalog AY26-27</button>
+          <button class="sidebarRow" onclick="javascript:goLink('https://classes.colorado.edu/')">Class Search (classes.colorado.edu)</button>
+        </div>
+        <button class="accordion">Computer Science Courses</button>
+        <div class="panel">
+          <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/graduate-programs/breadth-courses')">Breadth List</button>
+          <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/graduate-students/computer-science-professional-internship-class-csci-6930')">Professional Internship</button>
+          <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/guidelines-independent-study')">Master's Independent Study</button>
+          <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/professional-masters-computer-science-mscps-projects-requirement')">Professional MSCS Projects</button>
+          <button class="sidebarRow" onclick="javascript:goLink('https://docs.google.com/spreadsheets/d/10GefVmlLPtR8avL3Kjln62ebisCZMJJWeFko8VarKwE/edit?gid=0#gid=0')">Tentative Classes List (FA26)</button>
+          <button class="sidebarRow" onclick="javascript:goLink('https://docs.google.com/spreadsheets/d/1cyO2n1xfp6QEOjoUIr4CfAsfHH-fGB7LIWFB1ZFxfOY/edit?gid=0#gid=0')">3. Skills Learned by Course (2019)</button>
+          <button class="sidebarRow" onclick="javascript:goLink('https://bouldercsgrads.org/classes')">Class Reviews, CS-GSA</button>
+        </div>
+        <div class="sidebarSubHeaderRow">Degree Requirements</div>
+        <button class="accordion">Research MS, PhD</button>
+        <div class="panel">
+          <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/graduate-programs/master-science-computer-science/master-science-computer-science-degree')">Research MSCS (CSEN-MS)</button>
+          <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/graduate-programs/doctor-philosophy/degree-requirements')">CS PhD (CSEN-PhD)</button>
+        </div>
+        <button class="accordion">Professional MS</button>
+        <div class="panel">
+          <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/graduate-programs/professional-masters-artificial-intelligence/ms-ai-degree-requirements')">MS Artificial Intelligence (course-based)</button>
+          <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/graduate-programs/professional-masters-computer-science/degree-requirements')">MS Computer Science (course-based)</button>
+          <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/dual-professional-ms-engineering-management')">Dual-Degree MSCPS + ME-EMEN - Computer Science Requirements</button>
+          <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/emp/graduate-programs/dual-graduate-degrees/computer-science-me-em-dual-degrees#accordion-efcb9804c1ad9ffc16d8883bba71ce629-1')">Dual-Degree MSCPS + ME-EMEN - Engineering Management Requirements</button>
+          <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/graduate-programs/professional-masters-network-engineering/professional-masters-network')">MS Network Engineering (course-based)</button>
+        </div>
+        <button class="accordion">Bachelor-Acclerated Masters (BAM)</button>
+        <div class="panel">
           <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/undergraduate-programs/accelerated-masters-programs/computer-science-accelerated-masters-0#degree-requirements')">MSCS BAM</button>
           <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/undergraduate-programs/accelerated-masters-programs/network-engineering-accelerated-0')">MSNE BAM</button>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="grid-container-resources">
-  <div class="grid-item-resources">
-    <div class="sideBar">
-      <div class="sidebarSubHeaderRow">Admissions & Recruitment</div>
+        </div>
+        <div class="sidebarSubHeaderRow">Admissions & Recruitment</div>
         <button class="accordion">Traditional Admissions</button>
         <div class="panel">
           <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/admissions/graduate-admissions/discover-graduate-programs')">2027 Recruitment</button>
@@ -98,14 +90,7 @@
         <div class="panel">
           <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/undergraduate-programs/accelerated-masters-programs')">CS Undergraduate BAM Information</button>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="grid-container-resources">
-  <div class="grid-item-resources">
-    <div class="sideBar">
-      <div class="sidebarSubHeaderRow">Special Program Info</div>
+        <div class="sidebarSubHeaderRow">Special Program Info</div>
         <button class="accordion">Online Programs</button>
         <div class="panel">
           <button class="sidebarRow" onclick="javascript:goLink('https://www.colorado.edu/cs/academics/online-programs/mscs-coursera/curriculum')">MSCS Coursera (CSE3)</button>
@@ -120,8 +105,6 @@
         </div>
       </div>
     </div>
-  </div>
-</div>
     <div class="grid-item">
       <article>
         <div class="row">

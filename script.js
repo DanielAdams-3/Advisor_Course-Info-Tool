@@ -505,26 +505,6 @@
     searchResultMessage.textContent = "Completed";
     return;
   }
-  
-  /*
-  function showHide() {
-    let navList=document.getElementsByClassName("sideBar");
-    const visibleNav = navList[0]; 
-
-
-
-    if (visibleNav.style.width === '20%' || visibleNav.style.width === '200px') {
-      visibleNav.className="fade-out";
-      visibleNav.style.width="0%";
-      visibleNav.style.minWidth="0px";  
-    }
-
-    else {
-      visibleNav.className="fade-in";
-      visibleNav.style.width="20%";
-      visibleNav.style.minWidth="200px";
-    }
-  }*/
 
   function changeMenu(x) {
     x.classList.toggle("change");
@@ -547,19 +527,20 @@
     for (i = 0; i < messageClass.length; i++) {
       currMessage=messageClass[i];
       if (currMessage != protectedMessage){
-        if (currMessage.style.display != "none"){
+        var currMessageVisible = currMessage.classList.contains("fade-in-messageRow");
+        if (currMessageVisible === true){
           currMessage.className="fade-out-messageRow";
+          changeHelpButton(helpButtonClass[i]);
         }
       }
-      /*change the help button*/
-      let redButton = helpButtonClass[i].classList.contains("opened") === true;
+      /*change the help button
+      let redButton = helpButtonClass[i].style.backgroundColor ="#ff6060";
       if (redButton === true){
         changeHelpButton(helpButtonClass[i]);
-      }
-
+      }*/
     }
   }
-  
+
   //https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
   function ShowHideMessageRow(x){
     const helpMessageRowToDisplay=x;
