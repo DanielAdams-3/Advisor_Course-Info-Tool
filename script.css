@@ -3,29 +3,6 @@
 /*coral: ff6060, green: 00a491*/
 
 /*define style for body*/
-.grid-container-image{      
-  display:grid;
-  grid-template-columns:1fr;
-  grid-template-rows:1fr;
-  padding: 0.25rem;
-  gap:1vw;
-  margin:0.5vw;
-  max-width:98%;
-  border-radius:0.5vw;
-  height:3vw;
-  align-items:center;
-}
-.grid-item-image{
-  background-color:#000000;
-  height:inherit;
-  width:auto;
-  border-radius:0.5vw;
-  padding:0.5vw;
-}
-
-img{
-  height:inherit;
-}
 
 body {
   font-family: "Roboto", sans-serif;
@@ -39,8 +16,8 @@ body {
 
 .grid-container{
   display:grid;
-  grid-template-columns:1fr 2fr;
-  padding: 0.25rem;
+  grid-template-columns:3fr 7fr;
+  padding: 0.25vw;
   gap:1vw;
   margin:0.5vw;
   max-width:98%;
@@ -66,7 +43,6 @@ body {
 
 .grid-item-header{
   text-align:center;
-  align-self:center;
   background:black;
   border-radius:0.5vw;
   padding:1vw;
@@ -74,20 +50,36 @@ body {
   margin-bottom:0.5vw;
 }
 
+.grid-item-image{
+  background-color:#000000;
+  height:3vw;
+  width:100%;
+  border-radius:0.5vw;
+  padding:1vw;
+  overflow:hidden;
+  margin-bottom:0.5vw;
+}
+
+img{
+  height:inherit;
+  width:inherit;
+}
+
 .grid-container-resources{
   display:grid;
   grid-template-columns:1fr 1fr;
   grid-template-rows:1fr 1fr;
-  background:black;
+  background:#CFB87C;
   padding:1vw;
   overflow:hidden;
   align-self:normal;
   text-align:center;
   border-radius:0.5vw;
+  max-width:98%;
 }
 .grid-item-resources{
   text-align:left;
-  background:black;
+  background:#000000;
   border-radius:0.5vw;
   padding:1vw;
   overflow:hidden;
@@ -95,7 +87,7 @@ body {
 
 @media (max-width: 1024px) {
   .grid-container {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns:5fr 5fr;
   }
   .grid-container-resources{
     grid-template-columns:1fr 1fr;
@@ -111,7 +103,8 @@ body {
 
 @media (max-width: 768px) {
   .grid-container {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows:1fr 1fr;
   }
   .grid-container-resources{
     grid-template-columns: 1fr;
@@ -126,6 +119,7 @@ body {
 @media (max-width: 480px) {
   .grid-container {
     grid-template-columns: 1fr;
+    grid-template-rows:1fr 1fr;
   }
   .grid-container-resources{
     grid-template-columns: 1fr;
@@ -137,17 +131,6 @@ body {
   .grid-container-image{
     grid-template-columns:1fr;
   }
-}
-
-
-.sideBar {   
-  padding:0%;
-  opacity:1.0; 
-  background-color:#CFB87C; 
-  overflow-y:scroll;
-  overflow-x:hidden;
-  word-wrap:normal;
-  border-radius:0.5vw;
 }
 
 article, footer{
@@ -244,6 +227,7 @@ input[type="text"] {
   padding: 0.25rem;
   font-size: 1rem;
   font-weight:lighter;
+  width:98%;
 }
 
 /*Format the result boxes for certain result content*/
@@ -297,8 +281,10 @@ button:hover, .buttonHelp:hover
   max-height:2rem;
   min-height:2rem;
   margin-top:0rem;
+  width:98%;
   border-radius:0.25rem;
   border-color:#0A3758;
+  margin-bottom:0.25vw;
 }
 
 .fade-in-messageRow{
