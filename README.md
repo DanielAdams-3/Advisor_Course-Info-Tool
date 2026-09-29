@@ -47,28 +47,29 @@
     ##### Used in the final stages to debug and add featuers when I converted the C++ structure to .js
 
     #### GeeksforGeeks (geeksforgeeks.org)
+    ##### ../css/how-to-add-image-in-css/#image-as-content
     ##### ../css/how-to-design-a-modern-sidebar-menu-using-html-and-css/
-    ##### ../javascript/convert-a-string-to-an-integer-in-javascript/
     ##### ../css/how-to-create-toggle-switch-by-using-html-and-css/
     ##### ../css/how-to-make-right-align-div-elements-in-css/
+    ##### ../css/how-to-use-media-queries-for-common-device-breakpoints/
+    ##### ../css/text-truncate-in-css/
     ##### ../html/html-dropdown
     ##### ../html/how-to-set-the-default-value-for-an-html-select-element/
     ##### ../html/how-to-style-the-option-of-an-html-select-element/
     ##### ../html/html-clearing-the-input-field/
-    ##### ../python/javascript-equivalent-to-python-dictionary/
-    ##### ../javascript/javascript-string-search-methods/#using-the-search-method
+    ##### ../javascript/convert-a-string-to-an-integer-in-javascript/
     ##### ../javascript/how-to-create-dictionary-and-add-key-value-pairs-dynamically/
-    ##### ../javascript/how-to-iterate-over-a-javascript-object/
+    ##### ../javascript/how-to-include-a-javascript-file-in-another-javascript-file/
     ##### ../javascript/how-to-insert-a-string-at-a-specific-index-in-javascript/
-    ##### ../javascript/javascript-string-startswith-method/
+    ##### ../javascript/how-to-iterate-over-a-javascript-object/
     ##### ../javascript/javascript-array-sort-method/
     ##### ../javascript/javascript-array-splice-method/
-    ##### ../javascript/how-to-include-a-javascript-file-in-another-javascript-file/
-
-    ##### ../css/text-truncate-in-css/
-    ##### ../python/how-to-fix-no-module-named-pandas/
+    ##### ../javascript/javascript-string-startswith-method/
+    ##### ../javascript/javascript-string-search-methods/#using-the-search-method
     ##### ../javascript/where-to-put-javascript-in-an-html-document/
-    
+    ##### ../python/how-to-fix-no-module-named-pandas/
+    ##### ../python/javascript-equivalent-to-python-dictionary/
+
     #### GitHub (github.com)
     ##### ../yokoffing/Betterfox/discussions/261 - fixed font visibility issue in Firefox
 
@@ -121,6 +122,7 @@
     ##### ../css/tryit.asp?filename=tryresponsive_breakpoints2
     ##### ../html/html_layout.asp
     ##### ../css/css_dropdowns.asp
+    ##### ../css/css_grid_item_align.asp
     ##### ../csS/css3_flexbox.asp
     ##### ../css/css3_animations.asp
     ##### ../css/tryit.asp?filename=trycss_navbar_horizontal_responsive
@@ -141,6 +143,7 @@
     ##### ../howto/tryit.asp?filename=tryhow_css_menu_icon_js 
     ##### ../howto/tryit.asp?filename=tryhow_js_accordion_symbol
     ##### ../howto/tryit.asp?filename=tryhow_js_sidenav_dropdown
+    
 
     DHIWise.com
     ##### ../post/a-simple-guide-how-to-make-divs-stack-vertically
