@@ -156,11 +156,21 @@ img{
   .grid-container-header{
     grid-template-columns:1fr;
     grid-template-rows:1fr 1fr;
-    border-radius:1rem;
   }
   .grid-container-image{
     grid-template-columns:1fr;
-    border-radius:1rem;
+  }
+  .grid-item-image{
+    border-bottom-left-radius:1rem;
+    border-top-left-radius:1rem;
+    border-top-right-radius:1rem;
+    border-bottom-right-radius:1rem;
+  }
+  .grid-item-header{
+    border-bottom-left-radius:1rem;
+    border-top-left-radius:1rem;
+    border-top-right-radius:1rem;
+    border-bottom-right-radius:1rem;
   }
 }
 
