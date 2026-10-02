@@ -128,7 +128,7 @@ img{
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 950px) {
   .grid-container {
     grid-template-columns: 1fr;
   }
@@ -136,7 +136,8 @@ img{
     grid-template-columns: 1fr;
   }
   .grid-container-header{
-    grid-template-columns:1fr 2fr;
+    grid-template-columns:1fr;
+    grid-template-rows:1fr 1fr;
   }
   .grid-container-image{
     grid-template-columns:1fr;
