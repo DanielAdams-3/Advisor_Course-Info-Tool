@@ -137,33 +137,39 @@
             <button class="buttonHelp" id="autoHelpButton"onclick="javascript:ShowHideMessageRow(document.getElementById('autocompleteMessageOnClick'));javascript:changeHelpButton(this)">About</button>
           </div>
           <div class = "helpMessageRow" id="autocompleteMessageOnClick"><h4>About AutoComplete</h4><p>Must start with beginning of subject code. All available results will match those characters.</p></div>
-          <div class="row">
-            <h4>1: Get Matching Courses</h4>
-            <button class="buttonHelp" id="autoStepOneHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('autoStepOneMessageOnClick'));javascript:changeHelpButton(this)">About</button>
+          <div class="stepRow">
+            <div class="row">
+              <h4>Step 1-Enter the Beginning of a Course Number</h4>
+              <button class="buttonHelp" id="autoStepOneHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('autoStepOneMessageOnClick'));javascript:changeHelpButton(this)">About</button>
+            </div>
+            <div class = "helpMessageRow" id="autoStepOneMessageOnClick"><h4>Instructions for 1: Get Matching Courses:</h4><p>Enter the beginning letter(s) of a course number and select <b>Get Matching Courses</b> to retrieve suggestions. For example, entering 'CSCI 5' will retrieve all 5000-level CSCI courses</p></div>
+            <div class="row">
+              <input id="prefixInput" type="text" placeholder="Enter the first letter(s) of a course subject code..." />
+            </div>
+            <div class="row">
+              <button class="searchButton" onclick="populateAutocompleteSuggestions()">Get Matching Courses</button>
+            </div>
           </div>
-          <div class = "helpMessageRow" id="autoStepOneMessageOnClick"><h4>Instructions for 1: Get Matching Courses:</h4><p>Enter the beginning letter(s) of a course number and select <b>Get Matching Courses</b> to retrieve suggestions. For example, entering 'CSCI 5' will retrieve all 5000-level CSCI courses</p></div>
-          <div class="row">
-            <input id="prefixInput" type="text" placeholder="Enter the first letter(s) of a course subject code..." />
+          <div class="stepRow">
+            <div class="row">
+              <h4>Step 2-Choose a Suggestion</h4>
+              <button class="buttonHelp" id="autoStepTwoHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('autoStepTwoMessageOnClick'));javascript:changeHelpButton(this)">About</button>
+            </div>
+            <div class = "helpMessageRow" id="autoStepTwoMessageOnClick"><h4>Instructions for 2: Select a Suggestion: </h4><p>If any suggestions are provided, choose one from the dropdown menu</p></div>
+            <div class="selectRow">
+              <select id='suggestionSelected'></select>
+            </div>
           </div>
-          <div class="row">
-            <button class="searchButton" onclick="populateAutocompleteSuggestions()">Get Matching Courses</button>
+          <div class="stepRow">
+            <div class="row">
+              <h4>Step 3-Press Search</h4>
+              <button class="buttonHelp" id="autoStepThreeHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('autoStepThreeMessageOnClick'));javascript:changeHelpButton(this)">About</button>
+            </div>
+            <div class = "helpMessageRow" id="autoStepThreeMessageOnClick"><h4>Instructions for 3: Press Search: </h4><p>Press <b>Search</b> to retrieve the selected course's information</p></div>
+            <div class="row">
+              <button class="searchButton" onclick="javascript:autoCompleteSearch()">Search</button>
+            </div>
           </div>
-          <div class="row">
-            <h4>2: Select a Suggestion</h4>
-            <button class="buttonHelp" id="autoStepTwoHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('autoStepTwoMessageOnClick'));javascript:changeHelpButton(this)">About</button>
-          </div>
-          <div class = "helpMessageRow" id="autoStepTwoMessageOnClick"><h4>Instructions for 2: Select a Suggestion: </h4><p>If any suggestions are provided, choose one from the dropdown menu</p></div>
-          <div class="selectRow">
-            <select id='suggestionSelected'></select>
-          </div>
-          <div class="row">
-            <button class="searchButton" onclick="javascript:autoCompleteSearch()">Search</button>
-          </div>
-          <div class="row">
-            <h4>3: Press Search</h4>
-            <button class="buttonHelp" id="autoStepThreeHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('autoStepThreeMessageOnClick'));javascript:changeHelpButton(this)">About</button>
-          </div>
-          <div class = "helpMessageRow" id="autoStepThreeMessageOnClick"><h4>Instructions for 3: Press Search: </h4><p>Press <b>Search</b> to retrieve the selected course's information</p></div>
         </div>
         <div class="tabContent" id="searchByTopics">
           <div class = "row">
@@ -172,37 +178,46 @@
             javascript:changeHelpButton(this)">About</button>
           </div>
           <div class = "helpMessageRow" id="specialTopicsMessageOnClick"><h4>About Special Topics Search</h4><p>Special Topics Search allows search for specific sections of the available Special Topics courses, filtered by semester.</p></div>
-          <div class="row">
-            <h5>1-Select Course</h5>
+          <div class="stepRow">
+            <div class="row">
+              <h4>Step 1-Select Topics Course</h4>
+            </div>
+            <div class="selectRow">
+              <select id='topicsCourseSelected' onchange="populateTopicTerms()">
+                <option value="blank" selected></option>
+                <option value="CSCI-7000">CSCI 7000 Current Topics in Computer Science</option>
+                <option value="CYBR-5830">CYBR 5830 Special Topics</option>
+                <option value="ROBO-7000">ROBO 7000 Special Topics in Robotics</option>
+                <option value="DTSC-5900">DTSC 5900 Special Topics</option>
+                <option value="ATLS-5519">ATLS 5519 Advanced Topics</option>
+              </select>
+            </div>
           </div>
-          <div class="selectRow">
-            <select id='topicsCourseSelected' onchange="populateTopicTerms()">
-              <option value="blank" selected></option>
-              <option value="CSCI-7000">CSCI 7000 Current Topics in Computer Science</option>
-              <option value="CYBR-5830">CYBR 5830 Special Topics</option>
-              <option value="ROBO-7000">ROBO 7000 Special Topics in Robotics</option>
-              <option value="DTSC-5900">DTSC 5900 Special Topics</option>
-              <option value="ATLS-5519">ATLS 5519 Advanced Topics</option>
-            </select>
+          <div class="stepRow">
+            <div class="row">
+              <h4>Step 2-Select Term</h4>
+            </div>
+            <div class="selectRow">
+              <select id='topicsTermDisplayed' onchange="populateTopics()">
+                <option value="blank" selected></option>
+              </select>
+            </div>
           </div>
-          <div class="row">
-            <h5>2-Select Term</h5>
+          <div class="stepRow">
+            <div class="row">
+              <h4>Step 3-Select Topic Section</h4>
+            </div>
+            <div class="selectRow">
+              <select id='topicsDisplayed'>
+                <option value="blank" selected></option>
+              </select> 
+            </div>
           </div>
-          <div class="selectRow">
-            <select id='topicsTermDisplayed' onchange="populateTopics()">
-              <option value="blank" selected></option>
-            </select>
-          </div>
-          <div class="row">
-            <h5>3-Select Section</h5>
-          </div>
-          <div class="selectRow">
-            <select id='topicsDisplayed'>
-              <option value="blank" selected></option>
-            </select> 
-          </div>
-          <div class="row">
-            <button class="searchButton" onclick="javascript:TopicsSearch()">Search</button>
+          <div class="stepRow">
+            <div class="row">
+              <h4>Step 4-Press Search</h4>
+              <button class="searchButton" onclick="javascript:TopicsSearch()">Search</button>
+            </div>
           </div>
         </div>
         <div class="row">

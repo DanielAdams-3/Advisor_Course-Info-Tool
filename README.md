@@ -40,7 +40,7 @@
 ### Added menu button should be available in the sidebar, main menu button updates based on sidebar behavior regardless of which one is selected
 ### Added new field, Student Reviews from CS-GSA
 ### Added new field, 'Rigor, according to students' whihc is available for some courses in the Skills Learnt document'
-
+### Added multi-device format compatability by converting html to grid structure
 
 #### HTML, CSS, Javascript and related resources consulted after initial project
     #### Microsoft Copilot
@@ -117,16 +117,18 @@
     ##### ../hc/en-us/articles/33961409134227-Control-text-wrapping-line-breaking-and-truncation#how-to-set-wrapping-behavior
     
     #### W3 Schools (w3schools.com)
-    ##### ../html/html_responsive.asp
-    ##### ../css/css_rwd_intro.asp
-    ##### ../css/tryit.asp?filename=tryresponsive_breakpoints2
-    ##### ../html/html_layout.asp
-    ##### ../css/css_dropdowns.asp
-    ##### ../css/css_grid_item_align.asp
-    ##### ../csS/css3_flexbox.asp
-    ##### ../css/css3_animations.asp
-    ##### ../css/tryit.asp?filename=trycss_navbar_horizontal_responsive
+
+    ##### ../CSS/css3_animations.asp
+    ##### ../CSS/css_dropdowns.asp
+    ##### ../CSS/css3_flexbox.asp
+    ##### ../CSS/css_grid_item_align.asp
+    ##### ../CSS/css3_image_center.asp
+    ##### ../CSS/css_rwd_intro.asp
+    ##### ../CSS/tryit.asp?filename=trycss_navbar_horizontal_responsive
+    ##### ../CSS/tryit.asp?filename=tryresponsive_breakpoints2
     ##### ../htmL/html_images_background.asp
+    ##### ../html/html_layout.asp
+    ##### ../html/html_responsive.asp
     ##### ../howto/tryit.asp?filename=tryhow_css_switch
     ##### ../jsref/met_select_remove.asp
     ##### ../jsref/event_onchange.asp
@@ -143,6 +145,7 @@
     ##### ../howto/tryit.asp?filename=tryhow_css_menu_icon_js 
     ##### ../howto/tryit.asp?filename=tryhow_js_accordion_symbol
     ##### ../howto/tryit.asp?filename=tryhow_js_sidenav_dropdown
+    
     
 
     DHIWise.com
