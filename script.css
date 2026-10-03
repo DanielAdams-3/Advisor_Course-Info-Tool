@@ -501,15 +501,17 @@ button:hover, .buttonHelp:hover
   content: '\002B';
   color: #000000;
   font-weight: bold;
+  font-size:1.5rem;
   float: right;
   margin-left:0px;
   margin-right:0px;
 }
 
 .accordionNoPanel:after {
-  content: '->';
+  content: '>>';
   color: #000000;
   font-weight: bold;
+  font-size:1.5rem;
   float: right;
   margin-left:0px;
   margin-right:0px;
@@ -518,6 +520,8 @@ button:hover, .buttonHelp:hover
 
 .active:after {
   content: '\2212';
+  font-size:1.5rem;
+  font-weight:bold;
 }
 
 .selectRow{
