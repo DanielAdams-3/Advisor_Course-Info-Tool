@@ -110,39 +110,45 @@
 <div class="grid-container">
   <div class="grid-item">
     <article>
+      <div class="row">
+        <h2>Search Options</h2>
+      </div>
+      <div class="tab">
+        <button class="tablinks" id = "defaultOpen" onclick="javascript:openSearchTab(this, 'searchTraditionalTab')">Search by Full Course Number</button>
+        <button class="tablinks" onclick="javascript:openSearchTab(this, 'searchByTopics')">Search for Special Topics</button>
+        <button class="tablinks" onclick="javascript:openSearchTab(this, 'searchWithHelpTab')">Search by Partial Course Number</button>
+      </div>      
+      <div class="tabContent" id="searchTraditionalTab">
         <div class="row">
-          <h2>Search Options</h2>
+          <h3>Search by Full Course Number</h3>  
+          <button class="buttonHelp" id="searchStandardHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('searchMessageOnClick')); javascript:changeHelpButton(this)">About</button>
         </div>
-        <div class="tab">
-          <button class="tablinks" id = "defaultOpen" onclick="javascript:openSearchTab(this, 'searchTraditionalTab')">Search by Full Course Number</button>
-          <button class="tablinks" onclick="javascript:openSearchTab(this, 'searchByTopics')">Search for Special Topics</button>
-          <button class="tablinks" onclick="javascript:openSearchTab(this, 'searchWithHelpTab')">Search by Partial Course Number</button>
-        </div>      
-        <div class="tabContent" id="searchTraditionalTab">
+        <div class = "helpMessageRow" id="searchMessageOnClick"><h4>About Course Search</h4><p>Requires a full course number (subject code). For example, to get course information about 'CSCI 5214 Big Data Architecture', type CSCI5214, CSCI-5214, or CSCI 5214. If you do not know the full number, use autocomplete tab. For Special Topics courses, use the Special Topics Search tab.</p></div>
+        <div class="stepRow">
           <div class="row">
-            <h3>Search by Course Number</h3>  
-            <button class="buttonHelp" id="searchStandardHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('searchMessageOnClick')); javascript:changeHelpButton(this)">About</button>
-          </div>
-          <div class = "helpMessageRow" id="searchMessageOnClick"><h4>About Course Search</h4><p>Requires a full course number (aka subject code). For example, to get course information about 'CSCI 5214 Big Data Architecture', type CSCI5214, CSCI-5214, or CSCI 5214. If you do not know the full number, use autocomplete tab. For Special Topics courses, use the Special Topics Search tab.</p></div>
-          <div class="row">
+            <h4>Step 1- Enter a Full Course Number</h4>
             <input id="wordInput" type="text" placeholder="Enter a course subject code..." />
           </div>
+        </div>
+        <div class="stepRow">
           <div class="row">
+            <h4>Step 2-Press Search</h4>
             <button class="searchButton" onclick="searchBySubject(document.getElementById('wordInput').value.trim());">Search</button>
           </div>
         </div>
-        <div class="tabContent" id="searchWithHelpTab">
+      </div>
+      <div class="tabContent" id="searchWithHelpTab">
+        <div class="row">
+          <h3>Search by Partial Course Number</h3>
+          <button class="buttonHelp" id="autoHelpButton"onclick="javascript:ShowHideMessageRow(document.getElementById('autocompleteMessageOnClick'));javascript:changeHelpButton(this)">About</button>
+        </div>
+        <div class = "helpMessageRow" id="autocompleteMessageOnClick"><h4>About AutoComplete</h4><p>Must start with beginning of subject code. All available results will match those characters.</p></div>
+        <div class="stepRow">
           <div class="row">
-            <h3>Get Suggestions - AutoComplete</h3>
-            <button class="buttonHelp" id="autoHelpButton"onclick="javascript:ShowHideMessageRow(document.getElementById('autocompleteMessageOnClick'));javascript:changeHelpButton(this)">About</button>
+            <h4>Step 1-Enter the Beginning of a Course Number</h4>
+            <button class="buttonHelp" id="autoStepOneHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('autoStepOneMessageOnClick'));javascript:changeHelpButton(this)">About</button>
           </div>
-          <div class = "helpMessageRow" id="autocompleteMessageOnClick"><h4>About AutoComplete</h4><p>Must start with beginning of subject code. All available results will match those characters.</p></div>
-          <div class="stepRow">
-            <div class="row">
-              <h4>Step 1-Enter the Beginning of a Course Number</h4>
-              <button class="buttonHelp" id="autoStepOneHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('autoStepOneMessageOnClick'));javascript:changeHelpButton(this)">About</button>
-            </div>
-            <div class = "helpMessageRow" id="autoStepOneMessageOnClick"><h4>Instructions for 1: Get Matching Courses:</h4><p>Enter the beginning letter(s) of a course number and select <b>Get Matching Courses</b> to retrieve suggestions. For example, entering 'CSCI 5' will retrieve all 5000-level CSCI courses</p></div>
+          <div class = "helpMessageRow" id="autoStepOneMessageOnClick"><h4>Instructions for 1: Get Matching Courses:</h4><p>Enter the beginning letter(s) of a course number and select <b>Get Matching Courses</b> to retrieve suggestions. For example, entering 'CSCI 5' will retrieve all 5000-level CSCI courses</p></div>
             <div class="row">
               <input id="prefixInput" type="text" placeholder="Enter the first letter(s) of a course subject code..." />
             </div>
@@ -220,9 +226,11 @@
             </div>
           </div>
         </div>
-        <div class="row">
-          <h4>Search Result Message &nbsp;</h4>
-          <p id="searchResultMessage"></p>
+        <div class="stepRow">
+          <div class="row">
+            <h4>Search Result Message &nbsp;</h4>
+            <p id="searchResultMessage"></p>
+          </div>
         </div>
       </article>
       <hr/>
