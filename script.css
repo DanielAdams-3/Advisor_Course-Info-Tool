@@ -283,7 +283,7 @@ caption {
 input[type="text"] {
   padding: 0.25rem;
   font-size: 1rem;
-  font-weight:lighter;
+  font-weight:normal;
   width:98%;
   margin-top:0.5rem;
 }
