@@ -15,6 +15,122 @@
     resultMessage.textContent="failed search";
     return;
   }
+
+
+  async function anyCourseSubjectSearch(x){
+    let requestedCourse = x;
+    
+    /*get fields*/
+    const resultMessage = document.getElementById('searchResultMessage');
+    let subject = document.getElementById('resultSubject');
+    let title = document.getElementById('resultTitle');
+    let hours = document.getElementById('resultHours');
+    let description = document.getElementById('resultDescription');
+    let notes = document.getElementById('resultNotes');
+    let restrictions = document.getElementById('resultRestrictions');
+    let offerings = document.getElementById('resultOfferings');
+    let rigor=document.getElementById('resultRigor');
+    let reqCSENPHD = document.getElementById('reqsCSENPHD');
+    let reqCSENMS = document.getElementById('reqsCSENMS');
+    let reqCSENMSCPS = document.getElementById('reqsCSENMSCPS');
+    let reqNTENMSNE = document.getElementById('reqsNTENMSNE');
+    let reqAINTMSAI = document.getElementById('reqsAINTMSAI');
+    let reqsNotes=document.getElementById('reqsNotes');
+    let skills = document.getElementById('resultSkills');
+    let instructorReview = document.getElementById('reviewInstructor');
+    let courseloadReview = document.getElementById('reviewCourseload');
+    let inputReview = document.getElementById('reviewInput');
+    
+    /*clear out previous results*/
+    subject.textContent="";
+    title.textContent="";
+    hours.textContent="";
+    description.textContent="";
+    notes.textContent="";
+    offerings.textContent="";
+    restrictions.textContent="";
+    rigor.textContent="";
+    reqCSENPHD.textContent="";
+    reqCSENMS.textContent="";
+    reqCSENMSCPS.textContent="";
+    reqNTENMSNE.textContent="";
+    reqAINTMSAI.textContent="";
+    reqsNotes.textContent="";
+    skills.textContent="";
+    instructorReview.textContent="";
+    courseloadReview.textContent="";
+    inputReview.textContent="";
+
+    //validate if input is too long or non-existent
+    let badInput=false;
+    //check for no input or too much input
+    if (!requestedCourse || requestedCourse.length>=10){
+      badInput=true;
+    }
+  
+    if (badInput === true)
+    {
+      resultMessage.textContent = "Not found / not available";
+      return;
+    }
+
+    //refine the input, if not bad
+    requestedCourse = toUpper(requestedCourse);
+    let result = "";
+
+
+    //Verify input is eligible for direct search, not autocomplete
+    //If user inputs at least 8 characters and none are spaces (eg CSCI5214)
+    if (requestedCourse.length === 8 && requestedCourse.contains(' ')===false)
+    {
+      temp = requestedCourse.slice(0,4) + ' ' + requestedCourse.slice(4);
+      requestedCourse = temp;
+    }
+    
+    //direct search
+    if (requestedCourse.length === 9){
+      //clean input by removing '-' from input, for ex: CSCI-5214
+      if (requestedCourse.charAt(4) != ' ')
+      {
+        temp = requestedCourse.slice(0,4)+ ' ' + requestedCourse.slice(5);
+        requestedCourse = temp;
+      }
+      //LOOK FOR RESULT IN COURSECATALOG.JS
+      //call function retrieveCourseObject(x), x is requestedCourse input post-validation
+      result = retrieveCourseObject(requestedCourse);
+    }
+
+    //FIXME
+    //Do partial search and generate autocomplete suggestions 
+    
+    //SEARCH RESULT
+    //CASE 1 - FAILURE
+    if (result === undefined || result==="" || result.courseSubject.length === 0){
+      resultMessage.textContent = "Not found / not available";
+      return;
+    }
+    //CASE 2 - SUCCESS
+    subject.textContent=result.courseSubject;
+    title.textContent=result.title;
+    hours.textContent=result.credits;
+    description.textContent=result.description;
+    notes.textContent=result.notes;
+    offerings.textContent=result.offerings;
+    restrictions.textContent=result.restrictions;
+    rigor.textContent=result.rigor;
+    reqCSENPHD.textContent=result.reqCSENPHD;
+    reqCSENMS.textContent=result.reqCSENMS;
+    reqCSENMSCPS.textContent=result.reqCSENMSCPS;
+    reqNTENMSNE.textContent=result.reqNTENMSNE;
+    reqAINTMSAI.textContent=result.reqAINTMSAI;
+    reqsNotes.textContent=result.reqNote;
+    skills.textContent=result.skills;
+    instructorReview.textContent=result.reviewInstructor;
+    courseloadReview.textContent=result.reviewCourseload;
+    inputReview.textContent=result.reviewInput;
+    resultMessage.textContent="Completed";
+  }
+
   //traditional search, validates the inputs, does a traditional search by taking in the course subject code
   async function searchBySubject(x) {
     let requestedCourse = x;
@@ -533,11 +649,6 @@
           changeHelpButton(helpButtonClass[i]);
         }
       }
-      /*change the help button
-      let redButton = helpButtonClass[i].style.backgroundColor ="#ff6060";
-      if (redButton === true){
-        changeHelpButton(helpButtonClass[i]);
-      }*/
     }
   }
 

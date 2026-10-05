@@ -2,8 +2,6 @@
 /*dark grey: #777777, black: #000000, white: #ffffff, gold: #CFB87C*/
 /*coral: ff6060, green: 00a491*/
 
-/*define style for body*/
-
 body {
   font-family: "Roboto", sans-serif;
   font-size:1.5rem;
@@ -287,6 +285,7 @@ input[type="text"] {
   font-weight:normal;
   width:98%;
   margin-top:0.5rem;
+  background-color:#EEF5F8;
 }
 
 /*Format the result boxes for certain result content*/
@@ -300,10 +299,11 @@ input[type="text"] {
   overflow-x:visible;
   overflow-y:hidden;
   width:100%;
-  border: 2px solid #CFB87C;
+  border: 2px solid #777777;
   white-space: pre-wrap;
   cursor: text;
   font-size: 1rem;
+  border-radius:0.25rem;
 }
 /*Formatting for buttons*/
 button {
@@ -333,9 +333,9 @@ button {
   max-height:1.25rem;
   min-height:1.25rem;
   height:1.25rem;
-  background-color:#CFB87C;
+  background-color:#A2A4A3;
   color:#000000;
-  border-color:#CFB87C;
+  border-color:#A2A4A3;
 }
 
 .buttonHelp:hover{
@@ -400,7 +400,6 @@ button:hover
 
 .helpMessageRow.available{
   opacity:1.0;
-  min-height:100%;
   font-size:1rem;
   visibility:initial;
   max-height:fit-content;
@@ -423,7 +422,7 @@ button:hover
     border-color:#ffffff;
     border:#ffffff;
   }
-  95%{
+  90%{
     opacity:0.0;
   }
   100%{
@@ -432,9 +431,9 @@ button:hover
     max-height:fit-content;
     height:100%;
     visibility:visible;
-    display:contents;
+    display:block;
     background-color:#CFB87C;
-    border-radius:1vw;
+    border-radius:0.5vw;
     border-color:#000000;
     border:#000000;
   }
