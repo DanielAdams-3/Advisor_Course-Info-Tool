@@ -328,11 +328,11 @@ button {
   min-width:100%;
   font-size:1rem;
   padding-top:0rem;
-  padding-bottom:0.25rem;
+  padding-bottom:0rem;
   text-align:center;
-  max-height:1.25rem;
-  min-height:1.25rem;
-  height:1.25rem;
+  max-height:1.5rem;
+  min-height:1.5rem;
+  height:1.5rem;
   background-color:#A2A4A3;
   color:#000000;
   border-color:#A2A4A3;
