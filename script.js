@@ -181,7 +181,8 @@
       inputReview.textContent="";
       return;
     }
-
+    //permit lower case entries
+    requestedCourse=toUpper(requestedCourse);
     if (requestedCourse.length <8){
       resultMessage.textContent = "Not found / not available";
       subject.textContent="";
