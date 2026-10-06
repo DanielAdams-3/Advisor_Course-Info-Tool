@@ -112,9 +112,7 @@
 <div class="grid-container">
   <div class="grid-item">
     <article>
-      <div class="row">
-        <h2>Search Options</h2>
-      </div>
+      <h2>Search Options</h2>
       <div class="tab">
         <button class="tablinks" id = "defaultOpen" onclick="javascript:openSearchTab(this, 'searchTraditionalTab')">Search by Full Course Number</button>
         <button class="tablinks" onclick="javascript:openSearchTab(this, 'searchByTopics')">Search for Special Topics</button>
@@ -215,8 +213,7 @@
             </div>
             <div class="selectRow">
               <select id='topicsTermDisplayed' onchange="populateTopics()">
-                <option value="blank" selected></option>
-              </select>
+                <option value="blank" selected></option>              </select>
             </div>
           </div>
           <div class="stepRow">
@@ -249,10 +246,7 @@
       <article>
         <h2>Course Information</h2>
         <div class="row">
-          <h3>Course Subject&nbsp;</h3>
-        </div>
-        <div class="row">
-          <button class="buttonHelp" id="subjectHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('subjectMessageOnClick')); javascript:changeHelpButton(this)">About</button>
+          <button class="buttonHelp" id="subjectHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('subjectMessageOnClick')); javascript:changeHelpButton(this)">Subject</button>
         </div>
         <div class = "helpMessageRow" id="subjectMessageOnClick"><h4>About Subject</h4><p>Per Graduate Catalog AY26-27. If a course does not appear, it is not in the dataset, but can be requested by clicking the 'Contact CS Department' button at the bottom of the page</p>
         </div>
@@ -261,7 +255,7 @@
         </div>
           
         <div class="row">
-          <h3>Course Title&nbsp;</h3>
+          <h3>Title&nbsp;</h3>
         </div>
         <div class="row">
           <button class="buttonHelp" id="nameHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('nameMessageOnClick')); javascript:changeHelpButton(this)">About</button> 
@@ -294,12 +288,12 @@
           </div>
 
           <div class="row">  
-            <h3>Course Description&nbsp;</h3>
+            <h3>Description&nbsp;</h3>
           </div>
           <div class="row">
             <button class="buttonHelp" id="descriptionHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('descriptionMessageOnClick')); javascript:changeHelpButton(this)">About</button> 
           </div>
-          <div class = "helpMessageRow" id="descriptionMessageOnClick"><h4>About Course Description</h4><p>Data from 2026-27 Graduate Catalog. Results may also include cross-listed course numbers</p></div>
+          <div class = "helpMessageRow" id="descriptionMessageOnClick"><h4>About Description</h4><p>Data from 2026-27 Graduate Catalog. Results may also include cross-listed course numbers</p></div>
           <div class="row">
             <div id="resultDescription"></div>
           </div>  

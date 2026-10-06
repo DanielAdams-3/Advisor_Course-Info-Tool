@@ -17,9 +17,9 @@
   }
 
 
-  async function anyCourseSubjectSearch(x){
-    let requestedCourse = x;
-    
+  function anyLenCourseNumSearch(){
+    let requestedCourse = document.getElementById('prefixInput');
+
     /*get fields*/
     const resultMessage = document.getElementById('searchResultMessage');
     let subject = document.getElementById('resultSubject');
@@ -95,20 +95,24 @@
         temp = requestedCourse.slice(0,4)+ ' ' + requestedCourse.slice(5);
         requestedCourse = temp;
       }
+
       //LOOK FOR RESULT IN COURSECATALOG.JS
       //call function retrieveCourseObject(x), x is requestedCourse input post-validation
       result = retrieveCourseObject(requestedCourse);
     }
+    //otherwise, populate autocomplete suggestions
+    else{
+      //Do partial search and generate autocomplete suggestions 
+      populateAutocompleteSuggestions();
+    }
 
-    //FIXME
-    //Do partial search and generate autocomplete suggestions 
-    
     //SEARCH RESULT
     //CASE 1 - FAILURE
     if (result === undefined || result==="" || result.courseSubject.length === 0){
       resultMessage.textContent = "Not found / not available";
       return;
     }
+
     //CASE 2 - SUCCESS
     subject.textContent=result.courseSubject;
     title.textContent=result.title;
@@ -548,7 +552,7 @@
     blankSuggestion.value="blank";
     courseSuggestedList.appendChild(blankSuggestion);
 
-    //Step 2 - call lookupForSuggestions() to get an array of course objects suggested based on user input
+    //Step 2 - call lookupForSuggestions() to get an array of course objects matching user input
     let user_input=document.getElementById('prefixInput').value;
     let listSuggestions=[];
     if (user_input.length===0){
