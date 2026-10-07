@@ -189,9 +189,9 @@
       return;
     }
 
-    //permit lower case entries
+    /*FIXMEpermit lower case entries
     let temp = requestedCourse.toString().toUpperCase();
-    requestedCourse = temp;
+    requestedCourse = temp; */
   
     if (requestedCourse.length === 0){
       resultMessage.textContent = "Not found / not available";
@@ -214,7 +214,7 @@
     let result = retrieveCourseObject(requestedCourse);
     
     if (result === undefined || result==="" || result.courseSubject.length === 0){
-      resultMessage.textContent = "Not found / not available";
+      //resultMessage.textContent = "Not found / not available";
       return;
     }
 
@@ -637,11 +637,11 @@
     //var messageClass = document.getElementsByClassName("helpMessageRow");
     var openMessages = document.getElementsByClassName("fade-in-messageRow");
 
-    var i, currMessage;
+    var i, currMessage, currMessageVisible;
     for (i = 0; i < openMessages.length; i++) {
       currMessage=openMessages[i];
       if (currMessage != protectedMessage){
-        var currMessageVisible = currMessage.classList.contains("fade-in-messageRow");
+        currMessageVisible = currMessage.classList.contains("fade-in-messageRow");
         if (currMessageVisible === true){
           currMessage.className="fade-out-messageRow";
           changeHelpButton(helpButtonClass[i]);
@@ -649,9 +649,10 @@
       }
     }
 
+    /*this is causing the top button to open whenever another button opens
     var helpButtonClass=document.getElementsByClassName("buttonHelp");
     changeHelpButton(helpButtonClass[i]);
-
+    */
   }
 
   //https://developer.mozilla.org/en-US/docs/Web/API/Element/classList

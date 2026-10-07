@@ -337,10 +337,58 @@ button {
   border-color:#A2A4A3;
 }
 
+.h3buttonHelp{
+  font-family: "Roboto Condensed", sans-serif;
+  font-size:1.5rem;
+  font-weight:bold;
+  margin-top:0vw;
+  margin-bottom:0vw;
+  align-content:center;
+  margin-left:0vw;
+
+  min-width:100%;
+  padding-top:0rem;
+  padding-bottom:0rem;
+  text-align:left;
+  background-color:#EEF5F8;
+  color:#000000;
+  border-color:#EEF5F8;
+}
+
+.buttonHelp.after:opened, .h3buttonHelp.after:opened {
+  content: '-';
+}
+
+.h3buttonHelp:after {
+  content: '+';
+  color: #000000;
+  font-weight: bold;
+  font-size:1.5rem;
+  float: right;
+  margin-left:0px;
+  margin-right:0px;
+}
+
+.buttonHelp:after {
+  content: '+';
+  color: #000000;
+  font-weight: bold;
+  font-size:1.25rem;
+  float: right;
+  margin-left:0px;
+  margin-right:0px;
+}
+
 .buttonHelp:hover{
   background-color:#777777;
   color:#ffffff;
   border-color:#777777;
+}
+
+.h3buttonHelp:hover{
+  background-color:#096FAE;
+  color:#ffffff;
+  border-color:#096FAE;
 }
 
 /*Formatting when user hovers over primary buttons with mouse*/
