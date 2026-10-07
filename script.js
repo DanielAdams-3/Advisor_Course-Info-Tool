@@ -183,9 +183,11 @@
       return;
     }
     //permit lower case entries
-    let temp = requestedCourse.toUpperCase();
-    requestedCourse = temp;
-    
+    let temp = String(requestedCourse);
+    temp = temp.toUpperCase();
+    requestedCourse = temp.toUpperCase;
+  
+
     if (requestedCourse.length <8){
       resultMessage.textContent = "Not found / not available";
       subject.textContent="";
