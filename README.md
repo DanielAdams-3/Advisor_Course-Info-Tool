@@ -66,6 +66,7 @@
     ##### ../javascript/javascript-array-splice-method/
     ##### ../javascript/javascript-string-startswith-method/
     ##### ../javascript/javascript-string-search-methods/#using-the-search-method
+    ##### ../javascript/javascript-string-touppercase-method/
     ##### ../javascript/where-to-put-javascript-in-an-html-document/
     ##### ../python/how-to-fix-no-module-named-pandas/
     ##### ../python/javascript-equivalent-to-python-dictionary/
