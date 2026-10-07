@@ -649,18 +649,19 @@
   function HideAllOtherMessages(x){
     const protectedMessage = x;
 
-    var messageClass = document.getElementsByClassName("helpMessageRow");
+    //var messageClass = document.getElementsByClassName("helpMessageRow");
+    var openMessages = document.getElementsByClassName("fade-in-messageRow");
     var helpButtonClass=document.getElementsByClassName("buttonHelp");
 
     var i, currMessage;
-    for (i = 0; i < messageClass.length; i++) {
-      currMessage=messageClass[i];
-      if (currMessage != protectedMessage){
-        var currMessageVisible = currMessage.classList.contains("fade-in-messageRow");
-        if (currMessageVisible === true){
-          currMessage.className="fade-out-messageRow";
-          changeHelpButton(helpButtonClass[i]);
-        }
+    for (i = 0; i < openMessages.length; i++) {
+      currMessage=openMessages[i];
+      //currMessage=messageClass[i];
+      //if (currMessage != protectedMessage){
+      var currMessageVisible = currMessage.classList.contains("fade-in-messageRow");
+      if (currMessageVisible === true){
+        currMessage.className="fade-out-messageRow";
+        changeHelpButton(helpButtonClass[i]);
       }
     }
   }
