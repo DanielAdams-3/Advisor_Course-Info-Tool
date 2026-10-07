@@ -108,10 +108,11 @@
       //Do partial search and generate autocomplete suggestions 
       populateAutocompleteSuggestions();
     }
-
+    let suggestionsLength = document.getElementById('suggestionSelected');
+    let y = suggestionsLength.options.length;
     //SEARCH RESULT
-    //CASE 1 - FAILURE
-    if (result === undefined || result==="" || result.courseSubject.length === 0){
+    //CASE 1 - FAILURE - //result.courseSubject.length===0
+    if (result === undefined || result==="" || y === 0){
       resultMessage.textContent = "Not found / not available";
       return;
     }
