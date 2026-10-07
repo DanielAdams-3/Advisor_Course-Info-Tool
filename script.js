@@ -75,7 +75,8 @@
     }
 
     //refine the input, if not bad
-    requestedCourse = requestedCourse.toUpperCase();
+    let temp = requestedCourse.toUpperCase();
+    requestedCourse = temp;
     let result = "";
 
 
@@ -182,7 +183,9 @@
       return;
     }
     //permit lower case entries
-    requestedCourse=requestedCourse.toUpperCase();
+    let temp = requestedCourse.toUpperCase();
+    requestedCourse = temp;
+    
     if (requestedCourse.length <8){
       resultMessage.textContent = "Not found / not available";
       subject.textContent="";
