@@ -106,6 +106,7 @@
     else{
       //Do partial search and generate autocomplete suggestions 
       populateAutocompleteSuggestions();
+
     }
     let suggestionsLength = document.getElementById('suggestionSelected');
     let y = suggestionsLength.options.length;
@@ -162,53 +163,38 @@
     let courseloadReview = document.getElementById('reviewCourseload');
     let inputReview = document.getElementById('reviewInput');
 
+    //clear all results from any previous search
+    resultMessage.textContent = "Please enter a subject code";
+    subject.textContent="";
+    title.textContent="";
+    hours.textContent="";
+    description.textContent="";
+    notes.textContent="";
+    offerings.textContent="";
+    restrictions.textContent="";
+    rigor.textContent="";
+    reqCSENPHD.textContent="";
+    reqCSENMS.textContent="";
+    reqCSENMSCPS.textContent="";
+    reqNTENMSNE.textContent="";
+    reqAINTMSAI.textContent="";
+    reqsNotes.textContent="";
+    skills.textContent="";
+    instructorReview.textContent="";
+    courseloadReview.textContent="";
+    inputReview.textContent="";
+
     if (!requestedCourse) {
       resultMessage.textContent = "Please enter a subject code";
-      subject.textContent="";
-      title.textContent="";
-      hours.textContent="";
-      description.textContent="";
-      notes.textContent="";
-      offerings.textContent="";
-      restrictions.textContent="";
-      rigor.textContent="";
-      reqCSENPHD.textContent="";
-      reqCSENMS.textContent="";
-      reqCSENMSCPS.textContent="";
-      reqNTENMSNE.textContent="";
-      reqAINTMSAI.textContent="";
-      reqsNotes.textContent="";
-      skills.textContent="";
-      instructorReview.textContent="";
-      courseloadReview.textContent="";
-      inputReview.textContent="";
       return;
     }
+
     //permit lower case entries
     let temp = requestedCourse.toString().toUpperCase();
     requestedCourse = temp;
   
-
-    if (requestedCourse.length <8){
+    if (requestedCourse.length === 0){
       resultMessage.textContent = "Not found / not available";
-      subject.textContent="";
-      title.textContent="";
-      hours.textContent="";
-      description.textContent="";
-      notes.textContent="";
-      offerings.textContent="";
-      restrictions.textContent="";
-      rigor.textContent="";
-      reqCSENPHD.textContent="";
-      reqCSENMS.textContent="";
-      reqCSENMSCPS.textContent="";
-      reqNTENMSNE.textContent="";
-      reqAINTMSAI.textContent="";
-      reqsNotes.textContent="";
-      skills.textContent="";
-      instructorReview.textContent="";
-      courseloadReview.textContent="";
-      inputReview.textContent="";
       return;
     }
 
@@ -558,7 +544,8 @@
     blankSuggestion.text=" ";
     blankSuggestion.value="blank";
     courseSuggestedList.appendChild(blankSuggestion);
-
+    let searchResultMessage = document.getElementById('searchResultMessage');
+    
     //Step 2 - call lookupForSuggestions() to get an array of course objects matching user input
     let user_input=document.getElementById('prefixInput').value;
     let listSuggestions=[];
