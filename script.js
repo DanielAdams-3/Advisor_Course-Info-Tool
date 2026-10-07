@@ -75,7 +75,7 @@
     }
 
     //refine the input, if not bad
-    let temp = requestedCourse.toString.toUpperCase;
+    let temp = requestedCourse.toString().toUpperCase();
     requestedCourse = temp;
 
     let result = "";
@@ -185,9 +185,8 @@
       return;
     }
     //permit lower case entries
-    let temp = String(requestedCourse);
-    temp = temp.toUpperCase();
-    requestedCourse = temp.toUpperCase;
+    let temp = requestedCourse.toString().toUpperCase();
+    requestedCourse = temp;
   
 
     if (requestedCourse.length <8){
