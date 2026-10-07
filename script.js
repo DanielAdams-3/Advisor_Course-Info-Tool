@@ -75,9 +75,8 @@
     }
 
     //refine the input, if not bad
-    let temp = String(requestedCourse);
-    temp = temp.toUpperCase();
-    requestedCourse = temp.toUpperCase;
+    let temp = requestedCourse.toString.toUpperCase;
+    requestedCourse = temp;
 
     let result = "";
 
@@ -656,12 +655,12 @@
     var i, currMessage;
     for (i = 0; i < openMessages.length; i++) {
       currMessage=openMessages[i];
-      //currMessage=messageClass[i];
-      //if (currMessage != protectedMessage){
-      var currMessageVisible = currMessage.classList.contains("fade-in-messageRow");
-      if (currMessageVisible === true){
-        currMessage.className="fade-out-messageRow";
-        changeHelpButton(helpButtonClass[i]);
+      if (currMessage != protectedMessage){
+        var currMessageVisible = currMessage.classList.contains("fade-in-messageRow");
+        if (currMessageVisible === true){
+          currMessage.className="fade-out-messageRow";
+          changeHelpButton(helpButtonClass[i]);
+        }
       }
     }
   }
