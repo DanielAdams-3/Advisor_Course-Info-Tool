@@ -75,8 +75,10 @@
     }
 
     //refine the input, if not bad
-    let temp = requestedCourse.toUpperCase();
-    requestedCourse = temp;
+    let temp = String(requestedCourse);
+    temp = temp.toUpperCase();
+    requestedCourse = temp.toUpperCase;
+
     let result = "";
 
 
