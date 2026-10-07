@@ -545,7 +545,7 @@
     blankSuggestion.value="blank";
     courseSuggestedList.appendChild(blankSuggestion);
     let searchResultMessage = document.getElementById('searchResultMessage');
-    
+
     //Step 2 - call lookupForSuggestions() to get an array of course objects matching user input
     let user_input=document.getElementById('prefixInput').value;
     let listSuggestions=[];
@@ -636,7 +636,6 @@
 
     //var messageClass = document.getElementsByClassName("helpMessageRow");
     var openMessages = document.getElementsByClassName("fade-in-messageRow");
-    var helpButtonClass=document.getElementsByClassName("buttonHelp");
 
     var i, currMessage;
     for (i = 0; i < openMessages.length; i++) {
@@ -649,12 +648,15 @@
         }
       }
     }
+
+    var helpButtonClass=document.getElementsByClassName("buttonHelp");
+    changeHelpButton(helpButtonClass[i]);
+
   }
 
   //https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
   function ShowHideMessageRow(x){
     const helpMessageRowToDisplay=x;
-
     HideAllOtherMessages(helpMessageRowToDisplay);
 
     const messageShown=helpMessageRowToDisplay.classList.contains("fade-in-messageRow");
