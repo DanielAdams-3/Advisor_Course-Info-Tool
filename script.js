@@ -79,7 +79,6 @@
 
     let result = "";
 
-
     //Verify input is eligible for direct search, not autocomplete
     //If user inputs at least 8 characters and none are spaces (eg CSCI5214)
     if (requestedCourse.length === 8 && requestedCourse.contains(' ')===false)
@@ -109,8 +108,8 @@
     let suggestionsLength = document.getElementById('suggestionSelected');
     let y = suggestionsLength.options.length;
     //SEARCH RESULT
-    //CASE 1 - FAILURE - //result.courseSubject.length===0
-    if ((result === undefined || result==="") && y === 0){
+    //CASE 1 - FAILURE
+    if ((result === undefined || result==="" || result.courseSubject.length===0) && y === 0){
       resultMessage.textContent = "Not found / not available";
       return;
     }
