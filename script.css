@@ -350,9 +350,9 @@ button {
   padding-top:0rem;
   padding-bottom:0rem;
   text-align:left;
-  background-color:#0A3758;
-  color:#ffffff;
-  border-color:#0A3758;
+  background-color:#CFB87C;
+  color:#000000;
+  border-color:#CFB87C;
 }
 
 .buttonHelp.opened:after, .h3buttonHelp.opened:after {
@@ -386,12 +386,12 @@ button {
 }
 
 .h3buttonHelp:hover{
-  background-color:#096FAE;
+  background-color:#0A3758;
   color:#ffffff;
-  border-color:#096FAE;
+  border-color:#0A3758;
 }
 
-.h3buttonHelp.active:hover {
+.h3buttonHelp.opened:hover {
   background-color:#ff6060;
   color:#ffffff;
   border-color:#ff6060;

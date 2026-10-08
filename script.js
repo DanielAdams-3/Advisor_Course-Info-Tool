@@ -104,13 +104,13 @@
     //otherwise, populate autocomplete suggestions
     else{
       //Do partial search and generate autocomplete suggestions 
-      populateAutocompleteSuggestions();
+      populateuAtocompleteSuggestions();
     }
     let suggestionsLength = document.getElementById('suggestionSelected');
     let y = suggestionsLength.options.length;
     //SEARCH RESULT
     //CASE 1 - FAILURE - //result.courseSubject.length===0
-    if (result === undefined || result==="" || y === 0){
+    if ((result === undefined || result==="") && y === 0){
       resultMessage.textContent = "Not found / not available";
       return;
     }
@@ -646,22 +646,27 @@
     }
   }
 
-  function FixAllButtons(){
+  function FixAllButtons(y){
     var buttonHelpClass = document.getElementsByClassName("h3buttonHelp");
-    var currButton
+    var protectedButton=y;
+    var i, currButton, currButtonRed;
     for (i=0;i<buttonHelpClass.length;i++){
       currButton=buttonHelpClass[i];
-      if (currButton.classList.contains("opened") || currButton.classList.contains("change")){
-        changeHelpButton(currButton);
+      if (currButton != protectedButton){
+        currButtonRed=currButton.classList.contains("opened");
+        if (currButtonRed === true){
+          changeHelpButton(currButton);
+        }
       }
     }
   }
 
   //https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
-  function ShowHideMessageRow(x){
+  function ShowHideMessageRow(x,y){
     const helpMessageRowToDisplay=x;
+    let currButton = y;
     HideAllOtherMessages(helpMessageRowToDisplay);
-    FixAllButtons();
+    FixAllButtons(y);
 
     const messageShown=helpMessageRowToDisplay.classList.contains("fade-in-messageRow");
     if (messageShown === false)
