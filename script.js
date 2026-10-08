@@ -652,7 +652,7 @@
     var currButton
     for (i=0;i<buttonHelpClass.length;i++){
       currButton=buttonHelpClass[i];
-      if (currButton.classList.contains("opened") && currButton.classList.contains("change")){
+      if (currButton.classList.contains("opened") || currButton.classList.contains("change")){
         changeHelpButton(currbutton);
       }
     }
