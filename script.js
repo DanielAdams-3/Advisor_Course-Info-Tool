@@ -105,7 +105,6 @@
     else{
       //Do partial search and generate autocomplete suggestions 
       populateAutocompleteSuggestions();
-
     }
     let suggestionsLength = document.getElementById('suggestionSelected');
     let y = suggestionsLength.options.length;
@@ -653,7 +652,7 @@
     for (i=0;i<buttonHelpClass.length;i++){
       currButton=buttonHelpClass[i];
       if (currButton.classList.contains("opened") || currButton.classList.contains("change")){
-        changeHelpButton(currbutton);
+        changeHelpButton(currButton);
       }
     }
   }
