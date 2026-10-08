@@ -87,53 +87,54 @@
       requestedCourse = temp;
     }
     
-    //direct search
+    //direct search - user puts in acceptable-length entry that could be in the system (for ex: CSCI-5214)
     if (requestedCourse.length === 9){
-      //clean input by removing '-' from input, for ex: CSCI-5214
+      //clean input by removing '-' from input, for ex: CSCI-5214 becomes CSCI 5214
       if (requestedCourse.charAt(4) != ' ')
       {
         temp = requestedCourse.slice(0,4)+ ' ' + requestedCourse.slice(5);
         requestedCourse = temp;
       }
-
-      //LOOK FOR RESULT IN COURSECATALOG.JS
-      //call function retrieveCourseObject(x), x is requestedCourse input post-validation
+      //check if result is in system
+      //call function retrieveCourseObject(x), x is requestedCourse input
       result = retrieveCourseObject(requestedCourse);
+      //if does not match, we should stop
+      if ((result=== undefined || result==="" || result.courseSubject.length === 0)){
+        resultMessage.textContent = "Not found / not available";
+        return;
+      }
+      //otherwise, looks like we got something!
+      else{
+        //CASE 2 - SUCCESS
+        subject.textContent=result.courseSubject;
+        title.textContent=result.title;
+        hours.textContent=result.credits;
+        description.textContent=result.description;
+        notes.textContent=result.notes;
+        offerings.textContent=result.offerings;
+        restrictions.textContent=result.restrictions;
+        rigor.textContent=result.rigor;
+        reqCSENPHD.textContent=result.reqCSENPHD;
+        reqCSENMS.textContent=result.reqCSENMS;
+        reqCSENMSCPS.textContent=result.reqCSENMSCPS;
+        reqNTENMSNE.textContent=result.reqNTENMSNE;
+        reqAINTMSAI.textContent=result.reqAINTMSAI;
+        reqsNotes.textContent=result.reqNote;
+        skills.textContent=result.skills;
+        instructorReview.textContent=result.reviewInstructor;
+        courseloadReview.textContent=result.reviewCourseload;
+        inputReview.textContent=result.reviewInput;
+        resultMessage.textContent="Completed";
+      }
     }
-    //otherwise, populate autocomplete suggestions
-    else{
-      //Do partial search and generate autocomplete suggestions 
+
+    //CASE - user put in something but not nothing -  user put in short code or there are suggestions,
+    //now we check if there is anything matching what they input. 
+    if ((requestedCourse.length>0 && requestedCourse.length<9))
+    {
       populateAutocompleteSuggestions();
     }
-    let suggestionsLength = document.getElementById('suggestionSelected');
-    let y = suggestionsLength.options.length;
-    //SEARCH RESULT
-    //CASE 1 - FAILURE
-    if ((result === undefined || result==="" || result.courseSubject.length===0) && y === 0){
-      resultMessage.textContent = "Not found / not available";
-      return;
-    }
-
-    //CASE 2 - SUCCESS
-    subject.textContent=result.courseSubject;
-    title.textContent=result.title;
-    hours.textContent=result.credits;
-    description.textContent=result.description;
-    notes.textContent=result.notes;
-    offerings.textContent=result.offerings;
-    restrictions.textContent=result.restrictions;
-    rigor.textContent=result.rigor;
-    reqCSENPHD.textContent=result.reqCSENPHD;
-    reqCSENMS.textContent=result.reqCSENMS;
-    reqCSENMSCPS.textContent=result.reqCSENMSCPS;
-    reqNTENMSNE.textContent=result.reqNTENMSNE;
-    reqAINTMSAI.textContent=result.reqAINTMSAI;
-    reqsNotes.textContent=result.reqNote;
-    skills.textContent=result.skills;
-    instructorReview.textContent=result.reviewInstructor;
-    courseloadReview.textContent=result.reviewCourseload;
-    inputReview.textContent=result.reviewInput;
-    resultMessage.textContent="Completed";
+    /*We're done -- populateautocompletesuggestions handles messages from this point*/
   }
 
   //traditional search, validates the inputs, does a traditional search by taking in the course subject code
