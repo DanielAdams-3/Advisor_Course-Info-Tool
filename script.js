@@ -682,7 +682,7 @@
       //helpMessageRowToDisplay.style.borderRadius="2px";
       //helpMessageRowToDisplay.style.borderColor="#000000";
       //helpMessageRowToDisplay.style.display="block";
-      if (buttonRed=== false){
+      if (buttonRed === false){
         changeHelpButton(currButton);
       }
     }
