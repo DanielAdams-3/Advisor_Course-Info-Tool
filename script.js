@@ -95,10 +95,14 @@
         temp = requestedCourse.slice(0,4)+ ' ' + requestedCourse.slice(5);
         requestedCourse = temp;
       }
+      
       //check if result is in system
       //call function retrieveCourseObject(x), x is requestedCourse input
       result = retrieveCourseObject(requestedCourse);
-      //if does not match, we should stop
+      print(result);
+      resultMessage.textContent=result;
+      return;
+      //FIXME
       if ((result=== undefined || result==="" || result.courseSubject.length === 0)){
         resultMessage.textContent = "Not found / not available";
         return;
