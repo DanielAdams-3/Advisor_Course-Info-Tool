@@ -355,7 +355,7 @@ button {
   border-color:#EEF5F8;
 }
 
-.buttonHelp.after:opened, .h3buttonHelp.after:opened {
+.buttonHelp.opened:after, .h3buttonHelp.opened:after {
   content: '-';
 }
 
@@ -391,7 +391,7 @@ button {
   border-color:#096FAE;
 }
 
-/*Formatting when user hovers over primary buttons with mouse*/
+/*Formatting when user hovers over  buttons with mouse*/
 button:hover
 {
   background-color: #0A3758;
@@ -516,7 +516,7 @@ button:hover
   }
 }
 
-/*for menu buttons when opened*/
+/*for buttons when opened*/
 .opened{
   background-color:#ff6060;
   color:#000000;
@@ -565,6 +565,7 @@ button:hover
 .active, .accordion.active:hover, .active:hover {
   background-color:#ff6060;
   color:#ffffff;
+  transition-duration:0.25s;
 }
 
 .accordion:after {

@@ -16,7 +16,6 @@
     return;
   }
 
-
   function anyLenCourseNumSearch(){
     let requestedCourse = document.getElementById('prefixInput');
 
@@ -634,31 +633,36 @@
   function HideAllOtherMessages(x){
     const protectedMessage = x;
 
-    //var messageClass = document.getElementsByClassName("helpMessageRow");
     var openMessages = document.getElementsByClassName("fade-in-messageRow");
 
-    var i, currMessage, currMessageVisible;
+    var i, currMessage, currMessageVisible
     for (i = 0; i < openMessages.length; i++) {
       currMessage=openMessages[i];
       if (currMessage != protectedMessage){
         currMessageVisible = currMessage.classList.contains("fade-in-messageRow");
         if (currMessageVisible === true){
           currMessage.className="fade-out-messageRow";
-          changeHelpButton(helpButtonClass[i]);
         }
       }
     }
+  }
 
-    /*this is causing the top button to open whenever another button opens
-    var helpButtonClass=document.getElementsByClassName("buttonHelp");
-    changeHelpButton(helpButtonClass[i]);
-    */
+  function FixAllButtons(){
+    var buttonHelpClass = document.getElementsByClassName("h3buttonHelp");
+    var currButton
+    for (i=0;i<buttonHelpClass.length;i++){
+      currButton=buttonHelpClass[i];
+      if (currButton.classList.contains("opened") && currButton.classList.contains("changed")){
+        changeHelpButton(currbutton);
+      }
+    }
   }
 
   //https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
   function ShowHideMessageRow(x){
     const helpMessageRowToDisplay=x;
     HideAllOtherMessages(helpMessageRowToDisplay);
+    FixAllButtons();
 
     const messageShown=helpMessageRowToDisplay.classList.contains("fade-in-messageRow");
     if (messageShown === false)
