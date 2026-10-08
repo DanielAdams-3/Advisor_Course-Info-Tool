@@ -104,7 +104,7 @@
     //otherwise, populate autocomplete suggestions
     else{
       //Do partial search and generate autocomplete suggestions 
-      populateuAtocompleteSuggestions();
+      populateAutocompleteSuggestions();
     }
     let suggestionsLength = document.getElementById('suggestionSelected');
     let y = suggestionsLength.options.length;
@@ -666,9 +666,10 @@
     const helpMessageRowToDisplay=x;
     let currButton = y;
     HideAllOtherMessages(helpMessageRowToDisplay);
-    FixAllButtons(y);
+    FixAllButtons(currButton);
 
     const messageShown=helpMessageRowToDisplay.classList.contains("fade-in-messageRow");
+    const buttonRed = currButton.classList.contains("opened");
     if (messageShown === false)
     { 
       helpMessageRowToDisplay.className="fade-in-messageRow";
@@ -681,7 +682,11 @@
       //helpMessageRowToDisplay.style.borderRadius="2px";
       //helpMessageRowToDisplay.style.borderColor="#000000";
       //helpMessageRowToDisplay.style.display="block";
+      if (buttonRed=== false){
+        changeHelpButton(currButton);
+      }
     }
+
     else{
       helpMessageRowToDisplay.className="fade-out-messageRow";
       /*helpMessageRowToDisplay.style.opacity="0.0";
@@ -694,6 +699,9 @@
       helpMessageRowToDisplay.style.borderColor="#FFFFFF";
       helpMessageRowToDisplay.style.border="#FFFFFF";
       helpMessageRowToDisplay.style.display="none";*/
+      if (buttonRed === true){
+        changeHelpButton(currButton);
+      }
     }
   }
 

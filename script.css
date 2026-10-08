@@ -393,7 +393,7 @@ button {
 
 .h3buttonHelp.opened:hover {
   background-color:#ff6060;
-  color:#ffffff;
+  color:#000000;
   border-color:#ff6060;
 }
 /*Formatting when user hovers over  buttons with mouse*/
