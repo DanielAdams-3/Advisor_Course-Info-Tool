@@ -350,9 +350,9 @@ button {
   padding-top:0rem;
   padding-bottom:0rem;
   text-align:left;
-  background-color:#EEF5F8;
-  color:#000000;
-  border-color:#EEF5F8;
+  background-color:#0A3758;
+  color:#ffffff;
+  border-color:#0A3758;
 }
 
 .buttonHelp.opened:after, .h3buttonHelp.opened:after {
@@ -602,9 +602,6 @@ button:hover
 
 .selectRow{
   white-space:pre-line;
-  justify-content:left;
-  align-self:auto;
-  margin-top:0.25rem;
   font-size:1rem;
   display:block;
   min-width:98%;
