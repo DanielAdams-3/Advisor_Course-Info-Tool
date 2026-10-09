@@ -123,7 +123,7 @@
           <h3>Search by Full Course Number</h3>  
         </div>
         <div class="row">
-          <button class="buttonHelp" id="searchStandardHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('searchMessageOnClick')); javascript:changeHelpButton(this)">About</button>
+          <button class="buttonHelp" id="searchStandardHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('searchMessageOnClick'), this)">About</button>
         </div>
         <div class = "helpMessageRow" id="searchMessageOnClick"><h4>About Course Search</h4><p>Requires a full course number (subject code). For example, to get course information about 'CSCI 5214 Big Data Architecture', type CSCI5214, CSCI-5214, or CSCI 5214. If you do not know the full number, use autocomplete tab. For Special Topics courses, use the Special Topics Search tab.</p></div>
         <div class="stepRow">
@@ -187,7 +187,7 @@
             <h3>Search by Special Topic</h3>
           </div>
           <div class="row">
-            <button class="buttonHelp" id="searchTopicsHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('specialTopicsMessageOnClick'));
+            <button class="buttonHelp" id="searchTopicsHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('specialTopicsMessageOnClick'),this);
             javascript:changeHelpButton(this)">About</button>
           </div>
           <div class = "helpMessageRow" id="specialTopicsMessageOnClick"><h4>About Special Topics Search</h4><p>Special Topics Search allows search for specific sections of the available Special Topics courses, filtered by semester.</p></div>
@@ -287,7 +287,7 @@
           </div>  
           
           <div class="row">
-            <button class="h3buttonHelp" id="notesHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('notesMessageOnClick'),)">Class Notes&nbsp;</button> 
+            <button class="h3buttonHelp" id="notesHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('notesMessageOnClick'),this)">Class Notes&nbsp;</button> 
           </div>
           <div class = "helpMessageRow" id="notesMessageOnClick"><h4>About Class Notes</h4><p>Data pulled from Class Search. Notes are from most recent offering from Fall 2024-Fall 2026. If mutliple sections were offered, notes are split by section</p></div>
           <div class="row">
@@ -392,7 +392,7 @@
         <hr/>
         <footer>
           <div class="row">
-            <button class="buttonHelp" id="webpageHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('webpageMessageOnClick')); javascript:changeHelpButton(this)">Webpage Information</button>
+            <button class="buttonHelp" id="webpageHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('webpageMessageOnClick'),this)">Webpage Information</button>
           </div>
           <div class = "helpMessageRow" id="webpageMessageOnClick"><h4>Note</h4><p>Developed by Daniel Adams, Sr. GPS, Department of Computer Science</p></div>
           <div class="row">

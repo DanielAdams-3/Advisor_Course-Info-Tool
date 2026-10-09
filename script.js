@@ -102,7 +102,7 @@
       print(result);
       resultMessage.textContent=result;
       return;
-      //FIXME
+
       if ((result=== undefined || result==="" || result.courseSubject.length === 0)){
         resultMessage.textContent = "Not found / not available";
         return;
