@@ -131,9 +131,55 @@
     //now we check if there is anything matching what they input. 
     if ((requestedCourse.length>0 && requestedCourse.length<9))
     {
-      populateAutocompleteSuggestions();
+      //populateAutocompleteSuggestions();
+      //Step 1 - clear out all previous suggestions
+      const courseSuggestedList=document.getElementById('suggestionSelected'); 
+      let y = courseSuggestedList.options.length;
+      if (y>0){
+        while (y>0){
+          courseSuggestedList.remove(0);
+          y = courseSuggestedList.options.length;
+        }
+      } 
+
+      let blankSuggestion=document.createElement("option");
+      blankSuggestion.text=" ";
+      blankSuggestion.value="blank";
+      courseSuggestedList.appendChild(blankSuggestion);
+      let searchResultMessage = document.getElementById('searchResultMessage');
+
+      //Step 2 - call lookupForSuggestions() to get an array of course objects matching user input
+      let user_input=document.getElementById('prefixInput').value;
+      let listSuggestions=[];
+      if (user_input.length===0){
+        searchResultMessage.textContent="No input provided";
+        return;
+      }
+      listSuggestions = lookupForSuggestions(user_input);
+
+      if (listSuggestions.length===0){
+        searchResultMessage.textContent="No suggestions available";
+        return;
+      }
+
+      //Step 3 - if any results, populate the suggestions dropdown
+      for (let m=0;m<listSuggestions.length;m++){
+        let newSuggestion=document.createElement("option");
+        var new_option_value=listSuggestions[m].courseSubject;
+        var new_option_text=listSuggestions[m].courseSubject+" - "+listSuggestions[m].title;
+        newSuggestion.text=new_option_text;
+        newSuggestion.value=new_option_value;
+        courseSuggestedList.appendChild(newSuggestion);
+      }
+      searchResultMessage.textContent="Suggestions added";
+      return;
     }
-    /*We're done -- populateautocompletesuggestions should handle messages from this point*/
+    //CASE 3 - user input found no matches, no suggestions, no nothing.
+    else
+    {
+      resultMessage.textContent="No matches found, please try again."
+      return;
+    } 
   }
 
   //traditional search, validates the inputs, does a traditional search by taking in the course subject code
@@ -525,6 +571,7 @@
     searchResultMessage.textContent="Error, search failed";
     return;
   }
+
 
   function populateAutocompleteSuggestions(){
     //Step 1 - clear out all previous suggestions
