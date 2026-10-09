@@ -561,8 +561,7 @@
         instructorReview.textContent=courseObj.reviewInstructor;
         courseloadReview.textContent=courseObj.reviewCourseload;
         inputReview.textContent=courseObj.reviewInput;
-
-        searchResultMessage="Completed";
+        searchResultMessage.textContent="Completed";
         return;
       }
     }
