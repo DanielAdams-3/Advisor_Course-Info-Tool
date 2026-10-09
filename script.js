@@ -17,8 +17,6 @@
   }
 
   function anyLenCourseNumSearch(){
-    let requestedCourse = document.getElementById('prefixInput');
-
     /*get fields*/
     const resultMessage = document.getElementById('searchResultMessage');
     let subject = document.getElementById('resultSubject');
@@ -39,7 +37,9 @@
     let instructorReview = document.getElementById('reviewInstructor');
     let courseloadReview = document.getElementById('reviewCourseload');
     let inputReview = document.getElementById('reviewInput');
-    
+
+    const requestedCourse = document.getElementById('prefixInput');
+
     /*clear out previous results*/
     subject.textContent="";
     title.textContent="";
@@ -61,69 +61,54 @@
     inputReview.textContent="";
 
     //validate if input is too long or non-existent
-    let badInput=false;
-    //check for no input or too much input
     if (!requestedCourse || requestedCourse.length>=10){
-      badInput=true;
-    }
-  
-    if (badInput === true)
-    {
-      resultMessage.textContent = "Not found / not available";
+      resultMessage.textContent = "missing input or too much input";
       return;
     }
 
-    //refine the input, if not bad
-    //let temp = requestedCourse.toString().toUpperCase();
-    let temp = requestedCourse;
-    let result = "";
-
     //Verify input is eligible for direct search, not autocomplete
     //If user inputs at least 8 characters and none are spaces (eg CSCI5214)
-    if (requestedCourse.length === 8 && requestedCourse.contains(' ')===false)
+    var temp;
+    if ((requestedCourse.length === 8 && requestedCourse.contains(' ')) === false)
     {
       temp = requestedCourse.slice(0,4) + ' ' + requestedCourse.slice(4);
       requestedCourse = temp;
     }
     
-    //direct search - user puts in acceptable-length entry that could be in the system (for ex: CSCI-5214)
-    if (requestedCourse.length === 9){
-      //clean input by removing '-' from input, for ex: CSCI-5214 becomes CSCI 5214
-      if (requestedCourse.charAt(4) != ' ')
-      {
+    //direct search - user puts in acceptable-length entry that could be in the system (for ex: CSCI-5214, CSCI 5214)
+    //clean input by removing '-' from input, for ex: CSCI-5214 becomes CSCI 5214
+
+    if (requestedCourse.length === 9 && requestedCourse.charAt(4) != ' '){
         temp = requestedCourse.slice(0,4)+ ' ' + requestedCourse.slice(5);
         requestedCourse = temp;
-      }
-      
-      //check if result is in system by calling retrieveCourseObject(x), x is requestedCourse input
-      result = retrieveCourseObject(requestedCourse);
+    }
+    
+    //check if result is in system by calling retrieveCourseObject(x), x is requestedCourse input
+    let result = retrieveCourseObject(requestedCourse);
 
-      //CASE #1 - exact match found
-      if (result.courseSubject.length === 9){
-        subject.textContent=result.courseSubject;
-        title.textContent=result.title;
-        hours.textContent=result.credits;
-        description.textContent=result.description;
-        notes.textContent=result.notes;
-        offerings.textContent=result.offerings;
-        restrictions.textContent=result.restrictions;
-        rigor.textContent=result.rigor;
-        reqCSENPHD.textContent=result.reqCSENPHD;
-        reqCSENMS.textContent=result.reqCSENMS;
-        reqCSENMSCPS.textContent=result.reqCSENMSCPS;
-        reqNTENMSNE.textContent=result.reqNTENMSNE;
-        reqAINTMSAI.textContent=result.reqAINTMSAI;
-        reqsNotes.textContent=result.reqNote;
-        skills.textContent=result.skills;
-        instructorReview.textContent=result.reviewInstructor;
-        courseloadReview.textContent=result.reviewCourseload;
-        inputReview.textContent=result.reviewInput;
-        resultMessage.textContent="Completed";
-      }
-      //case #2 - no exact match found
-      else if ((result=== undefined || result==="" || result.courseSubject.length === 0)){
-        resultMessage.textContent = "Result not found, checking for partial matches";
-      }
+    //CASE #1 - exact match found
+    if (result.courseSubject.length === 9){
+      subject.textContent=result.courseSubject;
+      title.textContent=result.title;
+      hours.textContent=result.credits;
+      description.textContent=result.description;
+      notes.textContent=result.notes;
+      offerings.textContent=result.offerings;
+      restrictions.textContent=result.restrictions;
+      rigor.textContent=result.rigor;
+      reqCSENPHD.textContent=result.reqCSENPHD;
+      reqCSENMS.textContent=result.reqCSENMS;
+      reqCSENMSCPS.textContent=result.reqCSENMSCPS;
+      reqNTENMSNE.textContent=result.reqNTENMSNE;
+      reqAINTMSAI.textContent=result.reqAINTMSAI;
+      reqsNotes.textContent=result.reqNote;
+      skills.textContent=result.skills;
+      instructorReview.textContent=result.reviewInstructor;
+      courseloadReview.textContent=result.reviewCourseload;
+      inputReview.textContent=result.reviewInput;
+
+      resultMessage.textContent="Completed";
+      return;
     }
 
     //CASE 2A - user put in something but not nothing -  user put in short code or there are suggestions,
@@ -173,7 +158,14 @@
       searchResultMessage.textContent="Suggestions added";
       return;
     }
-    //CASE 3 - user input found no matches, no suggestions, no nothing.
+    
+    //case #3 - bad/no results
+    else if (result=== undefined || result==="" || result.courseSubject.length === 0){
+      resultMessage.textContent = "result missing, undefined, or no result found at all";
+      return;
+    }
+    
+    //CASE 4 - something else hapened.
     else
     {
       resultMessage.textContent="No matches found, please try again."
