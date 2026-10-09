@@ -97,6 +97,7 @@
       }
       
       //check if result is in system
+      //FIXME
       //call function retrieveCourseObject(x), x is requestedCourse input
       result = retrieveCourseObject(requestedCourse);
       print(result);
