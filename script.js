@@ -39,7 +39,10 @@
     let inputReview = document.getElementById('reviewInput');
 
     let variable = document.getElementById('prefixInput');
+    let variable2 = document.getElementById('prefixInput');
     requestedCourse = toString(variable);
+    requestedCourse2 = variable2.textContent;
+
     /*clear out previous results*/
     subject.textContent="";
     title.textContent="";
@@ -68,9 +71,10 @@
 
     //Verify input is eligible for direct search, not autocomplete
     //If user inputs at least 8 characters and none are spaces (eg CSCI5214)
-    var temp;
+    var temp, temp2;
     if ((requestedCourse.length === 8 && requestedCourse.contains(' ')) === false)
     {
+      temp2 = requestedCourse2.slice(0,4) + ' ' + requestedCourse2.slice(4);
       temp = requestedCourse.slice(0,4) + ' ' + requestedCourse.slice(4);
       requestedCourse = temp;
     }
