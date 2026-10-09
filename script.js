@@ -74,9 +74,8 @@
     }
 
     //refine the input, if not bad
-    let temp = requestedCourse.toString().toUpperCase();
-    requestedCourse = temp;
-
+    //let temp = requestedCourse.toString().toUpperCase();
+    let temp = requestedCourse;
     let result = "";
 
     //Verify input is eligible for direct search, not autocomplete
