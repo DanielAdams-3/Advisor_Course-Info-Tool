@@ -38,9 +38,10 @@
     let courseloadReview = document.getElementById('reviewCourseload');
     let inputReview = document.getElementById('reviewInput');
 
-    let variable = document.getElementById('prefixInput');
+    //let variable = document.getElementById('prefixInput');
     let variable2 = document.getElementById('prefixInput');
-    requestedCourse = toString(variable);
+    
+    //requestedCourse = toString(variable);
     requestedCourse2 = variable2.textContent;
 
     /*clear out previous results*/
@@ -64,21 +65,23 @@
     inputReview.textContent="";
 
     //validate if input is too long or non-existent
-    if (!requestedCourse || requestedCourse.length>=10){
-      resultMessage.textContent = "missing input or too much input";
+    if (!requestedCourse2 || requestedCourse2.length>=10){
+      resultMessage2.textContent = "missing input or too much input";
       return;
     }
 
     //Verify input is eligible for direct search, not autocomplete
     //If user inputs at least 8 characters and none are spaces (eg CSCI5214)
     var temp, temp2;
-    if ((requestedCourse.length === 8 && requestedCourse.contains(' ')) === false)
+    if ((requestedCourse2.length === 8 && requestedCourse2.contains(' ')) === false)
     {
       temp2 = requestedCourse2.slice(0,4) + ' ' + requestedCourse2.slice(4);
-      temp = requestedCourse.slice(0,4) + ' ' + requestedCourse.slice(4);
-      requestedCourse = temp;
+      //temp = requestedCourse.slice(0,4) + ' ' + requestedCourse.slice(4);
+      requestedCourse2 = temp2;
     }
     
+    //TEMPORARY MEASURE - FIXME
+    let requestedCourse = requestedCourse2;
     //direct search - user puts in acceptable-length entry that could be in the system (for ex: CSCI-5214, CSCI 5214)
     //clean input by removing '-' from input, for ex: CSCI-5214 becomes CSCI 5214
 
