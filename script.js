@@ -96,21 +96,11 @@
         requestedCourse = temp;
       }
       
-      //check if result is in system
-      //FIXME
-      //call function retrieveCourseObject(x), x is requestedCourse input
+      //check if result is in system by calling retrieveCourseObject(x), x is requestedCourse input
       result = retrieveCourseObject(requestedCourse);
-      print(result);
-      resultMessage.textContent=result;
-      return;
 
-      if ((result=== undefined || result==="" || result.courseSubject.length === 0)){
-        resultMessage.textContent = "Not found / not available";
-        return;
-      }
-      //otherwise, looks like we got something!
-      else{
-        //CASE 2 - SUCCESS
+      //CASE #1 - exact match found
+      if (result.courseSubject.length === 9){
         subject.textContent=result.courseSubject;
         title.textContent=result.title;
         hours.textContent=result.credits;
@@ -131,15 +121,19 @@
         inputReview.textContent=result.reviewInput;
         resultMessage.textContent="Completed";
       }
+      //case #2 - no exact match found
+      else if ((result=== undefined || result==="" || result.courseSubject.length === 0)){
+        resultMessage.textContent = "Result not found, checking for partial matches";
+      }
     }
 
-    //CASE - user put in something but not nothing -  user put in short code or there are suggestions,
+    //CASE 2A - user put in something but not nothing -  user put in short code or there are suggestions,
     //now we check if there is anything matching what they input. 
     if ((requestedCourse.length>0 && requestedCourse.length<9))
     {
       populateAutocompleteSuggestions();
     }
-    /*We're done -- populateautocompletesuggestions handles messages from this point*/
+    /*We're done -- populateautocompletesuggestions should handle messages from this point*/
   }
 
   //traditional search, validates the inputs, does a traditional search by taking in the course subject code
