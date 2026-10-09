@@ -44,10 +44,7 @@
       </div>      
       <div class="tabContent" id="searchTraditionalTab">
         <div class="row">
-          <h3>Search by Full Course Number</h3>  
-        </div>
-        <div class="row">
-          <button class="buttonHelp" id="searchStandardHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('searchMessageOnClick'), this)">About</button>
+          <button class="h3buttonHelp" id="searchStandardHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('searchMessageOnClick'), this)">Search by Full Course Number</button>
         </div>
         <div class = "helpMessageRow" id="searchMessageOnClick"><h4>About Course Search</h4><p>Requires a full course number (subject code). For example, to get course information about 'CSCI 5214 Big Data Architecture', type CSCI5214, CSCI-5214, or CSCI 5214. If you do not know the full number, use autocomplete tab. For Special Topics courses, use the Special Topics Search tab.</p></div>
         <div class="stepRow">
@@ -65,10 +62,7 @@
       </div>
       <div class="tabContent" id="searchWithHelpTab">
         <div class="row">
-          <h3>(Testing) Course Number Search with AutoComplete</h3>
-        </div>
-        <div class="row">
-          <button class="buttonHelp" id="autoHelpButton"onclick="javascript:ShowHideMessageRow(document.getElementById('autocompleteMessageOnClick'),this)">About</button>
+          <button class="h3buttonHelp" id="autoHelpButton"onclick="javascript:ShowHideMessageRow(document.getElementById('autocompleteMessageOnClick'),this)">(Testing) Course Number Search with AutoComplete</button>
         </div>
         <div class = "helpMessageRow" id="autocompleteMessageOnClick">
           <h4>About AutoComplete</h4>
@@ -102,12 +96,9 @@
         </div>
       </div>
       <div class="tabContent" id="searchByTopics">
-        <div class = "row">
-          <h3>Search by Special Topic</h3>
-        </div>
         <div class="row">
-          <button class="buttonHelp" id="searchTopicsHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('specialTopicsMessageOnClick'),this);
-            javascript:changeHelpButton(this)">About</button>
+          <button class="h3buttonHelp" id="searchTopicsHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('specialTopicsMessageOnClick'),this);
+            javascript:changeHelpButton(this)">Search by Special Topic</button>
         </div>
         <div class = "helpMessageRow" id="specialTopicsMessageOnClick"><h4>About Special Topics Search</h4><p>Special Topics Search allows search for specific sections of the available Special Topics courses, filtered by semester.</p></div>
         <div class="stepRow">
