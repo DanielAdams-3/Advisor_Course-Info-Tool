@@ -38,8 +38,8 @@
     let courseloadReview = document.getElementById('reviewCourseload');
     let inputReview = document.getElementById('reviewInput');
 
-    let requestedCourse = document.getElementById('prefixInput');
-
+    let variable = document.getElementById('prefixInput');
+    requestedCourse = toString(variable);
     /*clear out previous results*/
     subject.textContent="";
     title.textContent="";
