@@ -38,7 +38,7 @@
     let courseloadReview = document.getElementById('reviewCourseload');
     let inputReview = document.getElementById('reviewInput');
 
-    const requestedCourse = document.getElementById('prefixInput');
+    let requestedCourse = document.getElementById('prefixInput');
 
     /*clear out previous results*/
     subject.textContent="";
