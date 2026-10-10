@@ -1,7 +1,6 @@
   //helper function for traditional search
   //returns the course object
   function retrieveCourseObject(requestedSubject) {
-    let resultMessage = document.getElementById('searchResultMessage');
     for (let i=0; i< courseCatalog.length;i++)
     {
       currCourseSubj=courseCatalog[i].courseSubject;
@@ -12,12 +11,12 @@
           return result;
         }
     }
-    resultMessage.textContent="failed search";
     return;
   }
 
-  async function anyLenCourseNumSearch(){
+  async function anyLenCourseNumSearch(x){
     /*get fields*/
+    let requestedCourse2=x;
     const resultMessage = document.getElementById('searchResultMessage');
     let subject = document.getElementById('resultSubject');
     let title = document.getElementById('resultTitle');
@@ -39,9 +38,9 @@
     let inputReview = document.getElementById('reviewInput');
 
     //let variable = document.getElementById('prefixInput');
-    let variable2 = document.getElementById('prefixInput').value.trim();
+    //let variable2 = document.getElementById('prefixInput').value.trim();
     //requestedCourse = toString(variable);
-    requestedCourse2 = variable2;
+    //requestedCourse2 = variable2;
 
     /*clear out previous results*/
     subject.textContent="";
@@ -91,7 +90,10 @@
     
     //check if result is in system by calling retrieveCourseObject(x), x is requestedCourse input
     let result = retrieveCourseObject(requestedCourse);
-
+    if (!result){
+      resultMessage.textContent="failed search";
+      return;
+    }
     //CASE #1 - exact match found
     if (result.courseSubject.length === 9){
       subject.textContent=result.courseSubject;
@@ -228,10 +230,6 @@
       resultMessage.textContent = "Please enter a subject code";
       return;
     }
-
-    /*FIXMEpermit lower case entries
-    let temp = requestedCourse.toString().toUpperCase();
-    requestedCourse = temp; */
   
     if (requestedCourse.length === 0){
       resultMessage.textContent = "Not found / not available";

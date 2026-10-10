@@ -80,7 +80,7 @@
               <input id="prefixInput" type="text" placeholder="Enter the first letter(s) of a course subject code..." />
             </div>
             <div class="row">
-              <button class="searchButton" onclick="anyLenCourseNumSearch()">Search by Full or Partial Course Number</button>
+              <button class="searchButton" onclick="anyLenCourseNumSearch(document.getElementById('prefixInput').value.trim())">Search by Full or Partial Course Number</button>
             </div>
           </div>
         <div class="stepRow">
