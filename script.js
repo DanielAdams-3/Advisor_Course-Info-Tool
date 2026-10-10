@@ -39,10 +39,9 @@
     let inputReview = document.getElementById('reviewInput');
 
     //let variable = document.getElementById('prefixInput');
-    let variable2 = document.getElementById('prefixInput');
-    
+    let variable2 = document.getElementById('prefixInput').value.trim();
     //requestedCourse = toString(variable);
-    requestedCourse2 = variable2.textContent;
+    requestedCourse2 = variable2;
 
     /*clear out previous results*/
     subject.textContent="";
