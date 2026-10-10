@@ -74,14 +74,14 @@
     //TEMPORARY MEASURE - FIXME
     let requestedCourse = requestedCourse2;
     //direct search - user puts in acceptable-length entry that could be in the system (for ex: CSCI-5214, CSCI 5214)
-    //clean input by removing '-' from input, for ex: CSCI-5214 becomes CSCI 5214
 
+    //clean input by removing '-' from input, for ex: CSCI-5214 becomes CSCI 5214
     if (requestedCourse.length === 9 && requestedCourse.charAt(4) != ' '){
         temp = requestedCourse.slice(0,4)+ ' ' + requestedCourse.slice(5);
         requestedCourse = temp;
     }
     
-    //check if result is in system by calling retrieveCourseObject(x), x is requestedCourse input
+    //check if result is in system by calling retrieveCourseObject(x)
     let result = retrieveCourseObject(requestedCourse);
     
     if (!result){
