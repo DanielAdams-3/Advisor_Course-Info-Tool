@@ -81,12 +81,12 @@
         requestedCourse = temp;
     }
     
+    
     //check if result is in system by calling retrieveCourseObject(x)
     let result = retrieveCourseObject(requestedCourse);
-    
 
     //CASE #1 - exact match found
-    if (result.courseSubject.length === 9){
+    if (result && result.courseSubject.length === 9){
       subject.textContent=result.courseSubject;
       title.textContent=result.title;
       hours.textContent=result.credits;
