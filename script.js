@@ -84,10 +84,6 @@
     //check if result is in system by calling retrieveCourseObject(x)
     let result = retrieveCourseObject(requestedCourse);
     
-    if (!result){
-      resultMessage.textContent="failed search";
-      return;
-    }
 
     //CASE #1 - exact match found
     if (result.courseSubject.length === 9){
@@ -112,6 +108,10 @@
 
       resultMessage.textContent="Completed";
       return;
+    }
+
+    else if (!result){
+      resultMessage.textContent="Searching for matches";
     }
 
     //CASE 2A - user put in something but not nothing -  user put in short code or there are suggestions,
