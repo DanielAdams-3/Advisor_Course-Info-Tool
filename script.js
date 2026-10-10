@@ -176,6 +176,166 @@
     } 
   }
 
+
+  //helper function for title search
+  //returns the course object
+  function retrieveCourseObjectByTitle(requestedTitle) {
+    for (let i=0; i< courseCatalog.length;i++)
+    {
+      currCourseTitle=courseCatalog[i].title;
+        if (currCourseTitle === requestedTitle)
+        {
+          let result=courseCatalog[i];
+          return result;
+        }
+    }
+    return;
+  }
+
+  async function anyLenCourseTitleSearch(x){
+    /*get fields*/
+    let requestedCourse=x;
+    const resultMessage = document.getElementById('searchResultMessage');
+    let subject = document.getElementById('resultSubject');
+    let title = document.getElementById('resultTitle');
+    let hours = document.getElementById('resultHours');
+    let description = document.getElementById('resultDescription');
+    let notes = document.getElementById('resultNotes');
+    let restrictions = document.getElementById('resultRestrictions');
+    let offerings = document.getElementById('resultOfferings');
+    let rigor=document.getElementById('resultRigor');
+    let reqCSENPHD = document.getElementById('reqsCSENPHD');
+    let reqCSENMS = document.getElementById('reqsCSENMS');
+    let reqCSENMSCPS = document.getElementById('reqsCSENMSCPS');
+    let reqNTENMSNE = document.getElementById('reqsNTENMSNE');
+    let reqAINTMSAI = document.getElementById('reqsAINTMSAI');
+    let reqsNotes=document.getElementById('reqsNotes');
+    let skills = document.getElementById('resultSkills');
+    let instructorReview = document.getElementById('reviewInstructor');
+    let courseloadReview = document.getElementById('reviewCourseload');
+    let inputReview = document.getElementById('reviewInput');
+
+    /*clear out previous results*/
+    subject.textContent="";
+    title.textContent="";
+    hours.textContent="";
+    description.textContent="";
+    notes.textContent="";
+    offerings.textContent="";
+    restrictions.textContent="";
+    rigor.textContent="";
+    reqCSENPHD.textContent="";
+    reqCSENMS.textContent="";
+    reqCSENMSCPS.textContent="";
+    reqNTENMSNE.textContent="";
+    reqAINTMSAI.textContent="";
+    reqsNotes.textContent="";
+    skills.textContent="";
+    instructorReview.textContent="";
+    courseloadReview.textContent="";
+    inputReview.textContent="";
+
+    //validate if input is non-existent
+    if (!requestedCourse || requestedCourse.length===0){
+      resultMessage.textContent = "Input is missing or invalid";
+      return;
+    }
+  
+    //check if result is in system by calling retrieveCourseObjectByTitle(x)
+    let result = retrieveCourseObjectByTitle(requestedCourse); 
+
+    //CASE #1 - exact match found
+    if (result){
+      subject.textContent=result.courseSubject;
+      title.textContent=result.title;
+      hours.textContent=result.credits;
+      description.textContent=result.description;
+      notes.textContent=result.notes;
+      offerings.textContent=result.offerings;
+      restrictions.textContent=result.restrictions;
+      rigor.textContent=result.rigor;
+      reqCSENPHD.textContent=result.reqCSENPHD;
+      reqCSENMS.textContent=result.reqCSENMS;
+      reqCSENMSCPS.textContent=result.reqCSENMSCPS;
+      reqNTENMSNE.textContent=result.reqNTENMSNE;
+      reqAINTMSAI.textContent=result.reqAINTMSAI;
+      reqsNotes.textContent=result.reqNote;
+      skills.textContent=result.skills;
+      instructorReview.textContent=result.reviewInstructor;
+      courseloadReview.textContent=result.reviewCourseload;
+      inputReview.textContent=result.reviewInput;
+
+      resultMessage.textContent="Completed";
+      return;
+    }
+
+    else if (!result){
+      resultMessage.textContent="Searching for matches";
+    }
+
+    //CASE - user put in something but not nothing - check for matches
+    if ((requestedCourse.length > 0))
+    {
+      //Step 1 - clear out all previous suggestions
+      let courseSuggestedList=document.getElementById('titleSuggestionSelected'); //used to be const
+      let y = courseSuggestedList.options.length;
+      if (y>0){
+        while (y>0){
+          courseSuggestedList.remove(0);
+          y = courseSuggestedList.options.length;
+        }
+      } 
+
+      let blankSuggestion=document.createElement("option");
+      blankSuggestion.text=" ";
+      blankSuggestion.value="blank";
+      courseSuggestedList.appendChild(blankSuggestion);
+
+      //Step 2 - call lookupForSuggestions() to get an array of course objects matching user input
+      let listSuggestions=[];
+      listSuggestions = lookupForSuggestionsByTitle(requestedCourse);
+
+      if (listSuggestions.length===0){
+        resultMessage.textContent="No suggestions available";
+        return;
+      }
+
+      //Step 3 - if any results, populate the suggestions dropdown
+      for (let m=0;m<listSuggestions.length;m++){
+        let newSuggestion=document.createElement("option");
+        var new_option_value=listSuggestions[m].courseSubject;
+        var new_option_text=listSuggestions[m].courseSubject+" - "+listSuggestions[m].title;
+        newSuggestion.text=new_option_text;
+        newSuggestion.value=new_option_value;
+        courseSuggestedList.appendChild(newSuggestion);
+      }
+      resultMessage.textContent="Partial matches added, please choose an option from the dropdown list.";
+      return;
+    }
+    
+    //case #3 - bad/no results
+    else if (result=== undefined || result==="" || result.courseSubject.length === 0){
+      resultMessage.textContent = "result missing, undefined, or no result found at all";
+      return;
+    }
+    
+    //CASE 4 - something else hapened.
+    else
+    {
+      resultMessage.textContent="No matches found, please try again."
+      return;
+    } 
+  }
+
+
+
+
+
+
+
+
+
+
   //traditional search, validates the inputs, does a traditional search by taking in the course subject code
   async function searchBySubject(x) {
     let requestedCourse = x;
@@ -606,6 +766,23 @@
     return;
 
   }
+
+  function lookupForSuggestionsByTitle(x){
+    let partialTitle = x;
+    let suggestedCourseObjs=[];
+
+    for (let m=0; m< courseCatalog.length;m++)
+    {
+      let currCourse=courseCatalog[m];
+      if (currCourse.title.includes(partialTitle))
+      {
+        suggestedCourseObjs.push(currCourse);
+      }
+    }
+    return suggestedCourseObjs;
+  }
+
+
 
   //helper for populateautocompleteusggestions
   function lookupForSuggestions(x){

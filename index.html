@@ -38,49 +38,53 @@
     <article>
       <h2>Search Options</h2>
       <div class="tab">
-        <button class="tablinks" id = "defaultOpen" onclick="javascript:openSearchTab(this, 'searchTraditionalTab')">Search by Full Course Number</button>
-        <button class="tablinks" onclick="javascript:openSearchTab(this, 'searchByTopics')">Search for Special Topics</button>
-        <button class="tablinks" onclick="javascript:openSearchTab(this, 'searchWithHelpTab')">Search by Partial Course Number</button>
+        <button class="tablinks" id = "defaultOpen" onclick="javascript:openSearchTab(this, 'searchTraditionalTab')">Search by Course Title</button>
+        <button class="tablinks" onclick="javascript:openSearchTab(this, 'searchByTopics')">Search by Special Topics</button>
+        <button class="tablinks" onclick="javascript:openSearchTab(this, 'searchWithHelpTab')">Search by Course Number</button>
       </div>      
       <div class="tabContent" id="searchTraditionalTab">
         <div class="row">
-          <button class="h3buttonHelp" id="searchStandardHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('searchMessageOnClick'), this)">Search by Full Course Number</button>
+          <button class="h3buttonHelp" id="searchStandardHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('searchMessageOnClick'), this)">Search by Course Title</button>
         </div>
-        <div class = "helpMessageRow" id="searchMessageOnClick"><h4>About Course Search</h4><p>Requires a full course number (subject code). For example, to get course information about 'CSCI 5214 Big Data Architecture', type CSCI5214, CSCI-5214, or CSCI 5214. If you do not know the full number, use autocomplete tab. For Special Topics courses, use the Special Topics Search tab.</p></div>
+        <div class = "helpMessageRow" id="searchMessageOnClick"><h4>About Title Search</h4><p>Requires a full or partial course title. For example, to get course information about 'CSCI 5214 Big Data Architecture', type <b>Big</b>, <b>Big Data</b>, etc. Then select the appropriate option from the dropdown menu. For Special Topics courses, use the Special Topics tab.</p></div>
         <div class="stepRow">
           <div class="row">
-            <h4>Step 1- Enter a Full Course Number</h4>
-            <input id="wordInput" type="text" placeholder="Enter a course subject code..." />
+            <h4>Step 1- Enter a full or partial course title</h4>
+            <input id="titleInput" type="text" placeholder="Enter a course title..." />
+          </div>
+          <div class="row">
+            <button class="searchButton" onclick="anyLenCourseTitleSearch(document.getElementById('titleInput').value.trim());">Look for Matching Courses</button>
           </div>
         </div>
         <div class="stepRow">
           <div class="row">
-            <h4>Step 2-Press Search</h4>
-            <button class="searchButton" onclick="searchBySubject(document.getElementById('wordInput').value.trim());">Search</button>
+            <h4>2-Choose a suggestion from the dropdown list</h4>
+          </div>
+          <div class="selectRow">
+            <select id='titleSuggestionSelected'></select>
+          </div>
+          <div class="row">
+            <button class="searchButton" onclick="javascript:TitleSearch()">Search</button>
           </div>
         </div>
       </div>
       <div class="tabContent" id="searchWithHelpTab">
         <div class="row">
-          <button class="h3buttonHelp" id="autoHelpButton"onclick="javascript:ShowHideMessageRow(document.getElementById('autocompleteMessageOnClick'),this)">(Testing) Course Number Search with AutoComplete</button>
+          <button class="h3buttonHelp" id="autoHelpButton"onclick="javascript:ShowHideMessageRow(document.getElementById('autocompleteMessageOnClick'),this)">Search by Course Number</button>
         </div>
         <div class = "helpMessageRow" id="autocompleteMessageOnClick">
-          <h4>About AutoComplete</h4>
-          <p>Must start with beginning of subject code. 
-            All available results will match those characters. 
-            For example, entering 'CSCI 5' will retrieve all 5000-level CSCI courses.
-            If any suggestions are provided, choose one from the dropdown menu. Then press <b>Search</b> to search for the selected course's information.
-          </p>
+          <h4>About Search by Course Number</h4>
+          <p>Search by a full or partial course number. If a full number is provided (for ex: CSCI 5214), then it will search and populate the result. If no direct match is found, any matching courses will be added to the dropdown menu for you to choose from. For example, entering <b>CSCI 5</b> will retrieve all CSCI 5000-level courses. Entering <b>5214</b> will retrieve <b>CSCI 5214</b>, <b>ATLS 5214</b>, and <b>CSCA 5214</b>. Select the option you want and press <b>Search</b> to retrieve that course's information.</p>
         </div>
         <div class="stepRow">
           <div class="row">
-            <h4>1-Enter a Full or Partial Course Number</h4>
+            <h4>1-Enter a full or partial Course Number</h4>
           </div>
             <div class="row">
               <input id="prefixInput" type="text" placeholder="Enter the first letter(s) of a course subject code..." />
             </div>
             <div class="row">
-              <button class="searchButton" onclick="anyLenCourseNumSearch(document.getElementById('prefixInput').value.trim())">Search by Full or Partial Course Number</button>
+              <button class="searchButton" onclick="anyLenCourseNumSearch(document.getElementById('prefixInput').value.trim())">Search</button>
             </div>
           </div>
         <div class="stepRow">
@@ -103,7 +107,7 @@
         <div class = "helpMessageRow" id="specialTopicsMessageOnClick"><h4>About Special Topics Search</h4><p>Special Topics Search allows search for specific sections of the available Special Topics courses, filtered by semester.</p></div>
         <div class="stepRow">
           <div class="row">
-            <h4>Step 1-Select Topics Course</h4>
+            <h4>1-Select Topics Course</h4>
           </div>
           <div class="selectRow">
             <select id='topicsCourseSelected' onchange="populateTopicTerms()">
@@ -119,11 +123,12 @@
         </div>
         <div class="stepRow">
           <div class="row">
-            <h4>Step 2-Select Term</h4>
+            <h4>2-Select Term</h4>
           </div>
           <div class="selectRow">
             <select id='topicsTermDisplayed' onchange="populateTopics()">
-              <option value="blank" selected></option>              </select>
+              <option value="blank" selected></option> 
+            </select>
           </div>
         </div>
         <div class="stepRow">
