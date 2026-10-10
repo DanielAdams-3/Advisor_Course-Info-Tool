@@ -71,7 +71,7 @@
     //Verify input is eligible for direct search, not autocomplete
     //If user inputs at least 8 characters and none are spaces (eg CSCI5214)
     var temp, temp2;
-    if ((requestedCourse2.length === 8 && requestedCourse2.contains(' ')) === false)
+    if ((requestedCourse2.length === 8 && requestedCourse2.includes(' ')) === false)
     {
       temp2 = requestedCourse2.slice(0,4) + ' ' + requestedCourse2.slice(4);
       //temp = requestedCourse.slice(0,4) + ' ' + requestedCourse.slice(4);
