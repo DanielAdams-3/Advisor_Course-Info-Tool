@@ -16,7 +16,7 @@
     return;
   }
 
-  function anyLenCourseNumSearch(){
+  async function anyLenCourseNumSearch(){
     /*get fields*/
     const resultMessage = document.getElementById('searchResultMessage');
     let subject = document.getElementById('resultSubject');
