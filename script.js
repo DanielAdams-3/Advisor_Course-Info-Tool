@@ -118,7 +118,7 @@
     //now we check if there is anything matching what they input. 
     if ((requestedCourse.length>0 && requestedCourse.length<9))
     {
-      //populateAutocompleteSuggestions();
+
       //Step 1 - clear out all previous suggestions
       const courseSuggestedList=document.getElementById('suggestionSelected'); 
       let y = courseSuggestedList.options.length;
@@ -158,7 +158,7 @@
         newSuggestion.value=new_option_value;
         courseSuggestedList.appendChild(newSuggestion);
       }
-      searchResultMessage.textContent="Suggestions added";
+      searchResultMessage.textContent="Partial matches added, please choose an option from the suggestion dropdownlist.";
       return;
     }
     
@@ -628,7 +628,7 @@
     {
       let currCourse=courseCatalog[m];
       console.log(currCourse.courseSubject);
-      if (currCourse.courseSubject.startsWith(subjectPrefix))
+      if (currCourse.courseSubject.includes(subjectPrefix))
       {
         suggestedCourseObjs.push(currCourse);
       }
