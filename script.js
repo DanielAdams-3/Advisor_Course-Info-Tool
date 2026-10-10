@@ -66,7 +66,7 @@
 
     //validate if input is too long or non-existent
     if (!requestedCourse2 || requestedCourse2.length>=10){
-      resultMessage2.textContent = "missing input or too much input";
+      resultMessage.textContent = "missing input or too much input";
       return;
     }
 

@@ -345,7 +345,7 @@ button {
   margin-bottom:0vw;
   align-content:center;
   margin-left:0vw;
-
+  max-height:fit-content;
   min-width:100%;
   padding-top:0rem;
   padding-bottom:0rem;
