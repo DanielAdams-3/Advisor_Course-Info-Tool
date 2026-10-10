@@ -7,7 +7,6 @@
         if (currCourseSubj === requestedSubject)
         {
           let result=courseCatalog[i];
-          resultMessage.textContent=result.courseSubject;
           return result;
         }
     }
@@ -37,11 +36,6 @@
     let courseloadReview = document.getElementById('reviewCourseload');
     let inputReview = document.getElementById('reviewInput');
 
-    //let variable = document.getElementById('prefixInput');
-    //let variable2 = document.getElementById('prefixInput').value.trim();
-    //requestedCourse = toString(variable);
-    //requestedCourse2 = variable2;
-
     /*clear out previous results*/
     subject.textContent="";
     title.textContent="";
@@ -70,11 +64,10 @@
 
     //Verify input is eligible for direct search, not autocomplete
     //If user inputs at least 8 characters and none are spaces (eg CSCI5214)
-    var temp, temp2;
-    if ((requestedCourse2.length === 8 && requestedCourse2.includes(' ')) === false)
+    var temp2;
+    if ((requestedCourse2.length === 8) && (requestedCourse2.includes(' ') === false))
     {
       temp2 = requestedCourse2.slice(0,4) + ' ' + requestedCourse2.slice(4);
-      //temp = requestedCourse.slice(0,4) + ' ' + requestedCourse.slice(4);
       requestedCourse2 = temp2;
     }
     
@@ -90,10 +83,12 @@
     
     //check if result is in system by calling retrieveCourseObject(x), x is requestedCourse input
     let result = retrieveCourseObject(requestedCourse);
+    
     if (!result){
       resultMessage.textContent="failed search";
       return;
     }
+
     //CASE #1 - exact match found
     if (result.courseSubject.length === 9){
       subject.textContent=result.courseSubject;
