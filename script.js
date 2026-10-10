@@ -15,7 +15,7 @@
 
   async function anyLenCourseNumSearch(x){
     /*get fields*/
-    let requestedCourse2=x;
+    let requestedCourse=x;
     const resultMessage = document.getElementById('searchResultMessage');
     let subject = document.getElementById('resultSubject');
     let title = document.getElementById('resultTitle');
@@ -57,22 +57,20 @@
     inputReview.textContent="";
 
     //validate if input is too long or non-existent
-    if (!requestedCourse2 || requestedCourse2.length>=10){
+    if (!requestedCourse || requestedCourse.length>=10){
       resultMessage.textContent = "missing input or too much input";
       return;
     }
 
     //Verify input is eligible for direct search, not autocomplete
     //If user inputs at least 8 characters and none are spaces (eg CSCI5214)
-    var temp2;
-    if ((requestedCourse2.length === 8) && (requestedCourse2.includes(' ') === false))
+    var temp;
+    if ((requestedCourse.length === 8) && (requestedCourse.includes(' ') === false))
     {
-      temp2 = requestedCourse2.slice(0,4) + ' ' + requestedCourse2.slice(4);
-      requestedCourse2 = temp2;
+      temp = requestedCourse.slice(0,4) + ' ' + requestedCourse.slice(4);
+      requestedCourse = temp;
     }
     
-    //TEMPORARY MEASURE - FIXME
-    let requestedCourse = requestedCourse2;
     //direct search - user puts in acceptable-length entry that could be in the system (for ex: CSCI-5214, CSCI 5214)
 
     //clean input by removing '-' from input, for ex: CSCI-5214 becomes CSCI 5214
@@ -133,19 +131,18 @@
       blankSuggestion.text=" ";
       blankSuggestion.value="blank";
       courseSuggestedList.appendChild(blankSuggestion);
-      let searchResultMessage = document.getElementById('searchResultMessage');
 
       //Step 2 - call lookupForSuggestions() to get an array of course objects matching user input
       let user_input=document.getElementById('prefixInput').value;
       let listSuggestions=[];
       if (user_input.length===0){
-        searchResultMessage.textContent="No input provided";
+        resultMessage.textContent="No input provided";
         return;
       }
       listSuggestions = lookupForSuggestions(user_input);
 
       if (listSuggestions.length===0){
-        searchResultMessage.textContent="No suggestions available";
+        resultMessage.textContent="No suggestions available";
         return;
       }
 
@@ -158,7 +155,7 @@
         newSuggestion.value=new_option_value;
         courseSuggestedList.appendChild(newSuggestion);
       }
-      searchResultMessage.textContent="Partial matches added, please choose an option from the suggestion dropdownlist.";
+      resultMessage.textContent="Matches found. Please choose an option from the dropdown list.";
       return;
     }
     
@@ -309,7 +306,7 @@
         newSuggestion.value=new_option_value;
         courseSuggestedList.appendChild(newSuggestion);
       }
-      resultMessage.textContent="Partial matches added, please choose an option from the dropdown list.";
+      resultMessage.textContent="Matches found. Please choose an option from the dropdown list.";
       return;
     }
     
@@ -327,9 +324,66 @@
     } 
   }
 
+  function TitleSearch() {
+    const courseSelected=document.getElementById('titleSuggestionSelected').value; 
+    let resultMessage=document.getElementById('searchResultMessage');
+    if (!courseSelected || courseSelected === "blank") {
+      resultMessage.textContent = 'No course selected';
+      return;
+    }
 
+    //search couresCatalog for all IDs that match what we're looking for and populate the list
+    let searchCourse=courseSelected;
+    for (let i=0; i< courseCatalog.length;i++)
+    {
+      let courseObj=courseCatalog[i];
 
-
+      if (courseObj.id === searchCourse)
+      {
+        let subject = document.getElementById('resultSubject');
+        let title = document.getElementById('resultTitle');
+        let hours = document.getElementById('resultHours');
+        let description = document.getElementById('resultDescription');
+        let notes = document.getElementById('resultNotes');
+        let offerings = document.getElementById('resultOfferings');
+        let restrictions = document.getElementById('resultRestrictions');
+        let rigor = document.getElementById('resultRigor');
+        let reqCSENPHD = document.getElementById('reqsCSENPHD');
+        let reqCSENMS = document.getElementById('reqsCSENMS');
+        let reqCSENMSCPS = document.getElementById('reqsCSENMSCPS');
+        let reqNTENMSNE = document.getElementById('reqsNTENMSNE');
+        let reqAINTMSAI = document.getElementById('reqsAINTMSAI');
+        let reqsNotes=document.getElementById('reqsNotes');
+        let skills = document.getElementById('resultSkills');
+        let instructorReview = document.getElementById('reviewInstructor');
+        let courseloadReview = document.getElementById('reviewCourseload');
+        let inputReview = document.getElementById('reviewInput');
+    
+        subject.textContent=courseObj.courseSubject;
+        title.textContent=courseObj.title;
+        hours.textContent=courseObj.credits;
+        description.textContent=courseObj.description;
+        notes.textContent=courseObj.notes;
+        offerings.textContent=courseObj.offerings;
+        rigor.texContent=courseObj.rigor;
+        restrictions.textContent=courseObj.restrictions;
+        reqCSENPHD.textContent=courseObj.reqCSENPHD;
+        reqCSENMS.textContent=courseObj.reqCSENMS;
+        reqCSENMSCPS.textContent=courseObj.reqCSENMSCPS;
+        reqNTENMSNE.textContent=courseObj.reqNTENMSNE;
+        reqAINTMSAI.textContent=courseObj.reqAINTMSAI;
+        reqsNotes.textContent=courseObj.reqNote;
+        skills.textContent=courseObj.skills;
+        instructorReview.textContent=courseObj.reviewInstructor;
+        courseloadReview.textContent=courseObj.reviewCourseload;
+        inputReview.textContent=courseObj.reviewInput;
+        searchResultMessage.textContent="Completed";
+        return;
+      }
+    }
+    resultMessage.textContent="Error, search failed";
+    return;
+  }
 
 
 
@@ -774,7 +828,8 @@
     for (let m=0; m< courseCatalog.length;m++)
     {
       let currCourse=courseCatalog[m];
-      if (currCourse.title.includes(partialTitle))
+      
+      if (currCourse.title.toLowerCase().includes(partialTitle.toLowerCase()))
       {
         suggestedCourseObjs.push(currCourse);
       }
@@ -805,7 +860,7 @@
     {
       let currCourse=courseCatalog[m];
       console.log(currCourse.courseSubject);
-      if (currCourse.courseSubject.includes(subjectPrefix))
+      if (currCourse.courseSubject.toLowerCase().includes(subjecPrefix.toLowerCase()))
       {
         suggestedCourseObjs.push(currCourse);
       }
