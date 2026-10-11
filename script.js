@@ -339,7 +339,7 @@
     {
       let courseObj=courseCatalog[i];
 
-      if (courseObj.subject === searchCourse)
+      if (courseObj.courseSubject === searchCourse)
       {
         let subject = document.getElementById('resultSubject');
         let title = document.getElementById('resultTitle');
