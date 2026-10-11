@@ -1042,7 +1042,7 @@
     //clear out the current course's results and user inputs
     let prefixInput = document.getElementById('prefixInput');
     let topicsInput = document.getElementById('topicsCourseSelected');
-    let courseInput = document.getElementById('wordInput');
+    let titleInput = document.getElementById('titleInput');
 
     let subject = document.getElementById('resultSubject');
     let title = document.getElementById('resultTitle');
@@ -1085,7 +1085,7 @@
     topicsSectionSelected.value="";
     topicsTermSelected.value="";
     prefixInput.value="";
-    courseInput.value="";
+    titleInput.value="";
     topicsInput.value="blank";
     subject.textContent="";
     title.textContent="";
