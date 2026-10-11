@@ -327,7 +327,8 @@
   function TitleSearch() {
     const courseSelected=document.getElementById('titleSuggestionSelected').value; 
     let resultMessage=document.getElementById('searchResultMessage');
-    if (!courseSelected || courseSelected === "blank") {
+    if (!courseSelected || courseSelected === "blank")
+    {
       resultMessage.textContent = 'No course selected';
       return;
     }
@@ -860,7 +861,7 @@
     {
       let currCourse=courseCatalog[m];
       console.log(currCourse.courseSubject);
-      if (currCourse.courseSubject.toLowerCase().includes(subjecPrefix.toLowerCase()))
+      if (currCourse.courseSubject.toLowerCase().includes(subjectPrefix.toLowerCase()))
       {
         suggestedCourseObjs.push(currCourse);
       }
