@@ -386,9 +386,9 @@ button {
 }
 
 .h3buttonHelp:hover{
-  background-color:#0A3758;
+  background-color:#8D7334;
   color:#ffffff;
-  border-color:#0A3758;
+  border-color:#8D7334;
 }
 
 .h3buttonHelp.opened:hover {
