@@ -339,7 +339,7 @@
     {
       let courseObj=courseCatalog[i];
 
-      if (courseObj.id === searchCourse)
+      if (courseObj.subject === searchCourse)
       {
         let subject = document.getElementById('resultSubject');
         let title = document.getElementById('resultTitle');
@@ -382,6 +382,55 @@
         return;
       }
     }
+    /*
+    for (let i=0; i< topicsCourseCatalog.length;i++)
+    {
+      let courseObj=topicsCourseCatalog[i];
+  
+      if ((courseObj.subject === searchCourse))
+      {
+        let subject = document.getElementById('resultSubject');
+        let title = document.getElementById('resultTitle');
+        let hours = document.getElementById('resultHours');
+        let description = document.getElementById('resultDescription');
+        let notes = document.getElementById('resultNotes');
+        let offerings = document.getElementById('resultOfferings');
+        let restrictions = document.getElementById('resultRestrictions');
+        let rigor = document.getElementById('resultRigor');
+        let reqCSENPHD = document.getElementById('reqsCSENPHD');
+        let reqCSENMS = document.getElementById('reqsCSENMS');
+        let reqCSENMSCPS = document.getElementById('reqsCSENMSCPS');
+        let reqNTENMSNE = document.getElementById('reqsNTENMSNE');
+        let reqAINTMSAI = document.getElementById('reqsAINTMSAI');
+        let reqsNotes=document.getElementById('reqsNotes');
+        let skills = document.getElementById('resultSkills');
+        let instructorReview = document.getElementById('reviewInstructor');
+        let courseloadReview = document.getElementById('reviewCourseload');
+        let inputReview = document.getElementById('reviewInput');
+      
+        subject.textContent=courseObj.courseSubject;
+        title.textContent=courseObj.title;
+        hours.textContent=courseObj.credits;
+        description.textContent=courseObj.description;
+        notes.textContent=courseObj.notes;
+        offerings.textContent=courseObj.offerings;
+        rigor.texContent=courseObj.rigor;
+        restrictions.textContent=courseObj.restrictions;
+        reqCSENPHD.textContent=courseObj.reqCSENPHD;
+        reqCSENMS.textContent=courseObj.reqCSENMS;
+        reqCSENMSCPS.textContent=courseObj.reqCSENMSCPS;
+        reqNTENMSNE.textContent=courseObj.reqNTENMSNE;
+        reqAINTMSAI.textContent=courseObj.reqAINTMSAI;
+        reqsNotes.textContent=courseObj.reqNote;
+        skills.textContent=courseObj.skills;
+        instructorReview.textContent=courseObj.reviewInstructor;
+        courseloadReview.textContent=courseObj.reviewCourseload;
+        inputReview.textContent=courseObj.reviewInput;
+        searchResultMessage.textContent="Completed";
+        return;
+      }
+    }*/
+
     resultMessage.textContent="Error, search failed";
     return;
   }
@@ -768,6 +817,7 @@
         instructorReview.textContent=courseObj.reviewInstructor;
         courseloadReview.textContent=courseObj.reviewCourseload;
         inputReview.textContent=courseObj.reviewInput;
+
         searchResultMessage.textContent="Completed";
         return;
       }
@@ -860,7 +910,6 @@
     for (let m=0; m< courseCatalog.length;m++)
     {
       let currCourse=courseCatalog[m];
-      console.log(currCourse.courseSubject);
       if (currCourse.courseSubject.toLowerCase().includes(subjectPrefix.toLowerCase()))
       {
         suggestedCourseObjs.push(currCourse);
