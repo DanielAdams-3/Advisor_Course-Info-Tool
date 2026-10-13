@@ -245,6 +245,7 @@ caption {
   white-space:pre-line;
   word-wrap:normal;
   max-width:100%;
+  margin-bottom:.25rem;
   border-radius:0.5vw;
 }
 
