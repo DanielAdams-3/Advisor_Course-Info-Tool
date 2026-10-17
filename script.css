@@ -1,6 +1,10 @@
-/*color pallette quickreference*/
-/*dark grey: #777777, black: #000000, white: #ffffff, gold: #CFB87C*/
-/*coral: ff6060, green: 00a491*/
+/*color pallette QuickReference
+dark grey: #777777
+black: #000000 
+white: #ffffff
+gold: #CFB87C
+coral: ff6060
+green: 00a491*/
 
 body {
   font-family: "Roboto", sans-serif;
@@ -289,7 +293,7 @@ input[type="text"] {
 }
 
 /*Format the result boxes for certain result content*/
-#resultDescription, #resultNotes, #resultReqs, #resultRestrictions, #resultSkills, #resultSubject, #resultTitle, #resultHours, #resultOfferings, #resultRigor, #searchResultMessage
+#resultSubjectTitleHours, #resultDescription, #resultNotes, #resultReqs, #resultRestrictions, #resultSkills,  #resultOfferings, #resultRigor, #searchResultMessage
 {
   padding: 0.25rem;
   background: #ffff;
@@ -305,6 +309,7 @@ input[type="text"] {
   font-size: 1rem;
   border-radius:0.25rem;
 }
+
 /*Formatting for buttons*/
 button {
   margin-left: 1rem;
@@ -771,13 +776,13 @@ table {
   max-width:95%;
   border-collapse: collapse;
   border: 2px solid #777777;
-  font-size: 1.25rem;
+  font-size: 1rem;
   margin-bottom:1rem;
 }
 
 td,th {
   border: 1px solid #000000;
-  padding: 10px 20px;
+  padding: 0.25rem;
 }
 th{
   font-family:'Roboto Condensed', sans-serif;

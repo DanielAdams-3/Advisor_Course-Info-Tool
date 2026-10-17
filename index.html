@@ -123,11 +123,9 @@
             <select id='topicsCourseSelected' onchange="populateTopicTerms()">
               <option value="blank" selected></option>
               <option value="CSCI-7000">CSCI 7000 Current Topics in Computer Science</option>
-              <option value="CYBR-5830">CYBR 5830 Special Topics</option>
               <option value="ROBO-7000">ROBO 7000 Special Topics in Robotics</option>
+              <option value="CYBR-5830">CYBR 5830 Special Topics</option>
               <option value="DTSC-5900">DTSC 5900 Special Topics</option>
-              <option value="ATLS-5519">ATLS 5519 Advanced Topics</option>
-              <option value="ATLS-5529">ATLS 5529 Advanced Critical Topics</option>
             </select>
           </div>
           <div class="row">
@@ -159,31 +157,11 @@
       <h2>Course Information</h2>
       <div class="stepRow">
         <div class="row">
-          <button class="h3buttonHelp" id="subjectHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('subjectMessageOnClick'), this)">Subject</button>
+          <button class="h3buttonHelp" id="subjectHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('subjectMessageOnClick'), this)">Subject, Title and Credit Hours</button>
         </div>
-        <div class = "helpMessageRow" id="subjectMessageOnClick"><h4>About Subject</h4><p>Per Graduate Catalog AY26-27. If a course does not appear, it is not in the dataset, but can be requested by clicking the 'Contact CS Department' button at the bottom of the page</p>
-        </div>
+        <div class = "helpMessageRow" id="subjectMessageOnClick"><h4>About Subject, Title and Credit</h4><p>Data from 2026-27 Graduate Catalog. If credit hours are variable, output will be listed as a range (for ex: 1-4). If a course does not appear, it is not in the dataset, but can be requested by using the 'Contact CS Department' button on this page.</p></div>
         <div class="row">
-          <div id="resultSubject"></div>
-        </div>
-      </div>
-
-      <div class="stepRow">
-        <div class="row">
-          <button class="h3buttonHelp" id="nameHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('nameMessageOnClick'),this)">Title&nbsp;</button> 
-        </div>
-        <div class = "helpMessageRow" id="nameMessageOnClick"><h4>About Title</h4><p>Data from 2026-27 Graduate Catalog</p></div>
-        <div class="row">
-          <div id="resultSubject"></div><div id="resultTitle"></div>
-        </div>
-      </div>
-      <div class="stepRow">
-        <div class="row">
-          <button class="h3buttonHelp" id="hoursHelpButton" onclick="javascript:ShowHideMessageRow(document.getElementById('hoursMessageOnClick'),this)">Credit Hours&nbsp;</button> 
-        </div>
-        <div class = "helpMessageRow" id="hoursMessageOnClick"><h4>About Credit Hours</h4><p>Data from 2026-27 Graduate Catalog. If credit hours are variable, output will be listed as a range (for ex: 1-4)</p></div>
-        <div class="row">
-          <div id="resultHours"></div>
+          <div id="resultSubjectTitleHours"></div>
         </div>
       </div>
       

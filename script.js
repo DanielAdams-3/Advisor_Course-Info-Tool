@@ -17,9 +17,7 @@
     /*get fields*/
     let requestedCourse=x;
     const resultMessage = document.getElementById('searchResultMessage');
-    let subject = document.getElementById('resultSubject');
-    let title = document.getElementById('resultTitle');
-    let hours = document.getElementById('resultHours');
+    let subjectTitleHours = document.getElementById('resultSubjectTitleHours');
     let description = document.getElementById('resultDescription');
     let notes = document.getElementById('resultNotes');
     let restrictions = document.getElementById('resultRestrictions');
@@ -37,9 +35,7 @@
     let inputReview = document.getElementById('reviewInput');
 
     /*clear out previous results*/
-    subject.textContent="";
-    title.textContent="";
-    hours.textContent="";
+    subjectTitleHours.textContent="";
     description.textContent="";
     notes.textContent="";
     offerings.textContent="";
@@ -85,9 +81,10 @@
 
     //CASE #1 - exact match found
     if (result && result.courseSubject.length === 9){
-      subject.textContent=result.courseSubject;
-      title.textContent=result.title;
-      hours.textContent=result.credits;
+
+      //format subjectTitleHours
+      let tempSubjectTitleHours = result.CourseSubject + ": "+ result.title+" ("+result.credits+" hrs)";
+      subjectTitleHours.textContent=tempSubjectTitleHours;
       description.textContent=result.description;
       notes.textContent=result.notes;
       offerings.textContent=result.offerings;
@@ -193,9 +190,7 @@
     /*get fields*/
     let requestedCourse=x;
     const resultMessage = document.getElementById('searchResultMessage');
-    let subject = document.getElementById('resultSubject');
-    let title = document.getElementById('resultTitle');
-    let hours = document.getElementById('resultHours');
+    let subjectTitleHours = document.getElementById('resultSubjectTitleHours');
     let description = document.getElementById('resultDescription');
     let notes = document.getElementById('resultNotes');
     let restrictions = document.getElementById('resultRestrictions');
@@ -213,9 +208,7 @@
     let inputReview = document.getElementById('reviewInput');
 
     /*clear out previous results*/
-    subject.textContent="";
-    title.textContent="";
-    hours.textContent="";
+    subjectTitleHours.textContent="";
     description.textContent="";
     notes.textContent="";
     offerings.textContent="";
@@ -243,9 +236,8 @@
 
     //CASE #1 - exact match found
     if (result){
-      subject.textContent=result.courseSubject;
-      title.textContent=result.title;
-      hours.textContent=result.credits;
+      let tempSubjectTitleHours = result.CourseSubject + ": "+ result.title+" ("+result.credits+" hrs)";
+      subjectTitleHours.textContent=tempSubjectTitleHours;
       description.textContent=result.description;
       notes.textContent=result.notes;
       offerings.textContent=result.offerings;
@@ -341,9 +333,7 @@
 
       if (courseObj.courseSubject === searchCourse)
       {
-        let subject = document.getElementById('resultSubject');
-        let title = document.getElementById('resultTitle');
-        let hours = document.getElementById('resultHours');
+        let subjectTitleHours = document.getElementById('resultSubjectTitleHours');
         let description = document.getElementById('resultDescription');
         let notes = document.getElementById('resultNotes');
         let offerings = document.getElementById('resultOfferings');
@@ -360,9 +350,8 @@
         let courseloadReview = document.getElementById('reviewCourseload');
         let inputReview = document.getElementById('reviewInput');
     
-        subject.textContent=courseObj.courseSubject;
-        title.textContent=courseObj.title;
-        hours.textContent=courseObj.credits;
+        let tempSubjectTitleHours = courseObj.CourseSubject + ": "+ courseObj.title+" ("+courseObj.credits+" hrs)";
+        subjectTitleHours.textContent=tempSubjectTitleHours;
         description.textContent=courseObj.description;
         notes.textContent=courseObj.notes;
         offerings.textContent=courseObj.offerings;
@@ -382,54 +371,6 @@
         return;
       }
     }
-    /*
-    for (let i=0; i< topicsCourseCatalog.length;i++)
-    {
-      let courseObj=topicsCourseCatalog[i];
-  
-      if ((courseObj.subject === searchCourse))
-      {
-        let subject = document.getElementById('resultSubject');
-        let title = document.getElementById('resultTitle');
-        let hours = document.getElementById('resultHours');
-        let description = document.getElementById('resultDescription');
-        let notes = document.getElementById('resultNotes');
-        let offerings = document.getElementById('resultOfferings');
-        let restrictions = document.getElementById('resultRestrictions');
-        let rigor = document.getElementById('resultRigor');
-        let reqCSENPHD = document.getElementById('reqsCSENPHD');
-        let reqCSENMS = document.getElementById('reqsCSENMS');
-        let reqCSENMSCPS = document.getElementById('reqsCSENMSCPS');
-        let reqNTENMSNE = document.getElementById('reqsNTENMSNE');
-        let reqAINTMSAI = document.getElementById('reqsAINTMSAI');
-        let reqsNotes=document.getElementById('reqsNotes');
-        let skills = document.getElementById('resultSkills');
-        let instructorReview = document.getElementById('reviewInstructor');
-        let courseloadReview = document.getElementById('reviewCourseload');
-        let inputReview = document.getElementById('reviewInput');
-      
-        subject.textContent=courseObj.courseSubject;
-        title.textContent=courseObj.title;
-        hours.textContent=courseObj.credits;
-        description.textContent=courseObj.description;
-        notes.textContent=courseObj.notes;
-        offerings.textContent=courseObj.offerings;
-        rigor.texContent=courseObj.rigor;
-        restrictions.textContent=courseObj.restrictions;
-        reqCSENPHD.textContent=courseObj.reqCSENPHD;
-        reqCSENMS.textContent=courseObj.reqCSENMS;
-        reqCSENMSCPS.textContent=courseObj.reqCSENMSCPS;
-        reqNTENMSNE.textContent=courseObj.reqNTENMSNE;
-        reqAINTMSAI.textContent=courseObj.reqAINTMSAI;
-        reqsNotes.textContent=courseObj.reqNote;
-        skills.textContent=courseObj.skills;
-        instructorReview.textContent=courseObj.reviewInstructor;
-        courseloadReview.textContent=courseObj.reviewCourseload;
-        inputReview.textContent=courseObj.reviewInput;
-        searchResultMessage.textContent="Completed";
-        return;
-      }
-    }*/
 
     resultMessage.textContent="Error, search failed";
     return;
@@ -445,9 +386,7 @@
     let requestedCourse = x;
     
     const resultMessage = document.getElementById('searchResultMessage');
-    let subject = document.getElementById('resultSubject');
-    let title = document.getElementById('resultTitle');
-    let hours = document.getElementById('resultHours');
+    let subjectTitleHours = document.getElementById('resultSubjectTitleHours');
     let description = document.getElementById('resultDescription');
     let notes = document.getElementById('resultNotes');
     let restrictions = document.getElementById('resultRestrictions');
@@ -466,9 +405,7 @@
 
     //clear all results from any previous search
     resultMessage.textContent = "Please enter a subject code";
-    subject.textContent="";
-    title.textContent="";
-    hours.textContent="";
+    subjectTitleHours.textContent="";
     description.textContent="";
     notes.textContent="";
     offerings.textContent="";
@@ -516,9 +453,8 @@
     }
 
     //output
-    subject.textContent=result.courseSubject;
-    title.textContent=result.title;
-    hours.textContent=result.credits;
+    let tempSubjectTitleHours = result.CourseSubject + ": "+ result.title+" ("+result.credits+" hrs)";
+    subjectTitleHours.textContent=tempSubjectTitleHours;
     description.textContent=result.description;
     notes.textContent=result.notes;
     offerings.textContent=result.offerings;
@@ -780,9 +716,7 @@
 
       if (courseObj.id.startsWith(searchCourse))
       {
-        let subject = document.getElementById('resultSubject');
-        let title = document.getElementById('resultTitle');
-        let hours = document.getElementById('resultHours');
+        let subjectTitleHours = document.getElementById('resultSubjectTitleHours');
         let description = document.getElementById('resultDescription');
         let notes = document.getElementById('resultNotes');
         let offerings = document.getElementById('resultOfferings');
@@ -799,9 +733,12 @@
         let courseloadReview = document.getElementById('reviewCourseload');
         let inputReview = document.getElementById('reviewInput');
     
-        subject.textContent=courseObj.courseSubject;
+        subjectTitleHours.textContent=courseObj.courseSubject;
         title.textContent=courseObj.title;
         hours.textContent=courseObj.credits;
+        let tempSubjectTitleHours = courseObj.CourseSubject + " ["+ courseObj.title+"] ("+courseObj.credits+" hrs)";
+        subjectTitleHours.textContent=tempSubjectTitleHours;
+
         description.textContent=courseObj.description;
         notes.textContent=courseObj.notes;
         offerings.textContent=courseObj.offerings;
@@ -990,15 +927,6 @@
     if (messageShown === false)
     { 
       helpMessageRowToDisplay.className="fade-in-messageRow";
-      //helpMessageRowToDisplay.style.opacity="1.0";
-      //helpMessageRowToDisplay.style.minHeight="100%";
-      //helpMessageRowToDisplay.style.maxHeight="fit-content";
-      //helpMessageRowToDisplay.style.height="fit-content";
-      //helpMessageRowToDisplay.style.visibility="initial";
-      //helpMessageRowToDisplay.style.backgroundColor="#cfb87C";
-      //helpMessageRowToDisplay.style.borderRadius="2px";
-      //helpMessageRowToDisplay.style.borderColor="#000000";
-      //helpMessageRowToDisplay.style.display="block";
       if (buttonRed === false){
         changeHelpButton(currButton);
       }
@@ -1006,16 +934,7 @@
 
     else{
       helpMessageRowToDisplay.className="fade-out-messageRow";
-      /*helpMessageRowToDisplay.style.opacity="0.0";
-      helpMessageRowToDisplay.style.minHeight="0%";
-      helpMessageRowToDisplay.style.visibility="hidden";
-      helpMessageRowToDisplay.style.maxHeight="0%";
-      helpMessageRowToDisplay.style.height="0%";
-      helpMessageRowToDisplay.style.backgroundColor="#FFFFFF";
-      helpMessageRowToDisplay.style.borderRadius="0vw";
-      helpMessageRowToDisplay.style.borderColor="#FFFFFF";
-      helpMessageRowToDisplay.style.border="#FFFFFF";
-      helpMessageRowToDisplay.style.display="none";*/
+
       if (buttonRed === true){
         changeHelpButton(currButton);
       }
@@ -1044,9 +963,7 @@
     let topicsInput = document.getElementById('topicsCourseSelected');
     let titleInput = document.getElementById('titleInput');
 
-    let subject = document.getElementById('resultSubject');
-    let title = document.getElementById('resultTitle');
-    let hours = document.getElementById('resultHours');
+    let subjectTitleHours = document.getElementById('resultSubjectTitleHours');
     let description = document.getElementById('resultDescription');
     let notes = document.getElementById('resultNotes');
     let offerings=document.getElementById('resultOfferings');
@@ -1087,9 +1004,7 @@
     prefixInput.value="";
     titleInput.value="";
     topicsInput.value="blank";
-    subject.textContent="";
-    title.textContent="";
-    hours.textContent="";
+    subjectTitleHours.textContent="";
     description.textContent="";
     notes.textContent="";
     offerings.textContent="";
