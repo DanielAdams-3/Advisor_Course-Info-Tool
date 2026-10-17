@@ -765,8 +765,8 @@ option{
 }
 
 table {
-  margin-left:2.5%;
-  margin-right:2.5%;
+  margin-left:0.5rem;
+  margin-right:0.5rem;
   min-width:95%;
   max-width:95%;
   border-collapse: collapse;
