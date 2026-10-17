@@ -83,7 +83,7 @@
     if (result && result.courseSubject.length === 9){
 
       //format subjectTitleHours
-      let tempSubjectTitleHours = result.CourseSubject + ": "+ result.title+" ("+result.credits+" hrs)";
+      let tempSubjectTitleHours = result.courseSubject + ": "+ result.title+" ("+result.credits+" hrs)";
       subjectTitleHours.textContent=tempSubjectTitleHours;
       description.textContent=result.description;
       notes.textContent=result.notes;
@@ -236,7 +236,7 @@
 
     //CASE #1 - exact match found
     if (result){
-      let tempSubjectTitleHours = result.CourseSubject + ": "+ result.title+" ("+result.credits+" hrs)";
+      let tempSubjectTitleHours = result.courseSubject + ": "+ result.title+" ("+result.credits+" hrs)";
       subjectTitleHours.textContent=tempSubjectTitleHours;
       description.textContent=result.description;
       notes.textContent=result.notes;
@@ -350,7 +350,7 @@
         let courseloadReview = document.getElementById('reviewCourseload');
         let inputReview = document.getElementById('reviewInput');
     
-        let tempSubjectTitleHours = courseObj.CourseSubject + ": "+ courseObj.title+" ("+courseObj.credits+" hrs)";
+        let tempSubjectTitleHours = courseObj.courseSubject + ": "+ courseObj.title+" ("+courseObj.credits+" hrs)";
         subjectTitleHours.textContent=tempSubjectTitleHours;
         description.textContent=courseObj.description;
         notes.textContent=courseObj.notes;
@@ -453,7 +453,7 @@
     }
 
     //output
-    let tempSubjectTitleHours = result.CourseSubject + ": "+ result.title+" ("+result.credits+" hrs)";
+    let tempSubjectTitleHours = result.courseSubject + ": "+ result.title+" ("+result.credits+" hrs)";
     subjectTitleHours.textContent=tempSubjectTitleHours;
     description.textContent=result.description;
     notes.textContent=result.notes;
@@ -733,10 +733,7 @@
         let courseloadReview = document.getElementById('reviewCourseload');
         let inputReview = document.getElementById('reviewInput');
     
-        subjectTitleHours.textContent=courseObj.courseSubject;
-        title.textContent=courseObj.title;
-        hours.textContent=courseObj.credits;
-        let tempSubjectTitleHours = courseObj.CourseSubject + " ["+ courseObj.title+"] ("+courseObj.credits+" hrs)";
+        let tempSubjectTitleHours = courseObj.courseSubject + " ["+ courseObj.title+"] ("+courseObj.credits+" hrs)";
         subjectTitleHours.textContent=tempSubjectTitleHours;
 
         description.textContent=courseObj.description;
