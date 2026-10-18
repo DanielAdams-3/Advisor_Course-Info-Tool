@@ -355,7 +355,7 @@
         description.textContent=courseObj.description;
         notes.textContent=courseObj.notes;
         offerings.textContent=courseObj.offerings;
-        rigor.texContent=courseObj.rigor;
+        rigor.textContent=courseObj.rigor;
         restrictions.textContent=courseObj.restrictions;
         reqCSENPHD.textContent=courseObj.reqCSENPHD;
         reqCSENMS.textContent=courseObj.reqCSENMS;
@@ -739,7 +739,7 @@
         description.textContent=courseObj.description;
         notes.textContent=courseObj.notes;
         offerings.textContent=courseObj.offerings;
-        rigor.texContent=courseObj.rigor;
+        rigor.textContent=courseObj.rigor;
         restrictions.textContent=courseObj.restrictions;
         reqCSENPHD.textContent=courseObj.reqCSENPHD;
         reqCSENMS.textContent=courseObj.reqCSENMS;

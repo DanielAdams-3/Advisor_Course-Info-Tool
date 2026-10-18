@@ -3,6 +3,7 @@ import json
 xlsx_file = "cirt_data.xlsx"
 js_file = "courseCatalog.js"
 js2_file = "topicsCourseCatalog.js"
+js3_file = "courseraCourseCatalog.js"
 
 # Read spreadsheet
 df = pd.read_excel(xlsx_file,sheet_name="courses")
@@ -60,7 +61,6 @@ with open(js2_file, "w", encoding="utf-8") as g:
         g.write(f' id: {json.dumps(clean(row["id"]))},\n')
         g.write(f' courseSubject: {json.dumps(clean(row["courseSubject"]))},\n')
         g.write(f' term: {json.dumps(clean(row["term"]))},\n')
-        '''g.write(f' section: {json.dumps(clean(row["section"]).zfill(3))},\n')'''
         g.write(f' section: {json.dumps(str(int(row["section"])).zfill(3))},\n')
         g.write(f' title: {json.dumps(clean(row["title"]))},\n')
         g.write(f' description: {json.dumps(clean(row["description"]))},\n')
@@ -82,3 +82,36 @@ with open(js2_file, "w", encoding="utf-8") as g:
         g.write(" },\n")
     g.write("];\n")
 g.close()
+
+df3 = pd.read_excel(xlsx_file,sheet_name="coursera")
+# Replace blank cells, if needed
+df3 = df3.fillna("")
+
+print(df3.head())
+print(len(df3))
+
+with open(js3_file, "w", encoding="utf-8") as h:
+    h.write("const topicsCourseCatalog = [\n")
+    for _, row in df3.iterrows():
+        h.write(f' id: {json.dumps(clean(row["id"]))},\n')
+        h.write(f' courseSubject: {json.dumps(clean(row["courseSubject"]))},\n')
+        h.write(f' title: {json.dumps(clean(row["title"]))},\n')
+        h.write(f' description: {json.dumps(clean(row["description"]))},\n')
+        h.write(f' credits: {json.dumps(str(row["credits"]))},\n')
+        h.write(f' notes: {json.dumps(clean(row["notes"]))},\n')
+        h.write(f' restrictions: {json.dumps(clean(row["restrictions"]))},\n')
+        h.write(f' offerings: {json.dumps(clean(row["offerings"]))},\n')
+        h.write(f' skills: {json.dumps(clean(row["skills"]))},\n')
+        h.write(f' reqCSENPHD: {json.dumps(clean(row["reqCSENPHD"]))},\n')
+        h.write(f' reqCSENMS: {json.dumps(clean(row["reqCSENMS"]))},\n')
+        h.write(f' reqCSENMSCPS: {json.dumps(clean(row["reqCSENMSCPS"]))},\n')
+        h.write(f' reqNTENMSNE: {json.dumps(clean(row["reqNTENMSNE"]))},\n')
+        h.write(f' reqAINTMSAI: {json.dumps(str(row["reqAINTMSAI"]))},\n')
+        h.write(f' reqNote: {json.dumps(str(row["reqNote"]))},\n')
+        h.write(f' reviewInstructor: {json.dumps(str(row["reviewInstructor"]))},\n')
+        h.write(f' reviewCourseload: {json.dumps(str(row["reviewCourseload"]))},\n')
+        h.write(f' reviewInput: {json.dumps(str(row["reviewInput"]))},\n')
+        h.write(f' rigor: {json.dumps(clean(row["rigor"]))},\n')
+        h.write(" },\n")
+    h.write("];\n")
+h.close()
