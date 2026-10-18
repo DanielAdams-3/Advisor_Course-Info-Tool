@@ -28,7 +28,7 @@ body {
   display:grid;
   grid-template-columns:3fr 7fr;
   grid-template-rows:1fr;
-  border-radius:1rem;
+
   padding-left: 1rem;
   padding-right:1rem;
   
@@ -37,6 +37,8 @@ body {
   margin-right:0.25vw;
   margin-top:0vw;
   margin-bottom:0vw;
+
+  border-radius:1rem;
 }
 
 .grid-item{
@@ -52,7 +54,6 @@ body {
   height:max-content;
   grid-template-columns:1fr 5fr;
   grid-template-rows:1fr;
-  border-radius:1rem;
   padding-left: 1rem;
   padding-right:1rem;
   
@@ -61,20 +62,24 @@ body {
   margin-right:0.25vw;
   margin-top:0vw;
   margin-bottom:0vw;
+
+  border-radius:1rem;
 }
 
 .grid-item-header{
   text-align:center;
   background:white;
+  
+  justify-content:center;
+  overflow:hidden;
+  align-items:center;
+  
+  padding:1rem;
+  
   border-top-left-radius:0rem;
   border-bottom-left-radius:0rem;
   border-top-right-radius:1rem;
   border-bottom-right-radius:1rem;
-  padding:1rem;
-  overflow:hidden;
-  align-items:center;
-  display:flex;
-  justify-content:center;
 }
 
 .grid-item-image{
