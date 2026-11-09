@@ -29,10 +29,10 @@ body {
   grid-template-columns:3fr 7fr;
   grid-template-rows:1fr;
 
-  padding-left: 1rem;
-  padding-right:1rem;
+  padding-left: 0.5rem;
+  padding-right:0.5rem;
   
-  gap:1vw;
+  gap:0.5vw;
   margin-left:0.25vw;
   margin-right:0.25vw;
   margin-top:0vw;
@@ -361,9 +361,9 @@ button {
   padding-top:0rem;
   padding-bottom:0rem;
   text-align:left;
-  background-color:#CFB87C;
+  background-color:#F3F0E9;
   color:#000000;
-  border-color:#CFB87C;
+  border-color:#F3F0E9;
 }
 
 .buttonHelp.opened:after, .h3buttonHelp.opened:after {
@@ -397,14 +397,14 @@ button {
 }
 
 .h3buttonHelp:hover{
-  background-color:#8D7334;
+  background-color:#CFB87C;
   color:#ffffff;
-  border-color:#8D7334;
+  border-color:#CFB87C;
 }
 
 .h3buttonHelp.opened:hover {
   background-color:#ff6060;
-  color:#000000;
+  color:#ffffff;
   border-color:#ff6060;
 }
 /*Formatting when user hovers over  buttons with mouse*/
